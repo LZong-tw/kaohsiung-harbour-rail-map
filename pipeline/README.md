@@ -9,5 +9,6 @@ python3 prep13.py                 # geo_v12.json → geo_v12b.json
 python3 apply_reg.py              # → geo_v13.json
 python3 qa.py geo_v13.json        # 幾何檢查
 python3 wetcheck.py geo_v13.json  # 水域檢查
-python3 build_page.py             # → ../site2/index.html
+python3 build_page.py             # → ../site/index.html
+python3 ../tools/check_page.py ../site/index.html
 ```

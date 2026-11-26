@@ -7,7 +7,7 @@
 | 研究過程與方法 | [`METHODS.md`](METHODS.md)（同步自 Claude 文件「高雄臨港線歷史路線圖：研究過程與方法」） | 資料來源、定位方法、線形規整、檢查流程、關鍵判讀與修正、路線與年代表、限制、授權 |
 | 互動地圖 | [`site/`](site/)（另發布為 Claude artifact「高雄臨港線 1900–2024」） | 地圖與年份操作，以及各年份營運中／已停用的路線清單 |
 
-逐輪工作紀錄在 [`WORKLOG.md`](WORKLOG.md)，參考資料在 [`SOURCES.md`](SOURCES.md)，每個腳本與中繼檔的用途在 [`FILES.md`](FILES.md)。
+逐輪工作紀錄在 [`WORKLOG.md`](WORKLOG.md)，參考資料在 [`SOURCES.md`](SOURCES.md)，每個腳本與中繼檔的用途在 [`FILES.md`](FILES.md)。在這個 repo 工作的原則（給 Claude，也給人看）在 [`CLAUDE.md`](CLAUDE.md)。
 
 ## 網站（GitHub Pages）
 
@@ -42,7 +42,8 @@ python3 prep13.py        # geo_v12.json → geo_v12b.json：手動重描的線�
 python3 apply_reg.py     # → geo_v13.json：線形規整（直線擬合、圓曲線、轉轍器接點）、岸壁線、淺野線
 python3 qa.py geo_v13.json        # 重疊、折角／小半徑、懸空端點、與 1989 年圖的偏離
 python3 wetcheck.py geo_v13.json  # 是否落在 OSM 底圖水域
-python3 build_page.py    # tpl.html + geo_v13.json → ../site2/index.html
+python3 build_page.py    # tpl.html + geo_v13.json → ../site/index.html
+python3 ../tools/check_page.py ../site/index.html  # 年份切換與路線查詢檢查
 ```
 
 較早的檔案（`rb2.py`～`rb6.py`、`final*.py` 等）是前幾版的流程，留作紀錄。
