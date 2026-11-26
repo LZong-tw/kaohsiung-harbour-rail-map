@@ -151,3 +151,8 @@
   - 發現 `scratch/` 誤收了工作環境的本機設定檔（含一組本機服務用的 token），已從整個 git 歷史移除並強制推送，`.gitignore` 也排除這類檔案。
   - `site/` 裡殘留的手繪圖檔 `scan.jpg` 沒有進過 git，已刪除。
 
+## 第 23 輪：repo 公開、移除街景截圖
+
+- 使用者把 repo 轉為公開並啟用 GitHub Pages：<https://lzong-tw.github.io/kaohsiung-harbour-rail-map/>。
+- 使用者：「拿掉，只保留那一個網址」。`uploads/` 裡的 Google 街景截圖從整個 git 歷史移除並強制推送；文件改為只引用街景連結（見 `SOURCES.md`、`METHODS.md` 資料來源表）。
+

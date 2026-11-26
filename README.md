@@ -30,7 +30,7 @@ repo 可直接發布成靜態網站：首頁是互動地圖，另有「研究過
 | `pipeline/h/`、`pipeline/n/` | 中研院歷史地圖圖磚快取、國土測繪中心正射影像圖磚快取 |
 | `pipeline/water.npy`、`dark*.npy` | OSM 底圖水域遮罩、1989 年圖鐵路符號遮罩 |
 | `scratch/` | 每一輪的套圖檢查圖與檢查輸出 `qa*.txt` |
-| `uploads/` | 研究過程中的截圖與街景觀察紀錄 |
+| `uploads/` | 研究過程中的地圖截圖與對話摘錄（街景只留連結，不收錄截圖） |
 | `vendor/` | Leaflet 原始檔 |
 | `tools/build_site.py`、`.github/workflows/pages.yml` | GitHub Pages 網站的建置與部署 |
 

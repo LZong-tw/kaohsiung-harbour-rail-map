@@ -32,3 +32,4 @@
 
 - 手繪高雄港區路線圖：<https://www.facebook.com/groups/openfind/posts/8293469417339893/>（作者未確認）。整個專案從這張圖開始，但定位不以它為準。圖檔不收錄於本 repo。
 - 使用者的在地觀察：街景比對（獅子公園三角線、經貿變電所）、205 兵工廠外側線走凱得街、北裏岸壁線即後來的臨港線西段。
+- 經貿變電所側線的街景（2009-08，凱旋四路 103 號前）：<https://www.google.com/maps/@22.5930884,120.3082736,5a,75y,32.74h,75.45t/data=!3m8!1e1!3m6!1sQO7JTzMLJZIcQ_3qDbvvqA!2e0!5s20090801T000000!6shttps:%2F%2Fstreetviewpixels-pa.clients6.google.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D14.55015302007233%26panoid%3DQO7JTzMLJZIcQ_3qDbvvqA%26yaw%3D32.743846816366805!7i13312!8i6656?entry=ttu&g_ep=EgoyMDI2MTEyMy4wIKXMDSoASAFQAw%3D%3D>。截圖不收錄。
