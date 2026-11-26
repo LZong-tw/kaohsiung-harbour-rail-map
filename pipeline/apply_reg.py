@@ -320,17 +320,34 @@ _others = [g for g in G['yard'] if not _inside(_mid(g), _PKS) and not _inside(_m
 _qz = json.load(open('yard_qz1998.json'))
 _jc = [g for g in _qz if sum(p[0] for p in g) / len(g) > 22.6115]   # 機廠
 _qc = [g for g in _qz if sum(p[0] for p in g) / len(g) <= 22.6115]  # 前鎮車場
+# 描線雜訊過濾（第 29 輪，yardclean.py）：去掉圍牆、建物輪廓的鋸齒線，以及兩頭都不接任何股道、也不在股道束裡的短線
+from yardclean import clean as _yclean
+_mains = [v for k, v in S.items() if not k.startswith('lr')] + [p for ps in X.values() for p in ps]
+def _yc(lines, name):
+    k, d = _yclean(lines, _mains)
+    print('yardclean', name, 'kept', len(k), 'dropped', len(d), {r: [x for _, x in d].count(r) for r in set(x for _, x in d)})
+    return k
+_qc, _jc = _yc(_qc, 'qz'), _yc(_jc, 'jc')
 G['yards'] = [
     {'src': '1945 年美軍高雄市街圖', 'o': 1900, 'c': 1960, 'lines': _old_ks},
-    # 1960–1986 改用 1970 年 1:1200 都市計畫航測地形圖（中研院高雄百年歷史地圖）描出的股道（第 28 輪，yardtrace_line.py）：
+    # 1960–1976 改用 1970 年 1:1200 都市計畫航測地形圖（中研院高雄百年歷史地圖）描出的股道（第 28 輪，yardtrace_line.py）：
     # 線劃圖的股道連續、轉轍器清楚，比 1976 年像片基本圖的描線（yard_ks1976.json，片段多）適合讓主線沿股道走。
-    {'src': '1970 年 1:1200 都市計畫航測地形圖', 'o': 1960, 'c': 1987, 'lines': json.load(open('yard_ks1970.json'))},
-    {'src': '1998 年 1:5000 像片基本圖', 'o': 1987, 'c': 2008, 'lines': json.load(open('yard_ks1998.json'))},
+    {'src': '1970 年 1:1200 都市計畫航測地形圖', 'o': 1960, 'c': 1977, 'lines': _yc(json.load(open('yard_ks1970.json')), 'ks1970')},
+    # 1977–1990：1984 年都市計畫航測地形圖（第 29 輪，yardtrace.py，以 1970 年描線當方向場）。分界取相鄰兩版的中間年份。
+    {'src': '1984 年都市計畫航測地形圖', 'o': 1977, 'c': 1991, 'lines': _yc(json.load(open('yard_ks1984.json')), 'ks1984')},
+    {'src': '1998 年 1:5000 像片基本圖', 'o': 1991, 'c': 2008, 'lines': _yc(json.load(open('yard_ks1998.json')), 'ks1998')},
     {'src': '1998 年 1:5000 像片基本圖', 'o': 1967, 'c': 2018, 'lines': _qc},
     {'src': '1998 年 1:5000 像片基本圖', 'o': 1975, 'c': 2018, 'lines': _jc},
     {'src': '既有', 'o': None, 'c': None, 'lines': _others},
 ]
 del G['yard']
+# 轉車台（第 29 輪，turntable.py）：圓與放射股道依 1970 年 1:1200 圖；1984 年圖上配置相同，1998 年像片基本圖上已不見。
+# 1945、1956 年舊航照上已有轉車台（1945 年另見扇形車庫），放射股道的配置不明，1945–1959 只畫圓。
+_tt = json.load(open('tt_ks1970.json'))
+G['tt'] = [
+    {'src': '1945、1956 年舊航照（位置依 1970 年圖）', 'o': 1945, 'c': 1960, 'center': _tt['center'], 'r': _tt['r_m'], 'spokes': []},
+    {'src': '1970 年 1:1200 都市計畫航測地形圖（1984 年圖相同）', 'o': 1960, 'c': 1991, 'center': _tt['center'], 'r': _tt['r_m'], 'spokes': _tt['spokes']},
+]
 print('yards', [(g['o'], g['c'], len(g['lines'])) for g in G['yards']])
 # 9) 交叉與疊線修正（第 28 輪，overlap.py 檢查）：
 #    側線與母線在接點附近交叉而過、或先疊在母線上走一段才分出，改成從接點起就在同一側以平滑曲線分出／併入。
@@ -460,6 +477,23 @@ def rdp_ll(L, eps=0.5):
         return [a, b]
     return [L[i] for i in _r(0, len(L) - 1)]
 X['糖鐵籬仔內線（籬仔內站—前鎮河—小港糖廠）'][0] = snap_shared(X['糖鐵籬仔內線（籬仔內站—前鎮河—小港糖廠）'][0], S['s2b'])
+# 中山四路（高雄端一帶）：糖鐵與第二臨港線原本相距約 8 m 並行 400 m。1984 年都市計畫航測地形圖（比例尺夠大，
+# 8 m 的兩股分得開）在這一段只畫了一條鐵路，1989、1993、2001 年經建版也只有一條（2001 年糖鐵已停用，
+# 那條只能是第二臨港線）。所以 15 m 以內的段落同樣改與第二臨港線同線（第 29 輪）。
+X['糖鐵籬仔內線（籬仔內站—前鎮河—小港糖廠）'][0] = snap_shared(X['糖鐵籬仔內線（籬仔內站—前鎮河—小港糖廠）'][0], S['s2'])
+# 主線移動後，五甲鳳山線與牛寮三角線的接點離主線 6–10 m，把端點移回主線上，位移在 40 m 內以餘弦漸變。
+def reattach_end(L, M, at_start, ramp=40.0):
+    P = [toM(p) for p in (L[::-1] if at_start else L)]
+    PM, sM = _arc(M)
+    q, _ = _at(PM, sM, _pos(PM, sM, P[-1])[1])
+    off = q - P[-1]
+    s = np.r_[0, np.cumsum([np.hypot(*(b - a)) for a, b in zip(P, P[1:])])]
+    s = s[-1] - s
+    out = [toLL(p + off * (0.5 * (1 + math.cos(math.pi * si / ramp)) if si < ramp else 0.0)) for p, si in zip(P, s)]
+    return out[::-1] if at_start else out
+_SM = X['糖鐵籬仔內線（籬仔內站—前鎮河—小港糖廠）'][0]
+X['糖鐵五甲鳳山線（鳳山—五甲—籬仔內線分岐）'][0] = reattach_end(X['糖鐵五甲鳳山線（鳳山—五甲—籬仔內線分岐）'][0], _SM, False)
+X['糖鐵牛寮三角線（往籬仔內）'][0] = reattach_end(X['糖鐵牛寮三角線（往籬仔內）'][0], _SM, True)
 # 6) stations & branch markers re-projected
 lines = [v for k, v in S.items() if not k.startswith('lr')] + [p[0] for p in X.values()]
 for n, p in list(G['st'].items()):

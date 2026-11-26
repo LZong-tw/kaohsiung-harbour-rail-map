@@ -174,6 +174,9 @@ const yard=G.yards.flatMap(gr=>gr.lines.map(g=>{const l=L.polyline(g,{color:'#7b
  // 有年代的組別直接用；沒有的依最近車站決定年份
  let o=gr.o,c=gr.c;if(o==null){let bd=1e9;for(const[n,so,sc]of STN){const p=G.st[n];if(!p)continue;const d=Math.hypot(p[0]-g[0][0],(p[1]-g[0][1])*.92);if(d<bd){bd=d;o=so;c=sc}}}
  l._o=o??0;l._c=c??9999;return l}));
+// 轉車台：圓（公尺半徑）與放射股道，依年代顯示
+const ttL=(G.tt||[]).map(t=>{const g=L.layerGroup([L.circle(t.center,{radius:t.r,color:'#7b2d8e',weight:1.6,opacity:.8,fill:false,interactive:false}),
+ ...t.spokes.map(sp=>L.polyline(sp,{color:'#7b2d8e',weight:1.2,opacity:.55,interactive:false}))]);g._o=t.o;g._c=t.c;return g});
 const lay={};
 for(const s of SEG){lay[s.id]=L.polyline(G.seg[s.id],{...STY[s.k],lineCap:'round',lineJoin:'round',interactive:false})}
 // 穿過站場的線依年代改走該年代的股道（G.alt：主線、支線；G.xalt：側線）。停用後的灰線用最後一個年代的線形。
@@ -195,6 +198,7 @@ var draw=function(y){
   if(y>=s.c){if(s.lr){l.remove();showLabel(id,false);continue}l.setStyle({...GH});l.addTo(m);l.bringToBack();showLabel(id,false);continue}
   l.setStyle({opacity:1,...STY[s.k],dashArray:STY[s.k].dashArray||null});l.addTo(m);if(s.lr)l.bringToFront();showLabel(id,true)}
  yard.forEach(g=>y>=g._o&&y<g._c?g.addTo(m):g.remove());
+ ttL.forEach(g=>y>=g._o&&y<g._c?g.addTo(m):g.remove());
  for(const[n,v]of Object.entries(stl)){
   if(y<v.o){v.mk.remove();continue}
   const on=y<v.c;v.mk.setStyle({color:on?'#3b4248':'#8a949c',fillColor:on?'#fff':'#c9ced2'});

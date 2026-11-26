@@ -2,6 +2,7 @@
 
 python3 yardtrace_line.py IMG Z W N POLY OUT.json [OVERLAY.png]
 
+參數可用環境變數覆寫：YT_KW、YT_SIDE、YT_THR、YT_BAND（線條較細的圖，例如 1984 年都市計畫航測地形圖）。
 POLY 為像素多邊形 [[x,y],...]，或 {"include": 多邊形, "exclude": [多邊形, ...]}（排除已知的道路邊、圍牆）。
 
 這張圖的鐵路符號是兩條細軌線夾一串黑色枕木塊（全寬約 5 px，z18），相鄰股道中心約 11 px。
@@ -15,7 +16,7 @@ POLY 為像素多邊形 [[x,y],...]，或 {"include": 多邊形, "exclude": [多
    去掉沿線 5 px 寬帶平均暗度低的單線（道路邊、圍牆、地界；股道符號有黑色枕木塊，暗度高）；
    平滑後以 RDP 簡化，轉成經緯度。
 """
-import json, math, sys
+import json, math, os, sys
 import cv2
 import numpy as np
 from PIL import Image, ImageDraw
@@ -23,11 +24,11 @@ from skimage.draw import polygon as poly_fill
 from skimage.morphology import skeletonize, remove_small_objects
 from yardtrace import build_graph, prune_spurs, chains, rdp
 
-KL, KW = 25, 3      # 方向核長、寬（px）
-SIDE = 5            # 側向取樣距離（px）：相鄰股道之間白底的中央
+KL, KW = 25, int(os.environ.get('YT_KW', 3))      # 方向核長、寬（px）
+SIDE = float(os.environ.get('YT_SIDE', 5))   # 側向取樣距離（px）：相鄰股道之間白底的中央
 STEP = 3            # 方向間隔（度）
-THR = 0.10          # 股道強度門檻
-BAND = 0.32         # 沿線 5 px 寬帶的平均暗度下限
+THR = float(os.environ.get('YT_THR', 0.10))   # 股道強度門檻
+BAND = float(os.environ.get('YT_BAND', 0.32))  # 沿線 5 px 寬帶的平均暗度下限
 SPUR = 12
 KEEP = 30
 

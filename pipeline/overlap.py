@@ -70,6 +70,10 @@ def lines(y):
         parts = pick_alt(G.get('xalt', {}).get(n), y, parts)
         for v in parts:
             L.append((n, 'extra', LineString([xy(p) for p in v])))
+    for ti, t in enumerate(G.get('tt', [])):
+        if t['o'] <= y < t['c']:
+            for si, sp in enumerate(t['spokes']):
+                L.append((f'轉車台[{ti}.{si}]', 'yard', LineString([xy(p) for p in sp])))
     for gi, gr in enumerate(G['yards']):
         for li, g in enumerate(gr['lines']):
             o, c = yard_years(gr, g)
