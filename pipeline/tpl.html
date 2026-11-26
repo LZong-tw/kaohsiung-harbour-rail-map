@@ -44,6 +44,8 @@ body{background:var(--bg);color:var(--ink);font:15px/1.45 "Noto Sans TC",system-
 .ls .y{color:var(--mute);font-variant-numeric:tabular-nums;white-space:nowrap;margin-left:6px;font-size:13px}
 .ls p{grid-column:2;margin:1px 0 0;color:var(--mute);font-size:13px}
 .ls.off b{font-weight:500;color:var(--mute)}
+.key{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2px 14px;margin:12px 0 0;font-size:13px;color:var(--mute)}
+.key div{display:flex;align-items:center;gap:8px;min-height:22px}.key svg{flex:none}
 .tog{display:flex;align-items:center;gap:8px;font-size:14px;min-height:40px;cursor:pointer;margin-top:10px;border-top:1px solid var(--line);padding-top:10px}
 .tog input{width:18px;height:18px;margin:0;accent-color:var(--acc)}
 button:focus-visible,input:focus-visible{outline:3px solid var(--acc);outline-offset:2px}
@@ -64,6 +66,7 @@ button:focus-visible,input:focus-visible{outline:3px solid var(--acc);outline-of
 <input type="range" id="sl" min="1900" max="2026" step="1" value="1977" aria-label="年份">
 <div class="ticks" id="tk"></div>
 <p class="ev" id="ev"></p>
+<div class="key" id="key" aria-label="線型說明"></div>
 <h2>營運中<span id="na"></span></h2><ul class="ls" id="la"></ul>
 <h2>已停用<span id="nc"></span></h2><ul class="ls off" id="lc"></ul>
 <label class="tog"><input type="checkbox" id="ex" checked>顯示側線與糖鐵</label>
@@ -124,9 +127,10 @@ const EV=[
 [2017,'2017','輕軌第一階段延伸到 C14 哈瑪星'],
 [2018,'2018-09-28','東段末班車開出，10-01 臨港線全線廢止；10-14 縱貫、屏東線市區段地下化'],
 [2024,'2024-01-01','輕軌環狀全線試營運']];
-const STY={trunk:{color:'#1d4e89',weight:6},main:{color:'#7b2d8e',weight:5},br:{color:'#c2620a',weight:4},red:{color:'#c1121f',weight:5},unc:{color:'#c2620a',weight:3,dashArray:'3 7'},lr:{color:'#2f9e44',weight:7,opacity:.85},yd:{color:'#7b2d8e',weight:2.5,opacity:.9}};
+const STY={trunk:{color:'#1d4e89',weight:6},main:{color:'#7b2d8e',weight:5},br:{color:'#c2620a',weight:4},red:{color:'#c1121f',weight:5},unc:{color:'#c2620a',weight:3.5,dashArray:'0.5 7'},lr:{color:'#2f9e44',weight:7,opacity:.85},yd:{color:'#7b2d8e',weight:2.5,opacity:.9}};
 const GH={color:'#8a949c',weight:3,dashArray:'7 7',opacity:.9};
 const sw=S=>`<svg width="34" height="10" aria-hidden="true"><line x1="2" y1="5" x2="32" y2="5" stroke="${S.color}" stroke-width="${Math.min(S.weight,6)}" ${S.dashArray?`stroke-dasharray="${S.dashArray}"`:''} stroke-linecap="round"/></svg>`;
+document.getElementById('key').innerHTML=[[STY.main,'營運中'],[GH,'已停用'],[{color:'#c2620a',weight:3,dashArray:'6 4'},'專用側線'],[{color:'#7a5c3a',weight:3,dashArray:'6 4'},'糖業鐵道'],[STY.unc,'年份未查證']].map(([s,t])=>`<div>${sw(s)}${t}</div>`).join('');
 const m=L.map('map',{zoomControl:false,zoomSnap:.1,attributionControl:true,maxBounds:G.bounds,maxBoundsViscosity:.8,minZoom:12,maxZoom:17});window.__map=m;
 L.imageOverlay('base.jpg',G.bounds).addTo(m);L.control.zoom({position:'topright'}).addTo(m);
 const mapEl=document.getElementById('map');let Z0=13;
