@@ -21,8 +21,8 @@ body{background:var(--bg);color:var(--ink);font:15px/1.45 "Noto Sans TC",system-
 .app{display:grid;grid-template-columns:minmax(0,1fr) 360px;height:100%}
 .mapbox{position:relative}
 #map{position:absolute;inset:0;background:#d9dcd8}
-@media(prefers-color-scheme:dark){:root:not([data-theme=light]) .leaflet-image-layer{filter:invert(.92) hue-rotate(180deg) brightness(.85)}}
-:root[data-theme=dark] .leaflet-image-layer{filter:invert(.92) hue-rotate(180deg) brightness(.85)}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]) .leaflet-tile-pane{filter:invert(.92) hue-rotate(180deg) brightness(.85)}}
+:root[data-theme=dark] .leaflet-tile-pane{filter:invert(.92) hue-rotate(180deg) brightness(.85)}
 .hd{position:absolute;z-index:500;top:12px;left:16px;pointer-events:none;color:#14181d;text-shadow:0 0 3px #fff,0 0 8px #fff,0 0 14px #fff}
 .hd h1{margin:0;font-size:clamp(18px,2.4vw,24px);font-weight:700;line-height:1.2}
 .hd output{display:block;font-size:clamp(48px,8vw,80px);font-weight:900;line-height:1;letter-spacing:-.02em;font-variant-numeric:tabular-nums}
@@ -55,6 +55,8 @@ button:focus-visible,input:focus-visible{outline:3px solid var(--acc);outline-of
 .leaflet-tooltip.pick{font:13px/1.5 "Noto Sans TC",sans-serif;padding:5px 9px;white-space:nowrap}.pick span{margin-left:.6em;color:#5b6670}.pick .off{color:#8a949c}
 .ll{font-family:"Noto Sans TC",sans-serif;font-weight:700;paint-order:stroke;stroke:#fff;stroke-linejoin:round;pointer-events:none;letter-spacing:.06em}
 .leaflet-container{font-family:"Noto Sans TC",sans-serif}
+/* 小數縮放層級時圖磚之間會露出一像素的縫：讓每張圖磚多蓋一像素，並取消 Leaflet 預設的 plus-lighter 疊色（否則重疊處會變亮） */
+.leaflet-container img.leaflet-tile{mix-blend-mode:normal;width:257px!important;height:257px!important}
 @media(max-width:760px){html,body{height:auto}.app{grid-template-columns:minmax(0,1fr);grid-template-rows:62svh auto;height:auto}.side{border-left:0;border-top:1px solid var(--line);overflow:visible}}
 </style>
 
@@ -132,7 +134,7 @@ const GH={color:'#8a949c',weight:3,dashArray:'7 7',opacity:.9};
 const sw=S=>`<svg width="34" height="10" aria-hidden="true"><line x1="2" y1="5" x2="32" y2="5" stroke="${S.color}" stroke-width="${Math.min(S.weight,6)}" ${S.dashArray?`stroke-dasharray="${S.dashArray}"`:''} stroke-linecap="round"/></svg>`;
 document.getElementById('key').innerHTML=[[STY.trunk,'縱貫線、屏東線'],[STY.main,'臨港線'],[STY.br,'臨港線支線'],[STY.red,'第二臨港線'],[STY.lr,'環狀輕軌'],[GH,'已停用'],[{color:'#c2620a',weight:3,dashArray:'6 4'},'專用側線'],[{color:'#7a5c3a',weight:3,dashArray:'6 4'},'糖業鐵道'],[STY.unc,'支線，年份未查證']].map(([s,t])=>`<div>${sw(s)}${t}</div>`).join('');
 const m=L.map('map',{zoomControl:false,zoomSnap:.1,attributionControl:true,maxBounds:G.bounds,maxBoundsViscosity:.8,minZoom:12,maxZoom:17});window.__map=m;
-L.imageOverlay('base.jpg',G.bounds).addTo(m);L.control.zoom({position:'topright'}).addTo(m);
+L.tileLayer('t/{z}/{x}/{y}.webp',{minZoom:12,maxZoom:17,maxNativeZoom:15,minNativeZoom:12,bounds:G.bounds,keepBuffer:4}).addTo(m);L.control.zoom({position:'topright'}).addTo(m);
 const mapEl=document.getElementById('map');let Z0=13;
 const scale=()=>Math.min(2.4,Math.max(.6,Math.pow(2,(m.getZoom()-Z0)*.5)));
 const LBL={};
@@ -168,12 +170,12 @@ function relabel(){mapEl.style.setProperty('--s',scale().toFixed(3));for(const k
  for(const k of keys){const o=LBL[k];if(!o.on||!o.el||o.el.style.display==='none')continue;const b0=o.el.getBoundingClientRect(),sx=b0.width*.3,sy=b0.height*.3,r={left:b0.left+sx,right:b0.right-sx,top:b0.top+sy,bottom:b0.bottom-sy};
   if(R.some(q=>!(r.right<q.left||r.left>q.right||r.bottom<q.top||r.top>q.bottom))){o.el.style.display='none';continue}R.push(r)}}
 
-m.attributionControl.setPrefix(false).addAttribution('© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors');
+m.attributionControl.setPrefix(false).addAttribution('© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors');m.attributionControl.addAttribution('股道：<a href="https://maps.nlsc.gov.tw/">內政部國土測繪中心</a>像片基本圖');
 const FB=[[22.556,120.268],[22.672,120.362]];m.fitBounds(FB);addEventListener('load',()=>{m.invalidateSize();m.fitBounds(FB)});
-const yard=G.yard.map(g=>{const l=L.polyline(g,{color:'#7b2d8e',weight:1.5,opacity:.6,interactive:false});
- // 股道依最近的車站決定年份
- let best=null,bd=1e9;for(const[n,o,c]of STN){const p=G.st[n];if(!p)continue;const d=Math.hypot(p[0]-g[0][0],(p[1]-g[0][1])*.92);if(d<bd){bd=d;best=[o,c]}}
- l._o=best?best[0]:0;l._c=best?best[1]:9999;return l});
+const yard=G.yards.flatMap(gr=>gr.lines.map(g=>{const l=L.polyline(g,{color:'#7b2d8e',weight:1.2,opacity:.55,interactive:false});
+ // 有年代的組別直接用；沒有的依最近車站決定年份
+ let o=gr.o,c=gr.c;if(o==null){let bd=1e9;for(const[n,so,sc]of STN){const p=G.st[n];if(!p)continue;const d=Math.hypot(p[0]-g[0][0],(p[1]-g[0][1])*.92);if(d<bd){bd=d;o=so;c=sc}}}
+ l._o=o??0;l._c=c??9999;return l}));
 const lay={};
 for(const s of SEG){lay[s.id]=L.polyline(G.seg[s.id],{...STY[s.k],lineCap:'round',lineJoin:'round',interactive:false})}
 for(const s of SEG)if(s.lb)mkLabel(s.id,G.seg[s.id],s.lb,STY[s.k].color,13);

@@ -297,6 +297,39 @@ G['xy'] = {
 }
 missing = [k for k in X if k not in G['xy']]
 assert not missing, missing
+# 8) 站場股道（第 27 輪）：高雄港站、前鎮車場、高雄機廠改用 1:5000 像片基本圖描出的股道（yards.py），
+#    依年代分組；其餘站場維持原樣，年份由網頁依最近車站決定。
+import math as _m
+def _poly_ll(f, Z, W, N):
+    n = 2 ** Z * 256; ox = (W + 180) / 360 * n; oy = (1 - _m.asinh(_m.tan(_m.radians(N))) / _m.pi) / 2 * n
+    def ll(x, y):
+        return (_m.degrees(_m.atan(_m.sinh(_m.pi * (1 - 2 * (oy + y) / n)))), (ox + x) / n * 360 - 180)
+    return [ll(x, y) for x, y in json.load(open(f))]
+def _inside(pt, poly):
+    la, lo = pt; c = False
+    for i in range(len(poly)):
+        (a1, o1), (a2, o2) = poly[i], poly[i - 1]
+        if (a1 > la) != (a2 > la) and lo < (o2 - o1) * (la - a1) / (a2 - a1) + o1:
+            c = not c
+    return c
+_PKS = _poly_ll('yard_poly_ks.json', 18, 120.2715, 22.6270)
+_PQZ = _poly_ll('yard_poly_qz.json', 18, 120.3150, 22.6200)
+_mid = lambda g: g[len(g) // 2]
+_old_ks = [g for g in G['yard'] if _inside(_mid(g), _PKS)]
+_others = [g for g in G['yard'] if not _inside(_mid(g), _PKS) and not _inside(_mid(g), _PQZ)]
+_qz = json.load(open('yard_qz1998.json'))
+_jc = [g for g in _qz if sum(p[0] for p in g) / len(g) > 22.6115]   # 機廠
+_qc = [g for g in _qz if sum(p[0] for p in g) / len(g) <= 22.6115]  # 前鎮車場
+G['yards'] = [
+    {'src': '1945 年美軍高雄市街圖', 'o': 1900, 'c': 1960, 'lines': _old_ks},
+    {'src': '1976 年 1:5000 像片基本圖', 'o': 1960, 'c': 1987, 'lines': json.load(open('yard_ks1976.json'))},
+    {'src': '1998 年 1:5000 像片基本圖', 'o': 1987, 'c': 2008, 'lines': json.load(open('yard_ks1998.json'))},
+    {'src': '1998 年 1:5000 像片基本圖', 'o': 1967, 'c': 2018, 'lines': _qc},
+    {'src': '1998 年 1:5000 像片基本圖', 'o': 1975, 'c': 2018, 'lines': _jc},
+    {'src': '既有', 'o': None, 'c': None, 'lines': _others},
+]
+del G['yard']
+print('yards', [(g['o'], g['c'], len(g['lines'])) for g in G['yards']])
 # 6) stations & branch markers re-projected
 lines = [v for k, v in S.items() if not k.startswith('lr')] + [p[0] for p in X.values()]
 for n, p in list(G['st'].items()):

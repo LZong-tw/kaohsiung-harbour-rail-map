@@ -160,7 +160,11 @@ def main():
     os.makedirs(OUT)
     open(f'{OUT}/.nojekyll', 'w').close()
     for f in os.listdir('site'):
-        if f != 'index.html' and not f.startswith('_'):
+        if f == 'index.html' or f.startswith('_'):
+            continue
+        if os.path.isdir(f'site/{f}'):
+            shutil.copytree(f'site/{f}', f'{OUT}/{f}')   # 底圖圖磚 site/t/
+        else:
             shutil.copy(f'site/{f}', f'{OUT}/{f}')
     open(f'{OUT}/index.html', 'w', encoding='utf-8').write(map_page())
     for src, out, title in PAGES:
