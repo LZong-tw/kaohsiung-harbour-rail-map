@@ -87,24 +87,39 @@ def splice(L, path, c0, c1, bl=30.0):
     return p
 
 
+# 鍵為站場股道組別的起始年（G['yards'] 裡高雄港站各組的 'o'），值為該年代各線的路徑。
 # 每一年代、每一條線：('seg' 或 'x', 名稱, 錨點清單, 起點接回原線, 終點接回原線)
 # 起點／終點不接回原線，表示該端就是線的端點（例如以高雄港站為端點的西臨港線）。
 PLAN = {
-    0: [  # 1945 年美軍高雄市街圖（1900–1959）
+    1900: [  # 1945 年美軍高雄市街圖（1900–1959）
         # 濱線：原線形在車站以南沿鼓山一路，比 1945 年圖（與 1970 年圖）上的濱線股道偏西 20–40 m；
         # 改走 1945 年圖的股道，北端以 90 m 長的緩和段接回原線（1945 年描線在車站南側有 40 m 以上的缺口）。
         ('seg', 'hm', [(720, 1262), (495, 1450)], True, True, {'blend': 90.0}),
         # 北裏岸壁線東側的弧線在 1970 年圖上仍有股道（行政區界也沿著它），1945 年描線只是沒描到，所以維持原線形。
         ('seg', 'ob', [(1048, 561), (1030, 650), (1005, 760), (999, 850), (999, 950), (1001, 1000), (1030, 1200), (1060, 1290)], True, True),
     ],
-    1: [  # 1970 年 1:1200 都市計畫航測地形圖（1960–1986）
+    1960: [  # 1970 年 1:1200 都市計畫航測地形圖（1960–1976）
         # 站場北端咽喉區股道密集、描線破碎，各線在 y≈760–800 以北維持原線形（與股道同向並行）。
         ('seg', 'west', [(838, 1030), (921, 766)], False, True),
         ('seg', 'hm', [(838, 1030), (560, 1430)], False, True),
         ('seg', 'ob', [(986, 795), (1040, 1300), (1100, 1560), (1108, 1609)], True, True),
         ('seg', 'l1w', [(1018, 800), (1240, 1150)], True, True),
     ],
-    2: [  # 1998 年 1:5000 像片基本圖（1987–2007）
+    1977: [  # 1984 年都市計畫航測地形圖（1977–1990）
+        ('seg', 'west', [(838, 1030), (921, 766)], False, True),
+        ('seg', 'hm', [(838, 1030), (560, 1430)], False, True),
+        # 1984 年描線在站場中段股道完整：表岸壁線沿同一股（x≈990–1010）一路向南，錨點吸附半徑縮到 8 m，
+        # 避免像 1970 年圖那組錨點一樣在中段斜跨三股（第 29 輪）。
+        ('seg', 'ob', [(989, 850), (1007, 1300), (1054, 1543), (1108, 1609)], True, True, {'snap': 8.0}),
+        ('seg', 'l1w', [(1018, 800), (1240, 1150)], True, True),
+        # 裏岸壁線：原線形的西段在 1984 年圖上穿過建物；圖上的裏岸壁線是站場東側一股往東南彎出、
+        # 沿碼頭北側倉庫列向東的股道。這股與表岸壁線所在的股道之間隔兩股，以一段長約 100 m 的
+        # 緩和曲線（轉轍器梯線）從表岸壁線分出，不在短距離內斜跨。到 x≈1140 與原線形會合後沿原線形：
+        # 再往東，1984 年圖倉庫列南側有一股帶枕木的股道，比原線形（依 1989 年經建版與碼頭輪廓）偏南約 25 m，
+        # 哪一條才是裏岸壁線未查明，先不改（第 29 輪）。
+        ('x', '裏岸壁線', [(1014, 1045), (1049, 1228), (1138, 1438)], False, True, {'snap': 8.0, 'from': ('ob', (989, 860))}),
+    ],
+    1991: [  # 1998 年 1:5000 像片基本圖（1991–2007）
         ('seg', 'west', [(838, 1030), (921, 766)], False, True),
         ('seg', 'hm', [(838, 1030), (560, 1430)], False, True),
         ('seg', 'ob', [(1048, 561), (1015, 700), (986, 795), (1100, 1560), (1150, 1625)], True, True),
@@ -172,12 +187,18 @@ REATTACH = {'裏岸壁線': 'ob', '中岸壁線': 'ob'}
 def main():
     G = json.load(open('geo_v13.json'))
     G['alt'], G['xalt'] = {}, {}
-    for gi, plan in PLAN.items():
-        gr = G['yards'][gi]
+    for y0, plan in PLAN.items():
+        gr = next(g for g in G['yards'] if g.get('o') == y0)
         g = Graph(gr['lines'])
         for kind, name, anchors, c0, c1, *opt in plan:
             opt = opt[0] if opt else {}
-            pts, full = route(g, [px2ll(*p) for p in anchors], snap=20.0)
+            pts, full = route(g, [px2ll(*p) for p in anchors], snap=opt.get('snap', 20.0))
+            if 'from' in opt:                  # 自母線（本年代的線形）上的指定點以緩和曲線分出，接到路徑起點
+                par = G['alt'][opt['from'][0]][-1][2]
+                P0, h0, _ = on_line(par, px2ll(*opt['from'][1]))
+                a, b = np.array(to_xy(pts[0])), np.array(to_xy(pts[1]))
+                lead = hermite(P0, h0, a, math.atan2(*(b - a)[::-1]))
+                pts = [to_ll(*p) for p in lead[:-1]] + list(pts)
             base = G['seg'][name] if kind == 'seg' else G['extra'][name][0]
             new = splice(base, pts, c0, c1, opt.get('blend', 30.0))
             jumps = sum(1 for s, t in zip(full, full[1:]) if s[0] != t[0])
@@ -189,8 +210,11 @@ def main():
     for o, c, g in G['alt'].get('hm', []):
         G['xalt'].setdefault(hn, []).append([o, c, [hamasen_link(g)]])
     for xn, par in REATTACH.items():
+        own = {o for o, c, g in G['xalt'].get(xn, [])}     # 已在 PLAN 依股道算過的年代不再重接
         for o, c, g in G['alt'].get(par, []):
-            G['xalt'].setdefault(xn, []).append([o, c, [reattach(G['extra'][xn][0], g)] + G['extra'][xn][1:]])
+            if o not in own:
+                G['xalt'].setdefault(xn, []).append([o, c, [reattach(G['extra'][xn][0], g)] + G['extra'][xn][1:]])
+        G['xalt'].get(xn, []).sort(key=lambda a: a[0])
     json.dump(G, open('geo_v13.json', 'w'), separators=(',', ':'))
 
 

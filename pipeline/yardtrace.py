@@ -2,6 +2,8 @@
 
 python3 yardtrace.py IMG Z W N POLY OUT.json [OVERLAY.png]
 
+環境變數 YT_PRIOR=股道.json：以另一張圖描出的股道當方向場（枕木畫成長橫線、會帶走結構張量主方向的圖用）。
+
 IMG   nlsc.py 拼出的圖（縮放層級 Z，左上角經緯度 W、N）
 POLY  站場範圍：JSON 的像素多邊形 [[x,y],...]，只在範圍內找股道
 OUT   描出的股道，[[lat,lon],...] 的清單
@@ -16,6 +18,7 @@ OUT   描出的股道，[[lat,lon],...] 的清單
 """
 import json
 import math
+import os
 import sys
 
 import cv2
@@ -170,6 +173,26 @@ def main():
     # 梯度主方向的垂直方向就是線的走向（以 x 向右、y 向下的角度表示）
     theta_g = 0.5 * np.arctan2(2 * Arc, Acc - Arr)          # 梯度方向（相對 x 軸）
     dom = (np.degrees(theta_g) + 90) % 180                   # 線的走向
+    prior = os.environ.get('YT_PRIOR')
+    if prior:
+        # 枕木畫成橫跨整束股道的長橫線時（1984 年都市計畫航測地形圖），結構張量的主方向會被橫線帶走。
+        # 改用另一張圖描出的股道（同一站場、配置相近）當方向場：每個像素取最近一條先驗股道的走向。
+        n_ = 2 ** Z * 256
+        ox_ = (W + 180) / 360 * n_
+        oy_ = (1 - math.asinh(math.tan(math.radians(N))) / math.pi) / 2 * n_
+        canvas = np.zeros(gray.shape, np.uint8)
+        angimg = np.zeros(gray.shape, np.float32)
+        for g in json.load(open(prior)):
+            P2 = [((lo + 180) / 360 * n_ - ox_, (1 - math.asinh(math.tan(math.radians(la))) / math.pi) / 2 * n_ - oy_) for la, lo in g]
+            for (x1, y1), (x2, y2) in zip(P2, P2[1:]):
+                a_ = math.degrees(math.atan2(y2 - y1, x2 - x1)) % 180
+                tmp = np.zeros(gray.shape, np.uint8)
+                cv2.line(tmp, (int(round(x1)), int(round(y1))), (int(round(x2)), int(round(y2))), 1, 3)
+                canvas |= tmp
+                angimg[tmp.astype(bool)] = a_
+        from scipy.ndimage import distance_transform_edt
+        _, (iy, ix) = distance_transform_edt(canvas == 0, return_indices=True)
+        dom = angimg[iy, ix]
     keep = np.zeros(m8.shape, bool)
     for ang in np.arange(0, 180, 6):
         k = np.zeros((SEL, SEL), np.uint8)
