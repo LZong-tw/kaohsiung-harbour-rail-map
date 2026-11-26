@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>中央研究院臺灣百年歷史地圖 WMTS 服務</title>
+  <link rel="stylesheet" type="text/css" href="tileserver.css" />
+  <script src="tileserver.js"></script>
+<body>
+<script>tileserver(null,'https://gis.sinica.edu.tw/tileserver/tms','https://gis.sinica.edu.tw/tileserver/wmts');</script>
+<h1>中央研究院臺灣百年歷史地圖 WMTS 服務</h1>
+<p>
+<b>服務網址為：https://gis.sinica.edu.tw/tileserver/wmts</b>
+</p>
+<p>
+<b>語法(OGC WMTS服務)</b><br>
+https://gis.sinica.edu.tw/tileserver/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=<font color="#FF0000">{Layer_ID}</font>&STYLE=_null&TILEMATRIXSET= GoogleMapsCompatible &TILEMATRIX=<font color="#FF0000">{z}</font>&TILEROW=<font color="#FF0000">{y}</font>&TILECOL=<font color="#FF0000">{x}</font>&FORMAT=image/<font color="#FF0000">jpeg</font>
+</p>
+<p>
+<b>案例：</b>
+	<ul><li>
+		日治二萬分之一台灣堡圖(明治版)<br>
+		https://gis.sinica.edu.tw/tileserver/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=<font color="#FF0000">JM20K_1904</font>&TILEMATRIXSET=GoogleMapsCompatible&TILEMATRIX=<font color="#FF0000">12</font>&TILEROW=<font color="#FF0000">1753</font>&TILECOL=<font color="#FF0000">3430</font>&FORMAT=image/<font color="#FF0000">jpeg</font>
+		</li>
+		<li>
+			日治五萬分之一地形圖(陸地測量部)<br>
+			https:/gis.sinica.edu.tw/tileserver/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=<font color="#FF0000">JM50K_1920</font>&TILEMATRIXSET=GoogleMapsCompatible&TILEMATRIX=<font color="#FF0000">12</font>&TILEROW=<font color="#FF0000">1753</font>&TILECOL=<font color="#FF0000">3430</font>&FORMAT=image/<font color="#FF0000">png</font>
+		</li>
+	</ul>
+</p>
+<b>語法(RESTful API)</b><br>
+https://gis.sinica.edu.tw/tileserver/file-exists.php?img=<font color="#FF0000">{Layer_ID}</font>-<font color="#FF0000">{Image_Format}</font>-<font color="#FF0000">{z}</font>-<font color="#FF0000">{x}</font>-<font color="#FF0000">{y}</font>
+</p>
+<p>
+<b>案例：</b>
+        <ul><li>日治二萬分之一台灣堡圖(明治版)<br>https://gis.sinica.edu.tw/tileserver/file-exists.php?img=<font color="#FF0000">JM20K_1904</font>-<font color="#FF0000">jpg</font>-<font color="#FF0000">12</font>-<font color="#FF0000">3430</font>-<font color="#FF0000">1753</font></li>
+                <li>日治五萬分之一地形圖(陸地測量部)<br>https://gis.sinica.edu.tw/tileserver/file-exists.php?img=<font color="#FF0000">JM50K_1920</font>-<font color="#FF0000">png</font>-<font color="#FF0000">12</font>-<font color="#FF0000">3430</font>-<font color="#FF0000">1753</font></li>
+        </ul>
+</p>
+更多圖層介接訊息可以參考 https://gis.sinica.edu.tw/tileserver/wmts 中，＜ResourceURL＞欄位資訊
+<p>
+<b>GIS應用軟體介接：</b>
+	<ul><li>
+			QuantumGIS Desktop 2.0 : open with Layer->Add WMS layer<br>
+			<a href="https://gis.rchss.sinica.edu.tw/qgis/archives/2569/" target="_blank" style="text-decoration: none;color: #4183D8">https://gis.rchss.sinica.edu.tw/qgis/archives/2569/</a>
+		</li>
+		<li>
+			ESRI ArcGIS Desktop 10.1+ : native WMTS implementation supported<br>
+			<a href="https://desktop.arcgis.com/en/desktop/latest/manage-data/using-arccatalog/connecting-to-gis-servers.htm" target="_blank" style="text-decoration: none;color: #4183D8">https://desktop.arcgis.com/en/desktop/latest/manage-data/using-arccatalog/connecting-to-gis-servers.htm</a>
+		</li>
+                <li>
+                        ESRI ArcGIS Online : MODIFY MAP -> Add Layer from Web -> choose 'A WMTS OGC Web Service'<br>
+			<a href="https://www.arcgis.com/home/webmap/viewer.html" target="_blank" style="text-decoration: none;color: #4183D8">https://www.arcgis.com/home/webmap/viewer.html</a>
+                </li>
+		<li>
+			ArcBruTiles plugin for ArcGIS 9.3+ : via TMS endpoint<br>
+			<a href="https://arcbrutile.codeplex.com" target="_blank" style="text-decoration: none;color: #4183D8">https://arcbrutile.codeplex.com</a>
+		</li>
+		<li>
+			OpenLayers WMTS Layer - including parsing GetCapabilities<br>
+			<a href="https://www.openlayers.org" target="_blank" style="text-decoration: none;color: #4183D8">https://www.openlayers.org</a>
+		</li>
+		<li>
+			GAIA - native WMTS (issues with 3857 to be fixed)<br>
+			<a href="https://www.thecarbonproject.com/gaia.php" target="_blank" style="text-decoration: none;color: #4183D8">https://www.thecarbonproject.com/gaia.php</a>
+		</li>
+                <li>
+                        OruxMaps(Android APP) : update oruxmaps/mapfiles/onlinemapsources.xml<br>
+                        <a href="https://gis.sinica.edu.tw/tileserver/onlinemapsources.xml" target="_blank" style="text-decoration: none;color: #4183D8">https://gis.sinica.edu.tw/tileserver/onlinemapsources.xml</a>
+                </li>
+		<li>
+			Mobile Atlas Creator(MOBAC) : add "Custom maps" XML files into the mapsources directory<br>
+			<a href="https://gis.sinica.edu.tw/tileserver/mobac.zip" target="_blank" style="text-decoration: none;color: #4183D8">https://gis.sinica.edu.tw/tileserver/mobac.zip</a>
+		</li>
+                <li>
+                        Viking GPS data editor and analyzer : replace "Custom maps" XML files into <USER HOME DIRECTORY>/.viking/maps.xml<br>
+                        <a href="https://gis.sinica.edu.tw/tileserver/viking.zip" target="_blank" style="text-decoration: none;color: #4183D8">https://gis.sinica.edu.tw/tileserver/viking.zip</a>
+                </li>
+                <li>
+                        SuperGIS Desktop 3.2 : with OGC Service Add-on<br>
+                        <a href="https://www.supergeo.com.tw/P_OGCAddon.asp" target="_blank" style="text-decoration: none;color: #4183D8">https://www.supergeo.com.tw/P_OGCAddon.asp</a>
+                </li>
+                <li>
+                        Locus(Android APP) : copy xml file to Locus\mapsOnline\custom folder <br>
+                        <a href="https://gis.sinica.edu.tw/tileserver/Locus_OnlineMaps.zip" target="_blank" style="text-decoration: none;color: #4183D8">https://gis.sinica.edu.tw/tileserver/Locus_OnlineMaps.zip</a>
+                </li>
+	</ul>
+</p>
+<p>
+<b>預覽：</b>
+<ul><li>
+<iframe width="700" height="400" src="https://data.depositar.io/dataset/wmts-sinica-taiwan/resource/328fee57-b873-488e-9ff0-463b8e8555f4/view/3a803c90-7b12-499d-9969-7b5915aee1b7" frameBorder="0"></iframe>
+</li></ul>
+</p>
+<h3>Available maps： <font color='#FF0000'>{Layer_ID}</font></h3><ul><li><a href='/showwmts/index.php?s=tileserver&l=1956_Landuse' target='_blank' style='text-decoration:none;'>1956-臺灣土地利用及林型圖 : 1956_Landuse</a><li><a href='/showwmts/index.php?s=tileserver&l=1956_Landuse_250K_1' target='_blank' style='text-decoration:none;'>1956-臺灣省土地利用及林型分類圖 : 1956_Landuse_250K_1</a><li><a href='/showwmts/index.php?s=tileserver&l=1956_Landuse_250K_2' target='_blank' style='text-decoration:none;'>1956-臺灣省材積級與及保育問題等級圖 : 1956_Landuse_250K_2</a><li><a href='/showwmts/index.php?s=tileserver&l=1959_Landuse_windbreak_25K' target='_blank' style='text-decoration:none;'>1959-臺灣海岸及耕地防風林狀況圖 : 1959_Landuse_windbreak_25K</a><li><a href='/showwmts/index.php?s=tileserver&l=1974_Landuse_250K' target='_blank' style='text-decoration:none;'>1974-臺灣山坡地土地利用現況圖 : 1974_Landuse_250K</a><li><a href='/showwmts/index.php?s=tileserver&l=1979_Landuse_25K_Changhua' target='_blank' style='text-decoration:none;'>1979-土地灌溉利用圖_彰化縣 : 1979_Landuse_25K_Changhua</a><li><a href='/showwmts/index.php?s=tileserver&l=1979_Landuse_25K_Hsinchu' target='_blank' style='text-decoration:none;'>1979-土地灌溉利用圖_新竹縣 : 1979_Landuse_25K_Hsinchu</a><li><a href='/showwmts/index.php?s=tileserver&l=1979_Landuse_25K_Hualien' target='_blank' style='text-decoration:none;'>1979-土地灌溉利用圖_花蓮縣 : 1979_Landuse_25K_Hualien</a><li><a href='/showwmts/index.php?s=tileserver&l=1979_Landuse_25K_Miaoli' target='_blank' style='text-decoration:none;'>1979-土地灌溉利用圖_苗栗縣 : 1979_Landuse_25K_Miaoli</a><li><a href='/showwmts/index.php?s=tileserver&l=1979_Landuse_25K_Nantou' target='_blank' style='text-decoration:none;'>1979-土地灌溉利用圖_南投縣 : 1979_Landuse_25K_Nantou</a><li><a href='/showwmts/index.php?s=tileserver&l=1979_Landuse_25K_Pingtung' target='_blank' style='text-decoration:none;'>1979-土地灌溉利用圖_屏東縣 : 1979_Landuse_25K_Pingtung</a><li><a href='/showwmts/index.php?s=tileserver&l=1979_Landuse_25K_Taichung' target='_blank' style='text-decoration:none;'>1979-土地灌溉利用圖_臺中縣市 : 1979_Landuse_25K_Taichung</a><li><a href='/showwmts/index.php?s=tileserver&l=1979_Landuse_25K_Taipei' target='_blank' style='text-decoration:none;'>1979-土地灌溉利用圖_臺北縣市 : 1979_Landuse_25K_Taipei</a><li><a href='/showwmts/index.php?s=tileserver&l=1979_Landuse_25K_Taitung' target='_blank' style='text-decoration:none;'>1979-土地灌溉利用圖_臺東縣 : 1979_Landuse_25K_Taitung</a><li><a href='/showwmts/index.php?s=tileserver&l=1979_Landuse_25K_Taoyuan' target='_blank' style='text-decoration:none;'>1979-土地灌溉利用圖_桃園縣 : 1979_Landuse_25K_Taoyuan</a><li><a href='/showwmts/index.php?s=tileserver&l=1979_Landuse_25K_Yilan' target='_blank' style='text-decoration:none;'>1979-土地灌溉利用圖_宜蘭縣 : 1979_Landuse_25K_Yilan</a><li><a href='/showwmts/index.php?s=tileserver&l=AM25K_1944A' target='_blank' style='text-decoration:none;'>1944-美軍地形圖-1:25,000 : AM25K_1944A</a><li><a href='/showwmts/index.php?s=tileserver&l=AM25K_1944B' target='_blank' style='text-decoration:none;'>1944-美軍航照圖-1:25,000 : AM25K_1944B</a><li><a href='/showwmts/index.php?s=tileserver&l=AM50K_1944' target='_blank' style='text-decoration:none;'>1944-美軍地形圖-1:50,000 : AM50K_1944</a><li><a href='/showwmts/index.php?s=tileserver&l=AMCityPlan_1945' target='_blank' style='text-decoration:none;'>1945-美軍繪製臺灣城市地圖 : AMCityPlan_1945</a><li><a href='/showwmts/index.php?s=tileserver&l=AMS250K_1944' target='_blank' style='text-decoration:none;'>1944-美軍二十五萬分一地形圖-1:250,000 : AMS250K_1944</a><li><a href='/showwmts/index.php?s=tileserver&l=Admin_1901a' target='_blank' style='text-decoration:none;'>1901-日治行政區-廳(1900年代) : Admin_1901a</a><li><a href='/showwmts/index.php?s=tileserver&l=Admin_1901b' target='_blank' style='text-decoration:none;'>1901-日治行政區-堡里(1900年代) : Admin_1901b</a><li><a href='/showwmts/index.php?s=tileserver&l=Admin_1901c' target='_blank' style='text-decoration:none;'>1901-日治行政區-街庄(1900年代) : Admin_1901c</a><li><a href='/showwmts/index.php?s=tileserver&l=Admin_1930a' target='_blank' style='text-decoration:none;'>1930-日治行政區-州廳(1930年代) : Admin_1930a</a><li><a href='/showwmts/index.php?s=tileserver&l=Admin_1930b' target='_blank' style='text-decoration:none;'>1930-日治行政區-郡市(1930年代) : Admin_1930b</a><li><a href='/showwmts/index.php?s=tileserver&l=Admin_1930c' target='_blank' style='text-decoration:none;'>1930-日治行政區-街庄(1930年代) : Admin_1930c</a><li><a href='/showwmts/index.php?s=tileserver&l=JM100K_1905' target='_blank' style='text-decoration:none;'>1905-日治十萬分一臺灣圖-1:100,000 : JM100K_1905</a><li><a href='/showwmts/index.php?s=tileserver&l=JM1M_1931' target='_blank' style='text-decoration:none;'>1931-臺灣公共埤圳組合及水利組合灌溉排水區域圖 : JM1M_1931</a><li><a href='/showwmts/index.php?s=tileserver&l=JM200K_1897' target='_blank' style='text-decoration:none;'>1897-日治臺灣假製二十萬分一圖-1:200,000 : JM200K_1897</a><li><a href='/showwmts/index.php?s=tileserver&l=JM200K_1897_new' target='_blank' style='text-decoration:none;'>1897-日治臺灣假製二十萬分一圖-1:200,000 : JM200K_1897_new</a><li><a href='/showwmts/index.php?s=tileserver&l=JM200K_1932' target='_blank' style='text-decoration:none;'>1932-日治二十萬分一帝國圖(臺灣部分) : JM200K_1932</a><li><a href='/showwmts/index.php?s=tileserver&l=JM200K_1944' target='_blank' style='text-decoration:none;'>1944-日治二十萬分一帝國圖(聯勤翻印版) : JM200K_1944</a><li><a href='/showwmts/index.php?s=tileserver&l=JM20K_1904' target='_blank' style='text-decoration:none;'>1904-日治臺灣堡圖(明治版)-1:20,000 : JM20K_1904</a><li><a href='/showwmts/index.php?s=tileserver&l=JM20K_1904_triangulation' target='_blank' style='text-decoration:none;'>1904-日治初期臺灣三角測量點及水準點配置圖 : JM20K_1904_triangulation</a><li><a href='/showwmts/index.php?s=tileserver&l=JM20K_1921' target='_blank' style='text-decoration:none;'>1921-日治臺灣堡圖(大正版)-1:20,000 : JM20K_1921</a><li><a href='/showwmts/index.php?s=tileserver&l=JM25K_1921' target='_blank' style='text-decoration:none;'>1921-日治二萬五千分之一地形圖-1:25,000 : JM25K_1921</a><li><a href='/showwmts/index.php?s=tileserver&l=JM25K_1942' target='_blank' style='text-decoration:none;'>1942-日治二萬五千分之一地形圖(昭和修正版) : JM25K_1942</a><li><a href='/showwmts/index.php?s=tileserver&l=JM25K_1944' target='_blank' style='text-decoration:none;'>1944-日治地形圖(航照修正版)-1:25,000 : JM25K_1944</a><li><a href='/showwmts/index.php?s=tileserver&l=JM300K_1924' target='_blank' style='text-decoration:none;'>1924-日治臺灣全圖(第一版)-1:300,000 : JM300K_1924</a><li><a href='/showwmts/index.php?s=tileserver&l=JM300K_1934' target='_blank' style='text-decoration:none;'>1934-日治臺灣全圖(第三版)-1:300,000 : JM300K_1934</a><li><a href='/showwmts/index.php?s=tileserver&l=JM300K_1939' target='_blank' style='text-decoration:none;'>1939-日治臺灣全圖(第五版)-1:300,000 : JM300K_1939</a><li><a href='/showwmts/index.php?s=tileserver&l=JM400K_1899' target='_blank' style='text-decoration:none;'>1899-日治臺灣全圖-1:400,000 : JM400K_1899</a><li><a href='/showwmts/index.php?s=tileserver&l=JM500K_1936' target='_blank' style='text-decoration:none;'>1936-日治五十萬分一輿地圖(臺灣部分)-1:500,000 : JM500K_1936</a><li><a href='/showwmts/index.php?s=tileserver&l=JM50K_1916' target='_blank' style='text-decoration:none;'>1916-日治蕃地地形圖-1:50,000 : JM50K_1916</a><li><a href='/showwmts/index.php?s=tileserver&l=JM50K_1920' target='_blank' style='text-decoration:none;'>1920-日治五萬分一地形圖(總督府土木局)-1:50,000 : JM50K_1920</a><li><a href='/showwmts/index.php?s=tileserver&l=JM50K_1924' target='_blank' style='text-decoration:none;'>1924-日治五萬分一地形圖(陸地測量部)-1:50,000 : JM50K_1924</a><li><a href='/showwmts/index.php?s=tileserver&l=JM50K_1924_new' target='_blank' style='text-decoration:none;'>1924-日治五萬分一地形圖(陸地測量部)-1:50,000 : JM50K_1924_new</a><li><a href='/showwmts/index.php?s=tileserver&l=JMGeo_1930s' target='_blank' style='text-decoration:none;'>1930-日治時期地質圖 : JMGeo_1930s</a><li><a href='/showwmts/index.php?s=tileserver&l=JMWar_1895' target='_blank' style='text-decoration:none;'>1895-日軍攻台戰鬥地圖 : JMWar_1895</a><li><a href='/showwmts/index.php?s=tileserver&l=Map_LSB1_Hualien' target='_blank' style='text-decoration:none;'>日治官有林野圖(花蓮港廳花蓮及鳳林郡) : Map_LSB1_Hualien</a><li><a href='/showwmts/index.php?s=tileserver&l=Map_LSB1_Taitung' target='_blank' style='text-decoration:none;'>1914-日治官有林野圖(臺東廳)  : Map_LSB1_Taitung</a><li><a href='/showwmts/index.php?s=tileserver&l=Sunriver_50K_N_2017' target='_blank' style='text-decoration:none;'>台灣地理人文全覽圖北島 : Sunriver_50K_N_2017</a><li><a href='/showwmts/index.php?s=tileserver&l=TM100K_1953' target='_blank' style='text-decoration:none;'>1953-臺灣省交通圖-1:100,000 : TM100K_1953</a><li><a href='/showwmts/index.php?s=tileserver&l=TM100K_1984' target='_blank' style='text-decoration:none;'>1984-臺灣省交通圖-1:100,000 : TM100K_1984</a><li><a href='/showwmts/index.php?s=tileserver&l=TM100K_1987' target='_blank' style='text-decoration:none;'>1987-臺灣地形圖-1:100,000 : TM100K_1987</a><li><a href='/showwmts/index.php?s=tileserver&l=TM10K_1970' target='_blank' style='text-decoration:none;'>1970-臺灣地形圖(航測隊版)-1:10,000 : TM10K_1970</a><li><a href='/showwmts/index.php?s=tileserver&l=TM10K_1974' target='_blank' style='text-decoration:none;'>1974-臺灣地形圖(聯勤版)-1:10,000 : TM10K_1974</a><li><a href='/showwmts/index.php?s=tileserver&l=TM150K_1953' target='_blank' style='text-decoration:none;'>1953-臺糖鐵道網圖-1:150,000 : TM150K_1953</a><li><a href='/showwmts/index.php?s=tileserver&l=TM1M_1980' target='_blank' style='text-decoration:none;'>1980-臺灣省林務局各林區轄區圖 : TM1M_1980</a><li><a href='/showwmts/index.php?s=tileserver&l=TM250K_1963' target='_blank' style='text-decoration:none;'>1963-二十五萬分一地形圖-1:250,000 : TM250K_1963</a><li><a href='/showwmts/index.php?s=tileserver&l=TM250K_1973' target='_blank' style='text-decoration:none;'>1973-二十五萬分一地形圖-1:250,000 : TM250K_1973</a><li><a href='/showwmts/index.php?s=tileserver&l=TM250K_1988' target='_blank' style='text-decoration:none;'>1988-臺灣地區地形圖-1:250,000 : TM250K_1988</a><li><a href='/showwmts/index.php?s=tileserver&l=TM25K_1950' target='_blank' style='text-decoration:none;'>1950-臺灣地形圖-1:25,000 : TM25K_1950</a><li><a href='/showwmts/index.php?s=tileserver&l=TM25K_1955' target='_blank' style='text-decoration:none;'>1955-二萬五千分一臺灣省圖 : TM25K_1955</a><li><a href='/showwmts/index.php?s=tileserver&l=TM25K_1966' target='_blank' style='text-decoration:none;'>1957~1969-臺灣二萬五千分一地形圖 : TM25K_1966</a><li><a href='/showwmts/index.php?s=tileserver&l=TM25K_1989' target='_blank' style='text-decoration:none;'>1989-臺灣經建1版地形圖-1:25,000 : TM25K_1989</a><li><a href='/showwmts/index.php?s=tileserver&l=TM25K_1993' target='_blank' style='text-decoration:none;'>1993-臺灣經建2版地形圖-1:25,000 : TM25K_1993</a><li><a href='/showwmts/index.php?s=tileserver&l=TM25K_2001' target='_blank' style='text-decoration:none;'>2001-臺灣經建3版地形圖-1:25,000 : TM25K_2001</a><li><a href='/showwmts/index.php?s=tileserver&l=TM25K_2003' target='_blank' style='text-decoration:none;'>2003-臺灣經建4版地形圖-1:25,000 : TM25K_2003</a><li><a href='/showwmts/index.php?s=tileserver&l=TM300K_1959' target='_blank' style='text-decoration:none;'>1959-三十萬分之一臺灣省地圖 : TM300K_1959</a><li><a href='/showwmts/index.php?s=tileserver&l=TM500K_1966' target='_blank' style='text-decoration:none;'>1966-五十萬分一臺灣地圖-1:500,000 : TM500K_1966</a><li><a href='/showwmts/index.php?s=tileserver&l=TM500K_1978' target='_blank' style='text-decoration:none;'>1978-臺灣地區主要公路編號路線圖-1:500,000 : TM500K_1978</a><li><a href='/showwmts/index.php?s=tileserver&l=TM50K_1954' target='_blank' style='text-decoration:none;'>1954-臺灣地形圖-1:50,000 : TM50K_1954</a><li><a href='/showwmts/index.php?s=tileserver&l=TM50K_1956' target='_blank' style='text-decoration:none;'>1956-臺灣地形圖-1:50,000 : TM50K_1956</a><li><a href='/showwmts/index.php?s=tileserver&l=TM50K_1966' target='_blank' style='text-decoration:none;'>1966-臺灣省水利工程、水文站及基準點位置圖 : TM50K_1966</a><li><a href='/showwmts/index.php?s=tileserver&l=TM50K_1990' target='_blank' style='text-decoration:none;'>1990-臺灣經建1版地形圖-1:50,000 : TM50K_1990</a><li><a href='/showwmts/index.php?s=tileserver&l=TM50K_1996' target='_blank' style='text-decoration:none;'>1996-臺灣經建2版地形圖-1:50,000 : TM50K_1996</a><li><a href='/showwmts/index.php?s=tileserver&l=TM50K_2000A' target='_blank' style='text-decoration:none;'>2000-臺灣五萬分之一衛星影像地圖(921災區)  : TM50K_2000A</a><li><a href='/showwmts/index.php?s=tileserver&l=TM50K_2000B' target='_blank' style='text-decoration:none;'>2000-臺灣五萬分之一衛星影像地形圖(921災區)  : TM50K_2000B</a><li><a href='/showwmts/index.php?s=tileserver&l=TM50K_2003' target='_blank' style='text-decoration:none;'>2003-臺灣經建3版地形圖-1:50,000 : TM50K_2003</a><li><a href='/showwmts/index.php?s=tileserver&l=TM5K_1962' target='_blank' style='text-decoration:none;'>1962-臺灣西海岸海埔地地形圖 : TM5K_1962</a><li><a href='/showwmts/index.php?s=tileserver&l=Taiwan_Corona_1966' target='_blank' style='text-decoration:none;'>1966-Corona衛星影像 : Taiwan_Corona_1966</a><li><a href='/showwmts/index.php?s=tileserver&l=Taiwan_Corona_1969' target='_blank' style='text-decoration:none;'>1969-Corona衛星影像 : Taiwan_Corona_1969</a><li><a href='/showwmts/index.php?s=tileserver&l=Yushan_50K_1933' target='_blank' style='text-decoration:none;'>1933-新高登山地圖-1:50,000 : Yushan_50K_1933</a><li><a href='/showwmts/index.php?s=tileserver&l=abm' target='_blank' style='text-decoration:none;'>乾隆臺灣番界（柯志明、陳兆勇考證繪製） : abm</a></ul><b>參考資料：</b>
+	<ul>
+	<li>本服務採用 Klokan Technologies GmbH 之 <a href="https://github.com/klokantech/tileserver-php" target="_blank" style="text-decoration: none;color: #4183D8">tileserver-php</a> 技術開發。
+	</li>
+	<li><a href="https://www.opengeospatial.org/standards/wmts" target="_blank" style="text-decoration: none;color: #4183D8">OpenGIS Web Map Tile Service Implementation Standard</a>
+	</li>
+	</ul>
+</p>
+</body>
+</html>
+

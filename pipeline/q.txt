@@ -1,0 +1,11 @@
+[out:json][timeout:90];
+(
+ way["railway"](22.535,120.255,22.685,120.375);
+ way["abandoned:railway"](22.535,120.255,22.685,120.375);
+ way["razed:railway"](22.535,120.255,22.685,120.375);
+ way["disused:railway"](22.535,120.255,22.685,120.375);
+ way["historic:railway"](22.535,120.255,22.685,120.375);
+ way["historic"="railway"](22.535,120.255,22.685,120.375);
+ relation["route"~"train|railway|light_rail|tram"](22.535,120.255,22.685,120.375);
+);
+out tags geom;

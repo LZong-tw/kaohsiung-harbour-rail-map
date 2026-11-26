@@ -1,0 +1,2647 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.4 2390de5a",
+  "osm3s": {
+    "timestamp_osm_base": "2026-11-26T08:00:32Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+
+{
+  "type": "node",
+  "id": 1210177045,
+  "lat": 22.5987145,
+  "lon": 120.3142166,
+  "tags": {
+    "barrier": "gate",
+    "bicycle": "no",
+    "horse": "no",
+    "motorcar": "no",
+    "motorcycle": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 1234821580,
+  "lat": 22.5987779,
+  "lon": 120.3185282,
+  "tags": {
+    "barrier": "gate"
+  }
+},
+{
+  "type": "node",
+  "id": 3790419176,
+  "lat": 22.6074838,
+  "lon": 120.3096070,
+  "tags": {
+    "description": "to the exhibition area",
+    "entrance": "main",
+    "wheelchair": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 3790419178,
+  "lat": 22.6078671,
+  "lon": 120.3098258,
+  "tags": {
+    "description": "upstair",
+    "entrance": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 3848539414,
+  "lat": 22.6051509,
+  "lon": 120.3083932,
+  "tags": {
+    "entrance": "main"
+  }
+},
+{
+  "type": "node",
+  "id": 3848612691,
+  "lat": 22.6076186,
+  "lon": 120.3094593,
+  "tags": {
+    "entrance": "main",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 3935484562,
+  "lat": 22.6072755,
+  "lon": 120.3106547,
+  "tags": {
+    "entrance": "main"
+  }
+},
+{
+  "type": "node",
+  "id": 3935562076,
+  "lat": 22.6067805,
+  "lon": 120.3097681,
+  "tags": {
+    "barrier": "gate"
+  }
+},
+{
+  "type": "node",
+  "id": 4368983119,
+  "lat": 22.6079215,
+  "lon": 120.3097663,
+  "tags": {
+    "entrance": "yes",
+    "name": "R7-Maker Hub"
+  }
+},
+{
+  "type": "node",
+  "id": 4368983120,
+  "lat": 22.6078227,
+  "lon": 120.3098745,
+  "tags": {
+    "entrance": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 4454709445,
+  "lat": 22.6085253,
+  "lon": 120.3143667,
+  "tags": {
+    "barrier": "gate"
+  }
+},
+{
+  "type": "node",
+  "id": 4570040856,
+  "lat": 22.6055624,
+  "lon": 120.3090233,
+  "tags": {
+    "entrance": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 4921359060,
+  "lat": 22.6064973,
+  "lon": 120.3249628,
+  "tags": {
+    "barrier": "gate"
+  }
+},
+{
+  "type": "node",
+  "id": 4921359061,
+  "lat": 22.6101300,
+  "lon": 120.3259169,
+  "tags": {
+    "barrier": "gate"
+  }
+},
+{
+  "type": "node",
+  "id": 8353956735,
+  "lat": 22.6114764,
+  "lon": 120.3267715,
+  "tags": {
+    "barrier": "gate"
+  }
+},
+{
+  "type": "node",
+  "id": 8353956736,
+  "lat": 22.6062835,
+  "lon": 120.3251875,
+  "tags": {
+    "barrier": "gate"
+  }
+},
+{
+  "type": "node",
+  "id": 9404565079,
+  "lat": 22.5981991,
+  "lon": 120.3089696,
+  "tags": {
+    "access": "permit",
+    "entrance": "emergency"
+  }
+},
+{
+  "type": "node",
+  "id": 9404565095,
+  "lat": 22.5980076,
+  "lon": 120.3092107,
+  "tags": {
+    "access": "no",
+    "barrier": "gate",
+    "bicycle": "permit",
+    "foot": "permit"
+  }
+},
+{
+  "type": "node",
+  "id": 9404565098,
+  "lat": 22.5980482,
+  "lon": 120.3091980,
+  "tags": {
+    "access": "permit",
+    "entrance": "emergency"
+  }
+},
+{
+  "type": "node",
+  "id": 9404565105,
+  "lat": 22.5982386,
+  "lon": 120.3091640,
+  "tags": {
+    "access": "permit",
+    "entrance": "emergency"
+  }
+},
+{
+  "type": "node",
+  "id": 9405150657,
+  "lat": 22.5980624,
+  "lon": 120.3092845,
+  "tags": {
+    "access": "permit",
+    "barrier": "gate",
+    "motor_vehicle": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 11748595242,
+  "lat": 22.6033034,
+  "lon": 120.3083240,
+  "tags": {
+    "entrance": "main"
+  }
+},
+{
+  "type": "node",
+  "id": 11809967378,
+  "lat": 22.6082967,
+  "lon": 120.3116965,
+  "tags": {
+    "access": "private",
+    "barrier": "gate"
+  }
+},
+{
+  "type": "node",
+  "id": 14379983397,
+  "lat": 22.6039325,
+  "lon": 120.3133364,
+  "tags": {
+    "automatic_door": "motion",
+    "door": "sliding",
+    "door:wings": "2",
+    "entrance": "main",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 14379983398,
+  "lat": 22.6038471,
+  "lon": 120.3132420,
+  "tags": {
+    "automatic_door": "yes",
+    "door": "sliding",
+    "door:wings": "1",
+    "entrance": "exit"
+  }
+},
+{
+  "type": "way",
+  "id": 25360191,
+  "bounds": {
+    "minlat": 22.5916793,
+    "minlon": 120.3062433,
+    "maxlat": 22.5919168,
+    "maxlon": 120.3062922
+  },
+  "geometry": [
+    { "lat": 22.5916793, "lon": 120.3062433 },
+    { "lat": 22.5919168, "lon": 120.3062922 }
+  ],
+  "tags": {
+    "highway": "tertiary",
+    "name": "成功二路",
+    "name:en": "ChengGong 2nd Road",
+    "name:zh": "成功二路",
+    "oneway": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 26002469,
+  "bounds": {
+    "minlat": 22.6033966,
+    "minlon": 120.3240545,
+    "maxlat": 22.6050084,
+    "maxlon": 120.3249234
+  },
+  "geometry": [
+    { "lat": 22.6050084, "lon": 120.3249234 },
+    { "lat": 22.6048537, "lon": 120.3248457 },
+    { "lat": 22.6045153, "lon": 120.3247286 },
+    { "lat": 22.6041349, "lon": 120.3245663 },
+    { "lat": 22.6037540, "lon": 120.3243640 },
+    { "lat": 22.6035941, "lon": 120.3242187 },
+    { "lat": 22.6033966, "lon": 120.3240545 }
+  ],
+  "tags": {
+    "bicycle": "no",
+    "foot": "no",
+    "highway": "tertiary",
+    "motorcycle": "no",
+    "name": "凱旋四路",
+    "name:en": "Kaisyuan 4th Road",
+    "name:zh": "凱旋四路",
+    "oneway": "yes",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 26002486,
+  "bounds": {
+    "minlat": 22.5919920,
+    "minlon": 120.3121180,
+    "maxlat": 22.5920125,
+    "maxlon": 120.3121807
+  },
+  "geometry": [
+    { "lat": 22.5919920, "lon": 120.3121180 },
+    { "lat": 22.5920125, "lon": 120.3121807 }
+  ],
+  "tags": {
+    "highway": "residential",
+    "name": "翠亨北路",
+    "name:en": "Cueiheng North Road",
+    "name:zh": "翠亨北路"
+  }
+},
+{
+  "type": "way",
+  "id": 28295917,
+  "bounds": {
+    "minlat": 22.5955352,
+    "minlon": 120.3161883,
+    "maxlat": 22.5972158,
+    "maxlon": 120.3179732
+  },
+  "geometry": [
+    { "lat": 22.5955352, "lon": 120.3161883 },
+    { "lat": 22.5956865, "lon": 120.3164378 },
+    { "lat": 22.5957145, "lon": 120.3164686 },
+    { "lat": 22.5957459, "lon": 120.3165162 },
+    { "lat": 22.5957793, "lon": 120.3165670 },
+    { "lat": 22.5959239, "lon": 120.3167870 },
+    { "lat": 22.5961857, "lon": 120.3171107 },
+    { "lat": 22.5964751, "lon": 120.3173803 },
+    { "lat": 22.5965124, "lon": 120.3174122 },
+    { "lat": 22.5966172, "lon": 120.3175017 },
+    { "lat": 22.5966589, "lon": 120.3175394 },
+    { "lat": 22.5967513, "lon": 120.3176228 },
+    { "lat": 22.5969413, "lon": 120.3177682 },
+    { "lat": 22.5972158, "lon": 120.3179732 }
+  ],
+  "tags": {
+    "highway": "tertiary",
+    "name": "凱旋四路",
+    "name:en": "Kaisyuan 4th Road",
+    "name:zh": "凱旋四路",
+    "oneway": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 28831343,
+  "bounds": {
+    "minlat": 22.5999596,
+    "minlon": 120.3200468,
+    "maxlat": 22.6043533,
+    "maxlon": 120.3223866
+  },
+  "geometry": [
+    { "lat": 22.6043533, "lon": 120.3223866 },
+    { "lat": 22.6038920, "lon": 120.3221521 },
+    { "lat": 22.6037683, "lon": 120.3220892 },
+    { "lat": 22.6037101, "lon": 120.3220047 },
+    { "lat": 22.6035274, "lon": 120.3219946 },
+    { "lat": 22.6033433, "lon": 120.3219336 },
+    { "lat": 22.6031357, "lon": 120.3219716 },
+    { "lat": 22.6030214, "lon": 120.3218678 },
+    { "lat": 22.6029252, "lon": 120.3217920 },
+    { "lat": 22.6028691, "lon": 120.3217532 },
+    { "lat": 22.6027395, "lon": 120.3217277 },
+    { "lat": 22.6025840, "lon": 120.3216055 },
+    { "lat": 22.6010664, "lon": 120.3207042 },
+    { "lat": 22.5999596, "lon": 120.3200468 }
+  ],
+  "tags": {
+    "highway": "residential",
+    "lanes": "2",
+    "name": "凱得街",
+    "name:en": "KaiDe Street",
+    "name:zh": "凱得街",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 28831351,
+  "bounds": {
+    "minlat": 22.6064484,
+    "minlon": 120.3161000,
+    "maxlat": 22.6069311,
+    "maxlon": 120.3178118
+  },
+  "geometry": [
+    { "lat": 22.6064484, "lon": 120.3178118 },
+    { "lat": 22.6067550, "lon": 120.3167218 },
+    { "lat": 22.6069053, "lon": 120.3161877 },
+    { "lat": 22.6069311, "lon": 120.3161000 }
+  ],
+  "tags": {
+    "highway": "tertiary",
+    "name": "籬仔內路",
+    "name:en": "Lizihnei Road",
+    "name:zh": "籬仔內路",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 33246812,
+  "bounds": {
+    "minlat": 22.6048712,
+    "minlon": 120.3070076,
+    "maxlat": 22.6071718,
+    "maxlon": 120.3087330
+  },
+  "geometry": [
+    { "lat": 22.6071718, "lon": 120.3070076 },
+    { "lat": 22.6070463, "lon": 120.3070915 },
+    { "lat": 22.6055674, "lon": 120.3081867 },
+    { "lat": 22.6052798, "lon": 120.3084014 },
+    { "lat": 22.6051965, "lon": 120.3084636 },
+    { "lat": 22.6051238, "lon": 120.3085179 },
+    { "lat": 22.6049631, "lon": 120.3086379 },
+    { "lat": 22.6048712, "lon": 120.3087330 }
+  ],
+  "tags": {
+    "cycleway:right": "shared_lane",
+    "highway": "primary",
+    "lanes": "2",
+    "lit": "yes",
+    "name": "中山三路",
+    "name:en": "Jhongshan 3rd Road",
+    "name:nan": "Tiong-san 3-lō͘",
+    "name:nan-Hant": "中山三路",
+    "name:nan-Latn-pehoeji": "Tiong-san 3-lō͘",
+    "name:nan-Latn-tailo": "Tiong-san 3-lōo",
+    "name:zh": "中山三路",
+    "oneway": "yes",
+    "ref": "17",
+    "ref:en": "Provincial Highway 17",
+    "ref:zh": "台17線",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 45923046,
+  "bounds": {
+    "minlat": 22.5961915,
+    "minlon": 120.3116628,
+    "maxlat": 22.6016903,
+    "maxlon": 120.3161081
+  },
+  "geometry": [
+    { "lat": 22.5961915, "lon": 120.3161081 },
+    { "lat": 22.5962981, "lon": 120.3160232 },
+    { "lat": 22.5963878, "lon": 120.3159519 },
+    { "lat": 22.5985003, "lon": 120.3142727 },
+    { "lat": 22.5985527, "lon": 120.3142310 },
+    { "lat": 22.5986518, "lon": 120.3141522 },
+    { "lat": 22.5987654, "lon": 120.3140584 },
+    { "lat": 22.5996897, "lon": 120.3132957 },
+    { "lat": 22.6014947, "lon": 120.3118187 },
+    { "lat": 22.6015416, "lon": 120.3117803 },
+    { "lat": 22.6016790, "lon": 120.3116723 },
+    { "lat": 22.6016903, "lon": 120.3116628 }
+  ],
+  "tags": {
+    "cycleway:right": "shared_lane",
+    "highway": "primary",
+    "name": "中山三路",
+    "name:en": "Jhongshan 3rd Road",
+    "name:nan": "Tiong-san 3-lō͘",
+    "name:nan-Hant": "中山三路",
+    "name:nan-Latn-pehoeji": "Tiong-san 3-lō͘",
+    "name:nan-Latn-tailo": "Tiong-san 3-lōo",
+    "name:zh": "中山三路",
+    "oneway": "yes",
+    "ref": "17",
+    "ref:en": "Provincial Highway 17",
+    "ref:zh": "台17線",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 89295545,
+  "bounds": {
+    "minlat": 22.5943710,
+    "minlon": 120.3147722,
+    "maxlat": 22.5949565,
+    "maxlon": 120.3151085
+  },
+  "geometry": [
+    { "lat": 22.5943710, "lon": 120.3151085 },
+    { "lat": 22.5947769, "lon": 120.3148658 },
+    { "lat": 22.5948306, "lon": 120.3148337 },
+    { "lat": 22.5949013, "lon": 120.3147949 },
+    { "lat": 22.5949565, "lon": 120.3147722 }
+  ],
+  "tags": {
+    "highway": "service",
+    "name": "凱旋四路428巷",
+    "service": "alley"
+  }
+},
+{
+  "type": "way",
+  "id": 89295569,
+  "bounds": {
+    "minlat": 22.5939551,
+    "minlon": 120.3137755,
+    "maxlat": 22.5944811,
+    "maxlon": 120.3140289
+  },
+  "geometry": [
+    { "lat": 22.5944811, "lon": 120.3139821 },
+    { "lat": 22.5943691, "lon": 120.3140289 },
+    { "lat": 22.5939551, "lon": 120.3137755 }
+  ],
+  "tags": {
+    "highway": "service",
+    "name": "凱旋四路396巷",
+    "service": "alley"
+  }
+},
+{
+  "type": "way",
+  "id": 89295580,
+  "bounds": {
+    "minlat": 22.5925102,
+    "minlon": 120.3079594,
+    "maxlat": 22.5935398,
+    "maxlon": 120.3111642
+  },
+  "geometry": [
+    { "lat": 22.5925331, "lon": 120.3079594 },
+    { "lat": 22.5925102, "lon": 120.3080495 },
+    { "lat": 22.5925242, "lon": 120.3080914 },
+    { "lat": 22.5926880, "lon": 120.3085807 },
+    { "lat": 22.5930449, "lon": 120.3096475 },
+    { "lat": 22.5932372, "lon": 120.3102724 },
+    { "lat": 22.5934862, "lon": 120.3110061 },
+    { "lat": 22.5934958, "lon": 120.3110343 },
+    { "lat": 22.5935204, "lon": 120.3111067 },
+    { "lat": 22.5935398, "lon": 120.3111642 }
+  ],
+  "tags": {
+    "highway": "tertiary",
+    "name": "凱旋四路",
+    "name:en": "Kaisyuan 4th Road",
+    "name:zh": "凱旋四路",
+    "oneway": "yes",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 89295588,
+  "bounds": {
+    "minlat": 22.5939397,
+    "minlon": 120.3140704,
+    "maxlat": 22.5946725,
+    "maxlon": 120.3143638
+  },
+  "geometry": [
+    { "lat": 22.5939397, "lon": 120.3141161 },
+    { "lat": 22.5940624, "lon": 120.3140704 },
+    { "lat": 22.5946087, "lon": 120.3143490 },
+    { "lat": 22.5946725, "lon": 120.3143638 }
+  ],
+  "tags": {
+    "highway": "service",
+    "name": "凱旋四路406巷",
+    "service": "alley"
+  }
+},
+{
+  "type": "way",
+  "id": 89295593,
+  "bounds": {
+    "minlat": 22.5974963,
+    "minlon": 120.3071686,
+    "maxlat": 22.6072528,
+    "maxlon": 120.3149360
+  },
+  "geometry": [
+    { "lat": 22.5974963, "lon": 120.3149360 },
+    { "lat": 22.5984474, "lon": 120.3141726 },
+    { "lat": 22.5984902, "lon": 120.3141383 },
+    { "lat": 22.5985820, "lon": 120.3140646 },
+    { "lat": 22.5987064, "lon": 120.3139620 },
+    { "lat": 22.6014367, "lon": 120.3117339 },
+    { "lat": 22.6014818, "lon": 120.3116971 },
+    { "lat": 22.6016131, "lon": 120.3115802 },
+    { "lat": 22.6016825, "lon": 120.3115166 },
+    { "lat": 22.6017749, "lon": 120.3114426 },
+    { "lat": 22.6019374, "lon": 120.3113160 },
+    { "lat": 22.6040329, "lon": 120.3097089 },
+    { "lat": 22.6040800, "lon": 120.3096689 },
+    { "lat": 22.6041661, "lon": 120.3095924 },
+    { "lat": 22.6042543, "lon": 120.3095225 },
+    { "lat": 22.6046916, "lon": 120.3091578 },
+    { "lat": 22.6048031, "lon": 120.3090428 },
+    { "lat": 22.6048989, "lon": 120.3089556 },
+    { "lat": 22.6049767, "lon": 120.3088873 },
+    { "lat": 22.6050715, "lon": 120.3087974 },
+    { "lat": 22.6052294, "lon": 120.3086630 },
+    { "lat": 22.6071113, "lon": 120.3072609 },
+    { "lat": 22.6071463, "lon": 120.3072349 },
+    { "lat": 22.6072528, "lon": 120.3071686 }
+  ],
+  "tags": {
+    "bicycle": "no",
+    "foot": "no",
+    "highway": "primary",
+    "lit": "yes",
+    "motorcycle": "no",
+    "name": "中山三路",
+    "name:en": "Jhongshan 3rd Road",
+    "name:nan": "Tiong-san 3-lō͘",
+    "name:nan-Hant": "中山三路",
+    "name:nan-Latn-pehoeji": "Tiong-san 3-lō͘",
+    "name:nan-Latn-tailo": "Tiong-san 3-lōo",
+    "name:zh": "中山三路",
+    "oneway": "yes",
+    "ref": "17",
+    "ref:en": "Provincial Highway 17",
+    "ref:zh": "台17線",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 89295598,
+  "bounds": {
+    "minlat": 22.5972158,
+    "minlon": 120.3179732,
+    "maxlat": 22.6017525,
+    "maxlon": 120.3224649
+  },
+  "geometry": [
+    { "lat": 22.5972158, "lon": 120.3179732 },
+    { "lat": 22.5975600, "lon": 120.3181857 },
+    { "lat": 22.5979333, "lon": 120.3184873 },
+    { "lat": 22.5979395, "lon": 120.3184923 },
+    { "lat": 22.5980967, "lon": 120.3186530 },
+    { "lat": 22.5985614, "lon": 120.3191389 },
+    { "lat": 22.5988966, "lon": 120.3194920 },
+    { "lat": 22.5989157, "lon": 120.3195122 },
+    { "lat": 22.5989821, "lon": 120.3195821 },
+    { "lat": 22.5990543, "lon": 120.3196572 },
+    { "lat": 22.6007516, "lon": 120.3214208 },
+    { "lat": 22.6007872, "lon": 120.3214578 },
+    { "lat": 22.6017525, "lon": 120.3224649 }
+  ],
+  "tags": {
+    "bicycle": "no",
+    "foot": "no",
+    "highway": "tertiary",
+    "motorcycle": "no",
+    "name": "凱旋四路",
+    "name:en": "Kaisyuan 4th Road",
+    "name:zh": "凱旋四路",
+    "oneway": "yes",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 89295602,
+  "bounds": {
+    "minlat": 22.5928276,
+    "minlon": 120.3146521,
+    "maxlat": 22.5933715,
+    "maxlon": 120.3150594
+  },
+  "geometry": [
+    { "lat": 22.5933715, "lon": 120.3146521 },
+    { "lat": 22.5928276, "lon": 120.3150594 }
+  ],
+  "tags": {
+    "highway": "residential",
+    "name": "翠亨北路399巷"
+  }
+},
+{
+  "type": "way",
+  "id": 89295636,
+  "bounds": {
+    "minlat": 22.5931443,
+    "minlon": 120.3141760,
+    "maxlat": 22.5943300,
+    "maxlon": 120.3149697
+  },
+  "geometry": [
+    { "lat": 22.5931443, "lon": 120.3141760 },
+    { "lat": 22.5932312, "lon": 120.3141920 },
+    { "lat": 22.5943060, "lon": 120.3148866 },
+    { "lat": 22.5943300, "lon": 120.3149697 }
+  ],
+  "tags": {
+    "highway": "residential",
+    "name": "凱旋四路470巷"
+  }
+},
+{
+  "type": "way",
+  "id": 89295643,
+  "bounds": {
+    "minlat": 22.5925331,
+    "minlon": 120.3079594,
+    "maxlat": 22.5935777,
+    "maxlon": 120.3110688
+  },
+  "geometry": [
+    { "lat": 22.5925331, "lon": 120.3079594 },
+    { "lat": 22.5925704, "lon": 120.3080707 },
+    { "lat": 22.5930994, "lon": 120.3096481 },
+    { "lat": 22.5932927, "lon": 120.3102260 },
+    { "lat": 22.5935488, "lon": 120.3109834 },
+    { "lat": 22.5935563, "lon": 120.3110056 },
+    { "lat": 22.5935777, "lon": 120.3110688 }
+  ],
+  "tags": {
+    "bicycle": "no",
+    "foot": "no",
+    "highway": "tertiary",
+    "motorcycle": "no",
+    "name": "凱旋四路",
+    "name:en": "Kaisyuan 4th Road",
+    "name:zh": "凱旋四路",
+    "oneway": "yes",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 94756656,
+  "bounds": {
+    "minlat": 22.5935711,
+    "minlon": 120.3099448,
+    "maxlat": 22.5938807,
+    "maxlon": 120.3109408
+  },
+  "geometry": [
+    { "lat": 22.5935711, "lon": 120.3099448 },
+    { "lat": 22.5935942, "lon": 120.3100285 },
+    { "lat": 22.5938210, "lon": 120.3107726 },
+    { "lat": 22.5938452, "lon": 120.3108450 },
+    { "lat": 22.5938807, "lon": 120.3109408 }
+  ],
+  "tags": {
+    "highway": "residential",
+    "name": "凱旋四路",
+    "name:en": "Kaisyuan 4th Road",
+    "name:zh": "凱旋四路",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 94756669,
+  "bounds": {
+    "minlat": 22.5928053,
+    "minlon": 120.3056239,
+    "maxlat": 22.5935833,
+    "maxlon": 120.3078083
+  },
+  "geometry": [
+    { "lat": 22.5935833, "lon": 120.3056239 },
+    { "lat": 22.5934416, "lon": 120.3057492 },
+    { "lat": 22.5932429, "lon": 120.3059975 },
+    { "lat": 22.5930836, "lon": 120.3062230 },
+    { "lat": 22.5930651, "lon": 120.3062466 },
+    { "lat": 22.5929843, "lon": 120.3063997 },
+    { "lat": 22.5929795, "lon": 120.3064113 },
+    { "lat": 22.5929270, "lon": 120.3065389 },
+    { "lat": 22.5928826, "lon": 120.3066916 },
+    { "lat": 22.5928347, "lon": 120.3068883 },
+    { "lat": 22.5928053, "lon": 120.3071606 },
+    { "lat": 22.5928084, "lon": 120.3074035 },
+    { "lat": 22.5928280, "lon": 120.3076179 },
+    { "lat": 22.5928407, "lon": 120.3076749 },
+    { "lat": 22.5928468, "lon": 120.3077071 },
+    { "lat": 22.5928758, "lon": 120.3078083 }
+  ],
+  "tags": {
+    "highway": "tertiary",
+    "name": "凱旋四路",
+    "name:en": "KaiSyuan 4nd Road",
+    "name:zh": "凱旋四路",
+    "oneway": "yes",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 107801637,
+  "bounds": {
+    "minlat": 22.6030660,
+    "minlon": 120.3220932,
+    "maxlat": 22.6041374,
+    "maxlon": 120.3229668
+  },
+  "geometry": [
+    { "lat": 22.6030660, "lon": 120.3220932 },
+    { "lat": 22.6032974, "lon": 120.3223449 },
+    { "lat": 22.6034886, "lon": 120.3225435 },
+    { "lat": 22.6036779, "lon": 120.3227589 },
+    { "lat": 22.6041374, "lon": 120.3229668 }
+  ],
+  "tags": {
+    "highway": "residential",
+    "name": "籬仔內路29巷"
+  }
+},
+{
+  "type": "way",
+  "id": 107801656,
+  "bounds": {
+    "minlat": 22.6049276,
+    "minlon": 120.3200895,
+    "maxlat": 22.6057691,
+    "maxlon": 120.3214345
+  },
+  "geometry": [
+    { "lat": 22.6057691, "lon": 120.3200895 },
+    { "lat": 22.6052089, "lon": 120.3213747 },
+    { "lat": 22.6051638, "lon": 120.3214345 },
+    { "lat": 22.6050869, "lon": 120.3214315 },
+    { "lat": 22.6049276, "lon": 120.3214192 }
+  ],
+  "tags": {
+    "highway": "service",
+    "name": "籬仔內路188巷",
+    "name:en": "Lane 188, Li Zih Nei Road",
+    "name:zh": "籬仔內路188巷",
+    "service": "alley"
+  }
+},
+{
+  "type": "way",
+  "id": 107801720,
+  "bounds": {
+    "minlat": 22.6042809,
+    "minlon": 120.3226173,
+    "maxlat": 22.6045240,
+    "maxlon": 120.3244406
+  },
+  "geometry": [
+    { "lat": 22.6042837, "lon": 120.3226173 },
+    { "lat": 22.6043363, "lon": 120.3227828 },
+    { "lat": 22.6042809, "lon": 120.3232160 },
+    { "lat": 22.6043747, "lon": 120.3235564 },
+    { "lat": 22.6044606, "lon": 120.3242059 },
+    { "lat": 22.6045240, "lon": 120.3244406 }
+  ],
+  "tags": {
+    "highway": "residential",
+    "name": "凱旋四路1047巷"
+  }
+},
+{
+  "type": "way",
+  "id": 107801738,
+  "bounds": {
+    "minlat": 22.6026396,
+    "minlon": 120.3219716,
+    "maxlat": 22.6031357,
+    "maxlon": 120.3228360
+  },
+  "geometry": [
+    { "lat": 22.6031357, "lon": 120.3219716 },
+    { "lat": 22.6030660, "lon": 120.3220932 },
+    { "lat": 22.6028442, "lon": 120.3225172 },
+    { "lat": 22.6026396, "lon": 120.3228360 }
+  ],
+  "tags": {
+    "highway": "residential",
+    "name": "凱旋四路961巷"
+  }
+},
+{
+  "type": "way",
+  "id": 107801744,
+  "bounds": {
+    "minlat": 22.6035869,
+    "minlon": 120.3227589,
+    "maxlat": 22.6037258,
+    "maxlon": 120.3237309
+  },
+  "geometry": [
+    { "lat": 22.6037258, "lon": 120.3237309 },
+    { "lat": 22.6036617, "lon": 120.3235642 },
+    { "lat": 22.6035909, "lon": 120.3232729 },
+    { "lat": 22.6035869, "lon": 120.3231268 },
+    { "lat": 22.6036547, "lon": 120.3228642 },
+    { "lat": 22.6036779, "lon": 120.3227589 }
+  ],
+  "tags": {
+    "highway": "residential",
+    "name": "籬仔內路1巷"
+  }
+},
+{
+  "type": "way",
+  "id": 150461876,
+  "bounds": {
+    "minlat": 22.5995428,
+    "minlon": 120.3024934,
+    "maxlat": 22.6017935,
+    "maxlon": 120.3033405
+  },
+  "geometry": [
+    { "lat": 22.5995428, "lon": 120.3033405 },
+    { "lat": 22.5995727, "lon": 120.3033284 },
+    { "lat": 22.5996020, "lon": 120.3033183 },
+    { "lat": 22.5998799, "lon": 120.3032113 },
+    { "lat": 22.6002321, "lon": 120.3030758 },
+    { "lat": 22.6005744, "lon": 120.3029440 },
+    { "lat": 22.6006987, "lon": 120.3028962 },
+    { "lat": 22.6016688, "lon": 120.3025393 },
+    { "lat": 22.6017935, "lon": 120.3024934 }
+  ],
+  "tags": {
+    "highway": "tertiary",
+    "name": "成功二路",
+    "name:en": "ChengGong 2nd Road",
+    "name:zh": "成功二路",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 203586427,
+  "bounds": {
+    "minlat": 22.5935479,
+    "minlon": 120.3096227,
+    "maxlat": 22.5935879,
+    "maxlon": 120.3099448
+  },
+  "geometry": [
+    { "lat": 22.5935711, "lon": 120.3099448 },
+    { "lat": 22.5935879, "lon": 120.3098580 },
+    { "lat": 22.5935694, "lon": 120.3097323 },
+    { "lat": 22.5935479, "lon": 120.3096227 }
+  ],
+  "tags": {
+    "highway": "tertiary",
+    "name": "凱旋四路",
+    "name:en": "KaiSyuan 4nd Road",
+    "name:zh": "凱旋四路",
+    "oneway": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 208803137,
+  "bounds": {
+    "minlat": 22.5933471,
+    "minlon": 120.3139560,
+    "maxlat": 22.5947769,
+    "maxlon": 120.3148658
+  },
+  "geometry": [
+    { "lat": 22.5933471, "lon": 120.3139560 },
+    { "lat": 22.5946472, "lon": 120.3147973 },
+    { "lat": 22.5947769, "lon": 120.3148658 }
+  ],
+  "tags": {
+    "highway": "residential",
+    "name": "凱旋四路424巷"
+  }
+},
+{
+  "type": "way",
+  "id": 244507795,
+  "bounds": {
+    "minlat": 22.5937567,
+    "minlon": 120.3036112,
+    "maxlat": 22.5988371,
+    "maxlon": 120.3055806
+  },
+  "geometry": [
+    { "lat": 22.5937567, "lon": 120.3055806 },
+    { "lat": 22.5937845, "lon": 120.3055702 },
+    { "lat": 22.5952947, "lon": 120.3050022 },
+    { "lat": 22.5953249, "lon": 120.3049907 },
+    { "lat": 22.5954401, "lon": 120.3049472 },
+    { "lat": 22.5956487, "lon": 120.3048671 },
+    { "lat": 22.5956873, "lon": 120.3048510 },
+    { "lat": 22.5968463, "lon": 120.3044021 },
+    { "lat": 22.5971334, "lon": 120.3042920 },
+    { "lat": 22.5974270, "lon": 120.3041741 },
+    { "lat": 22.5977701, "lon": 120.3040390 },
+    { "lat": 22.5979048, "lon": 120.3039856 },
+    { "lat": 22.5987506, "lon": 120.3036498 },
+    { "lat": 22.5988371, "lon": 120.3036112 }
+  ],
+  "tags": {
+    "highway": "tertiary",
+    "lit": "yes",
+    "name": "成功二路",
+    "name:en": "ChengGong 2nd Road",
+    "name:zh": "成功二路",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 245074759,
+  "bounds": {
+    "minlat": 22.5925818,
+    "minlon": 120.3056239,
+    "maxlat": 22.5935833,
+    "maxlon": 120.3059724
+  },
+  "geometry": [
+    { "lat": 22.5935833, "lon": 120.3056239 },
+    { "lat": 22.5932906, "lon": 120.3057579 },
+    { "lat": 22.5931828, "lon": 120.3057830 },
+    { "lat": 22.5930983, "lon": 120.3057927 },
+    { "lat": 22.5925818, "lon": 120.3059724 }
+  ],
+  "tags": {
+    "highway": "tertiary",
+    "name": "成功二路",
+    "name:en": "ChengGong 2nd Road",
+    "name:zh": "成功二路",
+    "oneway": "yes",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 246576605,
+  "bounds": {
+    "minlat": 22.6017935,
+    "minlon": 120.2999131,
+    "maxlat": 22.6083446,
+    "maxlon": 120.3024934
+  },
+  "geometry": [
+    { "lat": 22.6017935, "lon": 120.3024934 },
+    { "lat": 22.6018728, "lon": 120.3024608 },
+    { "lat": 22.6025997, "lon": 120.3021623 },
+    { "lat": 22.6036041, "lon": 120.3017597 },
+    { "lat": 22.6036888, "lon": 120.3017257 },
+    { "lat": 22.6039082, "lon": 120.3016463 },
+    { "lat": 22.6040291, "lon": 120.3015997 },
+    { "lat": 22.6040549, "lon": 120.3015897 },
+    { "lat": 22.6050546, "lon": 120.3012043 },
+    { "lat": 22.6051149, "lon": 120.3011810 },
+    { "lat": 22.6052471, "lon": 120.3011356 },
+    { "lat": 22.6053607, "lon": 120.3010908 },
+    { "lat": 22.6053881, "lon": 120.3010799 },
+    { "lat": 22.6062432, "lon": 120.3007416 },
+    { "lat": 22.6062678, "lon": 120.3007319 },
+    { "lat": 22.6063929, "lon": 120.3006824 },
+    { "lat": 22.6064969, "lon": 120.3006407 },
+    { "lat": 22.6065217, "lon": 120.3006307 },
+    { "lat": 22.6077328, "lon": 120.3001447 },
+    { "lat": 22.6082021, "lon": 120.2999698 },
+    { "lat": 22.6083446, "lon": 120.2999131 }
+  ],
+  "tags": {
+    "cycleway:left": "track",
+    "cycleway:left:segregated": "no",
+    "cycleway:right": "lane",
+    "cycleway:right:lane": "exclusive",
+    "highway": "tertiary",
+    "lanes": "4",
+    "name": "成功二路",
+    "name:en": "ChengGong 2nd Road",
+    "name:nan": "Sêng-kong 2-lō͘",
+    "name:nan-Hant": "成功二路",
+    "name:nan-Latn-pehoeji": "Sêng-kong 2-lō͘",
+    "name:nan-Latn-tailo": "Sîng-kong 2-lōo",
+    "name:zh": "成功二路",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 246576622,
+  "bounds": {
+    "minlat": 22.5929552,
+    "minlon": 120.3077901,
+    "maxlat": 22.5935479,
+    "maxlon": 120.3096227
+  },
+  "geometry": [
+    { "lat": 22.5935479, "lon": 120.3096227 },
+    { "lat": 22.5935183, "lon": 120.3095209 },
+    { "lat": 22.5935027, "lon": 120.3094705 },
+    { "lat": 22.5931971, "lon": 120.3084884 },
+    { "lat": 22.5930268, "lon": 120.3079882 },
+    { "lat": 22.5930114, "lon": 120.3079457 },
+    { "lat": 22.5929912, "lon": 120.3078969 },
+    { "lat": 22.5929552, "lon": 120.3077901 }
+  ],
+  "tags": {
+    "highway": "tertiary",
+    "name": "凱旋四路",
+    "name:en": "KaiSyuan 4nd Road",
+    "name:zh": "凱旋四路",
+    "oneway": "yes",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 249002656,
+  "bounds": {
+    "minlat": 22.5919168,
+    "minlon": 120.3056948,
+    "maxlat": 22.5935945,
+    "maxlon": 120.3062922
+  },
+  "geometry": [
+    { "lat": 22.5919168, "lon": 120.3062922 },
+    { "lat": 22.5920640, "lon": 120.3062398 },
+    { "lat": 22.5929501, "lon": 120.3059570 },
+    { "lat": 22.5930221, "lon": 120.3059260 },
+    { "lat": 22.5931006, "lon": 120.3058875 },
+    { "lat": 22.5932102, "lon": 120.3058485 },
+    { "lat": 22.5934416, "lon": 120.3057492 },
+    { "lat": 22.5935945, "lon": 120.3056948 }
+  ],
+  "tags": {
+    "highway": "tertiary",
+    "name": "成功二路",
+    "name:en": "ChengGong 2nd Road",
+    "name:zh": "成功二路",
+    "oneway": "yes",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 249002657,
+  "bounds": {
+    "minlat": 22.5920125,
+    "minlon": 120.3121807,
+    "maxlat": 22.5922520,
+    "maxlon": 120.3126078
+  },
+  "geometry": [
+    { "lat": 22.5920125, "lon": 120.3121807 },
+    { "lat": 22.5920493, "lon": 120.3122816 },
+    { "lat": 22.5920593, "lon": 120.3123092 },
+    { "lat": 22.5920689, "lon": 120.3123356 },
+    { "lat": 22.5921757, "lon": 120.3125169 },
+    { "lat": 22.5922520, "lon": 120.3126078 }
+  ],
+  "tags": {
+    "highway": "residential",
+    "name": "翠亨北路",
+    "name:en": "Cueiheng North Road",
+    "name:zh": "翠亨北路"
+  }
+},
+{
+  "type": "way",
+  "id": 249002677,
+  "bounds": {
+    "minlat": 22.5935777,
+    "minlon": 120.3110688,
+    "maxlat": 22.5954863,
+    "maxlon": 120.3161074
+  },
+  "geometry": [
+    { "lat": 22.5935777, "lon": 120.3110688 },
+    { "lat": 22.5935957, "lon": 120.3111212 },
+    { "lat": 22.5936315, "lon": 120.3112283 },
+    { "lat": 22.5939986, "lon": 120.3123275 },
+    { "lat": 22.5945407, "lon": 120.3139571 },
+    { "lat": 22.5946725, "lon": 120.3143638 },
+    { "lat": 22.5948306, "lon": 120.3148337 },
+    { "lat": 22.5949510, "lon": 120.3151511 },
+    { "lat": 22.5951117, "lon": 120.3155529 },
+    { "lat": 22.5954168, "lon": 120.3160036 },
+    { "lat": 22.5954398, "lon": 120.3160377 },
+    { "lat": 22.5954453, "lon": 120.3160458 },
+    { "lat": 22.5954863, "lon": 120.3161074 }
+  ],
+  "tags": {
+    "bicycle": "no",
+    "foot": "no",
+    "highway": "tertiary",
+    "motorcycle": "no",
+    "name": "凱旋四路",
+    "name:en": "Kaisyuan 4th Road",
+    "name:zh": "凱旋四路",
+    "oneway": "yes",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 249002680,
+  "bounds": {
+    "minlat": 22.5926008,
+    "minlon": 120.3079186,
+    "maxlat": 22.5936524,
+    "maxlon": 120.3110671
+  },
+  "geometry": [
+    { "lat": 22.5936524, "lon": 120.3110671 },
+    { "lat": 22.5936445, "lon": 120.3110435 },
+    { "lat": 22.5936212, "lon": 120.3109748 },
+    { "lat": 22.5931515, "lon": 120.3095903 },
+    { "lat": 22.5926455, "lon": 120.3080544 },
+    { "lat": 22.5926396, "lon": 120.3080364 },
+    { "lat": 22.5926008, "lon": 120.3079186 }
+  ],
+  "tags": {
+    "bicycle": "no",
+    "foot": "no",
+    "highway": "tertiary",
+    "motorcycle": "no",
+    "name": "凱旋四路",
+    "name:en": "Kaisyuan 4th Road",
+    "name:zh": "凱旋四路",
+    "oneway": "yes",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 249903642,
+  "bounds": {
+    "minlat": 22.5916793,
+    "minlon": 120.3059724,
+    "maxlat": 22.5925818,
+    "maxlon": 120.3062433
+  },
+  "geometry": [
+    { "lat": 22.5925818, "lon": 120.3059724 },
+    { "lat": 22.5920409, "lon": 120.3061492 },
+    { "lat": 22.5919965, "lon": 120.3061637 },
+    { "lat": 22.5918643, "lon": 120.3062069 },
+    { "lat": 22.5916793, "lon": 120.3062433 }
+  ],
+  "tags": {
+    "highway": "tertiary",
+    "name": "成功二路",
+    "name:en": "ChengGong 2nd Road",
+    "name:zh": "成功二路",
+    "oneway": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 249903646,
+  "bounds": {
+    "minlat": 22.6042377,
+    "minlon": 120.3143796,
+    "maxlat": 22.6056425,
+    "maxlon": 120.3156949
+  },
+  "geometry": [
+    { "lat": 22.6056425, "lon": 120.3156949 },
+    { "lat": 22.6054898, "lon": 120.3156314 },
+    { "lat": 22.6052311, "lon": 120.3155238 },
+    { "lat": 22.6049549, "lon": 120.3152602 },
+    { "lat": 22.6043324, "lon": 120.3144959 },
+    { "lat": 22.6042888, "lon": 120.3144424 },
+    { "lat": 22.6042377, "lon": 120.3143796 }
+  ],
+  "tags": {
+    "highway": "tertiary",
+    "name": "光華三路",
+    "name:en": "GuangHua 3rd Road",
+    "name:zh": "光華三路",
+    "oneway": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 249903647,
+  "bounds": {
+    "minlat": 22.6018178,
+    "minlon": 120.3115481,
+    "maxlat": 22.6042377,
+    "maxlon": 120.3143796
+  },
+  "geometry": [
+    { "lat": 22.6042377, "lon": 120.3143796 },
+    { "lat": 22.6041603, "lon": 120.3142853 },
+    { "lat": 22.6037524, "lon": 120.3137937 },
+    { "lat": 22.6036162, "lon": 120.3136295 },
+    { "lat": 22.6020516, "lon": 120.3117436 },
+    { "lat": 22.6019599, "lon": 120.3116249 },
+    { "lat": 22.6018178, "lon": 120.3115481 }
+  ],
+  "tags": {
+    "highway": "tertiary",
+    "name": "光華三路",
+    "name:en": "GuangHua 3rd Road",
+    "name:zh": "光華三路",
+    "oneway": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 249903652,
+  "bounds": {
+    "minlat": 22.6016721,
+    "minlon": 120.3088153,
+    "maxlat": 22.6047866,
+    "maxlon": 120.3113013
+  },
+  "geometry": [
+    { "lat": 22.6047866, "lon": 120.3088153 },
+    { "lat": 22.6046892, "lon": 120.3089028 },
+    { "lat": 22.6043770, "lon": 120.3091530 },
+    { "lat": 22.6042592, "lon": 120.3092378 },
+    { "lat": 22.6041997, "lon": 120.3092806 },
+    { "lat": 22.6040779, "lon": 120.3093683 },
+    { "lat": 22.6039996, "lon": 120.3094304 },
+    { "lat": 22.6039862, "lon": 120.3094410 },
+    { "lat": 22.6021700, "lon": 120.3109033 },
+    { "lat": 22.6020899, "lon": 120.3109764 },
+    { "lat": 22.6018406, "lon": 120.3111768 },
+    { "lat": 22.6016721, "lon": 120.3113013 }
+  ],
+  "tags": {
+    "cycleway:right": "shared_lane",
+    "highway": "primary",
+    "name": "中山三路",
+    "name:en": "Jhongshan 3rd Road",
+    "name:nan": "Tiong-san 3-lō͘",
+    "name:nan-Hant": "中山三路",
+    "name:nan-Latn-pehoeji": "Tiong-san 3-lō͘",
+    "name:nan-Latn-tailo": "Tiong-san 3-lōo",
+    "name:zh": "中山三路",
+    "oneway": "yes",
+    "ref": "17",
+    "ref:en": "Provincial Highway 17",
+    "ref:zh": "台17線",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 249903653,
+  "bounds": {
+    "minlat": 22.6050320,
+    "minlon": 120.3072534,
+    "maxlat": 22.6073010,
+    "maxlon": 120.3089459
+  },
+  "geometry": [
+    { "lat": 22.6050320, "lon": 120.3089459 },
+    { "lat": 22.6051161, "lon": 120.3088557 },
+    { "lat": 22.6052719, "lon": 120.3087214 },
+    { "lat": 22.6054879, "lon": 120.3085521 },
+    { "lat": 22.6071567, "lon": 120.3073375 },
+    { "lat": 22.6071974, "lon": 120.3073080 },
+    { "lat": 22.6073010, "lon": 120.3072534 }
+  ],
+  "tags": {
+    "cycleway:right": "shared_lane",
+    "highway": "primary",
+    "lit": "yes",
+    "name": "中山三路",
+    "name:en": "Jhongshan 3rd Road",
+    "name:nan": "Tiong-san 3-lō͘",
+    "name:nan-Hant": "中山三路",
+    "name:nan-Latn-pehoeji": "Tiong-san 3-lō͘",
+    "name:nan-Latn-tailo": "Tiong-san 3-lōo",
+    "name:zh": "中山三路",
+    "oneway": "yes",
+    "ref": "17",
+    "ref:en": "Provincial Highway 17",
+    "ref:zh": "台17線",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 262003695,
+  "bounds": {
+    "minlat": 22.6041722,
+    "minlon": 120.3144517,
+    "maxlat": 22.6055730,
+    "maxlon": 120.3157903
+  },
+  "geometry": [
+    { "lat": 22.6041722, "lon": 120.3144517 },
+    { "lat": 22.6042174, "lon": 120.3145071 },
+    { "lat": 22.6048868, "lon": 120.3153357 },
+    { "lat": 22.6051884, "lon": 120.3156293 },
+    { "lat": 22.6053772, "lon": 120.3157083 },
+    { "lat": 22.6054586, "lon": 120.3157424 },
+    { "lat": 22.6055730, "lon": 120.3157903 }
+  ],
+  "tags": {
+    "highway": "tertiary",
+    "name": "光華三路",
+    "name:en": "GuangHua 3rd Road",
+    "name:zh": "光華三路",
+    "oneway": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 262417087,
+  "bounds": {
+    "minlat": 22.5928827,
+    "minlon": 120.3056948,
+    "maxlat": 22.5935945,
+    "maxlon": 120.3077901
+  },
+  "geometry": [
+    { "lat": 22.5929552, "lon": 120.3077901 },
+    { "lat": 22.5929253, "lon": 120.3076861 },
+    { "lat": 22.5929187, "lon": 120.3076542 },
+    { "lat": 22.5929021, "lon": 120.3075954 },
+    { "lat": 22.5928872, "lon": 120.3074251 },
+    { "lat": 22.5928827, "lon": 120.3071786 },
+    { "lat": 22.5929199, "lon": 120.3068719 },
+    { "lat": 22.5929463, "lon": 120.3067090 },
+    { "lat": 22.5929914, "lon": 120.3065750 },
+    { "lat": 22.5930539, "lon": 120.3064427 },
+    { "lat": 22.5930673, "lon": 120.3064145 },
+    { "lat": 22.5931413, "lon": 120.3062917 },
+    { "lat": 22.5933091, "lon": 120.3060529 },
+    { "lat": 22.5935089, "lon": 120.3057845 },
+    { "lat": 22.5935945, "lon": 120.3056948 }
+  ],
+  "tags": {
+    "highway": "tertiary",
+    "name": "凱旋四路",
+    "name:en": "KaiSyuan 4nd Road",
+    "name:zh": "凱旋四路",
+    "oneway": "yes",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 262417088,
+  "bounds": {
+    "minlat": 22.5928758,
+    "minlon": 120.3078083,
+    "maxlat": 22.5935711,
+    "maxlon": 120.3099448
+  },
+  "geometry": [
+    { "lat": 22.5928758, "lon": 120.3078083 },
+    { "lat": 22.5928937, "lon": 120.3078620 },
+    { "lat": 22.5929130, "lon": 120.3079276 },
+    { "lat": 22.5933935, "lon": 120.3094723 },
+    { "lat": 22.5934059, "lon": 120.3095125 },
+    { "lat": 22.5934196, "lon": 120.3095590 },
+    { "lat": 22.5934543, "lon": 120.3096619 },
+    { "lat": 22.5934885, "lon": 120.3097673 },
+    { "lat": 22.5935245, "lon": 120.3098816 },
+    { "lat": 22.5935711, "lon": 120.3099448 }
+  ],
+  "tags": {
+    "highway": "tertiary",
+    "name": "凱旋四路",
+    "name:en": "KaiSyuan 4nd Road",
+    "name:zh": "凱旋四路",
+    "oneway": "yes",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 262417093,
+  "bounds": {
+    "minlat": 22.6036036,
+    "minlon": 120.3238559,
+    "maxlat": 22.6050990,
+    "maxlon": 120.3246445
+  },
+  "geometry": [
+    { "lat": 22.6036036, "lon": 120.3238559 },
+    { "lat": 22.6036938, "lon": 120.3239420 },
+    { "lat": 22.6040779, "lon": 120.3242281 },
+    { "lat": 22.6043853, "lon": 120.3243745 },
+    { "lat": 22.6045240, "lon": 120.3244406 },
+    { "lat": 22.6048715, "lon": 120.3245894 },
+    { "lat": 22.6049412, "lon": 120.3246063 },
+    { "lat": 22.6049628, "lon": 120.3246115 },
+    { "lat": 22.6050990, "lon": 120.3246445 }
+  ],
+  "tags": {
+    "highway": "residential",
+    "name": "凱旋四路",
+    "name:en": "Kaisyuan 4th Road",
+    "name:zh": "凱旋四路",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 267234697,
+  "bounds": {
+    "minlat": 22.6049676,
+    "minlon": 120.3089459,
+    "maxlat": 22.6050320,
+    "maxlon": 120.3090277
+  },
+  "geometry": [
+    { "lat": 22.6049676, "lon": 120.3090277 },
+    { "lat": 22.6050320, "lon": 120.3089459 }
+  ],
+  "tags": {
+    "cycleway:right": "lane",
+    "cycleway:right:lane": "advisory",
+    "highway": "primary",
+    "name": "中山三路",
+    "name:en": "Jhongshan 3rd Road",
+    "name:nan": "Tiong-san 3-lō͘",
+    "name:nan-Hant": "中山三路",
+    "name:nan-Latn-pehoeji": "Tiong-san 3-lō͘",
+    "name:nan-Latn-tailo": "Tiong-san 3-lōo",
+    "name:zh": "中山三路",
+    "oneway": "yes",
+    "ref": "17",
+    "ref:en": "Provincial Highway 17",
+    "ref:zh": "台17線",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 267234698,
+  "bounds": {
+    "minlat": 22.6047866,
+    "minlon": 120.3087330,
+    "maxlat": 22.6048712,
+    "maxlon": 120.3088153
+  },
+  "geometry": [
+    { "lat": 22.6048712, "lon": 120.3087330 },
+    { "lat": 22.6047866, "lon": 120.3088153 }
+  ],
+  "tags": {
+    "cycleway:right": "lane",
+    "cycleway:right:lane": "advisory",
+    "highway": "primary",
+    "name": "中山三路",
+    "name:en": "Jhongshan 3rd Road",
+    "name:nan": "Tiong-san 3-lō͘",
+    "name:nan-Hant": "中山三路",
+    "name:nan-Latn-pehoeji": "Tiong-san 3-lō͘",
+    "name:nan-Latn-tailo": "Tiong-san 3-lōo",
+    "name:zh": "中山三路",
+    "oneway": "yes",
+    "ref": "17",
+    "ref:en": "Provincial Highway 17",
+    "ref:zh": "台17線",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 267234709,
+  "bounds": {
+    "minlat": 22.5936524,
+    "minlon": 120.3110671,
+    "maxlat": 22.5958423,
+    "maxlon": 120.3163727
+  },
+  "geometry": [
+    { "lat": 22.5958423, "lon": 120.3163727 },
+    { "lat": 22.5956557, "lon": 120.3161516 },
+    { "lat": 22.5956231, "lon": 120.3161007 },
+    { "lat": 22.5955259, "lon": 120.3159719 },
+    { "lat": 22.5951601, "lon": 120.3154868 },
+    { "lat": 22.5950095, "lon": 120.3150908 },
+    { "lat": 22.5949013, "lon": 120.3147949 },
+    { "lat": 22.5947457, "lon": 120.3143283 },
+    { "lat": 22.5946114, "lon": 120.3139292 },
+    { "lat": 22.5940668, "lon": 120.3123031 },
+    { "lat": 22.5937061, "lon": 120.3112273 },
+    { "lat": 22.5936970, "lon": 120.3112002 },
+    { "lat": 22.5936524, "lon": 120.3110671 }
+  ],
+  "tags": {
+    "bicycle": "no",
+    "foot": "no",
+    "highway": "tertiary",
+    "motorcycle": "no",
+    "name": "凱旋四路",
+    "name:en": "Kaisyuan 4th Road",
+    "name:zh": "凱旋四路",
+    "oneway": "yes",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 267234710,
+  "bounds": {
+    "minlat": 22.5958423,
+    "minlon": 120.3163727,
+    "maxlat": 22.6017912,
+    "maxlon": 120.3224139
+  },
+  "geometry": [
+    { "lat": 22.6017912, "lon": 120.3224139 },
+    { "lat": 22.6010507, "lon": 120.3216295 },
+    { "lat": 22.6008353, "lon": 120.3214012 },
+    { "lat": 22.5991443, "lon": 120.3196114 },
+    { "lat": 22.5991188, "lon": 120.3195845 },
+    { "lat": 22.5990499, "lon": 120.3195116 },
+    { "lat": 22.5989807, "lon": 120.3194403 },
+    { "lat": 22.5985971, "lon": 120.3190450 },
+    { "lat": 22.5981502, "lon": 120.3185927 },
+    { "lat": 22.5979795, "lon": 120.3184167 },
+    { "lat": 22.5975718, "lon": 120.3180972 },
+    { "lat": 22.5972100, "lon": 120.3178518 },
+    { "lat": 22.5969904, "lon": 120.3176571 },
+    { "lat": 22.5967965, "lon": 120.3174965 },
+    { "lat": 22.5967358, "lon": 120.3174390 },
+    { "lat": 22.5967084, "lon": 120.3174130 },
+    { "lat": 22.5966678, "lon": 120.3173745 },
+    { "lat": 22.5965992, "lon": 120.3173094 },
+    { "lat": 22.5965593, "lon": 120.3172716 },
+    { "lat": 22.5962640, "lon": 120.3169435 },
+    { "lat": 22.5960713, "lon": 120.3166782 },
+    { "lat": 22.5959468, "lon": 120.3165151 },
+    { "lat": 22.5959214, "lon": 120.3164845 },
+    { "lat": 22.5959050, "lon": 120.3164647 },
+    { "lat": 22.5958423, "lon": 120.3163727 }
+  ],
+  "tags": {
+    "bicycle": "no",
+    "foot": "no",
+    "highway": "tertiary",
+    "motorcycle": "no",
+    "name": "凱旋四路",
+    "name:en": "Kaisyuan 4th Road",
+    "name:zh": "凱旋四路",
+    "oneway": "yes",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 268545824,
+  "bounds": {
+    "minlat": 22.5922520,
+    "minlon": 120.3126078,
+    "maxlat": 22.5939850,
+    "maxlon": 120.3172438
+  },
+  "geometry": [
+    { "lat": 22.5922520, "lon": 120.3126078 },
+    { "lat": 22.5925509, "lon": 120.3131023 },
+    { "lat": 22.5928120, "lon": 120.3135593 },
+    { "lat": 22.5929704, "lon": 120.3138553 },
+    { "lat": 22.5930973, "lon": 120.3140937 },
+    { "lat": 22.5931443, "lon": 120.3141760 },
+    { "lat": 22.5931843, "lon": 120.3142494 },
+    { "lat": 22.5933715, "lon": 120.3146521 },
+    { "lat": 22.5935493, "lon": 120.3149806 },
+    { "lat": 22.5936557, "lon": 120.3152013 },
+    { "lat": 22.5938003, "lon": 120.3155400 },
+    { "lat": 22.5939288, "lon": 120.3158711 },
+    { "lat": 22.5939452, "lon": 120.3159778 },
+    { "lat": 22.5939685, "lon": 120.3161296 },
+    { "lat": 22.5939850, "lon": 120.3162886 },
+    { "lat": 22.5939821, "lon": 120.3163941 },
+    { "lat": 22.5939724, "lon": 120.3165325 },
+    { "lat": 22.5939461, "lon": 120.3166855 },
+    { "lat": 22.5938548, "lon": 120.3168961 },
+    { "lat": 22.5937454, "lon": 120.3170723 },
+    { "lat": 22.5936233, "lon": 120.3172438 }
+  ],
+  "tags": {
+    "highway": "residential",
+    "name": "翠亨北路",
+    "name:en": "Cueiheng North Road",
+    "name:zh": "翠亨北路"
+  }
+},
+{
+  "type": "way",
+  "id": 271671508,
+  "bounds": {
+    "minlat": 22.5935398,
+    "minlon": 120.3111642,
+    "maxlat": 22.5954863,
+    "maxlon": 120.3161074
+  },
+  "geometry": [
+    { "lat": 22.5935398, "lon": 120.3111642 },
+    { "lat": 22.5935698, "lon": 120.3112548 },
+    { "lat": 22.5939345, "lon": 120.3123555 },
+    { "lat": 22.5942041, "lon": 120.3131691 },
+    { "lat": 22.5944811, "lon": 120.3139821 },
+    { "lat": 22.5946087, "lon": 120.3143490 },
+    { "lat": 22.5947769, "lon": 120.3148658 },
+    { "lat": 22.5948718, "lon": 120.3151250 },
+    { "lat": 22.5948947, "lon": 120.3151876 },
+    { "lat": 22.5950703, "lon": 120.3155736 },
+    { "lat": 22.5953777, "lon": 120.3160321 },
+    { "lat": 22.5954012, "lon": 120.3160673 },
+    { "lat": 22.5954054, "lon": 120.3160735 },
+    { "lat": 22.5954863, "lon": 120.3161074 }
+  ],
+  "tags": {
+    "highway": "tertiary",
+    "name": "凱旋四路",
+    "name:en": "Kaisyuan 4th Road",
+    "name:zh": "凱旋四路",
+    "oneway": "yes",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 271671509,
+  "bounds": {
+    "minlat": 22.6017912,
+    "minlon": 120.3224139,
+    "maxlat": 22.6033966,
+    "maxlon": 120.3240545
+  },
+  "geometry": [
+    { "lat": 22.6033966, "lon": 120.3240545 },
+    { "lat": 22.6017912, "lon": 120.3224139 }
+  ],
+  "tags": {
+    "bicycle": "no",
+    "foot": "no",
+    "highway": "tertiary",
+    "motorcycle": "no",
+    "name": "凱旋四路",
+    "name:en": "Kaisyuan 4th Road",
+    "name:zh": "凱旋四路",
+    "oneway": "yes",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 271671513,
+  "bounds": {
+    "minlat": 22.5926008,
+    "minlon": 120.3079186,
+    "maxlat": 22.5937034,
+    "maxlon": 120.3110215
+  },
+  "geometry": [
+    { "lat": 22.5937034, "lon": 120.3110215 },
+    { "lat": 22.5936786, "lon": 120.3109475 },
+    { "lat": 22.5934367, "lon": 120.3102422 },
+    { "lat": 22.5932195, "lon": 120.3095757 },
+    { "lat": 22.5927115, "lon": 120.3080318 },
+    { "lat": 22.5927046, "lon": 120.3080110 },
+    { "lat": 22.5926851, "lon": 120.3079516 },
+    { "lat": 22.5926008, "lon": 120.3079186 }
+  ],
+  "tags": {
+    "highway": "tertiary",
+    "name": "凱旋四路",
+    "name:en": "Kaisyuan 4th Road",
+    "name:zh": "凱旋四路",
+    "oneway": "yes",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 271671514,
+  "bounds": {
+    "minlat": 22.6033966,
+    "minlon": 120.3238559,
+    "maxlat": 22.6036036,
+    "maxlon": 120.3240545
+  },
+  "geometry": [
+    { "lat": 22.6036036, "lon": 120.3238559 },
+    { "lat": 22.6035481, "lon": 120.3239241 },
+    { "lat": 22.6035219, "lon": 120.3239452 },
+    { "lat": 22.6034777, "lon": 120.3239870 },
+    { "lat": 22.6033966, "lon": 120.3240545 }
+  ],
+  "tags": {
+    "highway": "tertiary",
+    "name": "籬仔內路",
+    "name:en": "Lizihnei Road",
+    "name:zh": "籬仔內路",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 271671515,
+  "bounds": {
+    "minlat": 22.6033470,
+    "minlon": 120.3241134,
+    "maxlat": 22.6050084,
+    "maxlon": 120.3249296
+  },
+  "geometry": [
+    { "lat": 22.6033470, "lon": 120.3241134 },
+    { "lat": 22.6037224, "lon": 120.3244385 },
+    { "lat": 22.6042997, "lon": 120.3247158 },
+    { "lat": 22.6045080, "lon": 120.3247920 },
+    { "lat": 22.6046519, "lon": 120.3248627 },
+    { "lat": 22.6047937, "lon": 120.3249207 },
+    { "lat": 22.6048399, "lon": 120.3249296 },
+    { "lat": 22.6050084, "lon": 120.3249234 }
+  ],
+  "tags": {
+    "bicycle": "no",
+    "foot": "no",
+    "highway": "tertiary",
+    "motorcycle": "no",
+    "name": "凱旋四路",
+    "name:en": "Kaisyuan 4th Road",
+    "name:zh": "凱旋四路",
+    "oneway": "yes",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 271671517,
+  "bounds": {
+    "minlat": 22.5937034,
+    "minlon": 120.3110215,
+    "maxlat": 22.5958423,
+    "maxlon": 120.3163727
+  },
+  "geometry": [
+    { "lat": 22.5958423, "lon": 120.3163727 },
+    { "lat": 22.5956901, "lon": 120.3160532 },
+    { "lat": 22.5955881, "lon": 120.3159243 },
+    { "lat": 22.5952213, "lon": 120.3154610 },
+    { "lat": 22.5950580, "lon": 120.3150697 },
+    { "lat": 22.5949565, "lon": 120.3147722 },
+    { "lat": 22.5947982, "lon": 120.3143032 },
+    { "lat": 22.5946596, "lon": 120.3139093 },
+    { "lat": 22.5941201, "lon": 120.3122791 },
+    { "lat": 22.5941177, "lon": 120.3122718 },
+    { "lat": 22.5937626, "lon": 120.3112003 },
+    { "lat": 22.5937544, "lon": 120.3111756 },
+    { "lat": 22.5937034, "lon": 120.3110215 }
+  ],
+  "tags": {
+    "bicycle": "no",
+    "foot": "no",
+    "highway": "tertiary",
+    "motorcycle": "no",
+    "name": "凱旋四路",
+    "name:en": "Kaisyuan 4th Road",
+    "name:zh": "凱旋四路",
+    "oneway": "yes",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 286839912,
+  "bounds": {
+    "minlat": 22.5881952,
+    "minlon": 120.3182784,
+    "maxlat": 22.5923905,
+    "maxlon": 120.3218108
+  },
+  "geometry": [
+    { "lat": 22.5923905, "lon": 120.3182784 },
+    { "lat": 22.5922737, "lon": 120.3183790 },
+    { "lat": 22.5922294, "lon": 120.3184172 },
+    { "lat": 22.5916549, "lon": 120.3189120 },
+    { "lat": 22.5909322, "lon": 120.3194970 },
+    { "lat": 22.5901854, "lon": 120.3201009 },
+    { "lat": 22.5890159, "lon": 120.3211199 },
+    { "lat": 22.5886986, "lon": 120.3213887 },
+    { "lat": 22.5882838, "lon": 120.3217365 },
+    { "lat": 22.5882538, "lon": 120.3217617 },
+    { "lat": 22.5881952, "lon": 120.3218108 }
+  ],
+  "tags": {
+    "highway": "residential",
+    "name": "翠亨北路",
+    "name:en": "Cueiheng North Road",
+    "name:zh": "翠亨北路"
+  }
+},
+{
+  "type": "way",
+  "id": 294699558,
+  "bounds": {
+    "minlat": 22.5923905,
+    "minlon": 120.3175562,
+    "maxlat": 22.5932555,
+    "maxlon": 120.3182784
+  },
+  "geometry": [
+    { "lat": 22.5932555, "lon": 120.3175562 },
+    { "lat": 22.5929904, "lon": 120.3177768 },
+    { "lat": 22.5925238, "lon": 120.3181669 },
+    { "lat": 22.5924959, "lon": 120.3181903 },
+    { "lat": 22.5923905, "lon": 120.3182784 }
+  ],
+  "tags": {
+    "highway": "residential",
+    "name": "翠亨北路",
+    "name:en": "Cueiheng North Road",
+    "name:zh": "翠亨北路"
+  }
+},
+{
+  "type": "way",
+  "id": 295443777,
+  "bounds": {
+    "minlat": 22.6056425,
+    "minlon": 120.3156949,
+    "maxlat": 22.6085948,
+    "maxlon": 120.3166528
+  },
+  "geometry": [
+    { "lat": 22.6085948, "lon": 120.3166528 },
+    { "lat": 22.6084894, "lon": 120.3165605 },
+    { "lat": 22.6077486, "lon": 120.3163380 },
+    { "lat": 22.6069311, "lon": 120.3161000 },
+    { "lat": 22.6057797, "lon": 120.3157380 },
+    { "lat": 22.6057593, "lon": 120.3157316 },
+    { "lat": 22.6056425, "lon": 120.3156949 }
+  ],
+  "tags": {
+    "highway": "tertiary",
+    "name": "光華三路",
+    "name:en": "GuangHua 3rd Road",
+    "name:zh": "光華三路",
+    "oneway": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 297142535,
+  "bounds": {
+    "minlat": 22.6048739,
+    "minlon": 120.3090277,
+    "maxlat": 22.6049676,
+    "maxlon": 120.3091211
+  },
+  "geometry": [
+    { "lat": 22.6048739, "lon": 120.3091211 },
+    { "lat": 22.6049676, "lon": 120.3090277 }
+  ],
+  "tags": {
+    "cycleway:right": "lane",
+    "cycleway:right:lane": "advisory",
+    "highway": "primary",
+    "name": "中山三路",
+    "name:en": "Jhongshan 3rd Road",
+    "name:nan": "Tiong-san 3-lō͘",
+    "name:nan-Hant": "中山三路",
+    "name:nan-Latn-pehoeji": "Tiong-san 3-lō͘",
+    "name:nan-Latn-tailo": "Tiong-san 3-lōo",
+    "name:zh": "中山三路",
+    "oneway": "yes",
+    "ref": "17",
+    "ref:en": "Provincial Highway 17",
+    "ref:zh": "台17線",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 311081637,
+  "bounds": {
+    "minlat": 22.6018178,
+    "minlon": 120.3115481,
+    "maxlat": 22.6041722,
+    "maxlon": 120.3144517
+  },
+  "geometry": [
+    { "lat": 22.6018178, "lon": 120.3115481 },
+    { "lat": 22.6018811, "lon": 120.3117057 },
+    { "lat": 22.6040544, "lon": 120.3143103 },
+    { "lat": 22.6040923, "lon": 120.3143558 },
+    { "lat": 22.6041722, "lon": 120.3144517 }
+  ],
+  "tags": {
+    "highway": "tertiary",
+    "name": "光華三路",
+    "name:en": "GuangHua 3rd Road",
+    "name:zh": "光華三路",
+    "oneway": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 311081646,
+  "bounds": {
+    "minlat": 22.5960089,
+    "minlon": 120.3113013,
+    "maxlat": 22.6016721,
+    "maxlon": 120.3158244
+  },
+  "geometry": [
+    { "lat": 22.6016721, "lon": 120.3113013 },
+    { "lat": 22.6015127, "lon": 120.3114324 },
+    { "lat": 22.6014765, "lon": 120.3114645 },
+    { "lat": 22.6013322, "lon": 120.3115813 },
+    { "lat": 22.5986741, "lon": 120.3137319 },
+    { "lat": 22.5986017, "lon": 120.3137909 },
+    { "lat": 22.5984815, "lon": 120.3138886 },
+    { "lat": 22.5983769, "lon": 120.3139704 },
+    { "lat": 22.5982876, "lon": 120.3140401 },
+    { "lat": 22.5980643, "lon": 120.3142148 },
+    { "lat": 22.5974873, "lon": 120.3146658 },
+    { "lat": 22.5960971, "lon": 120.3157527 },
+    { "lat": 22.5960842, "lon": 120.3157628 },
+    { "lat": 22.5960089, "lon": 120.3158244 }
+  ],
+  "tags": {
+    "cycleway:right": "shared_lane",
+    "highway": "primary",
+    "name": "中山三路",
+    "name:en": "Jhongshan 3rd Road",
+    "name:nan": "Tiong-san 3-lō͘",
+    "name:nan-Hant": "中山三路",
+    "name:nan-Latn-pehoeji": "Tiong-san 3-lō͘",
+    "name:nan-Latn-tailo": "Tiong-san 3-lōo",
+    "name:zh": "中山三路",
+    "oneway": "yes",
+    "ref": "17",
+    "ref:en": "Provincial Highway 17",
+    "ref:zh": "台17線",
+    "sidewalk": "right",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 311081652,
+  "bounds": {
+    "minlat": 22.6016903,
+    "minlon": 120.3091211,
+    "maxlat": 22.6048739,
+    "maxlon": 120.3116628
+  },
+  "geometry": [
+    { "lat": 22.6016903, "lon": 120.3116628 },
+    { "lat": 22.6018178, "lon": 120.3115481 },
+    { "lat": 22.6020129, "lon": 120.3114358 },
+    { "lat": 22.6040276, "lon": 120.3098039 },
+    { "lat": 22.6041038, "lon": 120.3097491 },
+    { "lat": 22.6041963, "lon": 120.3096760 },
+    { "lat": 22.6042685, "lon": 120.3096125 },
+    { "lat": 22.6046255, "lon": 120.3093279 },
+    { "lat": 22.6047453, "lon": 120.3092281 },
+    { "lat": 22.6048739, "lon": 120.3091211 }
+  ],
+  "tags": {
+    "cycleway:right": "shared_lane",
+    "highway": "primary",
+    "lanes": "2",
+    "name": "中山三路",
+    "name:en": "Jhongshan 3rd Road",
+    "name:nan": "Tiong-san 3-lō͘",
+    "name:nan-Hant": "中山三路",
+    "name:nan-Latn-pehoeji": "Tiong-san 3-lō͘",
+    "name:nan-Latn-tailo": "Tiong-san 3-lōo",
+    "name:zh": "中山三路",
+    "oneway": "yes",
+    "ref": "17",
+    "ref:en": "Provincial Highway 17",
+    "ref:zh": "台17線",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 311081658,
+  "bounds": {
+    "minlat": 22.5960089,
+    "minlon": 120.3158244,
+    "maxlat": 22.5961915,
+    "maxlon": 120.3161081
+  },
+  "geometry": [
+    { "lat": 22.5960089, "lon": 120.3158244 },
+    { "lat": 22.5961915, "lon": 120.3161081 }
+  ],
+  "tags": {
+    "highway": "residential",
+    "name": "凱旋四路",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 311081660,
+  "bounds": {
+    "minlat": 22.5961915,
+    "minlon": 120.3161081,
+    "maxlat": 22.6036036,
+    "maxlon": 120.3238559
+  },
+  "geometry": [
+    { "lat": 22.5961915, "lon": 120.3161081 },
+    { "lat": 22.5962946, "lon": 120.3162139 },
+    { "lat": 22.5963069, "lon": 120.3162266 },
+    { "lat": 22.5967340, "lon": 120.3166648 },
+    { "lat": 22.5988877, "lon": 120.3188746 },
+    { "lat": 22.5992473, "lon": 120.3192465 },
+    { "lat": 22.5997801, "lon": 120.3198437 },
+    { "lat": 22.5999596, "lon": 120.3200468 },
+    { "lat": 22.6008428, "lon": 120.3209616 },
+    { "lat": 22.6013131, "lon": 120.3214486 },
+    { "lat": 22.6026396, "lon": 120.3228360 },
+    { "lat": 22.6027528, "lon": 120.3229480 },
+    { "lat": 22.6029364, "lon": 120.3231466 },
+    { "lat": 22.6036036, "lon": 120.3238559 }
+  ],
+  "tags": {
+    "highway": "residential",
+    "lanes": "2",
+    "name": "凱旋四路",
+    "name:en": "Kaisyuan 4th Road",
+    "name:zh": "凱旋四路",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 311360913,
+  "bounds": {
+    "minlat": 22.6046255,
+    "minlon": 120.3093279,
+    "maxlat": 22.6051927,
+    "maxlon": 120.3101472
+  },
+  "geometry": [
+    { "lat": 22.6051927, "lon": 120.3101472 },
+    { "lat": 22.6046664, "lon": 120.3093808 },
+    { "lat": 22.6046255, "lon": 120.3093279 }
+  ],
+  "tags": {
+    "highway": "service",
+    "name": "中山三路126巷",
+    "service": "alley"
+  }
+},
+{
+  "type": "way",
+  "id": 311381362,
+  "bounds": {
+    "minlat": 22.6047019,
+    "minlon": 120.3205859,
+    "maxlat": 22.6051986,
+    "maxlon": 120.3219945
+  },
+  "geometry": [
+    { "lat": 22.6050259, "lon": 120.3205859 },
+    { "lat": 22.6051986, "lon": 120.3206555 },
+    { "lat": 22.6049276, "lon": 120.3214192 },
+    { "lat": 22.6047019, "lon": 120.3219945 }
+  ],
+  "tags": {
+    "highway": "service",
+    "name": "籬仔內路188巷",
+    "name:en": "Lane 188, Li Zih Nei Road",
+    "name:zh": "籬仔內路188巷",
+    "service": "alley"
+  }
+},
+{
+  "type": "way",
+  "id": 311545444,
+  "bounds": {
+    "minlat": 22.6055730,
+    "minlon": 120.3157903,
+    "maxlat": 22.6085948,
+    "maxlon": 120.3166612
+  },
+  "geometry": [
+    { "lat": 22.6055730, "lon": 120.3157903 },
+    { "lat": 22.6057314, "lon": 120.3158375 },
+    { "lat": 22.6060915, "lon": 120.3159450 },
+    { "lat": 22.6069053, "lon": 120.3161877 },
+    { "lat": 22.6083734, "lon": 120.3166366 },
+    { "lat": 22.6084540, "lon": 120.3166612 },
+    { "lat": 22.6085948, "lon": 120.3166528 }
+  ],
+  "tags": {
+    "highway": "tertiary",
+    "name": "光華三路",
+    "name:en": "GuangHua 3rd Road",
+    "name:zh": "光華三路",
+    "oneway": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 312365071,
+  "bounds": {
+    "minlat": 22.6017525,
+    "minlon": 120.3224649,
+    "maxlat": 22.6033470,
+    "maxlon": 120.3241134
+  },
+  "geometry": [
+    { "lat": 22.6017525, "lon": 120.3224649 },
+    { "lat": 22.6033470, "lon": 120.3241134 }
+  ],
+  "tags": {
+    "bicycle": "no",
+    "foot": "no",
+    "highway": "tertiary",
+    "motorcycle": "no",
+    "name": "凱旋四路",
+    "name:en": "Kaisyuan 4th Road",
+    "name:zh": "凱旋四路",
+    "oneway": "yes",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 312712054,
+  "bounds": {
+    "minlat": 22.5974432,
+    "minlon": 120.3070965,
+    "maxlat": 22.6072179,
+    "maxlon": 120.3148486
+  },
+  "geometry": [
+    { "lat": 22.6072179, "lon": 120.3070965 },
+    { "lat": 22.6071099, "lon": 120.3071826 },
+    { "lat": 22.6053070, "lon": 120.3084609 },
+    { "lat": 22.6051624, "lon": 120.3085709 },
+    { "lat": 22.6049926, "lon": 120.3086975 },
+    { "lat": 22.6049023, "lon": 120.3087811 },
+    { "lat": 22.6048231, "lon": 120.3088569 },
+    { "lat": 22.6047316, "lon": 120.3089454 },
+    { "lat": 22.6042996, "lon": 120.3093121 },
+    { "lat": 22.6042233, "lon": 120.3093769 },
+    { "lat": 22.6041186, "lon": 120.3094658 },
+    { "lat": 22.6040361, "lon": 120.3095311 },
+    { "lat": 22.6040125, "lon": 120.3095503 },
+    { "lat": 22.6022062, "lon": 120.3110109 },
+    { "lat": 22.6018902, "lon": 120.3112490 },
+    { "lat": 22.6017201, "lon": 120.3113689 },
+    { "lat": 22.6015575, "lon": 120.3114984 },
+    { "lat": 22.6013767, "lon": 120.3116463 },
+    { "lat": 22.5988236, "lon": 120.3137348 },
+    { "lat": 22.5987269, "lon": 120.3138139 },
+    { "lat": 22.5986528, "lon": 120.3138745 },
+    { "lat": 22.5985294, "lon": 120.3139755 },
+    { "lat": 22.5984328, "lon": 120.3140532 },
+    { "lat": 22.5974432, "lon": 120.3148486 }
+  ],
+  "tags": {
+    "bicycle": "no",
+    "foot": "no",
+    "highway": "primary",
+    "lit": "yes",
+    "motorcycle": "no",
+    "name": "中山三路",
+    "name:en": "Jhongshan 3rd Road",
+    "name:nan": "Tiong-san 3-lō͘",
+    "name:nan-Hant": "中山三路",
+    "name:nan-Latn-pehoeji": "Tiong-san 3-lō͘",
+    "name:nan-Latn-tailo": "Tiong-san 3-lōo",
+    "name:zh": "中山三路",
+    "oneway": "yes",
+    "ref": "17",
+    "ref:en": "Provincial Highway 17",
+    "ref:zh": "台17線",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 328516572,
+  "bounds": {
+    "minlat": 22.5938807,
+    "minlon": 120.3109408,
+    "maxlat": 22.5960089,
+    "maxlon": 120.3158244
+  },
+  "geometry": [
+    { "lat": 22.5938807, "lon": 120.3109408 },
+    { "lat": 22.5939164, "lon": 120.3110221 },
+    { "lat": 22.5939258, "lon": 120.3110476 },
+    { "lat": 22.5939387, "lon": 120.3110888 },
+    { "lat": 22.5940699, "lon": 120.3114399 },
+    { "lat": 22.5942491, "lon": 120.3119198 },
+    { "lat": 22.5942654, "lon": 120.3119705 },
+    { "lat": 22.5943051, "lon": 120.3120933 },
+    { "lat": 22.5943360, "lon": 120.3121960 },
+    { "lat": 22.5943458, "lon": 120.3122286 },
+    { "lat": 22.5944407, "lon": 120.3125133 },
+    { "lat": 22.5947007, "lon": 120.3133287 },
+    { "lat": 22.5949946, "lon": 120.3141103 },
+    { "lat": 22.5950314, "lon": 120.3141917 },
+    { "lat": 22.5950851, "lon": 120.3143103 },
+    { "lat": 22.5951175, "lon": 120.3143799 },
+    { "lat": 22.5953334, "lon": 120.3148434 },
+    { "lat": 22.5954637, "lon": 120.3150652 },
+    { "lat": 22.5957553, "lon": 120.3154896 },
+    { "lat": 22.5958758, "lon": 120.3156479 },
+    { "lat": 22.5959041, "lon": 120.3156852 },
+    { "lat": 22.5960089, "lon": 120.3158244 }
+  ],
+  "tags": {
+    "highway": "residential",
+    "name": "凱旋四路",
+    "name:en": "Kaisyuan 4th Road",
+    "name:zh": "凱旋四路",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 369452959,
+  "bounds": {
+    "minlat": 22.5953513,
+    "minlon": 120.3046617,
+    "maxlat": 22.5986518,
+    "maxlon": 120.3141522
+  },
+  "geometry": [
+    { "lat": 22.5986518, "lon": 120.3141522 },
+    { "lat": 22.5985820, "lon": 120.3140646 },
+    { "lat": 22.5985294, "lon": 120.3139755 },
+    { "lat": 22.5984815, "lon": 120.3138886 },
+    { "lat": 22.5984124, "lon": 120.3137659 },
+    { "lat": 22.5983954, "lon": 120.3137167 },
+    { "lat": 22.5979007, "lon": 120.3122970 },
+    { "lat": 22.5978876, "lon": 120.3122453 },
+    { "lat": 22.5978407, "lon": 120.3120848 },
+    { "lat": 22.5978045, "lon": 120.3119749 },
+    { "lat": 22.5977945, "lon": 120.3119388 },
+    { "lat": 22.5974845, "lon": 120.3110180 },
+    { "lat": 22.5974767, "lon": 120.3109948 },
+    { "lat": 22.5974425, "lon": 120.3108932 },
+    { "lat": 22.5973910, "lon": 120.3107484 },
+    { "lat": 22.5973837, "lon": 120.3107279 },
+    { "lat": 22.5967444, "lon": 120.3087638 },
+    { "lat": 22.5967359, "lon": 120.3087338 },
+    { "lat": 22.5967048, "lon": 120.3086404 },
+    { "lat": 22.5966671, "lon": 120.3085244 },
+    { "lat": 22.5966377, "lon": 120.3084282 },
+    { "lat": 22.5966102, "lon": 120.3083370 },
+    { "lat": 22.5965883, "lon": 120.3082640 },
+    { "lat": 22.5965689, "lon": 120.3081977 },
+    { "lat": 22.5957906, "lon": 120.3060075 },
+    { "lat": 22.5954937, "lon": 120.3051094 },
+    { "lat": 22.5954856, "lon": 120.3050850 },
+    { "lat": 22.5954401, "lon": 120.3049472 },
+    { "lat": 22.5954007, "lon": 120.3048238 },
+    { "lat": 22.5953897, "lon": 120.3047893 },
+    { "lat": 22.5953786, "lon": 120.3047548 },
+    { "lat": 22.5953688, "lon": 120.3047240 },
+    { "lat": 22.5953513, "lon": 120.3046617 }
+  ],
+  "tags": {
+    "highway": "tertiary",
+    "lit": "yes",
+    "name": "時代大道",
+    "name:en": "Shihdai Boulevard",
+    "name:zh": "時代大道",
+    "sidewalk:both": "separate",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 405961968,
+  "bounds": {
+    "minlat": 22.5935945,
+    "minlon": 120.3055806,
+    "maxlat": 22.5937567,
+    "maxlon": 120.3056948
+  },
+  "geometry": [
+    { "lat": 22.5935945, "lon": 120.3056948 },
+    { "lat": 22.5937002, "lon": 120.3056204 },
+    { "lat": 22.5937567, "lon": 120.3055806 }
+  ],
+  "tags": {
+    "highway": "tertiary",
+    "name": "成功二路",
+    "name:en": "ChengGong 2nd Road",
+    "name:zh": "成功二路",
+    "oneway": "yes",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 405961970,
+  "bounds": {
+    "minlat": 22.5935833,
+    "minlon": 120.3055806,
+    "maxlat": 22.5937567,
+    "maxlon": 120.3056239
+  },
+  "geometry": [
+    { "lat": 22.5937567, "lon": 120.3055806 },
+    { "lat": 22.5936915, "lon": 120.3055969 },
+    { "lat": 22.5935833, "lon": 120.3056239 }
+  ],
+  "tags": {
+    "highway": "tertiary",
+    "name": "成功二路",
+    "name:en": "ChengGong 2nd Road",
+    "name:zh": "成功二路",
+    "oneway": "yes",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 800678522,
+  "bounds": {
+    "minlat": 22.6036036,
+    "minlon": 120.3197333,
+    "maxlat": 22.6054335,
+    "maxlon": 120.3238559
+  },
+  "geometry": [
+    { "lat": 22.6054335, "lon": 120.3197333 },
+    { "lat": 22.6053614, "lon": 120.3198568 },
+    { "lat": 22.6053116, "lon": 120.3199585 },
+    { "lat": 22.6052968, "lon": 120.3199889 },
+    { "lat": 22.6052751, "lon": 120.3200333 },
+    { "lat": 22.6050259, "lon": 120.3205859 },
+    { "lat": 22.6048925, "lon": 120.3209321 },
+    { "lat": 22.6047591, "lon": 120.3213704 },
+    { "lat": 22.6045637, "lon": 120.3219083 },
+    { "lat": 22.6043533, "lon": 120.3223866 },
+    { "lat": 22.6042837, "lon": 120.3226173 },
+    { "lat": 22.6041374, "lon": 120.3229668 },
+    { "lat": 22.6037258, "lon": 120.3237309 },
+    { "lat": 22.6036036, "lon": 120.3238559 }
+  ],
+  "tags": {
+    "highway": "tertiary",
+    "lanes": "4",
+    "name": "籬仔內路",
+    "name:en": "Lizihnei Road",
+    "name:zh": "籬仔內路",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 800678527,
+  "bounds": {
+    "minlat": 22.6054335,
+    "minlon": 120.3178118,
+    "maxlat": 22.6064484,
+    "maxlon": 120.3197333
+  },
+  "geometry": [
+    { "lat": 22.6054335, "lon": 120.3197333 },
+    { "lat": 22.6055155, "lon": 120.3195846 },
+    { "lat": 22.6055263, "lon": 120.3195649 },
+    { "lat": 22.6061112, "lon": 120.3185040 },
+    { "lat": 22.6063900, "lon": 120.3179992 },
+    { "lat": 22.6064484, "lon": 120.3178118 }
+  ],
+  "tags": {
+    "highway": "tertiary",
+    "name": "籬仔內路",
+    "name:en": "Lizihnei Road",
+    "name:zh": "籬仔內路"
+  }
+},
+{
+  "type": "way",
+  "id": 902644640,
+  "bounds": {
+    "minlat": 22.5943160,
+    "minlon": 120.3014941,
+    "maxlat": 22.5953513,
+    "maxlon": 120.3046617
+  },
+  "geometry": [
+    { "lat": 22.5953513, "lon": 120.3046617 },
+    { "lat": 22.5953296, "lon": 120.3045783 },
+    { "lat": 22.5953161, "lon": 120.3045367 },
+    { "lat": 22.5943612, "lon": 120.3016369 },
+    { "lat": 22.5943448, "lon": 120.3015820 },
+    { "lat": 22.5943160, "lon": 120.3014941 }
+  ],
+  "tags": {
+    "highway": "tertiary",
+    "name": "時代大道",
+    "name:en": "Shihdai Boulevard",
+    "name:zh": "時代大道",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 932355878,
+  "bounds": {
+    "minlat": 22.6061112,
+    "minlon": 120.3179214,
+    "maxlat": 22.6065987,
+    "maxlon": 120.3185040
+  },
+  "geometry": [
+    { "lat": 22.6061112, "lon": 120.3185040 },
+    { "lat": 22.6063538, "lon": 120.3181728 },
+    { "lat": 22.6064875, "lon": 120.3179583 },
+    { "lat": 22.6065205, "lon": 120.3179315 },
+    { "lat": 22.6065987, "lon": 120.3179214 }
+  ],
+  "tags": {
+    "highway": "service",
+    "name": "籬仔內路",
+    "name:en": "Lizihnei Road",
+    "name:zh": "籬仔內路",
+    "oneway": "yes"
+  }
+},
+{
+  "type": "relation",
+  "id": 2380139,
+  "bounds": {
+    "minlat": 22.5929552,
+    "minlon": 120.2862369,
+    "maxlat": 22.7192389,
+    "maxlon": 120.3096227
+  },
+  "tags": {
+    "from": "加昌站",
+    "name": "205中華幹線(往程)",
+    "network": "高雄市公車",
+    "network:en": "Kaohsiung City Bus",
+    "network:nan": "Ko-hiông-chhī Kong-chhia",
+    "network:nan-Hant": "高雄市公車",
+    "network:nan-Latn-pehoeji": "Ko-hiông-chhī Kong-chhia",
+    "network:nan-Latn-tailo": "Ko-hiông-tshī Kong-tshia",
+    "network:wikidata": "Q15903688",
+    "network:wikipedia": "ja:高雄市公車",
+    "network:zh": "高雄市公車",
+    "operator": "港都客運",
+    "public_transport:version": "2",
+    "ref": "205中華幹線",
+    "route": "bus",
+    "to": "輕軌夢時代站(統一時代百貨)",
+    "type": "route"
+  }
+},
+{
+  "type": "relation",
+  "id": 4147329,
+  "bounds": {
+    "minlat": 22.5928827,
+    "minlon": 120.2863334,
+    "maxlat": 22.7190970,
+    "maxlon": 120.3077901
+  },
+  "tags": {
+    "from": "輕軌夢時代站(統一時代百貨)",
+    "name": "205中華幹線(返程)",
+    "network": "高雄市公車",
+    "network:en": "Kaohsiung City Bus",
+    "network:nan": "Ko-hiông-chhī Kong-chhia",
+    "network:nan-Hant": "高雄市公車",
+    "network:nan-Latn-pehoeji": "Ko-hiông-chhī Kong-chhia",
+    "network:nan-Latn-tailo": "Ko-hiông-tshī Kong-tshia",
+    "network:wikidata": "Q15903688",
+    "network:wikipedia": "ja:高雄市公車",
+    "network:zh": "高雄市公車",
+    "operator": "港都客運",
+    "public_transport:version": "2",
+    "ref": "205中華幹線",
+    "route": "bus",
+    "to": "加昌站",
+    "type": "route"
+  }
+},
+{
+  "type": "relation",
+  "id": 5489982,
+  "bounds": {
+    "minlat": 22.5972288,
+    "minlon": 120.3117601,
+    "maxlat": 22.6058105,
+    "maxlon": 120.3215601
+  },
+  "tags": {
+    "addr:city": "高雄市",
+    "addr:country": "TW",
+    "addr:district": "前鎮區",
+    "addr:full": "高雄市前鎮區中山三路98號",
+    "addr:housenumber": "98",
+    "addr:street": "中山三路",
+    "alt_name": "光中營區;光復營區",
+    "landuse": "military",
+    "name": "205廠",
+    "official_name": "國防部軍備局第205廠",
+    "operator": "軍備局",
+    "proposed:landuse": "commercial",
+    "proposed:name": "205經貿特區",
+    "type": "multipolygon"
+  }
+},
+{
+  "type": "relation",
+  "id": 17726218,
+  "bounds": {
+    "minlat": 22.5930458,
+    "minlon": 120.3072505,
+    "maxlat": 22.5945898,
+    "maxlon": 120.3088360
+  },
+  "tags": {
+    "government": "labor",
+    "name": "勞動部勞動力發展署高屏澎東分署",
+    "name:en": "Workforce Development Agency, Ministry of Labor, Kaohsiung - Pingtung - Penghu - Taitung Regional Branch",
+    "name:zh": "勞動部勞動力發展署高屏澎東分署",
+    "office": "government",
+    "type": "multipolygon"
+  }
+}
+
+  ]
+}

@@ -1,0 +1,1755 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.4 2390de5a",
+  "osm3s": {
+    "timestamp_osm_base": "2026-11-26T09:12:06Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+
+{
+  "type": "node",
+  "id": 2682024123,
+  "lat": 22.6092751,
+  "lon": 120.3255513,
+  "tags": {
+    "bus": "yes",
+    "highway": "bus_stop",
+    "name": "輕軌機廠站",
+    "name:en": "LRT Depot Station",
+    "name:zh": "輕軌機廠站",
+    "network": "高雄市公車",
+    "network:en": "Kaohsiung City Bus",
+    "network:wikidata": "Q15903688",
+    "network:wikipedia": "ja:高雄市公車",
+    "network:zh": "高雄市公車",
+    "operator": "高雄市公車",
+    "public_transport": "platform"
+  }
+},
+{
+  "type": "node",
+  "id": 2682024127,
+  "lat": 22.6093274,
+  "lon": 120.3254531,
+  "tags": {
+    "bus": "yes",
+    "highway": "bus_stop",
+    "name": "輕軌機廠站",
+    "name:en": "LRT Depot Station",
+    "name:zh": "輕軌機廠站",
+    "network": "高雄市公車",
+    "network:en": "Kaohsiung City Bus",
+    "network:wikidata": "Q15903688",
+    "network:wikipedia": "ja:高雄市公車",
+    "network:zh": "高雄市公車",
+    "operator": "高雄市公車",
+    "public_transport": "platform"
+  }
+},
+{
+  "type": "node",
+  "id": 4430464468,
+  "lat": 22.6084708,
+  "lon": 120.3260616,
+  "tags": {
+    "alt_name": "輕軌機廠站",
+    "alt_name:en": "LRT Dept Station",
+    "alt_name:nan": "Khin-thih Ki-chhiúⁿ chām;Khin-kúi Ki-chhiúⁿ chām",
+    "alt_name:nan-Hant": "輕鐵機廠站;輕軌機廠站",
+    "alt_name:nan-Latn-pehoeji": "Khin-thih Ki-chhiúⁿ chām;Khin-kúi Ki-chhiúⁿ chām",
+    "alt_name:nan-Latn-tailo": "Khin-thih Kí-tshiúnn tsām;Khin-kuí Kí-tshiúnn tsām",
+    "alt_name:zh": "輕軌機廠站",
+    "light_rail": "yes",
+    "name": "輕軌機廠",
+    "name:en": "LRT Depot",
+    "name:hak": "Khîn-kúi Kî-chhóng",
+    "name:nan": "Khin-thih Ki-chhiúⁿ",
+    "name:nan-Hant": "輕鐵機廠",
+    "name:nan-Latn-pehoeji": "Khin-thih Ki-chhiúⁿ",
+    "name:nan-Latn-tailo": "Khin-thih ki-tshiúnn",
+    "name:zh": "輕軌機廠",
+    "name:zh-Hans": "轻轨机厂",
+    "name:zh-Hant": "輕軌機廠",
+    "name:zh-Latn-pinyin": "qīng guǐ jī chǎng",
+    "public_transport": "stop_position",
+    "railway": "stop"
+  }
+},
+{
+  "type": "node",
+  "id": 4430464469,
+  "lat": 22.6084763,
+  "lon": 120.3260415,
+  "tags": {
+    "alt_name": "輕軌機廠站",
+    "alt_name:en": "LRT Dept Station",
+    "alt_name:nan": "Khin-thih Ki-chhiúⁿ chām;Khin-kúi Ki-chhiúⁿ chām",
+    "alt_name:nan-Hant": "輕鐵機廠站;輕軌機廠站",
+    "alt_name:nan-Latn-pehoeji": "Khin-thih Ki-chhiúⁿ chām;Khin-kúi Ki-chhiúⁿ chām",
+    "alt_name:nan-Latn-tailo": "Khin-thih Kí-tshiúnn tsām;Khin-kuí Kí-tshiúnn tsām",
+    "alt_name:zh": "輕軌機廠站",
+    "light_rail": "yes",
+    "name": "輕軌機廠",
+    "name:en": "LRT Depot",
+    "name:hak": "Khîn-kúi Kî-chhóng",
+    "name:nan": "Khin-thih Ki-chhiúⁿ",
+    "name:nan-Hant": "輕鐵機廠",
+    "name:nan-Latn-pehoeji": "Khin-thih Ki-chhiúⁿ",
+    "name:nan-Latn-tailo": "Khin-thih ki-tshiúnn",
+    "name:zh": "輕軌機廠",
+    "name:zh-Hans": "轻轨机厂",
+    "name:zh-Hant": "輕軌機廠",
+    "name:zh-Latn-pinyin": "qīng guǐ jī chǎng",
+    "public_transport": "stop_position",
+    "railway": "stop"
+  }
+},
+{
+  "type": "node",
+  "id": 6842633387,
+  "lat": 22.6092881,
+  "lon": 120.3199121,
+  "tags": {
+    "amenity": "kindergarten",
+    "education": "kindergarten",
+    "name": "前鎮竹西育兒資源中心"
+  }
+},
+{
+  "type": "node",
+  "id": 6842661285,
+  "lat": 22.6095199,
+  "lon": 120.3199069,
+  "tags": {
+    "amenity": "kindergarten",
+    "education": "kindergarten",
+    "name": "前鎮育兒資源中心"
+  }
+},
+{
+  "type": "node",
+  "id": 8057987303,
+  "lat": 22.6084757,
+  "lon": 120.3260515,
+  "tags": {
+    "alt_name": "輕軌機廠站",
+    "alt_name:en": "LRT Dept Station",
+    "alt_name:nan": "Khin-thih Ki-chhiúⁿ chām;Khin-kúi Ki-chhiúⁿ chām",
+    "alt_name:nan-Hant": "輕鐵機廠站;輕軌機廠站",
+    "alt_name:nan-Latn-pehoeji": "Khin-thih Ki-chhiúⁿ chām;Khin-kúi Ki-chhiúⁿ chām",
+    "alt_name:nan-Latn-tailo": "Khin-thih Kí-tshiúnn tsām;Khin-kuí Kí-tshiúnn tsām",
+    "alt_name:zh": "輕軌機廠站",
+    "light_rail": "yes",
+    "name": "輕軌機廠",
+    "name:en": "LRT Depot",
+    "name:hak": "Khîn-kúi Kî-chhóng",
+    "name:nan": "Khin-thih Ki-chhiúⁿ",
+    "name:nan-Hant": "輕鐵機廠",
+    "name:nan-Latn-pehoeji": "Khin-thih Ki-chhiúⁿ",
+    "name:nan-Latn-tailo": "Khin-thih ki-tshiúnn",
+    "name:zh": "輕軌機廠",
+    "name:zh-Hans": "轻轨机厂",
+    "name:zh-Hant": "輕軌機廠",
+    "name:zh-Latn-pinyin": "qīng guǐ jī chǎng",
+    "network": "高雄捷運",
+    "operator": "高雄捷運公司",
+    "public_transport": "station",
+    "railway": "station",
+    "ref": "C37",
+    "source": "survay;教育部",
+    "station": "light_rail",
+    "wheelchair": "yes",
+    "wikidata": "Q19852905",
+    "wikipedia": "zh:輕軌機廠站"
+  }
+},
+{
+  "type": "node",
+  "id": 8882102136,
+  "lat": 22.6088400,
+  "lon": 120.3254300,
+  "tags": {
+    "alt_name": "YouBike2.0_輕軌機廠站",
+    "alt_name:en": "YouBike2.0_LRT Depot",
+    "alt_name:zh": "YouBike2.0_輕軌機廠站",
+    "alt_name:zh-Bopo": "YouBike2.0_ㄑㄧㄥㄍㄨㄟˇㄐㄧㄔㄤˇㄓㄢˋ",
+    "alt_name:zh-Hans": "YouBike2.0_轻轨机厂站",
+    "alt_name:zh-Hant": "YouBike2.0_輕軌機廠站",
+    "alt_name:zh-Latn-pinyin": "YouBike2.0_qīngguǐjīchǎngzhàn",
+    "amenity": "bicycle_rental",
+    "authentication:app": "yes",
+    "authentication:contactless": "yes",
+    "authentication:membership_card": "yes",
+    "bicycle_rental": "docking_station",
+    "brand": "YouBike 2.0",
+    "brand:en": "YouBike 2.0",
+    "brand:wikidata": "Q20687952",
+    "brand:wikipedia": "en:YouBike",
+    "brand:zh": "微笑單車2.0",
+    "capacity": "14",
+    "description": "凱旋三路/賢明路(東側)",
+    "description:en": "Kaixuan 3rd Rd./ Xianming Rd.(East)",
+    "description:zh": "凱旋三路/賢明路(東側)",
+    "description:zh-Hans": "凯旋三路/贤明路(东侧)",
+    "description:zh-Hant": "凱旋三路/賢明路(東側)",
+    "fee": "yes",
+    "name": "輕軌機廠站",
+    "name:en": "LRT Depot",
+    "name:zh": "輕軌機廠站",
+    "name:zh-Bopo": "ㄑㄧㄥㄍㄨㄟˇㄐㄧㄔㄤˇㄓㄢˋ",
+    "name:zh-Hans": "轻轨机厂站",
+    "name:zh-Hant": "輕軌機廠站",
+    "name:zh-Latn-pinyin": "qīngguǐjīchǎngzhàn",
+    "nat_ref": "KHH501208080",
+    "network": "高雄市公共自行車租賃系統",
+    "network:en": "Kaohsiung Pubic Bike",
+    "network:zh": "微笑單車",
+    "network:zh-Hans": "微笑单车",
+    "network:zh-Hant": "微笑單車",
+    "opening_hours": "24/7",
+    "operator": "Giant",
+    "operator:wikidata": "Q703557",
+    "operator:wikipedia": "en:Giant Bicycles",
+    "payment:credit_cards": "yes",
+    "payment:ep_easycard": "yes",
+    "payment:ep_ipass": "yes",
+    "payment:ep_linepay": "yes",
+    "payment:jcb": "yes",
+    "payment:mastercard": "yes",
+    "payment:visa": "yes",
+    "ref": "501208080",
+    "rental": "city_bike",
+    "source": "PTX",
+    "source:date": "2021-06-29T10:12:21+08:00",
+    "start_date": "2021-01-02 0:00"
+  }
+},
+{
+  "type": "node",
+  "id": 9625808448,
+  "lat": 22.6001000,
+  "lon": 120.3280800,
+  "tags": {
+    "amenity": "parcel_locker",
+    "brand": "i郵箱",
+    "brand:en": "iBox",
+    "brand:nan": "i-iû-siuⁿ",
+    "brand:nan-Hant": "i郵箱",
+    "brand:nan-Latn-pehoeji": "i-iû-siuⁿ",
+    "brand:nan-Latn-tailo": "i-iû-siunn",
+    "brand:wikidata": "Q4375439",
+    "brand:zh": "i郵箱",
+    "brand:zh-Hans": "i邮箱",
+    "brand:zh-Hant": "i郵箱",
+    "capacity": "40",
+    "description": "80600高雄市前鎮區保泰路75號，門口右側",
+    "description:payment": "郵政金融卡/悠遊卡/一卡通/愛金卡",
+    "name": "前鎮東急文具保泰店i郵箱",
+    "note": "四代櫃(智慧郵筒)",
+    "opening_hours": "24/7",
+    "operator": "中華郵政",
+    "operator:en": "Chunghwa Post",
+    "operator:nan": "Tiong-hôa Iû-chèng",
+    "operator:nan-Hant": "中華郵政",
+    "operator:nan-Latn-pehoeji": "Tiong-hôa Iû-chèng",
+    "operator:nan-Latn-tailo": "Tiong-huâ Iû-tsìng",
+    "operator:wikidata": "Q709259",
+    "operator:wikipedia": "zh:中華郵政",
+    "operator:zh": "中華郵政",
+    "operator:zh-Hans": "中华邮政",
+    "operator:zh-Hant": "中華郵政",
+    "parcel_mail_in": "yes",
+    "parcel_pickup": "yes",
+    "payment:ep_easycard": "yes",
+    "payment:ep_icash": "yes",
+    "payment:ep_ipass": "yes",
+    "refrigerated": "no",
+    "source": "中華郵政",
+    "source:date": "2021-10-05 16:58",
+    "source:url": "https://data.gov.tw/dataset/52779"
+  }
+},
+{
+  "type": "way",
+  "id": 93899603,
+  "bounds": {
+    "minlat": 22.6080898,
+    "minlon": 120.3181791,
+    "maxlat": 22.6085185,
+    "maxlon": 120.3186661
+  },
+  "geometry": [
+    { "lat": 22.6082506, "lon": 120.3182599 },
+    { "lat": 22.6082795, "lon": 120.3181791 },
+    { "lat": 22.6085185, "lon": 120.3182795 },
+    { "lat": 22.6083801, "lon": 120.3186661 },
+    { "lat": 22.6081411, "lon": 120.3185657 },
+    { "lat": 22.6081678, "lon": 120.3184910 },
+    { "lat": 22.6080898, "lon": 120.3184564 },
+    { "lat": 22.6081169, "lon": 120.3183848 },
+    { "lat": 22.6081562, "lon": 120.3182812 },
+    { "lat": 22.6081767, "lon": 120.3182270 },
+    { "lat": 22.6082506, "lon": 120.3182599 }
+  ],
+  "tags": {
+    "addr:city": "高雄市",
+    "addr:country": "TW",
+    "addr:district": "前鎮區",
+    "addr:full": "高雄市前鎮區竹西里1鄰一心一路286號",
+    "addr:hamlet": "竹西里",
+    "addr:housenumber": "286",
+    "addr:neighbourhood": "1",
+    "addr:street": "一心一路",
+    "alt_name": "前鎮警察局",
+    "building": "yes",
+    "government": "police",
+    "name": "前鎮分局",
+    "office": "government"
+  }
+},
+{
+  "type": "way",
+  "id": 107444368,
+  "bounds": {
+    "minlat": 22.6075222,
+    "minlon": 120.3216439,
+    "maxlat": 22.6086033,
+    "maxlon": 120.3232912
+  },
+  "geometry": [
+    { "lat": 22.6086033, "lon": 120.3217502 },
+    { "lat": 22.6085040, "lon": 120.3232912 },
+    { "lat": 22.6075222, "lon": 120.3232474 },
+    { "lat": 22.6075659, "lon": 120.3223685 },
+    { "lat": 22.6076019, "lon": 120.3216439 },
+    { "lat": 22.6086033, "lon": 120.3217502 }
+  ],
+  "tags": {
+    "addr:city": "高雄市",
+    "addr:country": "TW",
+    "addr:district": "前鎮區",
+    "addr:full": "高雄市前鎮區育樂路61號",
+    "addr:housenumber": "61",
+    "addr:postcode": "806",
+    "addr:street": "育樂路",
+    "amenity": "school",
+    "education": "school",
+    "emergency": "assembly_point",
+    "emergency:amenity": "social_facility",
+    "emergency:shelter_type": "水災,震災,土石流,海嘯",
+    "emergency:social_facility": "shelter",
+    "emergency:social_facility:association_villages": "全區綜合調度",
+    "emergency:social_facility:for": "displaced_people",
+    "emergency:social_facility:id": "3468",
+    "emergency:social_facility:source": "內政部消防署",
+    "evacuation_center": "yes",
+    "grades": "7-12",
+    "name": "高雄市前鎮區樂群國民小學",
+    "name:en": "Kaohsiung Municipal Le Chyun Elementary School",
+    "name:nan-Hant": "高雄市前鎮區樂群國民小學",
+    "name:zh": "高雄市前鎮區樂群國民小學",
+    "website": "https://www.lcps.kh.edu.tw/index.php?WebID=157",
+    "wikidata": "Q75920697"
+  }
+},
+{
+  "type": "way",
+  "id": 107444476,
+  "bounds": {
+    "minlat": 22.6141397,
+    "minlon": 120.3196322,
+    "maxlat": 22.6154916,
+    "maxlon": 120.3209692
+  },
+  "geometry": [
+    { "lat": 22.6153866, "lon": 120.3196848 },
+    { "lat": 22.6154916, "lon": 120.3209692 },
+    { "lat": 22.6141397, "lon": 120.3209155 },
+    { "lat": 22.6141848, "lon": 120.3196322 },
+    { "lat": 22.6153866, "lon": 120.3196848 }
+  ],
+  "tags": {
+    "addr:city": "高雄市",
+    "addr:country": "TW",
+    "addr:district": "前鎮區",
+    "addr:full": "806高雄市前鎮區廣西路57號",
+    "addr:housenumber": "57",
+    "addr:postcode": "806",
+    "addr:street": "廣西路",
+    "amenity": "school",
+    "education": "school",
+    "grades": "7-12",
+    "name": "高雄市前鎮區光華國民小學",
+    "name:en": "Kaohsiung Municipal Kuanghua Elementary School",
+    "name:zh": "高雄市前鎮區光華國民小學",
+    "operator": "高雄市政府教育局",
+    "operator:type": "government",
+    "website": "http://school.kh.edu.tw/index.php?WebID=270",
+    "wikidata": "Q76098619"
+  }
+},
+{
+  "type": "way",
+  "id": 113739814,
+  "bounds": {
+    "minlat": 22.5997087,
+    "minlon": 120.3258807,
+    "maxlat": 22.6016917,
+    "maxlon": 120.3276916
+  },
+  "geometry": [
+    { "lat": 22.6012676, "lon": 120.3258807 },
+    { "lat": 22.6005568, "lon": 120.3260195 },
+    { "lat": 22.5997087, "lon": 120.3263301 },
+    { "lat": 22.6002792, "lon": 120.3276916 },
+    { "lat": 22.6009149, "lon": 120.3272325 },
+    { "lat": 22.6011670, "lon": 120.3270472 },
+    { "lat": 22.6016917, "lon": 120.3265879 },
+    { "lat": 22.6012676, "lon": 120.3258807 }
+  ],
+  "tags": {
+    "addr:city": "高雄市",
+    "addr:country": "TW",
+    "addr:district": "前鎮區",
+    "addr:full": "806高雄市前鎮區班超路20號",
+    "addr:housenumber": "20",
+    "addr:postcode": "806",
+    "addr:street": "班超路",
+    "amenity": "school",
+    "education": "school",
+    "emergency": "assembly_point",
+    "emergency:amenity": "social_facility",
+    "emergency:shelter_type": "水災,震災,土石流,海嘯",
+    "emergency:social_facility": "shelter",
+    "emergency:social_facility:association_villages": "全區綜合運用",
+    "emergency:social_facility:for": "displaced_people",
+    "emergency:social_facility:id": "7671",
+    "emergency:social_facility:source": "內政部消防署",
+    "evacuation_center": "yes",
+    "grades": "7-12",
+    "name": "高雄市前鎮區瑞祥國民小學",
+    "name:en": "Rueisiang Elementary School, Cianjhen District, Kaohsiung City",
+    "name:zh": "高雄市前鎮區瑞祥國民小學",
+    "official_name": "高雄市前鎮區瑞祥國民小學",
+    "operator": "高雄市政府教育局",
+    "operator:type": "government",
+    "website": "http://school.kh.edu.tw/view/index.php?WebID=75&MainType=HOME",
+    "wheelchair": "limited",
+    "wikidata": "Q75920718"
+  }
+},
+{
+  "type": "way",
+  "id": 203361437,
+  "bounds": {
+    "minlat": 22.6119310,
+    "minlon": 120.3270385,
+    "maxlat": 22.6181257,
+    "maxlon": 120.3325278
+  },
+  "geometry": [
+    { "lat": 22.6120244, "lon": 120.3275896 },
+    { "lat": 22.6119310, "lon": 120.3270385 },
+    { "lat": 22.6125601, "lon": 120.3272600 },
+    { "lat": 22.6135527, "lon": 120.3275415 },
+    { "lat": 22.6141245, "lon": 120.3275883 },
+    { "lat": 22.6147080, "lon": 120.3275889 },
+    { "lat": 22.6151730, "lon": 120.3275162 },
+    { "lat": 22.6156155, "lon": 120.3274074 },
+    { "lat": 22.6165798, "lon": 120.3270533 },
+    { "lat": 22.6166787, "lon": 120.3279880 },
+    { "lat": 22.6176302, "lon": 120.3278436 },
+    { "lat": 22.6181257, "lon": 120.3319163 },
+    { "lat": 22.6143279, "lon": 120.3323661 },
+    { "lat": 22.6143213, "lon": 120.3321972 },
+    { "lat": 22.6131055, "lon": 120.3323401 },
+    { "lat": 22.6131145, "lon": 120.3324557 },
+    { "lat": 22.6125304, "lon": 120.3325278 },
+    { "lat": 22.6123472, "lon": 120.3301407 },
+    { "lat": 22.6122482, "lon": 120.3284777 },
+    { "lat": 22.6120719, "lon": 120.3282206 },
+    { "lat": 22.6120244, "lon": 120.3275896 }
+  ],
+  "tags": {
+    "landuse": "greenfield",
+    "name": "舊台鐵高雄機廠",
+    "wikidata": "Q19854089",
+    "wikipedia": "zh:高雄機廠"
+  }
+},
+{
+  "type": "way",
+  "id": 256262404,
+  "bounds": {
+    "minlat": 22.6111243,
+    "minlon": 120.3270020,
+    "maxlat": 22.6132970,
+    "maxlon": 120.3320455
+  },
+  "geometry": [
+    { "lat": 22.6111243, "lon": 120.3270020 },
+    { "lat": 22.6114958, "lon": 120.3274066 },
+    { "lat": 22.6117392, "lon": 120.3276873 },
+    { "lat": 22.6119482, "lon": 120.3279013 },
+    { "lat": 22.6120921, "lon": 120.3281169 },
+    { "lat": 22.6123202, "lon": 120.3284806 },
+    { "lat": 22.6124551, "lon": 120.3287715 },
+    { "lat": 22.6126474, "lon": 120.3291861 },
+    { "lat": 22.6129637, "lon": 120.3298348 },
+    { "lat": 22.6130220, "lon": 120.3299332 },
+    { "lat": 22.6130793, "lon": 120.3300856 },
+    { "lat": 22.6131187, "lon": 120.3302499 },
+    { "lat": 22.6131566, "lon": 120.3304849 },
+    { "lat": 22.6132970, "lon": 120.3320455 }
+  ],
+  "tags": {
+    "railway": "disused",
+    "service": "yard"
+  }
+},
+{
+  "type": "way",
+  "id": 256262405,
+  "bounds": {
+    "minlat": 22.6105863,
+    "minlon": 120.3266456,
+    "maxlat": 22.6139330,
+    "maxlon": 120.3297528
+  },
+  "geometry": [
+    { "lat": 22.6105863, "lon": 120.3266456 },
+    { "lat": 22.6107654, "lon": 120.3267511 },
+    { "lat": 22.6109999, "lon": 120.3268966 },
+    { "lat": 22.6111243, "lon": 120.3270020 },
+    { "lat": 22.6113080, "lon": 120.3271194 },
+    { "lat": 22.6118907, "lon": 120.3275903 },
+    { "lat": 22.6121455, "lon": 120.3278190 },
+    { "lat": 22.6124681, "lon": 120.3282897 },
+    { "lat": 22.6127884, "lon": 120.3288259 },
+    { "lat": 22.6130526, "lon": 120.3292096 },
+    { "lat": 22.6131169, "lon": 120.3292714 },
+    { "lat": 22.6132898, "lon": 120.3294379 },
+    { "lat": 22.6134335, "lon": 120.3295805 },
+    { "lat": 22.6136351, "lon": 120.3296849 },
+    { "lat": 22.6139330, "lon": 120.3297528 }
+  ],
+  "tags": {
+    "railway": "disused",
+    "service": "yard"
+  }
+},
+{
+  "type": "way",
+  "id": 256262415,
+  "bounds": {
+    "minlat": 22.6113080,
+    "minlon": 120.3271194,
+    "maxlat": 22.6145555,
+    "maxlon": 120.3285306
+  },
+  "geometry": [
+    { "lat": 22.6145555, "lon": 120.3285306 },
+    { "lat": 22.6131668, "lon": 120.3282516 },
+    { "lat": 22.6130212, "lon": 120.3282006 },
+    { "lat": 22.6128420, "lon": 120.3281206 },
+    { "lat": 22.6126001, "lon": 120.3279725 },
+    { "lat": 22.6122798, "lon": 120.3277420 },
+    { "lat": 22.6118797, "lon": 120.3274652 },
+    { "lat": 22.6113080, "lon": 120.3271194 }
+  ],
+  "tags": {
+    "railway": "disused",
+    "service": "yard"
+  }
+},
+{
+  "type": "way",
+  "id": 256262416,
+  "bounds": {
+    "minlat": 22.6113080,
+    "minlon": 120.3271194,
+    "maxlat": 22.6147846,
+    "maxlon": 120.3279590
+  },
+  "geometry": [
+    { "lat": 22.6113080, "lon": 120.3271194 },
+    { "lat": 22.6116803, "lon": 120.3273036 },
+    { "lat": 22.6118623, "lon": 120.3273548 },
+    { "lat": 22.6121713, "lon": 120.3274409 },
+    { "lat": 22.6126749, "lon": 120.3275438 },
+    { "lat": 22.6132578, "lon": 120.3276536 },
+    { "lat": 22.6137868, "lon": 120.3277463 },
+    { "lat": 22.6147846, "lon": 120.3279590 }
+  ],
+  "tags": {
+    "railway": "disused",
+    "service": "yard"
+  }
+},
+{
+  "type": "way",
+  "id": 256262417,
+  "bounds": {
+    "minlat": 22.6113080,
+    "minlon": 120.3271194,
+    "maxlat": 22.6153845,
+    "maxlon": 120.3284971
+  },
+  "geometry": [
+    { "lat": 22.6153845, "lon": 120.3284971 },
+    { "lat": 22.6135790, "lon": 120.3281265 },
+    { "lat": 22.6129613, "lon": 120.3280030 },
+    { "lat": 22.6126920, "lon": 120.3279069 },
+    { "lat": 22.6124164, "lon": 120.3277525 },
+    { "lat": 22.6120252, "lon": 120.3275111 },
+    { "lat": 22.6118704, "lon": 120.3274060 },
+    { "lat": 22.6113080, "lon": 120.3271194 }
+  ],
+  "tags": {
+    "railway": "disused",
+    "service": "yard"
+  }
+},
+{
+  "type": "way",
+  "id": 445644637,
+  "bounds": {
+    "minlat": 22.6068381,
+    "minlon": 120.3250556,
+    "maxlat": 22.6085840,
+    "maxlon": 120.3258382
+  },
+  "geometry": [
+    { "lat": 22.6084353, "lon": 120.3254632 },
+    { "lat": 22.6084193, "lon": 120.3255200 },
+    { "lat": 22.6084112, "lon": 120.3255488 },
+    { "lat": 22.6085840, "lon": 120.3256059 },
+    { "lat": 22.6085654, "lon": 120.3256719 },
+    { "lat": 22.6085462, "lon": 120.3257399 },
+    { "lat": 22.6085289, "lon": 120.3258011 },
+    { "lat": 22.6085185, "lon": 120.3258382 },
+    { "lat": 22.6076289, "lon": 120.3255440 },
+    { "lat": 22.6076069, "lon": 120.3256220 },
+    { "lat": 22.6075973, "lon": 120.3256562 },
+    { "lat": 22.6068963, "lon": 120.3254243 },
+    { "lat": 22.6069050, "lon": 120.3253936 },
+    { "lat": 22.6069256, "lon": 120.3253204 },
+    { "lat": 22.6068381, "lon": 120.3252915 },
+    { "lat": 22.6069046, "lon": 120.3250556 },
+    { "lat": 22.6073151, "lon": 120.3251914 },
+    { "lat": 22.6073406, "lon": 120.3251011 },
+    { "lat": 22.6084353, "lon": 120.3254632 }
+  ],
+  "tags": {
+    "building": "transportation",
+    "railway": "workshop"
+  }
+},
+{
+  "type": "way",
+  "id": 501281474,
+  "bounds": {
+    "minlat": 22.6093372,
+    "minlon": 120.3259355,
+    "maxlat": 22.6113600,
+    "maxlon": 120.3266948
+  },
+  "geometry": [
+    { "lat": 22.6113600, "lon": 120.3266948 },
+    { "lat": 22.6111835, "lon": 120.3265785 },
+    { "lat": 22.6111093, "lon": 120.3265476 },
+    { "lat": 22.6110300, "lon": 120.3265145 },
+    { "lat": 22.6094367, "lon": 120.3259880 },
+    { "lat": 22.6093949, "lon": 120.3259721 },
+    { "lat": 22.6093671, "lon": 120.3259574 },
+    { "lat": 22.6093372, "lon": 120.3259355 }
+  ],
+  "tags": {
+    "electrified": "contact_line",
+    "frequency": "0",
+    "gauge": "1435",
+    "railway": "light_rail",
+    "service": "yard",
+    "voltage": "750"
+  }
+},
+{
+  "type": "way",
+  "id": 501281475,
+  "bounds": {
+    "minlat": 22.6059609,
+    "minlon": 120.3250885,
+    "maxlat": 22.6110300,
+    "maxlon": 120.3265145
+  },
+  "geometry": [
+    { "lat": 22.6110300, "lon": 120.3265145 },
+    { "lat": 22.6109250, "lon": 120.3264271 },
+    { "lat": 22.6108304, "lon": 120.3263515 },
+    { "lat": 22.6107537, "lon": 120.3262883 },
+    { "lat": 22.6107110, "lon": 120.3262641 },
+    { "lat": 22.6106613, "lon": 120.3262427 },
+    { "lat": 22.6094819, "lon": 120.3258523 },
+    { "lat": 22.6094537, "lon": 120.3258470 },
+    { "lat": 22.6094185, "lon": 120.3258437 },
+    { "lat": 22.6093364, "lon": 120.3258457 },
+    { "lat": 22.6093083, "lon": 120.3258444 },
+    { "lat": 22.6092783, "lon": 120.3258402 },
+    { "lat": 22.6091559, "lon": 120.3258033 },
+    { "lat": 22.6091045, "lon": 120.3257941 },
+    { "lat": 22.6090508, "lon": 120.3257900 },
+    { "lat": 22.6089897, "lon": 120.3257965 },
+    { "lat": 22.6088448, "lon": 120.3258203 },
+    { "lat": 22.6086764, "lon": 120.3258421 },
+    { "lat": 22.6084174, "lon": 120.3258654 },
+    { "lat": 22.6082839, "lon": 120.3258821 },
+    { "lat": 22.6082497, "lon": 120.3258796 },
+    { "lat": 22.6082222, "lon": 120.3258759 },
+    { "lat": 22.6081883, "lon": 120.3258664 },
+    { "lat": 22.6069164, "lon": 120.3254694 },
+    { "lat": 22.6068792, "lon": 120.3254487 },
+    { "lat": 22.6068501, "lon": 120.3254286 },
+    { "lat": 22.6067944, "lon": 120.3253723 },
+    { "lat": 22.6067647, "lon": 120.3253508 },
+    { "lat": 22.6067126, "lon": 120.3253265 },
+    { "lat": 22.6062835, "lon": 120.3251875 },
+    { "lat": 22.6061933, "lon": 120.3251645 },
+    { "lat": 22.6059609, "lon": 120.3250885 }
+  ],
+  "tags": {
+    "electrified": "contact_line",
+    "frequency": "0",
+    "gauge": "1435",
+    "railway": "light_rail",
+    "service": "yard",
+    "voltage": "750"
+  }
+},
+{
+  "type": "way",
+  "id": 501281476,
+  "bounds": {
+    "minlat": 22.6092783,
+    "minlon": 120.3258402,
+    "maxlat": 22.6108304,
+    "maxlon": 120.3263515
+  },
+  "geometry": [
+    { "lat": 22.6108304, "lon": 120.3263515 },
+    { "lat": 22.6107958, "lon": 120.3263308 },
+    { "lat": 22.6107676, "lon": 120.3263197 },
+    { "lat": 22.6092783, "lon": 120.3258402 }
+  ],
+  "tags": {
+    "electrified": "contact_line",
+    "frequency": "0",
+    "gauge": "1435",
+    "railway": "light_rail",
+    "service": "yard",
+    "voltage": "750"
+  }
+},
+{
+  "type": "way",
+  "id": 501281477,
+  "bounds": {
+    "minlat": 22.6092768,
+    "minlon": 120.3258795,
+    "maxlat": 22.6109250,
+    "maxlon": 120.3264271
+  },
+  "geometry": [
+    { "lat": 22.6109250, "lon": 120.3264271 },
+    { "lat": 22.6093380, "lon": 120.3259069 },
+    { "lat": 22.6093086, "lon": 120.3258963 },
+    { "lat": 22.6092768, "lon": 120.3258795 }
+  ],
+  "tags": {
+    "electrified": "contact_line",
+    "frequency": "0",
+    "gauge": "1435",
+    "railway": "light_rail",
+    "service": "yard",
+    "voltage": "750"
+  }
+},
+{
+  "type": "way",
+  "id": 501281478,
+  "bounds": {
+    "minlat": 22.6094282,
+    "minlon": 120.3260178,
+    "maxlat": 22.6109965,
+    "maxlon": 120.3265583
+  },
+  "geometry": [
+    { "lat": 22.6109965, "lon": 120.3265583 },
+    { "lat": 22.6095264, "lon": 120.3260700 },
+    { "lat": 22.6094937, "lon": 120.3260589 },
+    { "lat": 22.6094636, "lon": 120.3260425 },
+    { "lat": 22.6094282, "lon": 120.3260178 }
+  ],
+  "tags": {
+    "electrified": "contact_line",
+    "frequency": "0",
+    "gauge": "1435",
+    "railway": "light_rail",
+    "service": "yard",
+    "voltage": "750"
+  }
+},
+{
+  "type": "way",
+  "id": 501281479,
+  "bounds": {
+    "minlat": 22.6091559,
+    "minlon": 120.3258033,
+    "maxlat": 22.6111093,
+    "maxlon": 120.3265672
+  },
+  "geometry": [
+    { "lat": 22.6111093, "lon": 120.3265476 },
+    { "lat": 22.6109965, "lon": 120.3265583 },
+    { "lat": 22.6108956, "lon": 120.3265672 },
+    { "lat": 22.6095998, "lon": 120.3261517 },
+    { "lat": 22.6095724, "lon": 120.3261404 },
+    { "lat": 22.6095510, "lon": 120.3261289 },
+    { "lat": 22.6095302, "lon": 120.3261111 },
+    { "lat": 22.6094282, "lon": 120.3260178 },
+    { "lat": 22.6093372, "lon": 120.3259355 },
+    { "lat": 22.6092768, "lon": 120.3258795 },
+    { "lat": 22.6092352, "lon": 120.3258437 },
+    { "lat": 22.6092142, "lon": 120.3258306 },
+    { "lat": 22.6091968, "lon": 120.3258206 },
+    { "lat": 22.6091559, "lon": 120.3258033 }
+  ],
+  "tags": {
+    "electrified": "contact_line",
+    "frequency": "0",
+    "gauge": "1435",
+    "railway": "light_rail",
+    "service": "yard",
+    "voltage": "750"
+  }
+},
+{
+  "type": "way",
+  "id": 501281480,
+  "bounds": {
+    "minlat": 22.6076069,
+    "minlon": 120.3256220,
+    "maxlat": 22.6084174,
+    "maxlon": 120.3258654
+  },
+  "geometry": [
+    { "lat": 22.6076069, "lon": 120.3256220 },
+    { "lat": 22.6083363, "lon": 120.3258593 },
+    { "lat": 22.6083670, "lon": 120.3258641 },
+    { "lat": 22.6084174, "lon": 120.3258654 }
+  ],
+  "tags": {
+    "electrified": "contact_line",
+    "frequency": "0",
+    "gauge": "1435",
+    "layer": "-1",
+    "railway": "light_rail",
+    "service": "yard",
+    "tunnel": "building_passage",
+    "voltage": "750"
+  }
+},
+{
+  "type": "way",
+  "id": 501281481,
+  "bounds": {
+    "minlat": 22.6085654,
+    "minlon": 120.3256719,
+    "maxlat": 22.6089897,
+    "maxlon": 120.3257965
+  },
+  "geometry": [
+    { "lat": 22.6089897, "lon": 120.3257965 },
+    { "lat": 22.6089539, "lon": 120.3257951 },
+    { "lat": 22.6089226, "lon": 120.3257887 },
+    { "lat": 22.6087981, "lon": 120.3257500 },
+    { "lat": 22.6086072, "lon": 120.3256860 },
+    { "lat": 22.6085654, "lon": 120.3256719 }
+  ],
+  "tags": {
+    "electrified": "contact_line",
+    "frequency": "0",
+    "gauge": "1435",
+    "railway": "light_rail",
+    "service": "yard",
+    "voltage": "750"
+  }
+},
+{
+  "type": "way",
+  "id": 501281482,
+  "bounds": {
+    "minlat": 22.6085462,
+    "minlon": 120.3257399,
+    "maxlat": 22.6088448,
+    "maxlon": 120.3258203
+  },
+  "geometry": [
+    { "lat": 22.6088448, "lon": 120.3258203 },
+    { "lat": 22.6087994, "lon": 120.3258175 },
+    { "lat": 22.6087672, "lon": 120.3258102 },
+    { "lat": 22.6085644, "lon": 120.3257457 },
+    { "lat": 22.6085462, "lon": 120.3257399 }
+  ],
+  "tags": {
+    "electrified": "contact_line",
+    "frequency": "0",
+    "gauge": "1435",
+    "railway": "light_rail",
+    "service": "yard",
+    "voltage": "750"
+  }
+},
+{
+  "type": "way",
+  "id": 501281483,
+  "bounds": {
+    "minlat": 22.6085289,
+    "minlon": 120.3258011,
+    "maxlat": 22.6086764,
+    "maxlon": 120.3258421
+  },
+  "geometry": [
+    { "lat": 22.6086764, "lon": 120.3258421 },
+    { "lat": 22.6086521, "lon": 120.3258397 },
+    { "lat": 22.6086284, "lon": 120.3258332 },
+    { "lat": 22.6085448, "lon": 120.3258062 },
+    { "lat": 22.6085289, "lon": 120.3258011 }
+  ],
+  "tags": {
+    "electrified": "contact_line",
+    "frequency": "0",
+    "gauge": "1435",
+    "railway": "light_rail",
+    "service": "yard",
+    "voltage": "750"
+  }
+},
+{
+  "type": "way",
+  "id": 501281484,
+  "bounds": {
+    "minlat": 22.6084193,
+    "minlon": 120.3255200,
+    "maxlat": 22.6087981,
+    "maxlon": 120.3257500
+  },
+  "geometry": [
+    { "lat": 22.6087981, "lon": 120.3257500 },
+    { "lat": 22.6087369, "lon": 120.3257035 },
+    { "lat": 22.6086749, "lon": 120.3256293 },
+    { "lat": 22.6086097, "lon": 120.3255823 },
+    { "lat": 22.6084193, "lon": 120.3255200 }
+  ],
+  "tags": {
+    "electrified": "contact_line",
+    "frequency": "0",
+    "gauge": "1435",
+    "railway": "light_rail",
+    "service": "yard",
+    "voltage": "750"
+  }
+},
+{
+  "type": "way",
+  "id": 894471003,
+  "bounds": {
+    "minlat": 22.6043666,
+    "minlon": 120.3245585,
+    "maxlat": 22.6047631,
+    "maxlon": 120.3247269
+  },
+  "geometry": [
+    { "lat": 22.6047631, "lon": 120.3246998 },
+    { "lat": 22.6047591, "lon": 120.3247126 },
+    { "lat": 22.6047547, "lon": 120.3247269 },
+    { "lat": 22.6043666, "lon": 120.3245856 },
+    { "lat": 22.6043711, "lon": 120.3245712 },
+    { "lat": 22.6043750, "lon": 120.3245585 },
+    { "lat": 22.6047631, "lon": 120.3246998 }
+  ],
+  "tags": {
+    "area": "yes",
+    "light_rail": "yes",
+    "public_transport": "platform",
+    "railway": "platform"
+  }
+},
+{
+  "type": "way",
+  "id": 894471004,
+  "bounds": {
+    "minlat": 22.6043859,
+    "minlon": 120.3244915,
+    "maxlat": 22.6047823,
+    "maxlon": 120.3246597
+  },
+  "geometry": [
+    { "lat": 22.6047823, "lon": 120.3246328 },
+    { "lat": 22.6047779, "lon": 120.3246472 },
+    { "lat": 22.6047740, "lon": 120.3246597 },
+    { "lat": 22.6043859, "lon": 120.3245184 },
+    { "lat": 22.6043905, "lon": 120.3245036 },
+    { "lat": 22.6043942, "lon": 120.3244915 },
+    { "lat": 22.6047823, "lon": 120.3246328 }
+  ],
+  "tags": {
+    "area": "yes",
+    "light_rail": "yes",
+    "public_transport": "platform",
+    "railway": "platform"
+  }
+},
+{
+  "type": "way",
+  "id": 894472581,
+  "bounds": {
+    "minlat": 22.6082405,
+    "minlon": 120.3260100,
+    "maxlat": 22.6086414,
+    "maxlon": 120.3261588
+  },
+  "geometry": [
+    { "lat": 22.6086414, "lon": 120.3261315 },
+    { "lat": 22.6086375, "lon": 120.3261466 },
+    { "lat": 22.6086343, "lon": 120.3261588 },
+    { "lat": 22.6082405, "lon": 120.3260373 },
+    { "lat": 22.6082438, "lon": 120.3260245 },
+    { "lat": 22.6082476, "lon": 120.3260100 },
+    { "lat": 22.6086414, "lon": 120.3261315 }
+  ],
+  "tags": {
+    "area": "yes",
+    "light_rail": "yes",
+    "public_transport": "platform",
+    "railway": "platform"
+  }
+},
+{
+  "type": "way",
+  "id": 894472582,
+  "bounds": {
+    "minlat": 22.6082614,
+    "minlon": 120.3259320,
+    "maxlat": 22.6086625,
+    "maxlon": 120.3260799
+  },
+  "geometry": [
+    { "lat": 22.6086625, "lon": 120.3260526 },
+    { "lat": 22.6086592, "lon": 120.3260656 },
+    { "lat": 22.6086555, "lon": 120.3260799 },
+    { "lat": 22.6082614, "lon": 120.3259593 },
+    { "lat": 22.6082653, "lon": 120.3259442 },
+    { "lat": 22.6082685, "lon": 120.3259320 },
+    { "lat": 22.6086625, "lon": 120.3260526 }
+  ],
+  "tags": {
+    "area": "yes",
+    "light_rail": "yes",
+    "public_transport": "platform",
+    "railway": "platform"
+  }
+},
+{
+  "type": "way",
+  "id": 1153379540,
+  "bounds": {
+    "minlat": 22.6119052,
+    "minlon": 120.3269484,
+    "maxlat": 22.6120954,
+    "maxlon": 120.3270358
+  },
+  "geometry": [
+    { "lat": 22.6119052, "lon": 120.3269484 },
+    { "lat": 22.6119800, "lon": 120.3269785 },
+    { "lat": 22.6120343, "lon": 120.3270094 },
+    { "lat": 22.6120954, "lon": 120.3270358 }
+  ],
+  "tags": {
+    "electrified": "no",
+    "gauge": "1435",
+    "name": "高雄環狀輕軌",
+    "railway": "light_rail",
+    "service": "crossover"
+  }
+},
+{
+  "type": "way",
+  "id": 1153379541,
+  "bounds": {
+    "minlat": 22.6052753,
+    "minlon": 120.3248671,
+    "maxlat": 22.6055729,
+    "maxlon": 120.3249303
+  },
+  "geometry": [
+    { "lat": 22.6052753, "lon": 120.3248671 },
+    { "lat": 22.6053208, "lon": 120.3248804 },
+    { "lat": 22.6053493, "lon": 120.3248861 },
+    { "lat": 22.6054845, "lon": 120.3249123 },
+    { "lat": 22.6055238, "lon": 120.3249190 },
+    { "lat": 22.6055729, "lon": 120.3249303 }
+  ],
+  "tags": {
+    "electrified": "no",
+    "gauge": "1435",
+    "name": "高雄環狀輕軌",
+    "railway": "light_rail",
+    "service": "crossover"
+  }
+},
+{
+  "type": "way",
+  "id": 1153379542,
+  "bounds": {
+    "minlat": 22.6069725,
+    "minlon": 120.3251376,
+    "maxlat": 22.6085654,
+    "maxlon": 120.3256719
+  },
+  "geometry": [
+    { "lat": 22.6085654, "lon": 120.3256719 },
+    { "lat": 22.6069725, "lon": 120.3251376 }
+  ],
+  "tags": {
+    "electrified": "contact_line",
+    "frequency": "0",
+    "gauge": "1435",
+    "layer": "-1",
+    "railway": "light_rail",
+    "service": "yard",
+    "tunnel": "building_passage",
+    "voltage": "750"
+  }
+},
+{
+  "type": "way",
+  "id": 1153379543,
+  "bounds": {
+    "minlat": 22.6073478,
+    "minlon": 120.3253584,
+    "maxlat": 22.6085462,
+    "maxlon": 120.3257399
+  },
+  "geometry": [
+    { "lat": 22.6085462, "lon": 120.3257399 },
+    { "lat": 22.6073478, "lon": 120.3253584 }
+  ],
+  "tags": {
+    "electrified": "contact_line",
+    "frequency": "0",
+    "gauge": "1435",
+    "layer": "-1",
+    "railway": "light_rail",
+    "service": "yard",
+    "tunnel": "building_passage",
+    "voltage": "750"
+  }
+},
+{
+  "type": "way",
+  "id": 1153379544,
+  "bounds": {
+    "minlat": 22.6073262,
+    "minlon": 120.3254140,
+    "maxlat": 22.6085289,
+    "maxlon": 120.3258011
+  },
+  "geometry": [
+    { "lat": 22.6085289, "lon": 120.3258011 },
+    { "lat": 22.6073262, "lon": 120.3254140 }
+  ],
+  "tags": {
+    "electrified": "contact_line",
+    "frequency": "0",
+    "gauge": "1435",
+    "layer": "-1",
+    "railway": "light_rail",
+    "service": "yard",
+    "tunnel": "building_passage",
+    "voltage": "750"
+  }
+},
+{
+  "type": "way",
+  "id": 1153379545,
+  "bounds": {
+    "minlat": 22.6069050,
+    "minlon": 120.3253936,
+    "maxlat": 22.6076069,
+    "maxlon": 120.3256220
+  },
+  "geometry": [
+    { "lat": 22.6069050, "lon": 120.3253936 },
+    { "lat": 22.6076069, "lon": 120.3256220 }
+  ],
+  "tags": {
+    "electrified": "contact_line",
+    "frequency": "0",
+    "gauge": "1435",
+    "railway": "light_rail",
+    "service": "yard",
+    "voltage": "750"
+  }
+},
+{
+  "type": "way",
+  "id": 1153379546,
+  "bounds": {
+    "minlat": 22.6067126,
+    "minlon": 120.3253265,
+    "maxlat": 22.6069050,
+    "maxlon": 120.3253936
+  },
+  "geometry": [
+    { "lat": 22.6067126, "lon": 120.3253265 },
+    { "lat": 22.6069050, "lon": 120.3253936 }
+  ],
+  "tags": {
+    "electrified": "contact_line",
+    "frequency": "0",
+    "gauge": "1435",
+    "railway": "light_rail",
+    "service": "yard",
+    "voltage": "750"
+  }
+},
+{
+  "type": "way",
+  "id": 1342616485,
+  "bounds": {
+    "minlat": 22.6073690,
+    "minlon": 120.3251802,
+    "maxlat": 22.6084193,
+    "maxlon": 120.3255200
+  },
+  "geometry": [
+    { "lat": 22.6084193, "lon": 120.3255200 },
+    { "lat": 22.6073690, "lon": 120.3251802 }
+  ],
+  "tags": {
+    "electrified": "contact_line",
+    "frequency": "0",
+    "gauge": "1435",
+    "layer": "-1",
+    "railway": "light_rail",
+    "service": "yard",
+    "tunnel": "building_passage",
+    "voltage": "750"
+  }
+},
+{
+  "type": "way",
+  "id": 1559431680,
+  "bounds": {
+    "minlat": 22.6046336,
+    "minlon": 120.3246203,
+    "maxlat": 22.6048430,
+    "maxlon": 120.3246890
+  },
+  "geometry": [
+    { "lat": 22.6048430, "lon": 120.3246890 },
+    { "lat": 22.6046336, "lon": 120.3246203 }
+  ],
+  "tags": {
+    "electrified": "no",
+    "gauge": "1435",
+    "maxspeed": "50",
+    "name": "高雄環狀輕軌",
+    "oneway": "yes",
+    "railway": "light_rail"
+  }
+},
+{
+  "type": "way",
+  "id": 1559431681,
+  "bounds": {
+    "minlat": 22.6045661,
+    "minlon": 120.3245974,
+    "maxlat": 22.6046336,
+    "maxlon": 120.3246203
+  },
+  "geometry": [
+    { "lat": 22.6046336, "lon": 120.3246203 },
+    { "lat": 22.6045779, "lon": 120.3246020 },
+    { "lat": 22.6045661, "lon": 120.3245974 }
+  ],
+  "tags": {
+    "electrified": "contact_line",
+    "frequency": "0",
+    "gauge": "1435",
+    "maxspeed": "50",
+    "name": "高雄環狀輕軌",
+    "oneway": "yes",
+    "railway": "light_rail",
+    "voltage": "750"
+  }
+},
+{
+  "type": "way",
+  "id": 1559431682,
+  "bounds": {
+    "minlat": 22.6046251,
+    "minlon": 120.3246399,
+    "maxlat": 22.6048354,
+    "maxlon": 120.3247153
+  },
+  "geometry": [
+    { "lat": 22.6046251, "lon": 120.3246399 },
+    { "lat": 22.6048354, "lon": 120.3247153 }
+  ],
+  "tags": {
+    "electrified": "no",
+    "gauge": "1435",
+    "maxspeed": "50",
+    "name": "高雄環狀輕軌",
+    "oneway": "yes",
+    "railway": "light_rail"
+  }
+},
+{
+  "type": "way",
+  "id": 1559431683,
+  "bounds": {
+    "minlat": 22.6045600,
+    "minlon": 120.3246164,
+    "maxlat": 22.6046251,
+    "maxlon": 120.3246399
+  },
+  "geometry": [
+    { "lat": 22.6045600, "lon": 120.3246164 },
+    { "lat": 22.6045713, "lon": 120.3246206 },
+    { "lat": 22.6046251, "lon": 120.3246399 }
+  ],
+  "tags": {
+    "electrified": "contact_line",
+    "frequency": "0",
+    "gauge": "1435",
+    "maxspeed": "50",
+    "name": "高雄環狀輕軌",
+    "oneway": "yes",
+    "railway": "light_rail",
+    "voltage": "750"
+  }
+},
+{
+  "type": "way",
+  "id": 1559431684,
+  "bounds": {
+    "minlat": 22.5995205,
+    "minlon": 120.3197625,
+    "maxlat": 22.6045600,
+    "maxlon": 120.3246164
+  },
+  "geometry": [
+    { "lat": 22.5995205, "lon": 120.3197625 },
+    { "lat": 22.5995542, "lon": 120.3197983 },
+    { "lat": 22.5996916, "lon": 120.3199443 },
+    { "lat": 22.6007721, "lon": 120.3211018 },
+    { "lat": 22.6022017, "lon": 120.3225846 },
+    { "lat": 22.6033879, "lon": 120.3238071 },
+    { "lat": 22.6035219, "lon": 120.3239452 },
+    { "lat": 22.6036427, "lon": 120.3240474 },
+    { "lat": 22.6039902, "lon": 120.3243412 },
+    { "lat": 22.6041886, "lon": 120.3244646 },
+    { "lat": 22.6043390, "lon": 120.3245343 },
+    { "lat": 22.6045600, "lon": 120.3246164 }
+  ],
+  "tags": {
+    "electrified": "no",
+    "gauge": "1435",
+    "maxspeed": "50",
+    "name": "高雄環狀輕軌",
+    "oneway": "yes",
+    "railway": "light_rail"
+  }
+},
+{
+  "type": "way",
+  "id": 1559431686,
+  "bounds": {
+    "minlat": 22.5995385,
+    "minlon": 120.3197409,
+    "maxlat": 22.6045661,
+    "maxlon": 120.3245974
+  },
+  "geometry": [
+    { "lat": 22.6045661, "lon": 120.3245974 },
+    { "lat": 22.6043452, "lon": 120.3245109 },
+    { "lat": 22.6042040, "lon": 120.3244337 },
+    { "lat": 22.6040113, "lon": 120.3243075 },
+    { "lat": 22.6036667, "lon": 120.3240223 },
+    { "lat": 22.6035481, "lon": 120.3239241 },
+    { "lat": 22.6034110, "lon": 120.3237828 },
+    { "lat": 22.6007947, "lon": 120.3210862 },
+    { "lat": 22.6004246, "lon": 120.3206989 },
+    { "lat": 22.5997108, "lon": 120.3199237 },
+    { "lat": 22.5995752, "lon": 120.3197799 },
+    { "lat": 22.5995385, "lon": 120.3197409 }
+  ],
+  "tags": {
+    "electrified": "no",
+    "gauge": "1435",
+    "maxspeed": "50",
+    "name": "高雄環狀輕軌",
+    "oneway": "yes",
+    "railway": "light_rail"
+  }
+},
+{
+  "type": "way",
+  "id": 1561884683,
+  "bounds": {
+    "minlat": 22.6048430,
+    "minlon": 120.3246890,
+    "maxlat": 22.6058442,
+    "maxlon": 120.3250357
+  },
+  "geometry": [
+    { "lat": 22.6058442, "lon": 120.3250357 },
+    { "lat": 22.6057106, "lon": 120.3249780 },
+    { "lat": 22.6055729, "lon": 120.3249303 },
+    { "lat": 22.6051657, "lon": 120.3247846 },
+    { "lat": 22.6050563, "lon": 120.3247562 },
+    { "lat": 22.6048430, "lon": 120.3246890 }
+  ],
+  "tags": {
+    "electrified": "no",
+    "gauge": "1435",
+    "maxspeed": "50",
+    "name": "高雄環狀輕軌",
+    "oneway": "yes",
+    "railway": "light_rail",
+    "usage": "main"
+  }
+},
+{
+  "type": "way",
+  "id": 1561884684,
+  "bounds": {
+    "minlat": 22.6058442,
+    "minlon": 120.3250357,
+    "maxlat": 22.6059609,
+    "maxlon": 120.3250885
+  },
+  "geometry": [
+    { "lat": 22.6059609, "lon": 120.3250885 },
+    { "lat": 22.6058442, "lon": 120.3250357 }
+  ],
+  "tags": {
+    "electrified": "contact_line",
+    "frequency": "0",
+    "gauge": "1435",
+    "maxspeed": "50",
+    "name": "高雄環狀輕軌",
+    "oneway": "yes",
+    "railway": "light_rail",
+    "usage": "main",
+    "voltage": "750"
+  }
+},
+{
+  "type": "way",
+  "id": 1561884685,
+  "bounds": {
+    "minlat": 22.6113600,
+    "minlon": 120.3266948,
+    "maxlat": 22.6116786,
+    "maxlon": 120.3268684
+  },
+  "geometry": [
+    { "lat": 22.6116786, "lon": 120.3268684 },
+    { "lat": 22.6114764, "lon": 120.3267715 },
+    { "lat": 22.6113600, "lon": 120.3266948 }
+  ],
+  "tags": {
+    "electrified": "no",
+    "gauge": "1435",
+    "railway": "light_rail",
+    "service": "yard"
+  }
+},
+{
+  "type": "way",
+  "id": 1561884686,
+  "bounds": {
+    "minlat": 22.6059609,
+    "minlon": 120.3250885,
+    "maxlat": 22.6084376,
+    "maxlon": 120.3260291
+  },
+  "geometry": [
+    { "lat": 22.6084376, "lon": 120.3260291 },
+    { "lat": 22.6081599, "lon": 120.3259403 },
+    { "lat": 22.6069937, "lon": 120.3255668 },
+    { "lat": 22.6066136, "lon": 120.3254165 },
+    { "lat": 22.6064038, "lon": 120.3253066 },
+    { "lat": 22.6062664, "lon": 120.3252335 },
+    { "lat": 22.6061444, "lon": 120.3251745 },
+    { "lat": 22.6059609, "lon": 120.3250885 }
+  ],
+  "tags": {
+    "electrified": "no",
+    "gauge": "1435",
+    "maxspeed": "50",
+    "name": "高雄環狀輕軌",
+    "oneway": "yes",
+    "railway": "light_rail",
+    "usage": "main"
+  }
+},
+{
+  "type": "way",
+  "id": 1561884687,
+  "bounds": {
+    "minlat": 22.6084376,
+    "minlon": 120.3260291,
+    "maxlat": 22.6085047,
+    "maxlon": 120.3260497
+  },
+  "geometry": [
+    { "lat": 22.6085047, "lon": 120.3260497 },
+    { "lat": 22.6084763, "lon": 120.3260415 },
+    { "lat": 22.6084376, "lon": 120.3260291 }
+  ],
+  "tags": {
+    "electrified": "contact_line",
+    "frequency": "0",
+    "gauge": "1435",
+    "maxspeed": "50",
+    "name": "高雄環狀輕軌",
+    "oneway": "yes",
+    "railway": "light_rail",
+    "usage": "main",
+    "voltage": "750"
+  }
+},
+{
+  "type": "way",
+  "id": 1561884688,
+  "bounds": {
+    "minlat": 22.6048354,
+    "minlon": 120.3247153,
+    "maxlat": 22.6084320,
+    "maxlon": 120.3260492
+  },
+  "geometry": [
+    { "lat": 22.6048354, "lon": 120.3247153 },
+    { "lat": 22.6050468, "lon": 120.3247869 },
+    { "lat": 22.6051568, "lon": 120.3248176 },
+    { "lat": 22.6052753, "lon": 120.3248671 },
+    { "lat": 22.6053017, "lon": 120.3248762 },
+    { "lat": 22.6056907, "lon": 120.3250196 },
+    { "lat": 22.6058603, "lon": 120.3250893 },
+    { "lat": 22.6059550, "lon": 120.3251332 },
+    { "lat": 22.6062522, "lon": 120.3252623 },
+    { "lat": 22.6063809, "lon": 120.3253341 },
+    { "lat": 22.6065871, "lon": 120.3254494 },
+    { "lat": 22.6069876, "lon": 120.3255956 },
+    { "lat": 22.6081548, "lon": 120.3259608 },
+    { "lat": 22.6084320, "lon": 120.3260492 }
+  ],
+  "tags": {
+    "electrified": "no",
+    "gauge": "1435",
+    "maxspeed": "50",
+    "name": "高雄環狀輕軌",
+    "oneway": "yes",
+    "railway": "light_rail",
+    "usage": "main"
+  }
+},
+{
+  "type": "way",
+  "id": 1561884689,
+  "bounds": {
+    "minlat": 22.6084320,
+    "minlon": 120.3260492,
+    "maxlat": 22.6084997,
+    "maxlon": 120.3260705
+  },
+  "geometry": [
+    { "lat": 22.6084320, "lon": 120.3260492 },
+    { "lat": 22.6084708, "lon": 120.3260616 },
+    { "lat": 22.6084997, "lon": 120.3260705 }
+  ],
+  "tags": {
+    "electrified": "contact_line",
+    "frequency": "0",
+    "gauge": "1435",
+    "maxspeed": "50",
+    "name": "高雄環狀輕軌",
+    "oneway": "yes",
+    "railway": "light_rail",
+    "usage": "main",
+    "voltage": "750"
+  }
+},
+{
+  "type": "way",
+  "id": 1561884690,
+  "bounds": {
+    "minlat": 22.6085047,
+    "minlon": 120.3260497,
+    "maxlat": 22.6124645,
+    "maxlon": 120.3271230
+  },
+  "geometry": [
+    { "lat": 22.6124645, "lon": 120.3271230 },
+    { "lat": 22.6122673, "lon": 120.3270629 },
+    { "lat": 22.6119052, "lon": 120.3269484 },
+    { "lat": 22.6118188, "lon": 120.3269211 },
+    { "lat": 22.6116786, "lon": 120.3268684 },
+    { "lat": 22.6111864, "lon": 120.3267201 },
+    { "lat": 22.6107351, "lon": 120.3265800 },
+    { "lat": 22.6103674, "lon": 120.3264660 },
+    { "lat": 22.6099762, "lon": 120.3263808 },
+    { "lat": 22.6094669, "lon": 120.3262936 },
+    { "lat": 22.6092520, "lon": 120.3262514 },
+    { "lat": 22.6087454, "lon": 120.3261189 },
+    { "lat": 22.6085047, "lon": 120.3260497 }
+  ],
+  "tags": {
+    "electrified": "no",
+    "gauge": "1435",
+    "maxspeed": "50",
+    "name": "高雄環狀輕軌",
+    "oneway": "yes",
+    "railway": "light_rail",
+    "usage": "main"
+  }
+},
+{
+  "type": "way",
+  "id": 1561884692,
+  "bounds": {
+    "minlat": 22.6084997,
+    "minlon": 120.3260705,
+    "maxlat": 22.6124593,
+    "maxlon": 120.3271438
+  },
+  "geometry": [
+    { "lat": 22.6084997, "lon": 120.3260705 },
+    { "lat": 22.6087392, "lon": 120.3261441 },
+    { "lat": 22.6092334, "lon": 120.3262822 },
+    { "lat": 22.6094628, "lon": 120.3263292 },
+    { "lat": 22.6099477, "lon": 120.3264204 },
+    { "lat": 22.6103550, "lon": 120.3265156 },
+    { "lat": 22.6107500, "lon": 120.3266363 },
+    { "lat": 22.6111795, "lon": 120.3267617 },
+    { "lat": 22.6118177, "lon": 120.3269520 },
+    { "lat": 22.6120954, "lon": 120.3270358 },
+    { "lat": 22.6122613, "lon": 120.3270858 },
+    { "lat": 22.6124593, "lon": 120.3271438 }
+  ],
+  "tags": {
+    "electrified": "no",
+    "gauge": "1435",
+    "maxspeed": "50",
+    "name": "高雄環狀輕軌",
+    "oneway": "yes",
+    "railway": "light_rail",
+    "usage": "main"
+  }
+},
+{
+  "type": "relation",
+  "id": 2106606,
+  "bounds": {
+    "minlat": 22.5589965,
+    "minlon": 120.2776218,
+    "maxlat": 22.6183351,
+    "maxlon": 120.3396147
+  },
+  "tags": {
+    "admin_level": "7",
+    "boundary": "administrative",
+    "is_in": "臺灣高雄市",
+    "is_in:city": "高雄市",
+    "is_in:country": "TW",
+    "name": "前鎮區",
+    "name:en": "Qianzhen District",
+    "name:hak": "Chhièn-chṳ́n",
+    "name:it": "Distretto di Qianzhen",
+    "name:ja": "前鎮区",
+    "name:ko": "첸전구",
+    "name:nan": "Chiân-tìn-khu",
+    "name:nan-Hant": "前鎮區",
+    "name:nan-Latn-pehoeji": "Chiân-tìn-khu",
+    "name:nan-Latn-tailo": "Tsiân-tìn-khu",
+    "name:pl": "Qianzhen",
+    "name:vi": "Tiền Trấn",
+    "name:zh": "前鎮區",
+    "nat_ref": "64000090",
+    "postal_code": "806",
+    "type": "boundary",
+    "wikidata": "Q712894",
+    "wikipedia": "zh:前鎮區"
+  }
+},
+{
+  "type": "relation",
+  "id": 6389655,
+  "bounds": {
+    "minlat": 22.6059798,
+    "minlon": 120.3249547,
+    "maxlat": 22.6114898,
+    "maxlon": 120.3267882
+  },
+  "tags": {
+    "landuse": "railway",
+    "name": "高雄捷運前鎮機廠",
+    "name:en": "Cianjhen Depot, Kaohsiung Metro",
+    "name:zh": "高雄捷運前鎮機廠",
+    "operator": "高雄捷運公司 Kaohsiung Metro",
+    "type": "multipolygon"
+  }
+},
+{
+  "type": "relation",
+  "id": 12147624,
+  "bounds": {
+    "minlat": 22.6082405,
+    "minlon": 120.3254300,
+    "maxlat": 22.6093274,
+    "maxlon": 120.3261588
+  },
+  "tags": {
+    "alt_name": "輕軌機廠站",
+    "alt_name:en": "LRT Dept Station",
+    "alt_name:nan": "Khin-thih Ki-chhiúⁿ chām;Khin-kúi Ki-chhiúⁿ chām",
+    "alt_name:nan-Hant": "輕鐵機廠站;輕軌機廠站",
+    "alt_name:nan-Latn-pehoeji": "Khin-thih Ki-chhiúⁿ chām;Khin-kúi Ki-chhiúⁿ chām",
+    "alt_name:nan-Latn-tailo": "Khin-thih Kí-tshiúnn tsām;Khin-kuí Kí-tshiúnn tsām",
+    "alt_name:zh": "輕軌機廠站",
+    "name": "輕軌機廠",
+    "name:en": "LRT Depot",
+    "name:hak": "Khîn-kúi Kî-chhóng",
+    "name:nan": "Khin-thih Ki-chhiúⁿ",
+    "name:nan-Hant": "輕鐵機廠",
+    "name:nan-Latn-pehoeji": "Khin-thih Ki-chhiúⁿ",
+    "name:nan-Latn-tailo": "Khin-thih ki-tshiúnn",
+    "name:zh": "輕軌機廠",
+    "name:zh-Hans": "轻轨机厂",
+    "name:zh-Hant": "輕軌機廠",
+    "name:zh-Latn-pinyin": "qīng guǐ jī chǎng",
+    "operator": "高雄捷運公司",
+    "public_transport": "stop_area",
+    "ref": "C37",
+    "type": "public_transport",
+    "wheelchair": "yes"
+  }
+}
+
+  ]
+}

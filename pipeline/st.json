@@ -1,0 +1,523 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.4 2390de5a",
+  "osm3s": {
+    "timestamp_osm_base": "2026-11-26T05:26:35Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+
+{
+  "type": "node",
+  "id": 2558130627,
+  "lat": 22.6197102,
+  "lon": 120.2707312,
+  "tags": {
+    "bus": "yes",
+    "highway": "bus_stop",
+    "name": "鼓山輪渡站",
+    "name:en": "Gushan Ferry Station",
+    "name:zh": "鼓山輪渡站",
+    "network": "高雄市公車",
+    "network:en": "Kaohsiung City Bus",
+    "network:nan": "Ko-hiông-chhī Kong-chhia",
+    "network:nan-Hant": "高雄市公車",
+    "network:nan-Latn-pehoeji": "Ko-hiông-chhī Kong-chhia",
+    "network:nan-Latn-tailo": "Ko-hiông-tshī Kong-tshia",
+    "network:wikidata": "Q15903688",
+    "network:wikipedia": "ja:高雄市公車",
+    "network:zh": "高雄市公車",
+    "operator": "高雄市公車",
+    "public_transport": "platform",
+    "ref": "0028",
+    "shelter": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 3921289758,
+  "lat": 22.6197426,
+  "lon": 120.2698860,
+  "tags": {
+    "amenity": "ferry_terminal",
+    "ferry": "yes",
+    "name": "鼓山輪渡站",
+    "name:en": "Gushan Ferry Pier",
+    "name:zh": "鼓山輪渡站",
+    "public_transport": "station"
+  }
+},
+{
+  "type": "way",
+  "id": 25356220,
+  "bounds": {
+    "minlat": 22.6196911,
+    "minlon": 120.2698870,
+    "maxlat": 22.6240968,
+    "maxlon": 120.2701390
+  },
+  "geometry": [
+    { "lat": 22.6240968, "lon": 120.2700073 },
+    { "lat": 22.6239917, "lon": 120.2699548 },
+    { "lat": 22.6239105, "lon": 120.2699367 },
+    { "lat": 22.6237165, "lon": 120.2699047 },
+    { "lat": 22.6235682, "lon": 120.2698870 },
+    { "lat": 22.6234797, "lon": 120.2698879 },
+    { "lat": 22.6229676, "lon": 120.2699490 },
+    { "lat": 22.6228114, "lon": 120.2699591 },
+    { "lat": 22.6227109, "lon": 120.2699628 },
+    { "lat": 22.6219449, "lon": 120.2700130 },
+    { "lat": 22.6216711, "lon": 120.2700075 },
+    { "lat": 22.6215307, "lon": 120.2700166 },
+    { "lat": 22.6214008, "lon": 120.2700269 },
+    { "lat": 22.6210574, "lon": 120.2700607 },
+    { "lat": 22.6207035, "lon": 120.2700494 },
+    { "lat": 22.6203541, "lon": 120.2700796 },
+    { "lat": 22.6202678, "lon": 120.2700936 },
+    { "lat": 22.6201882, "lon": 120.2701095 },
+    { "lat": 22.6201138, "lon": 120.2701118 },
+    { "lat": 22.6200797, "lon": 120.2701129 },
+    { "lat": 22.6197857, "lon": 120.2701338 },
+    { "lat": 22.6196911, "lon": 120.2701390 }
+  ],
+  "tags": {
+    "highway": "living_street",
+    "name": "濱海二路",
+    "name:en": "Binhai 2nd Road",
+    "name:zh": "濱海二路",
+    "oneway": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 25822432,
+  "bounds": {
+    "minlat": 22.6189125,
+    "minlon": 120.2741215,
+    "maxlat": 22.6200517,
+    "maxlon": 120.2741670
+  },
+  "geometry": [
+    { "lat": 22.6200517, "lon": 120.2741396 },
+    { "lat": 22.6198278, "lon": 120.2741374 },
+    { "lat": 22.6197585, "lon": 120.2741356 },
+    { "lat": 22.6197215, "lon": 120.2741347 },
+    { "lat": 22.6193181, "lon": 120.2741215 },
+    { "lat": 22.6189125, "lon": 120.2741670 }
+  ],
+  "tags": {
+    "highway": "residential",
+    "name": "捷興一街",
+    "name:en": "Jiesing 1st street",
+    "name:zh": "捷興一街"
+  }
+},
+{
+  "type": "way",
+  "id": 28526230,
+  "bounds": {
+    "minlat": 22.6197471,
+    "minlon": 120.2707902,
+    "maxlat": 22.6199406,
+    "maxlon": 120.2728651
+  },
+  "geometry": [
+    { "lat": 22.6197471, "lon": 120.2707902 },
+    { "lat": 22.6197719, "lon": 120.2710595 },
+    { "lat": 22.6198230, "lon": 120.2714486 },
+    { "lat": 22.6198406, "lon": 120.2716926 },
+    { "lat": 22.6198538, "lon": 120.2717792 },
+    { "lat": 22.6199406, "lon": 120.2728651 }
+  ],
+  "tags": {
+    "highway": "residential",
+    "name": "濱海一路",
+    "name:en": "Binhai 1st Road",
+    "name:zh": "濱海一路",
+    "oneway": "yes",
+    "sidewalk": "both"
+  }
+},
+{
+  "type": "way",
+  "id": 28526232,
+  "bounds": {
+    "minlat": 22.6199891,
+    "minlon": 120.2735158,
+    "maxlat": 22.6221922,
+    "maxlon": 120.2749749
+  },
+  "geometry": [
+    { "lat": 22.6221922, "lon": 120.2749749 },
+    { "lat": 22.6215991, "lon": 120.2745991 },
+    { "lat": 22.6215169, "lon": 120.2745467 },
+    { "lat": 22.6214250, "lon": 120.2744874 },
+    { "lat": 22.6205724, "lon": 120.2739143 },
+    { "lat": 22.6199891, "lon": 120.2735158 }
+  ],
+  "tags": {
+    "highway": "residential",
+    "name": "捷興二街",
+    "name:en": "Jiesing 2nd Street",
+    "name:zh": "捷興二街"
+  }
+},
+{
+  "type": "way",
+  "id": 205060865,
+  "bounds": {
+    "minlat": 22.6196942,
+    "minlon": 120.2699782,
+    "maxlat": 22.6200557,
+    "maxlon": 120.2700483
+  },
+  "geometry": [
+    { "lat": 22.6196963, "lon": 120.2700483 },
+    { "lat": 22.6197359, "lon": 120.2700456 },
+    { "lat": 22.6200557, "lon": 120.2700321 },
+    { "lat": 22.6200546, "lon": 120.2700045 },
+    { "lat": 22.6200536, "lon": 120.2699782 },
+    { "lat": 22.6196942, "lon": 120.2699944 },
+    { "lat": 22.6196963, "lon": 120.2700483 }
+  ],
+  "tags": {
+    "amenity": "ferry_terminal",
+    "building": "transportation",
+    "ferry": "yes",
+    "name": "鼓山輪渡站",
+    "name:en": "Gushan Ferry Pier",
+    "name:zh": "鼓山輪渡站",
+    "public_transport": "station",
+    "wikidata": "Q11179997",
+    "wikipedia": "zh:鼓山輪渡站"
+  }
+},
+{
+  "type": "way",
+  "id": 205152895,
+  "bounds": {
+    "minlat": 22.6200517,
+    "minlon": 120.2741396,
+    "maxlat": 22.6212668,
+    "maxlon": 120.2749857
+  },
+  "geometry": [
+    { "lat": 22.6200517, "lon": 120.2741396 },
+    { "lat": 22.6203389, "lon": 120.2743215 },
+    { "lat": 22.6211582, "lon": 120.2749106 },
+    { "lat": 22.6211882, "lon": 120.2749310 },
+    { "lat": 22.6212668, "lon": 120.2749857 }
+  ],
+  "tags": {
+    "highway": "residential",
+    "lanes": "1",
+    "name": "鼓山一路",
+    "name:en": "Gushan 1st Road",
+    "name:zh": "鼓山一路",
+    "oneway": "yes",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 211139350,
+  "bounds": {
+    "minlat": 22.6212668,
+    "minlon": 120.2740736,
+    "maxlat": 22.6217850,
+    "maxlon": 120.2749857
+  },
+  "geometry": [
+    { "lat": 22.6212668, "lon": 120.2749857 },
+    { "lat": 22.6213212, "lon": 120.2748929 },
+    { "lat": 22.6213424, "lon": 120.2748572 },
+    { "lat": 22.6213901, "lon": 120.2747676 },
+    { "lat": 22.6215169, "lon": 120.2745467 },
+    { "lat": 22.6217233, "lon": 120.2741757 },
+    { "lat": 22.6217850, "lon": 120.2740736 }
+  ],
+  "tags": {
+    "highway": "tertiary",
+    "name": "臨海二路",
+    "name:en": "Linhai 2nd Road",
+    "name:zh": "臨海二路",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 232769117,
+  "bounds": {
+    "minlat": 22.6223966,
+    "minlon": 120.2722963,
+    "maxlat": 22.6227928,
+    "maxlon": 120.2729920
+  },
+  "geometry": [
+    { "lat": 22.6223966, "lon": 120.2729920 },
+    { "lat": 22.6225470, "lon": 120.2727279 },
+    { "lat": 22.6225744, "lon": 120.2726799 },
+    { "lat": 22.6225973, "lon": 120.2726397 },
+    { "lat": 22.6227928, "lon": 120.2722963 }
+  ],
+  "tags": {
+    "highway": "tertiary",
+    "name": "臨海二路",
+    "name:en": "Linhai 2nd Road",
+    "name:zh": "臨海二路"
+  }
+},
+{
+  "type": "way",
+  "id": 232769121,
+  "bounds": {
+    "minlat": 22.6227928,
+    "minlon": 120.2700073,
+    "maxlat": 22.6240968,
+    "maxlon": 120.2722963
+  },
+  "geometry": [
+    { "lat": 22.6227928, "lon": 120.2722963 },
+    { "lat": 22.6229273, "lon": 120.2720604 },
+    { "lat": 22.6229762, "lon": 120.2719774 },
+    { "lat": 22.6230147, "lon": 120.2719070 },
+    { "lat": 22.6231477, "lon": 120.2716737 },
+    { "lat": 22.6233589, "lon": 120.2713031 },
+    { "lat": 22.6234284, "lon": 120.2711831 },
+    { "lat": 22.6234466, "lon": 120.2711517 },
+    { "lat": 22.6235520, "lon": 120.2709587 },
+    { "lat": 22.6237125, "lon": 120.2706840 },
+    { "lat": 22.6237396, "lon": 120.2706366 },
+    { "lat": 22.6237746, "lon": 120.2705783 },
+    { "lat": 22.6239535, "lon": 120.2702599 },
+    { "lat": 22.6240554, "lon": 120.2700792 },
+    { "lat": 22.6240968, "lon": 120.2700073 }
+  ],
+  "tags": {
+    "highway": "tertiary",
+    "name": "臨海二路",
+    "name:en": "Linhai 2nd Road",
+    "name:zh": "臨海二路"
+  }
+},
+{
+  "type": "way",
+  "id": 232769128,
+  "bounds": {
+    "minlat": 22.6196911,
+    "minlon": 120.2701390,
+    "maxlat": 22.6197471,
+    "maxlon": 120.2707902
+  },
+  "geometry": [
+    { "lat": 22.6196911, "lon": 120.2701390 },
+    { "lat": 22.6196959, "lon": 120.2701910 },
+    { "lat": 22.6197021, "lon": 120.2702667 },
+    { "lat": 22.6197172, "lon": 120.2704225 },
+    { "lat": 22.6197287, "lon": 120.2705810 },
+    { "lat": 22.6197388, "lon": 120.2706953 },
+    { "lat": 22.6197471, "lon": 120.2707902 }
+  ],
+  "tags": {
+    "highway": "residential",
+    "name": "濱海一路",
+    "name:en": "Binhai 1st Road",
+    "name:zh": "濱海一路",
+    "oneway": "yes",
+    "sidewalk": "both"
+  }
+},
+{
+  "type": "way",
+  "id": 232769131,
+  "bounds": {
+    "minlat": 22.6190509,
+    "minlon": 120.2717791,
+    "maxlat": 22.6195748,
+    "maxlon": 120.2762514
+  },
+  "geometry": [
+    { "lat": 22.6190509, "lon": 120.2717791 },
+    { "lat": 22.6190849, "lon": 120.2720333 },
+    { "lat": 22.6191976, "lon": 120.2732220 },
+    { "lat": 22.6193181, "lon": 120.2741215 },
+    { "lat": 22.6192318, "lon": 120.2756202 },
+    { "lat": 22.6191678, "lon": 120.2759595 },
+    { "lat": 22.6191861, "lon": 120.2760335 },
+    { "lat": 22.6192423, "lon": 120.2760980 },
+    { "lat": 22.6192941, "lon": 120.2761250 },
+    { "lat": 22.6193006, "lon": 120.2761284 },
+    { "lat": 22.6193856, "lon": 120.2761700 },
+    { "lat": 22.6195748, "lon": 120.2762514 }
+  ],
+  "tags": {
+    "highway": "residential",
+    "name": "捷興一街",
+    "name:en": "Jiesing 1st Street",
+    "name:zh": "捷興一街",
+    "oneway": "no"
+  }
+},
+{
+  "type": "way",
+  "id": 239205291,
+  "bounds": {
+    "minlat": 22.6212668,
+    "minlon": 120.2749857,
+    "maxlat": 22.6220160,
+    "maxlon": 120.2754336
+  },
+  "geometry": [
+    { "lat": 22.6212668, "lon": 120.2749857 },
+    { "lat": 22.6213815, "lon": 120.2750538 },
+    { "lat": 22.6214101, "lon": 120.2750681 },
+    { "lat": 22.6217852, "lon": 120.2753031 },
+    { "lat": 22.6218085, "lon": 120.2753158 },
+    { "lat": 22.6220160, "lon": 120.2754336 }
+  ],
+  "tags": {
+    "highway": "tertiary",
+    "name": "鼓山一路",
+    "name:en": "Gushan 1st Road",
+    "name:zh": "鼓山一路",
+    "oneway": "yes",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 249154060,
+  "bounds": {
+    "minlat": 22.6199406,
+    "minlon": 120.2728651,
+    "maxlat": 22.6200517,
+    "maxlon": 120.2741396
+  },
+  "geometry": [
+    { "lat": 22.6199406, "lon": 120.2728651 },
+    { "lat": 22.6199891, "lon": 120.2735158 },
+    { "lat": 22.6200219, "lon": 120.2738711 },
+    { "lat": 22.6200517, "lon": 120.2741396 }
+  ],
+  "tags": {
+    "highway": "residential",
+    "lanes": "1",
+    "name": "濱海一路",
+    "name:en": "Binhai 1st Road",
+    "name:zh": "濱海一路",
+    "oneway": "yes",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 249154061,
+  "bounds": {
+    "minlat": 22.6239735,
+    "minlon": 120.2765272,
+    "maxlat": 22.6263127,
+    "maxlon": 120.2781041
+  },
+  "geometry": [
+    { "lat": 22.6239735, "lon": 120.2765272 },
+    { "lat": 22.6240384, "lon": 120.2765752 },
+    { "lat": 22.6240664, "lon": 120.2765953 },
+    { "lat": 22.6244133, "lon": 120.2768365 },
+    { "lat": 22.6244956, "lon": 120.2768911 },
+    { "lat": 22.6246910, "lon": 120.2770206 },
+    { "lat": 22.6255672, "lon": 120.2776086 },
+    { "lat": 22.6256511, "lon": 120.2776649 },
+    { "lat": 22.6256709, "lon": 120.2776781 },
+    { "lat": 22.6256918, "lon": 120.2776919 },
+    { "lat": 22.6261707, "lon": 120.2780098 },
+    { "lat": 22.6261986, "lon": 120.2780284 },
+    { "lat": 22.6263127, "lon": 120.2781041 }
+  ],
+  "tags": {
+    "highway": "tertiary",
+    "name": "鼓山一路",
+    "name:en": "Gushan 1st Road",
+    "name:zh": "鼓山一路",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 249154067,
+  "bounds": {
+    "minlat": 22.6240968,
+    "minlon": 120.2695163,
+    "maxlat": 22.6243587,
+    "maxlon": 120.2700073
+  },
+  "geometry": [
+    { "lat": 22.6240968, "lon": 120.2700073 },
+    { "lat": 22.6241290, "lon": 120.2699513 },
+    { "lat": 22.6241470, "lon": 120.2699201 },
+    { "lat": 22.6243126, "lon": 120.2696074 },
+    { "lat": 22.6243587, "lon": 120.2695163 }
+  ],
+  "tags": {
+    "highway": "tertiary",
+    "name": "臨海二路",
+    "name:en": "Linhai 2nd Road",
+    "name:zh": "臨海二路"
+  }
+},
+{
+  "type": "way",
+  "id": 249154068,
+  "bounds": {
+    "minlat": 22.6217850,
+    "minlon": 120.2729920,
+    "maxlat": 22.6223966,
+    "maxlon": 120.2740736
+  },
+  "geometry": [
+    { "lat": 22.6217850, "lon": 120.2740736 },
+    { "lat": 22.6218451, "lon": 120.2739674 },
+    { "lat": 22.6220174, "lon": 120.2736627 },
+    { "lat": 22.6221497, "lon": 120.2734288 },
+    { "lat": 22.6222023, "lon": 120.2733369 },
+    { "lat": 22.6222194, "lon": 120.2733056 },
+    { "lat": 22.6223966, "lon": 120.2729920 }
+  ],
+  "tags": {
+    "highway": "tertiary",
+    "name": "臨海二路",
+    "name:en": "Linhai 2nd Road",
+    "name:zh": "臨海二路"
+  }
+},
+{
+  "type": "way",
+  "id": 293502307,
+  "bounds": {
+    "minlat": 22.6220160,
+    "minlon": 120.2754336,
+    "maxlat": 22.6239735,
+    "maxlon": 120.2765272
+  },
+  "geometry": [
+    { "lat": 22.6220160, "lon": 120.2754336 },
+    { "lat": 22.6221447, "lon": 120.2755040 },
+    { "lat": 22.6221913, "lon": 120.2755306 },
+    { "lat": 22.6226038, "lon": 120.2757321 },
+    { "lat": 22.6228506, "lon": 120.2758423 },
+    { "lat": 22.6231281, "lon": 120.2760093 },
+    { "lat": 22.6238293, "lon": 120.2764766 },
+    { "lat": 22.6238571, "lon": 120.2764932 },
+    { "lat": 22.6239735, "lon": 120.2765272 }
+  ],
+  "tags": {
+    "highway": "tertiary",
+    "name": "鼓山一路",
+    "name:en": "Gushan 1st Road",
+    "name:zh": "鼓山一路",
+    "oneway": "yes",
+    "surface": "asphalt"
+  }
+}
+
+  ]
+}

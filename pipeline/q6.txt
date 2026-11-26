@@ -1,0 +1,5 @@
+[out:json][timeout:90];
+(
+ way["boundary"="administrative"](22.585,120.315,22.640,120.365);
+);
+out tags geom;

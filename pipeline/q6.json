@@ -1,0 +1,8465 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.4 2390de5a",
+  "osm3s": {
+    "timestamp_osm_base": "2026-11-26T08:30:05Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+
+{
+  "type": "way",
+  "id": 157528331,
+  "bounds": {
+    "minlat": 22.6342613,
+    "minlon": 120.3137779,
+    "maxlat": 22.6366617,
+    "maxlon": 120.3168135
+  },
+  "geometry": [
+    { "lat": 22.6342613, "lon": 120.3168135 },
+    { "lat": 22.6366552, "lon": 120.3139995 },
+    { "lat": 22.6366617, "lon": 120.3137779 }
+  ],
+  "tags": {
+    "admin_level": "7",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 157528332,
+  "bounds": {
+    "minlat": 22.6337462,
+    "minlon": 120.3418339,
+    "maxlat": 22.6342493,
+    "maxlon": 120.3447330
+  },
+  "geometry": [
+    { "lat": 22.6337462, "lon": 120.3447330 },
+    { "lat": 22.6342493, "lon": 120.3418339 }
+  ],
+  "tags": {
+    "admin_level": "7",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 157539062,
+  "bounds": {
+    "minlat": 22.6323964,
+    "minlon": 120.3167400,
+    "maxlat": 22.6342613,
+    "maxlon": 120.3171389
+  },
+  "geometry": [
+    { "lat": 22.6342613, "lon": 120.3168135 },
+    { "lat": 22.6336361, "lon": 120.3167400 },
+    { "lat": 22.6333802, "lon": 120.3167605 },
+    { "lat": 22.6323964, "lon": 120.3171389 }
+  ],
+  "tags": {
+    "admin_level": "7",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 157539066,
+  "bounds": {
+    "minlat": 22.6123398,
+    "minlon": 120.3269812,
+    "maxlat": 22.6141689,
+    "maxlon": 120.3274294
+  },
+  "geometry": [
+    { "lat": 22.6123398, "lon": 120.3269812 },
+    { "lat": 22.6126675, "lon": 120.3271326 },
+    { "lat": 22.6132291, "lon": 120.3273140 },
+    { "lat": 22.6136408, "lon": 120.3274032 },
+    { "lat": 22.6141689, "lon": 120.3274294 }
+  ],
+  "tags": {
+    "admin_level": "7",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 157541962,
+  "bounds": {
+    "minlat": 22.6123176,
+    "minlon": 120.3269812,
+    "maxlat": 22.6126689,
+    "maxlon": 120.3327325
+  },
+  "geometry": [
+    { "lat": 22.6123398, "lon": 120.3269812 },
+    { "lat": 22.6123944, "lon": 120.3285452 },
+    { "lat": 22.6126689, "lon": 120.3326749 },
+    { "lat": 22.6123176, "lon": 120.3327325 }
+  ],
+  "tags": {
+    "admin_level": "7",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 157552844,
+  "bounds": {
+    "minlat": 22.5834702,
+    "minlon": 120.3392684,
+    "maxlat": 22.5853836,
+    "maxlon": 120.3496329
+  },
+  "geometry": [
+    { "lat": 22.5844921, "lon": 120.3392684 },
+    { "lat": 22.5845254, "lon": 120.3395597 },
+    { "lat": 22.5844806, "lon": 120.3399115 },
+    { "lat": 22.5844070, "lon": 120.3400809 },
+    { "lat": 22.5842216, "lon": 120.3402696 },
+    { "lat": 22.5840361, "lon": 120.3405574 },
+    { "lat": 22.5836524, "lon": 120.3413407 },
+    { "lat": 22.5835277, "lon": 120.3416861 },
+    { "lat": 22.5834702, "lon": 120.3424663 },
+    { "lat": 22.5835085, "lon": 120.3428947 },
+    { "lat": 22.5838379, "lon": 120.3437357 },
+    { "lat": 22.5839242, "lon": 120.3441194 },
+    { "lat": 22.5839754, "lon": 120.3444455 },
+    { "lat": 22.5840042, "lon": 120.3455103 },
+    { "lat": 22.5840393, "lon": 120.3458236 },
+    { "lat": 22.5842684, "lon": 120.3466443 },
+    { "lat": 22.5843720, "lon": 120.3468317 },
+    { "lat": 22.5844897, "lon": 120.3471778 },
+    { "lat": 22.5847199, "lon": 120.3486774 },
+    { "lat": 22.5849954, "lon": 120.3487980 },
+    { "lat": 22.5851148, "lon": 120.3490959 },
+    { "lat": 22.5853322, "lon": 120.3494976 },
+    { "lat": 22.5853836, "lon": 120.3496329 }
+  ],
+  "tags": {
+    "admin_level": "7",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 234124446,
+  "bounds": {
+    "minlat": 22.6384199,
+    "minlon": 120.3244546,
+    "maxlat": 22.6394836,
+    "maxlon": 120.3321141
+  },
+  "geometry": [
+    { "lat": 22.6394836, "lon": 120.3244546 },
+    { "lat": 22.6394111, "lon": 120.3253557 },
+    { "lat": 22.6391107, "lon": 120.3280540 },
+    { "lat": 22.6384199, "lon": 120.3321141 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 234124450,
+  "bounds": {
+    "minlat": 22.6384199,
+    "minlon": 120.3321141,
+    "maxlat": 22.6407383,
+    "maxlon": 120.3322698
+  },
+  "geometry": [
+    { "lat": 22.6384199, "lon": 120.3321141 },
+    { "lat": 22.6390054, "lon": 120.3322523 },
+    { "lat": 22.6394235, "lon": 120.3322698 },
+    { "lat": 22.6407383, "lon": 120.3322091 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 234124452,
+  "bounds": {
+    "minlat": 22.6394836,
+    "minlon": 120.3243714,
+    "maxlat": 22.6410593,
+    "maxlon": 120.3244954
+  },
+  "geometry": [
+    { "lat": 22.6410593, "lon": 120.3243714 },
+    { "lat": 22.6408101, "lon": 120.3244369 },
+    { "lat": 22.6404392, "lon": 120.3244954 },
+    { "lat": 22.6399606, "lon": 120.3244900 },
+    { "lat": 22.6396813, "lon": 120.3244777 },
+    { "lat": 22.6394836, "lon": 120.3244546 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 234128990,
+  "bounds": {
+    "minlat": 22.6372612,
+    "minlon": 120.3194320,
+    "maxlat": 22.6381894,
+    "maxlon": 120.3245724
+  },
+  "geometry": [
+    { "lat": 22.6372612, "lon": 120.3245724 },
+    { "lat": 22.6381894, "lon": 120.3194320 }
+  ],
+  "tags": {
+    "admin_level": "7",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 234129000,
+  "bounds": {
+    "minlat": 22.6360807,
+    "minlon": 120.3316262,
+    "maxlat": 22.6384199,
+    "maxlon": 120.3321141
+  },
+  "geometry": [
+    { "lat": 22.6384199, "lon": 120.3321141 },
+    { "lat": 22.6360807, "lon": 120.3316262 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 234129003,
+  "bounds": {
+    "minlat": 22.6384118,
+    "minlon": 120.3162982,
+    "maxlat": 22.6385928,
+    "maxlon": 120.3171597
+  },
+  "geometry": [
+    { "lat": 22.6384118, "lon": 120.3171597 },
+    { "lat": 22.6385928, "lon": 120.3162982 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 234129004,
+  "bounds": {
+    "minlat": 22.6375467,
+    "minlon": 120.3321141,
+    "maxlat": 22.6384199,
+    "maxlon": 120.3371580
+  },
+  "geometry": [
+    { "lat": 22.6375467, "lon": 120.3371580 },
+    { "lat": 22.6380087, "lon": 120.3344748 },
+    { "lat": 22.6384199, "lon": 120.3321141 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 234129005,
+  "bounds": {
+    "minlat": 22.6372612,
+    "minlon": 120.3244546,
+    "maxlat": 22.6394836,
+    "maxlon": 120.3248223
+  },
+  "geometry": [
+    { "lat": 22.6394836, "lon": 120.3244546 },
+    { "lat": 22.6386985, "lon": 120.3248223 },
+    { "lat": 22.6372612, "lon": 120.3245724 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 234129006,
+  "bounds": {
+    "minlat": 22.6360807,
+    "minlon": 120.3270962,
+    "maxlat": 22.6368258,
+    "maxlon": 120.3316262
+  },
+  "geometry": [
+    { "lat": 22.6360807, "lon": 120.3316262 },
+    { "lat": 22.6368258, "lon": 120.3270962 }
+  ],
+  "tags": {
+    "admin_level": "7",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 234129007,
+  "bounds": {
+    "minlat": 22.6381894,
+    "minlon": 120.3176451,
+    "maxlat": 22.6401346,
+    "maxlon": 120.3196055
+  },
+  "geometry": [
+    { "lat": 22.6401346, "lon": 120.3176451 },
+    { "lat": 22.6399607, "lon": 120.3196055 },
+    { "lat": 22.6381894, "lon": 120.3194320 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 234129011,
+  "bounds": {
+    "minlat": 22.6385928,
+    "minlon": 120.3139326,
+    "maxlat": 22.6388770,
+    "maxlon": 120.3162982
+  },
+  "geometry": [
+    { "lat": 22.6385928, "lon": 120.3162982 },
+    { "lat": 22.6386452, "lon": 120.3160032 },
+    { "lat": 22.6388230, "lon": 120.3146090 },
+    { "lat": 22.6388770, "lon": 120.3139326 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 234129012,
+  "bounds": {
+    "minlat": 22.6325633,
+    "minlon": 120.3168135,
+    "maxlat": 22.6342613,
+    "maxlon": 120.3197725
+  },
+  "geometry": [
+    { "lat": 22.6338283, "lon": 120.3197725 },
+    { "lat": 22.6331933, "lon": 120.3195054 },
+    { "lat": 22.6325633, "lon": 120.3190070 },
+    { "lat": 22.6342613, "lon": 120.3168135 }
+  ],
+  "tags": {
+    "admin_level": "7",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 234129013,
+  "bounds": {
+    "minlat": 22.6350918,
+    "minlon": 120.3369667,
+    "maxlat": 22.6375467,
+    "maxlon": 120.3371580
+  },
+  "geometry": [
+    { "lat": 22.6375467, "lon": 120.3371580 },
+    { "lat": 22.6364332, "lon": 120.3370729 },
+    { "lat": 22.6353982, "lon": 120.3369878 },
+    { "lat": 22.6350918, "lon": 120.3369667 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 234129014,
+  "bounds": {
+    "minlat": 22.6385928,
+    "minlon": 120.3162982,
+    "maxlat": 22.6402227,
+    "maxlon": 120.3166528
+  },
+  "geometry": [
+    { "lat": 22.6402227, "lon": 120.3166528 },
+    { "lat": 22.6391184, "lon": 120.3165359 },
+    { "lat": 22.6391445, "lon": 120.3163306 },
+    { "lat": 22.6385928, "lon": 120.3162982 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 234129015,
+  "bounds": {
+    "minlat": 22.6381894,
+    "minlon": 120.3171597,
+    "maxlat": 22.6384713,
+    "maxlon": 120.3194320
+  },
+  "geometry": [
+    { "lat": 22.6381894, "lon": 120.3194320 },
+    { "lat": 22.6383923, "lon": 120.3183086 },
+    { "lat": 22.6384713, "lon": 120.3176439 },
+    { "lat": 22.6384597, "lon": 120.3173984 },
+    { "lat": 22.6384118, "lon": 120.3171597 }
+  ],
+  "tags": {
+    "admin_level": "7",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 234129016,
+  "bounds": {
+    "minlat": 22.6350918,
+    "minlon": 120.3324672,
+    "maxlat": 22.6358261,
+    "maxlon": 120.3369667
+  },
+  "geometry": [
+    { "lat": 22.6350918, "lon": 120.3369667 },
+    { "lat": 22.6355930, "lon": 120.3338879 },
+    { "lat": 22.6357120, "lon": 120.3333463 },
+    { "lat": 22.6358261, "lon": 120.3324672 }
+  ],
+  "tags": {
+    "admin_level": "7",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 234129017,
+  "bounds": {
+    "minlat": 22.6399251,
+    "minlon": 120.3370053,
+    "maxlat": 22.6434635,
+    "maxlon": 120.3371981
+  },
+  "geometry": [
+    { "lat": 22.6434635, "lon": 120.3370053 },
+    { "lat": 22.6419822, "lon": 120.3371180 },
+    { "lat": 22.6407070, "lon": 120.3371981 },
+    { "lat": 22.6399251, "lon": 120.3371981 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 234129018,
+  "bounds": {
+    "minlat": 22.6337882,
+    "minlon": 120.3171597,
+    "maxlat": 22.6384118,
+    "maxlon": 120.3202059
+  },
+  "geometry": [
+    { "lat": 22.6384118, "lon": 120.3171597 },
+    { "lat": 22.6380539, "lon": 120.3179241 },
+    { "lat": 22.6376823, "lon": 120.3184053 },
+    { "lat": 22.6373362, "lon": 120.3186962 },
+    { "lat": 22.6365278, "lon": 120.3191515 },
+    { "lat": 22.6337882, "lon": 120.3202059 }
+  ],
+  "tags": {
+    "admin_level": "7",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 234129021,
+  "bounds": {
+    "minlat": 22.6338283,
+    "minlon": 120.3138031,
+    "maxlat": 22.6371752,
+    "maxlon": 120.3197725
+  },
+  "geometry": [
+    { "lat": 22.6338283, "lon": 120.3197725 },
+    { "lat": 22.6343304, "lon": 120.3178501 },
+    { "lat": 22.6344611, "lon": 120.3175457 },
+    { "lat": 22.6359770, "lon": 120.3158572 },
+    { "lat": 22.6368592, "lon": 120.3147952 },
+    { "lat": 22.6370911, "lon": 120.3143067 },
+    { "lat": 22.6371752, "lon": 120.3138031 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 234278631,
+  "bounds": {
+    "minlat": 22.6377848,
+    "minlon": 120.3459488,
+    "maxlat": 22.6417877,
+    "maxlon": 120.3502327
+  },
+  "geometry": [
+    { "lat": 22.6377848, "lon": 120.3467948 },
+    { "lat": 22.6380350, "lon": 120.3475841 },
+    { "lat": 22.6382778, "lon": 120.3481353 },
+    { "lat": 22.6387763, "lon": 120.3500244 },
+    { "lat": 22.6388346, "lon": 120.3501756 },
+    { "lat": 22.6389336, "lon": 120.3502327 },
+    { "lat": 22.6390143, "lon": 120.3502205 },
+    { "lat": 22.6391940, "lon": 120.3501113 },
+    { "lat": 22.6398157, "lon": 120.3495867 },
+    { "lat": 22.6397963, "lon": 120.3494046 },
+    { "lat": 22.6400732, "lon": 120.3491131 },
+    { "lat": 22.6416420, "lon": 120.3459488 },
+    { "lat": 22.6417877, "lon": 120.3460033 }
+  ],
+  "tags": {
+    "admin_level": "7",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 234278635,
+  "bounds": {
+    "minlat": 22.6391757,
+    "minlon": 120.3413569,
+    "maxlat": 22.6425425,
+    "maxlon": 120.3420081
+  },
+  "geometry": [
+    { "lat": 22.6391757, "lon": 120.3413569 },
+    { "lat": 22.6425425, "lon": 120.3420081 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 234278638,
+  "bounds": {
+    "minlat": 22.6369962,
+    "minlon": 120.3401773,
+    "maxlat": 22.6393151,
+    "maxlon": 120.3406071
+  },
+  "geometry": [
+    { "lat": 22.6393151, "lon": 120.3406071 },
+    { "lat": 22.6369962, "lon": 120.3401773 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 234278639,
+  "bounds": {
+    "minlat": 22.6361511,
+    "minlon": 120.3444123,
+    "maxlat": 22.6362367,
+    "maxlon": 120.3448899
+  },
+  "geometry": [
+    { "lat": 22.6362367, "lon": 120.3444123 },
+    { "lat": 22.6361511, "lon": 120.3448899 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 234278641,
+  "bounds": {
+    "minlat": 22.6393151,
+    "minlon": 120.3371981,
+    "maxlat": 22.6399251,
+    "maxlon": 120.3406071
+  },
+  "geometry": [
+    { "lat": 22.6399251, "lon": 120.3371981 },
+    { "lat": 22.6393151, "lon": 120.3406071 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 234278643,
+  "bounds": {
+    "minlat": 22.6391757,
+    "minlon": 120.3406071,
+    "maxlat": 22.6393151,
+    "maxlon": 120.3413569
+  },
+  "geometry": [
+    { "lat": 22.6393151, "lon": 120.3406071 },
+    { "lat": 22.6391757, "lon": 120.3413569 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 234278644,
+  "bounds": {
+    "minlat": 22.6369962,
+    "minlon": 120.3371580,
+    "maxlat": 22.6375467,
+    "maxlon": 120.3401773
+  },
+  "geometry": [
+    { "lat": 22.6375467, "lon": 120.3371580 },
+    { "lat": 22.6369962, "lon": 120.3401773 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 234278648,
+  "bounds": {
+    "minlat": 22.6362367,
+    "minlon": 120.3401773,
+    "maxlat": 22.6369962,
+    "maxlon": 120.3444123
+  },
+  "geometry": [
+    { "lat": 22.6369962, "lon": 120.3401773 },
+    { "lat": 22.6369479, "lon": 120.3404424 },
+    { "lat": 22.6362367, "lon": 120.3444123 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 234278651,
+  "bounds": {
+    "minlat": 22.6362367,
+    "minlon": 120.3413569,
+    "maxlat": 22.6391757,
+    "maxlon": 120.3449258
+  },
+  "geometry": [
+    { "lat": 22.6391757, "lon": 120.3413569 },
+    { "lat": 22.6385119, "lon": 120.3449258 },
+    { "lat": 22.6362367, "lon": 120.3444123 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 234278652,
+  "bounds": {
+    "minlat": 22.6337462,
+    "minlon": 120.3446577,
+    "maxlat": 22.6361511,
+    "maxlon": 120.3448899
+  },
+  "geometry": [
+    { "lat": 22.6361511, "lon": 120.3448899 },
+    { "lat": 22.6356137, "lon": 120.3447888 },
+    { "lat": 22.6344335, "lon": 120.3446577 },
+    { "lat": 22.6337462, "lon": 120.3447330 }
+  ],
+  "tags": {
+    "admin_level": "7",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 234278659,
+  "bounds": {
+    "minlat": 22.6375467,
+    "minlon": 120.3371580,
+    "maxlat": 22.6399251,
+    "maxlon": 120.3371981
+  },
+  "geometry": [
+    { "lat": 22.6399251, "lon": 120.3371981 },
+    { "lat": 22.6388866, "lon": 120.3371981 },
+    { "lat": 22.6378886, "lon": 120.3371881 },
+    { "lat": 22.6375467, "lon": 120.3371580 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 234434825,
+  "bounds": {
+    "minlat": 22.6323964,
+    "minlon": 120.3134204,
+    "maxlat": 22.6326220,
+    "maxlon": 120.3171389
+  },
+  "geometry": [
+    { "lat": 22.6326220, "lon": 120.3134204 },
+    { "lat": 22.6323964, "lon": 120.3171389 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 234434847,
+  "bounds": {
+    "minlat": 22.6303587,
+    "minlon": 120.3171389,
+    "maxlat": 22.6323964,
+    "maxlon": 120.3179167
+  },
+  "geometry": [
+    { "lat": 22.6323964, "lon": 120.3171389 },
+    { "lat": 22.6305530, "lon": 120.3178386 },
+    { "lat": 22.6305008, "lon": 120.3178596 },
+    { "lat": 22.6303587, "lon": 120.3179167 }
+  ],
+  "tags": {
+    "admin_level": "7",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 234948561,
+  "bounds": {
+    "minlat": 22.6172566,
+    "minlon": 120.3144169,
+    "maxlat": 22.6177904,
+    "maxlon": 120.3160628
+  },
+  "geometry": [
+    { "lat": 22.6172566, "lon": 120.3144169 },
+    { "lat": 22.6177904, "lon": 120.3160628 }
+  ],
+  "tags": {
+    "admin_level": "7",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 234949050,
+  "bounds": {
+    "minlat": 22.6308545,
+    "minlon": 120.3423356,
+    "maxlat": 22.6337462,
+    "maxlon": 120.3452650
+  },
+  "geometry": [
+    { "lat": 22.6308701, "lon": 120.3423356 },
+    { "lat": 22.6308545, "lon": 120.3429129 },
+    { "lat": 22.6310930, "lon": 120.3430238 },
+    { "lat": 22.6321159, "lon": 120.3431796 },
+    { "lat": 22.6328017, "lon": 120.3434630 },
+    { "lat": 22.6330454, "lon": 120.3436144 },
+    { "lat": 22.6330652, "lon": 120.3437923 },
+    { "lat": 22.6329993, "lon": 120.3448527 },
+    { "lat": 22.6330191, "lon": 120.3450766 },
+    { "lat": 22.6330899, "lon": 120.3452650 },
+    { "lat": 22.6331327, "lon": 120.3452650 },
+    { "lat": 22.6332726, "lon": 120.3451366 },
+    { "lat": 22.6335789, "lon": 120.3447875 },
+    { "lat": 22.6337462, "lon": 120.3447330 }
+  ],
+  "tags": {
+    "admin_level": "7",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 234949051,
+  "bounds": {
+    "minlat": 22.6304685,
+    "minlon": 120.3364016,
+    "maxlat": 22.6318315,
+    "maxlon": 120.3365664
+  },
+  "geometry": [
+    { "lat": 22.6318315, "lon": 120.3365664 },
+    { "lat": 22.6304685, "lon": 120.3364016 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 234949053,
+  "bounds": {
+    "minlat": 22.6274405,
+    "minlon": 120.3184772,
+    "maxlat": 22.6289351,
+    "maxlon": 120.3190473
+  },
+  "geometry": [
+    { "lat": 22.6289351, "lon": 120.3184772 },
+    { "lat": 22.6274405, "lon": 120.3190473 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 234949054,
+  "bounds": {
+    "minlat": 22.6274923,
+    "minlon": 120.3141956,
+    "maxlat": 22.6289351,
+    "maxlon": 120.3184772
+  },
+  "geometry": [
+    { "lat": 22.6289351, "lon": 120.3184772 },
+    { "lat": 22.6274923, "lon": 120.3141956 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 234949055,
+  "bounds": {
+    "minlat": 22.6304685,
+    "minlon": 120.3335168,
+    "maxlat": 22.6313906,
+    "maxlon": 120.3364016
+  },
+  "geometry": [
+    { "lat": 22.6304685, "lon": 120.3364016 },
+    { "lat": 22.6313906, "lon": 120.3335168 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 234949056,
+  "bounds": {
+    "minlat": 22.6299726,
+    "minlon": 120.3179547,
+    "maxlat": 22.6302568,
+    "maxlon": 120.3216712
+  },
+  "geometry": [
+    { "lat": 22.6302568, "lon": 120.3179547 },
+    { "lat": 22.6299726, "lon": 120.3216712 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 234949057,
+  "bounds": {
+    "minlat": 22.6289351,
+    "minlon": 120.3179547,
+    "maxlat": 22.6302568,
+    "maxlon": 120.3184772
+  },
+  "geometry": [
+    { "lat": 22.6302568, "lon": 120.3179547 },
+    { "lat": 22.6302031, "lon": 120.3179792 },
+    { "lat": 22.6300238, "lon": 120.3180512 },
+    { "lat": 22.6299995, "lon": 120.3180610 },
+    { "lat": 22.6289351, "lon": 120.3184772 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 234949058,
+  "bounds": {
+    "minlat": 22.6299726,
+    "minlon": 120.3202059,
+    "maxlat": 22.6337882,
+    "maxlon": 120.3216712
+  },
+  "geometry": [
+    { "lat": 22.6337882, "lon": 120.3202059 },
+    { "lat": 22.6299726, "lon": 120.3216712 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 234949059,
+  "bounds": {
+    "minlat": 22.6322377,
+    "minlon": 120.3301518,
+    "maxlat": 22.6324843,
+    "maxlon": 120.3307752
+  },
+  "geometry": [
+    { "lat": 22.6322377, "lon": 120.3307752 },
+    { "lat": 22.6324843, "lon": 120.3301518 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 234949060,
+  "bounds": {
+    "minlat": 22.6239376,
+    "minlon": 120.3362532,
+    "maxlat": 22.6243508,
+    "maxlon": 120.3400574
+  },
+  "geometry": [
+    { "lat": 22.6239376, "lon": 120.3362532 },
+    { "lat": 22.6243508, "lon": 120.3400574 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 234949061,
+  "bounds": {
+    "minlat": 22.6298654,
+    "minlon": 120.3231848,
+    "maxlat": 22.6315144,
+    "maxlon": 120.3245732
+  },
+  "geometry": [
+    { "lat": 22.6298654, "lon": 120.3231848 },
+    { "lat": 22.6301189, "lon": 120.3233982 },
+    { "lat": 22.6315144, "lon": 120.3245732 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 234949062,
+  "bounds": {
+    "minlat": 22.6320211,
+    "minlon": 120.3400264,
+    "maxlat": 22.6342493,
+    "maxlon": 120.3418339
+  },
+  "geometry": [
+    { "lat": 22.6342493, "lon": 120.3418339 },
+    { "lat": 22.6320211, "lon": 120.3400264 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 234949063,
+  "bounds": {
+    "minlat": 22.6290793,
+    "minlon": 120.3292636,
+    "maxlat": 22.6306491,
+    "maxlon": 120.3298770
+  },
+  "geometry": [
+    { "lat": 22.6306491, "lon": 120.3298770 },
+    { "lat": 22.6290793, "lon": 120.3292636 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 234949064,
+  "bounds": {
+    "minlat": 22.6313906,
+    "minlon": 120.3307752,
+    "maxlat": 22.6322377,
+    "maxlon": 120.3335168
+  },
+  "geometry": [
+    { "lat": 22.6313906, "lon": 120.3335168 },
+    { "lat": 22.6322377, "lon": 120.3307752 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 234949065,
+  "bounds": {
+    "minlat": 22.6285099,
+    "minlon": 120.3216712,
+    "maxlat": 22.6299726,
+    "maxlon": 120.3222381
+  },
+  "geometry": [
+    { "lat": 22.6285099, "lon": 120.3222381 },
+    { "lat": 22.6299726, "lon": 120.3216712 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 234949066,
+  "bounds": {
+    "minlat": 22.6368258,
+    "minlon": 120.3245724,
+    "maxlat": 22.6372612,
+    "maxlon": 120.3270962
+  },
+  "geometry": [
+    { "lat": 22.6368258, "lon": 120.3270962 },
+    { "lat": 22.6372612, "lon": 120.3245724 }
+  ],
+  "tags": {
+    "admin_level": "7",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 234949067,
+  "bounds": {
+    "minlat": 22.6246248,
+    "minlon": 120.3422152,
+    "maxlat": 22.6284174,
+    "maxlon": 120.3422583
+  },
+  "geometry": [
+    { "lat": 22.6284174, "lon": 120.3422152 },
+    { "lat": 22.6246248, "lon": 120.3422583 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 234949068,
+  "bounds": {
+    "minlat": 22.6337882,
+    "minlon": 120.3197725,
+    "maxlat": 22.6338283,
+    "maxlon": 120.3202059
+  },
+  "geometry": [
+    { "lat": 22.6337882, "lon": 120.3202059 },
+    { "lat": 22.6338283, "lon": 120.3197725 }
+  ],
+  "tags": {
+    "admin_level": "7",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 234949069,
+  "bounds": {
+    "minlat": 22.6243508,
+    "minlon": 120.3400574,
+    "maxlat": 22.6246248,
+    "maxlon": 120.3422583
+  },
+  "geometry": [
+    { "lat": 22.6243508, "lon": 120.3400574 },
+    { "lat": 22.6246248, "lon": 120.3422583 }
+  ],
+  "tags": {
+    "admin_level": "7",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 234949070,
+  "bounds": {
+    "minlat": 22.6324843,
+    "minlon": 120.3301518,
+    "maxlat": 22.6353889,
+    "maxlon": 120.3311373
+  },
+  "geometry": [
+    { "lat": 22.6324843, "lon": 120.3301518 },
+    { "lat": 22.6333330, "lon": 120.3304398 },
+    { "lat": 22.6353889, "lon": 120.3311373 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 234949071,
+  "bounds": {
+    "minlat": 22.6298654,
+    "minlon": 120.3216712,
+    "maxlat": 22.6299726,
+    "maxlon": 120.3231848
+  },
+  "geometry": [
+    { "lat": 22.6299726, "lon": 120.3216712 },
+    { "lat": 22.6298918, "lon": 120.3228123 },
+    { "lat": 22.6298654, "lon": 120.3231848 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 234949072,
+  "bounds": {
+    "minlat": 22.6274405,
+    "minlon": 120.3190473,
+    "maxlat": 22.6285099,
+    "maxlon": 120.3222381
+  },
+  "geometry": [
+    { "lat": 22.6274405, "lon": 120.3190473 },
+    { "lat": 22.6285099, "lon": 120.3222381 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 234949073,
+  "bounds": {
+    "minlat": 22.6280755,
+    "minlon": 120.3292636,
+    "maxlat": 22.6290793,
+    "maxlon": 120.3322856
+  },
+  "geometry": [
+    { "lat": 22.6290793, "lon": 120.3292636 },
+    { "lat": 22.6280755, "lon": 120.3322856 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 234949074,
+  "bounds": {
+    "minlat": 22.6318315,
+    "minlon": 120.3365664,
+    "maxlat": 22.6350918,
+    "maxlon": 120.3369667
+  },
+  "geometry": [
+    { "lat": 22.6350918, "lon": 120.3369667 },
+    { "lat": 22.6328947, "lon": 120.3366951 },
+    { "lat": 22.6318315, "lon": 120.3365664 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 234949075,
+  "bounds": {
+    "minlat": 22.6308701,
+    "minlon": 120.3400264,
+    "maxlat": 22.6320211,
+    "maxlon": 120.3424925
+  },
+  "geometry": [
+    { "lat": 22.6320211, "lon": 120.3400264 },
+    { "lat": 22.6315528, "lon": 120.3424925 },
+    { "lat": 22.6308701, "lon": 120.3423356 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 234949076,
+  "bounds": {
+    "minlat": 22.6295135,
+    "minlon": 120.3364016,
+    "maxlat": 22.6304685,
+    "maxlon": 120.3393450
+  },
+  "geometry": [
+    { "lat": 22.6304685, "lon": 120.3364016 },
+    { "lat": 22.6298685, "lon": 120.3382747 },
+    { "lat": 22.6295135, "lon": 120.3393450 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 234949077,
+  "bounds": {
+    "minlat": 22.6239376,
+    "minlon": 120.3361800,
+    "maxlat": 22.6267486,
+    "maxlon": 120.3362532
+  },
+  "geometry": [
+    { "lat": 22.6267486, "lon": 120.3361800 },
+    { "lat": 22.6255188, "lon": 120.3361919 },
+    { "lat": 22.6239376, "lon": 120.3362532 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 234949078,
+  "bounds": {
+    "minlat": 22.6328230,
+    "minlon": 120.3256119,
+    "maxlat": 22.6368258,
+    "maxlon": 120.3270962
+  },
+  "geometry": [
+    { "lat": 22.6368258, "lon": 120.3270962 },
+    { "lat": 22.6348003, "lon": 120.3263391 },
+    { "lat": 22.6328230, "lon": 120.3256119 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 234949079,
+  "bounds": {
+    "minlat": 22.6342493,
+    "minlon": 120.3369667,
+    "maxlat": 22.6350918,
+    "maxlon": 120.3418339
+  },
+  "geometry": [
+    { "lat": 22.6342493, "lon": 120.3418339 },
+    { "lat": 22.6350600, "lon": 120.3371618 },
+    { "lat": 22.6350918, "lon": 120.3369667 }
+  ],
+  "tags": {
+    "admin_level": "7",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 234949080,
+  "bounds": {
+    "minlat": 22.6327543,
+    "minlon": 120.3202059,
+    "maxlat": 22.6337882,
+    "maxlon": 120.3256119
+  },
+  "geometry": [
+    { "lat": 22.6328230, "lon": 120.3256119 },
+    { "lat": 22.6327543, "lon": 120.3247006 },
+    { "lat": 22.6337882, "lon": 120.3202059 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 234949081,
+  "bounds": {
+    "minlat": 22.6358261,
+    "minlon": 120.3316262,
+    "maxlat": 22.6360807,
+    "maxlon": 120.3324672
+  },
+  "geometry": [
+    { "lat": 22.6358261, "lon": 120.3324672 },
+    { "lat": 22.6360204, "lon": 120.3320082 },
+    { "lat": 22.6360807, "lon": 120.3316262 }
+  ],
+  "tags": {
+    "admin_level": "7",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 234949082,
+  "bounds": {
+    "minlat": 22.6306491,
+    "minlon": 120.3298770,
+    "maxlat": 22.6322377,
+    "maxlon": 120.3307752
+  },
+  "geometry": [
+    { "lat": 22.6322377, "lon": 120.3307752 },
+    { "lat": 22.6313668, "lon": 120.3303014 },
+    { "lat": 22.6306491, "lon": 120.3298770 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 234949083,
+  "bounds": {
+    "minlat": 22.6315144,
+    "minlon": 120.3245732,
+    "maxlat": 22.6328230,
+    "maxlon": 120.3256119
+  },
+  "geometry": [
+    { "lat": 22.6315144, "lon": 120.3245732 },
+    { "lat": 22.6324141, "lon": 120.3253669 },
+    { "lat": 22.6324957, "lon": 120.3254388 },
+    { "lat": 22.6328230, "lon": 120.3256119 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 234949084,
+  "bounds": {
+    "minlat": 22.6302568,
+    "minlon": 120.3132406,
+    "maxlat": 22.6306193,
+    "maxlon": 120.3179547
+  },
+  "geometry": [
+    { "lat": 22.6302568, "lon": 120.3179547 },
+    { "lat": 22.6304941, "lon": 120.3145338 },
+    { "lat": 22.6306193, "lon": 120.3132406 }
+  ],
+  "tags": {
+    "admin_level": "7",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 234949085,
+  "bounds": {
+    "minlat": 22.6267486,
+    "minlon": 120.3361800,
+    "maxlat": 22.6304685,
+    "maxlon": 120.3364016
+  },
+  "geometry": [
+    { "lat": 22.6267486, "lon": 120.3361800 },
+    { "lat": 22.6278237, "lon": 120.3362265 },
+    { "lat": 22.6290247, "lon": 120.3362790 },
+    { "lat": 22.6304685, "lon": 120.3364016 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 234949086,
+  "bounds": {
+    "minlat": 22.6284174,
+    "minlon": 120.3393450,
+    "maxlat": 22.6295135,
+    "maxlon": 120.3422152
+  },
+  "geometry": [
+    { "lat": 22.6284174, "lon": 120.3422152 },
+    { "lat": 22.6285975, "lon": 120.3416181 },
+    { "lat": 22.6291362, "lon": 120.3401089 },
+    { "lat": 22.6295135, "lon": 120.3393450 }
+  ],
+  "tags": {
+    "admin_level": "7",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 234949087,
+  "bounds": {
+    "minlat": 22.6353889,
+    "minlon": 120.3308687,
+    "maxlat": 22.6358261,
+    "maxlon": 120.3324672
+  },
+  "geometry": [
+    { "lat": 22.6353889, "lon": 120.3311373 },
+    { "lat": 22.6358149, "lon": 120.3308687 },
+    { "lat": 22.6357076, "lon": 120.3323359 },
+    { "lat": 22.6358261, "lon": 120.3324672 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 234949088,
+  "bounds": {
+    "minlat": 22.6290793,
+    "minlon": 120.3276930,
+    "maxlat": 22.6296654,
+    "maxlon": 120.3292636
+  },
+  "geometry": [
+    { "lat": 22.6290793, "lon": 120.3292636 },
+    { "lat": 22.6296654, "lon": 120.3276930 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 234949089,
+  "bounds": {
+    "minlat": 22.6306491,
+    "minlon": 120.3245732,
+    "maxlat": 22.6315144,
+    "maxlon": 120.3298770
+  },
+  "geometry": [
+    { "lat": 22.6306491, "lon": 120.3298770 },
+    { "lat": 22.6308693, "lon": 120.3287717 },
+    { "lat": 22.6311381, "lon": 120.3269439 },
+    { "lat": 22.6312553, "lon": 120.3258008 },
+    { "lat": 22.6315144, "lon": 120.3245732 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 234949090,
+  "bounds": {
+    "minlat": 22.6328230,
+    "minlon": 120.3256119,
+    "maxlat": 22.6328248,
+    "maxlon": 120.3256602
+  },
+  "geometry": [
+    { "lat": 22.6328230, "lon": 120.3256119 },
+    { "lat": 22.6328248, "lon": 120.3256602 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 234949091,
+  "bounds": {
+    "minlat": 22.6313906,
+    "minlon": 120.3311373,
+    "maxlat": 22.6353889,
+    "maxlon": 120.3346473
+  },
+  "geometry": [
+    { "lat": 22.6353889, "lon": 120.3311373 },
+    { "lat": 22.6343098, "lon": 120.3346473 },
+    { "lat": 22.6313906, "lon": 120.3335168 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 234949092,
+  "bounds": {
+    "minlat": 22.6314213,
+    "minlon": 120.3365664,
+    "maxlat": 22.6320211,
+    "maxlon": 120.3400264
+  },
+  "geometry": [
+    { "lat": 22.6320211, "lon": 120.3400264 },
+    { "lat": 22.6314499, "lon": 120.3395630 },
+    { "lat": 22.6319359, "lon": 120.3381039 },
+    { "lat": 22.6314213, "lon": 120.3379056 },
+    { "lat": 22.6318315, "lon": 120.3365664 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 234949093,
+  "bounds": {
+    "minlat": 22.6295135,
+    "minlon": 120.3393450,
+    "maxlat": 22.6308701,
+    "maxlon": 120.3423356
+  },
+  "geometry": [
+    { "lat": 22.6295135, "lon": 120.3393450 },
+    { "lat": 22.6297270, "lon": 120.3401963 },
+    { "lat": 22.6298367, "lon": 120.3414791 },
+    { "lat": 22.6298879, "lon": 120.3417681 },
+    { "lat": 22.6308455, "lon": 120.3418358 },
+    { "lat": 22.6308701, "lon": 120.3423356 }
+  ],
+  "tags": {
+    "admin_level": "7",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 234949094,
+  "bounds": {
+    "minlat": 22.6246248,
+    "minlon": 120.3422583,
+    "maxlat": 22.6248953,
+    "maxlon": 120.3442910
+  },
+  "geometry": [
+    { "lat": 22.6246248, "lon": 120.3422583 },
+    { "lat": 22.6247912, "lon": 120.3428504 },
+    { "lat": 22.6248953, "lon": 120.3442910 }
+  ],
+  "tags": {
+    "admin_level": "7",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 234949598,
+  "bounds": {
+    "minlat": 22.6164492,
+    "minlon": 120.3366435,
+    "maxlat": 22.6243508,
+    "maxlon": 120.3406437
+  },
+  "geometry": [
+    { "lat": 22.6164492, "lon": 120.3366435 },
+    { "lat": 22.6165139, "lon": 120.3372388 },
+    { "lat": 22.6179829, "lon": 120.3390012 },
+    { "lat": 22.6176607, "lon": 120.3395192 },
+    { "lat": 22.6190315, "lon": 120.3406437 },
+    { "lat": 22.6205729, "lon": 120.3382116 },
+    { "lat": 22.6224807, "lon": 120.3396456 },
+    { "lat": 22.6230923, "lon": 120.3398608 },
+    { "lat": 22.6234981, "lon": 120.3399857 },
+    { "lat": 22.6243508, "lon": 120.3400574 }
+  ],
+  "tags": {
+    "admin_level": "7",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 234949599,
+  "bounds": {
+    "minlat": 22.6206975,
+    "minlon": 120.3292570,
+    "maxlat": 22.6209735,
+    "maxlon": 120.3316279
+  },
+  "geometry": [
+    { "lat": 22.6209735, "lon": 120.3316279 },
+    { "lat": 22.6206975, "lon": 120.3292570 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 234949600,
+  "bounds": {
+    "minlat": 22.6247935,
+    "minlon": 120.3264505,
+    "maxlat": 22.6257913,
+    "maxlon": 120.3292408
+  },
+  "geometry": [
+    { "lat": 22.6247935, "lon": 120.3264505 },
+    { "lat": 22.6257913, "lon": 120.3292408 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 234949601,
+  "bounds": {
+    "minlat": 22.6219230,
+    "minlon": 120.3288473,
+    "maxlat": 22.6227383,
+    "maxlon": 120.3311994
+  },
+  "geometry": [
+    { "lat": 22.6219230, "lon": 120.3288473 },
+    { "lat": 22.6227383, "lon": 120.3311994 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 234949602,
+  "bounds": {
+    "minlat": 22.6227772,
+    "minlon": 120.3313073,
+    "maxlat": 22.6230467,
+    "maxlon": 120.3320549
+  },
+  "geometry": [
+    { "lat": 22.6227772, "lon": 120.3313073 },
+    { "lat": 22.6230467, "lon": 120.3320549 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 234949603,
+  "bounds": {
+    "minlat": 22.6229148,
+    "minlon": 120.3204260,
+    "maxlat": 22.6238414,
+    "maxlon": 120.3207809
+  },
+  "geometry": [
+    { "lat": 22.6229148, "lon": 120.3207809 },
+    { "lat": 22.6238414, "lon": 120.3204260 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 234949604,
+  "bounds": {
+    "minlat": 22.6239788,
+    "minlon": 120.3222381,
+    "maxlat": 22.6285099,
+    "maxlon": 120.3239754
+  },
+  "geometry": [
+    { "lat": 22.6239788, "lon": 120.3239754 },
+    { "lat": 22.6285099, "lon": 120.3222381 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 234949605,
+  "bounds": {
+    "minlat": 22.6165365,
+    "minlon": 120.3268355,
+    "maxlat": 22.6165412,
+    "maxlon": 120.3275093
+  },
+  "geometry": [
+    { "lat": 22.6165365, "lon": 120.3268355 },
+    { "lat": 22.6165412, "lon": 120.3275093 }
+  ],
+  "tags": {
+    "admin_level": "7",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 234949606,
+  "bounds": {
+    "minlat": 22.6269811,
+    "minlon": 120.3268225,
+    "maxlat": 22.6277398,
+    "maxlon": 120.3270909
+  },
+  "geometry": [
+    { "lat": 22.6269811, "lon": 120.3268225 },
+    { "lat": 22.6277398, "lon": 120.3270909 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 234949607,
+  "bounds": {
+    "minlat": 22.6215290,
+    "minlon": 120.3277106,
+    "maxlat": 22.6219230,
+    "maxlon": 120.3288473
+  },
+  "geometry": [
+    { "lat": 22.6215290, "lon": 120.3277106 },
+    { "lat": 22.6219230, "lon": 120.3288473 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 234949608,
+  "bounds": {
+    "minlat": 22.6227383,
+    "minlon": 120.3311994,
+    "maxlat": 22.6227772,
+    "maxlon": 120.3313073
+  },
+  "geometry": [
+    { "lat": 22.6227383, "lon": 120.3311994 },
+    { "lat": 22.6227772, "lon": 120.3313073 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 234949609,
+  "bounds": {
+    "minlat": 22.6196571,
+    "minlon": 120.3220492,
+    "maxlat": 22.6200948,
+    "maxlon": 120.3234235
+  },
+  "geometry": [
+    { "lat": 22.6196571, "lon": 120.3220492 },
+    { "lat": 22.6200948, "lon": 120.3234235 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 234949610,
+  "bounds": {
+    "minlat": 22.6239788,
+    "minlon": 120.3239754,
+    "maxlat": 22.6247935,
+    "maxlon": 120.3264505
+  },
+  "geometry": [
+    { "lat": 22.6247935, "lon": 120.3264505 },
+    { "lat": 22.6239788, "lon": 120.3239754 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 234949611,
+  "bounds": {
+    "minlat": 22.6277398,
+    "minlon": 120.3270909,
+    "maxlat": 22.6296654,
+    "maxlon": 120.3276930
+  },
+  "geometry": [
+    { "lat": 22.6277398, "lon": 120.3270909 },
+    { "lat": 22.6296654, "lon": 120.3276930 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 234949612,
+  "bounds": {
+    "minlat": 22.6199998,
+    "minlon": 120.3316279,
+    "maxlat": 22.6209735,
+    "maxlon": 120.3317479
+  },
+  "geometry": [
+    { "lat": 22.6199998, "lon": 120.3317479 },
+    { "lat": 22.6209735, "lon": 120.3316279 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 234949613,
+  "bounds": {
+    "minlat": 22.6210789,
+    "minlon": 120.3207809,
+    "maxlat": 22.6229148,
+    "maxlon": 120.3214956
+  },
+  "geometry": [
+    { "lat": 22.6229148, "lon": 120.3207809 },
+    { "lat": 22.6210789, "lon": 120.3214956 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 234949614,
+  "bounds": {
+    "minlat": 22.6178548,
+    "minlon": 120.3296087,
+    "maxlat": 22.6181493,
+    "maxlon": 120.3319502
+  },
+  "geometry": [
+    { "lat": 22.6178548, "lon": 120.3296087 },
+    { "lat": 22.6181493, "lon": 120.3319502 }
+  ],
+  "tags": {
+    "admin_level": "7",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 234949615,
+  "bounds": {
+    "minlat": 22.6229148,
+    "minlon": 120.3207809,
+    "maxlat": 22.6239788,
+    "maxlon": 120.3239754
+  },
+  "geometry": [
+    { "lat": 22.6239788, "lon": 120.3239754 },
+    { "lat": 22.6229148, "lon": 120.3207809 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 234949616,
+  "bounds": {
+    "minlat": 22.6211497,
+    "minlon": 120.3266161,
+    "maxlat": 22.6215290,
+    "maxlon": 120.3277106
+  },
+  "geometry": [
+    { "lat": 22.6211497, "lon": 120.3266161 },
+    { "lat": 22.6215290, "lon": 120.3277106 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 234949617,
+  "bounds": {
+    "minlat": 22.6181493,
+    "minlon": 120.3319502,
+    "maxlat": 22.6184635,
+    "maxlon": 120.3344480
+  },
+  "geometry": [
+    { "lat": 22.6181493, "lon": 120.3319502 },
+    { "lat": 22.6184635, "lon": 120.3344480 }
+  ],
+  "tags": {
+    "admin_level": "7",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 234949618,
+  "bounds": {
+    "minlat": 22.6206802,
+    "minlon": 120.3252618,
+    "maxlat": 22.6211497,
+    "maxlon": 120.3266161
+  },
+  "geometry": [
+    { "lat": 22.6206802, "lon": 120.3252618 },
+    { "lat": 22.6211497, "lon": 120.3266161 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 234949619,
+  "bounds": {
+    "minlat": 22.6162417,
+    "minlon": 120.3344480,
+    "maxlat": 22.6184635,
+    "maxlon": 120.3366435
+  },
+  "geometry": [
+    { "lat": 22.6184635, "lon": 120.3344480 },
+    { "lat": 22.6162417, "lon": 120.3347337 },
+    { "lat": 22.6164492, "lon": 120.3366435 }
+  ],
+  "tags": {
+    "admin_level": "7",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 234949620,
+  "bounds": {
+    "minlat": 22.6181493,
+    "minlon": 120.3317479,
+    "maxlat": 22.6199998,
+    "maxlon": 120.3319502
+  },
+  "geometry": [
+    { "lat": 22.6181493, "lon": 120.3319502 },
+    { "lat": 22.6194084, "lon": 120.3318207 },
+    { "lat": 22.6199998, "lon": 120.3317479 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 234949621,
+  "bounds": {
+    "minlat": 22.6206802,
+    "minlon": 120.3239754,
+    "maxlat": 22.6239788,
+    "maxlon": 120.3252618
+  },
+  "geometry": [
+    { "lat": 22.6239788, "lon": 120.3239754 },
+    { "lat": 22.6221901, "lon": 120.3247011 },
+    { "lat": 22.6206802, "lon": 120.3252618 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 234949622,
+  "bounds": {
+    "minlat": 22.6205111,
+    "minlon": 120.3341521,
+    "maxlat": 22.6209920,
+    "maxlon": 120.3345425
+  },
+  "geometry": [
+    { "lat": 22.6205111, "lon": 120.3341528 },
+    { "lat": 22.6205831, "lon": 120.3341521 },
+    { "lat": 22.6209920, "lon": 120.3345425 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 234949623,
+  "bounds": {
+    "minlat": 22.6184635,
+    "minlon": 120.3341528,
+    "maxlat": 22.6205111,
+    "maxlon": 120.3344480
+  },
+  "geometry": [
+    { "lat": 22.6205111, "lon": 120.3341528 },
+    { "lat": 22.6202881, "lon": 120.3341621 },
+    { "lat": 22.6184635, "lon": 120.3344480 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 234949624,
+  "bounds": {
+    "minlat": 22.6178548,
+    "minlon": 120.3292570,
+    "maxlat": 22.6206975,
+    "maxlon": 120.3296087
+  },
+  "geometry": [
+    { "lat": 22.6206975, "lon": 120.3292570 },
+    { "lat": 22.6190637, "lon": 120.3294792 },
+    { "lat": 22.6178548, "lon": 120.3296087 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 234949625,
+  "bounds": {
+    "minlat": 22.6296654,
+    "minlon": 120.3231848,
+    "maxlat": 22.6298654,
+    "maxlon": 120.3276930
+  },
+  "geometry": [
+    { "lat": 22.6296654, "lon": 120.3276930 },
+    { "lat": 22.6296979, "lon": 120.3264806 },
+    { "lat": 22.6296999, "lon": 120.3264403 },
+    { "lat": 22.6298522, "lon": 120.3234443 },
+    { "lat": 22.6298654, "lon": 120.3231848 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 234949626,
+  "bounds": {
+    "minlat": 22.6215290,
+    "minlon": 120.3264505,
+    "maxlat": 22.6247935,
+    "maxlon": 120.3277106
+  },
+  "geometry": [
+    { "lat": 22.6247935, "lon": 120.3264505 },
+    { "lat": 22.6233286, "lon": 120.3270446 },
+    { "lat": 22.6215290, "lon": 120.3277106 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 234949627,
+  "bounds": {
+    "minlat": 22.6206975,
+    "minlon": 120.3288473,
+    "maxlat": 22.6219230,
+    "maxlon": 120.3292570
+  },
+  "geometry": [
+    { "lat": 22.6219230, "lon": 120.3288473 },
+    { "lat": 22.6210225, "lon": 120.3292128 },
+    { "lat": 22.6206975, "lon": 120.3292570 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 234949628,
+  "bounds": {
+    "minlat": 22.6267486,
+    "minlon": 120.3322856,
+    "maxlat": 22.6280755,
+    "maxlon": 120.3361800
+  },
+  "geometry": [
+    { "lat": 22.6280755, "lon": 120.3322856 },
+    { "lat": 22.6277437, "lon": 120.3332866 },
+    { "lat": 22.6267486, "lon": 120.3361800 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 234949629,
+  "bounds": {
+    "minlat": 22.6165412,
+    "minlon": 120.3275093,
+    "maxlat": 22.6178548,
+    "maxlon": 120.3296087
+  },
+  "geometry": [
+    { "lat": 22.6165412, "lon": 120.3275093 },
+    { "lat": 22.6165451, "lon": 120.3280566 },
+    { "lat": 22.6176381, "lon": 120.3278859 },
+    { "lat": 22.6178548, "lon": 120.3296087 }
+  ],
+  "tags": {
+    "admin_level": "7",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 234949630,
+  "bounds": {
+    "minlat": 22.6209735,
+    "minlon": 120.3313073,
+    "maxlat": 22.6227772,
+    "maxlon": 120.3316279
+  },
+  "geometry": [
+    { "lat": 22.6209735, "lon": 120.3316279 },
+    { "lat": 22.6222177, "lon": 120.3315076 },
+    { "lat": 22.6225392, "lon": 120.3314091 },
+    { "lat": 22.6227772, "lon": 120.3313073 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 234949631,
+  "bounds": {
+    "minlat": 22.6243903,
+    "minlon": 120.3292408,
+    "maxlat": 22.6257913,
+    "maxlon": 120.3303347
+  },
+  "geometry": [
+    { "lat": 22.6243903, "lon": 120.3303347 },
+    { "lat": 22.6251522, "lon": 120.3297549 },
+    { "lat": 22.6255723, "lon": 120.3293048 },
+    { "lat": 22.6257913, "lon": 120.3292408 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 234949632,
+  "bounds": {
+    "minlat": 22.6230467,
+    "minlon": 120.3320549,
+    "maxlat": 22.6239376,
+    "maxlon": 120.3362532
+  },
+  "geometry": [
+    { "lat": 22.6230467, "lon": 120.3320549 },
+    { "lat": 22.6233102, "lon": 120.3327855 },
+    { "lat": 22.6235332, "lon": 120.3333772 },
+    { "lat": 22.6236762, "lon": 120.3344150 },
+    { "lat": 22.6239376, "lon": 120.3362532 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 234949633,
+  "bounds": {
+    "minlat": 22.6227383,
+    "minlon": 120.3303347,
+    "maxlat": 22.6243903,
+    "maxlon": 120.3311994
+  },
+  "geometry": [
+    { "lat": 22.6243903, "lon": 120.3303347 },
+    { "lat": 22.6239192, "lon": 120.3305891 },
+    { "lat": 22.6234446, "lon": 120.3308710 },
+    { "lat": 22.6229356, "lon": 120.3311127 },
+    { "lat": 22.6227383, "lon": 120.3311994 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 234949634,
+  "bounds": {
+    "minlat": 22.6164492,
+    "minlon": 120.3345425,
+    "maxlat": 22.6213357,
+    "maxlon": 120.3366435
+  },
+  "geometry": [
+    { "lat": 22.6164492, "lon": 120.3366435 },
+    { "lat": 22.6207149, "lon": 120.3360573 },
+    { "lat": 22.6205996, "lon": 120.3351088 },
+    { "lat": 22.6213357, "lon": 120.3350190 },
+    { "lat": 22.6209920, "lon": 120.3345425 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 234949635,
+  "bounds": {
+    "minlat": 22.6209920,
+    "minlon": 120.3320549,
+    "maxlat": 22.6230467,
+    "maxlon": 120.3345425
+  },
+  "geometry": [
+    { "lat": 22.6209920, "lon": 120.3345425 },
+    { "lat": 22.6223617, "lon": 120.3331546 },
+    { "lat": 22.6224246, "lon": 120.3326497 },
+    { "lat": 22.6229537, "lon": 120.3320921 },
+    { "lat": 22.6230467, "lon": 120.3320549 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 234949636,
+  "bounds": {
+    "minlat": 22.6257913,
+    "minlon": 120.3270909,
+    "maxlat": 22.6277398,
+    "maxlon": 120.3295750
+  },
+  "geometry": [
+    { "lat": 22.6257913, "lon": 120.3292408 },
+    { "lat": 22.6259696, "lon": 120.3290174 },
+    { "lat": 22.6260299, "lon": 120.3289538 },
+    { "lat": 22.6261870, "lon": 120.3293272 },
+    { "lat": 22.6269304, "lon": 120.3295750 },
+    { "lat": 22.6270160, "lon": 120.3293123 },
+    { "lat": 22.6272507, "lon": 120.3285919 },
+    { "lat": 22.6277398, "lon": 120.3270909 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 234949637,
+  "bounds": {
+    "minlat": 22.6243903,
+    "minlon": 120.3303347,
+    "maxlat": 22.6280755,
+    "maxlon": 120.3323618
+  },
+  "geometry": [
+    { "lat": 22.6280755, "lon": 120.3322856 },
+    { "lat": 22.6271180, "lon": 120.3319295 },
+    { "lat": 22.6258997, "lon": 120.3323618 },
+    { "lat": 22.6256176, "lon": 120.3316081 },
+    { "lat": 22.6249019, "lon": 120.3319019 },
+    { "lat": 22.6243903, "lon": 120.3303347 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 234949638,
+  "bounds": {
+    "minlat": 22.6165365,
+    "minlon": 120.3252618,
+    "maxlat": 22.6206802,
+    "maxlon": 120.3268355
+  },
+  "geometry": [
+    { "lat": 22.6206802, "lon": 120.3252618 },
+    { "lat": 22.6197777, "lon": 120.3256230 },
+    { "lat": 22.6189689, "lon": 120.3259647 },
+    { "lat": 22.6182894, "lon": 120.3262319 },
+    { "lat": 22.6174766, "lon": 120.3265298 },
+    { "lat": 22.6167406, "lon": 120.3267839 },
+    { "lat": 22.6165365, "lon": 120.3268355 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 234949639,
+  "bounds": {
+    "minlat": 22.6199998,
+    "minlon": 120.3317479,
+    "maxlat": 22.6208228,
+    "maxlon": 120.3341528
+  },
+  "geometry": [
+    { "lat": 22.6199998, "lon": 120.3317479 },
+    { "lat": 22.6201880, "lon": 120.3329726 },
+    { "lat": 22.6208228, "lon": 120.3328920 },
+    { "lat": 22.6206713, "lon": 120.3331120 },
+    { "lat": 22.6204854, "lon": 120.3334744 },
+    { "lat": 22.6203910, "lon": 120.3336665 },
+    { "lat": 22.6205111, "lon": 120.3341528 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 234949640,
+  "bounds": {
+    "minlat": 22.6247935,
+    "minlon": 120.3263629,
+    "maxlat": 22.6269811,
+    "maxlon": 120.3268225
+  },
+  "geometry": [
+    { "lat": 22.6269811, "lon": 120.3268225 },
+    { "lat": 22.6264596, "lon": 120.3266432 },
+    { "lat": 22.6258449, "lon": 120.3264373 },
+    { "lat": 22.6255618, "lon": 120.3263629 },
+    { "lat": 22.6253394, "lon": 120.3263629 },
+    { "lat": 22.6250604, "lon": 120.3263804 },
+    { "lat": 22.6247935, "lon": 120.3264505 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 234949641,
+  "bounds": {
+    "minlat": 22.6165412,
+    "minlon": 120.3266161,
+    "maxlat": 22.6211497,
+    "maxlon": 120.3275093
+  },
+  "geometry": [
+    { "lat": 22.6211497, "lon": 120.3266161 },
+    { "lat": 22.6202559, "lon": 120.3269617 },
+    { "lat": 22.6202842, "lon": 120.3270668 },
+    { "lat": 22.6196291, "lon": 120.3270931 },
+    { "lat": 22.6194370, "lon": 120.3270975 },
+    { "lat": 22.6176414, "lon": 120.3273538 },
+    { "lat": 22.6165412, "lon": 120.3275093 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 234949642,
+  "bounds": {
+    "minlat": 22.6269811,
+    "minlon": 120.3231848,
+    "maxlat": 22.6298654,
+    "maxlon": 120.3268225
+  },
+  "geometry": [
+    { "lat": 22.6298654, "lon": 120.3231848 },
+    { "lat": 22.6294478, "lon": 120.3233703 },
+    { "lat": 22.6288534, "lon": 120.3237865 },
+    { "lat": 22.6282306, "lon": 120.3242070 },
+    { "lat": 22.6278788, "lon": 120.3245575 },
+    { "lat": 22.6276079, "lon": 120.3250132 },
+    { "lat": 22.6274017, "lon": 120.3254556 },
+    { "lat": 22.6269811, "lon": 120.3268225 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 234949937,
+  "bounds": {
+    "minlat": 22.6152607,
+    "minlon": 120.3234235,
+    "maxlat": 22.6200948,
+    "maxlon": 120.3251865
+  },
+  "geometry": [
+    { "lat": 22.6200948, "lon": 120.3234235 },
+    { "lat": 22.6193049, "lon": 120.3236282 },
+    { "lat": 22.6188731, "lon": 120.3237459 },
+    { "lat": 22.6186872, "lon": 120.3238047 },
+    { "lat": 22.6176291, "lon": 120.3243221 },
+    { "lat": 22.6168256, "lon": 120.3247248 },
+    { "lat": 22.6165768, "lon": 120.3248425 },
+    { "lat": 22.6159763, "lon": 120.3250284 },
+    { "lat": 22.6156903, "lon": 120.3251058 },
+    { "lat": 22.6152607, "lon": 120.3251865 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 234949938,
+  "bounds": {
+    "minlat": 22.6170184,
+    "minlon": 120.3177423,
+    "maxlat": 22.6183351,
+    "maxlon": 120.3182514
+  },
+  "geometry": [
+    { "lat": 22.6183351, "lon": 120.3177423 },
+    { "lat": 22.6170184, "lon": 120.3182514 }
+  ],
+  "tags": {
+    "admin_level": "7",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 234949939,
+  "bounds": {
+    "minlat": 22.6154678,
+    "minlon": 120.3195717,
+    "maxlat": 22.6174286,
+    "maxlon": 120.3196527
+  },
+  "geometry": [
+    { "lat": 22.6174286, "lon": 120.3196527 },
+    { "lat": 22.6154678, "lon": 120.3195717 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 234949940,
+  "bounds": {
+    "minlat": 22.6213499,
+    "minlon": 120.3165010,
+    "maxlat": 22.6214825,
+    "maxlon": 120.3165505
+  },
+  "geometry": [
+    { "lat": 22.6214825, "lon": 120.3165010 },
+    { "lat": 22.6213499, "lon": 120.3165505 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 234949941,
+  "bounds": {
+    "minlat": 22.6234754,
+    "minlon": 120.3157578,
+    "maxlat": 22.6249928,
+    "maxlon": 120.3199849
+  },
+  "geometry": [
+    { "lat": 22.6234754, "lon": 120.3157578 },
+    { "lat": 22.6249928, "lon": 120.3199849 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 234949943,
+  "bounds": {
+    "minlat": 22.6224221,
+    "minlon": 120.3161506,
+    "maxlat": 22.6238414,
+    "maxlon": 120.3204260
+  },
+  "geometry": [
+    { "lat": 22.6224221, "lon": 120.3161506 },
+    { "lat": 22.6238414, "lon": 120.3204260 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 234949945,
+  "bounds": {
+    "minlat": 22.6183351,
+    "minlon": 120.3172263,
+    "maxlat": 22.6196404,
+    "maxlon": 120.3177423
+  },
+  "geometry": [
+    { "lat": 22.6196404, "lon": 120.3172263 },
+    { "lat": 22.6183351, "lon": 120.3177423 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 234949946,
+  "bounds": {
+    "minlat": 22.6196404,
+    "minlon": 120.3172263,
+    "maxlat": 22.6210789,
+    "maxlon": 120.3214956
+  },
+  "geometry": [
+    { "lat": 22.6196404, "lon": 120.3172263 },
+    { "lat": 22.6210789, "lon": 120.3214956 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 234949947,
+  "bounds": {
+    "minlat": 22.6191642,
+    "minlon": 120.3205811,
+    "maxlat": 22.6196571,
+    "maxlon": 120.3220492
+  },
+  "geometry": [
+    { "lat": 22.6191642, "lon": 120.3205811 },
+    { "lat": 22.6196571, "lon": 120.3220492 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 234949948,
+  "bounds": {
+    "minlat": 22.6203355,
+    "minlon": 120.3132279,
+    "maxlat": 22.6213499,
+    "maxlon": 120.3165505
+  },
+  "geometry": [
+    { "lat": 22.6213499, "lon": 120.3165505 },
+    { "lat": 22.6203355, "lon": 120.3132279 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 234949949,
+  "bounds": {
+    "minlat": 22.6154678,
+    "minlon": 120.3195717,
+    "maxlat": 22.6156961,
+    "maxlon": 120.3225423
+  },
+  "geometry": [
+    { "lat": 22.6154678, "lon": 120.3195717 },
+    { "lat": 22.6156961, "lon": 120.3225423 }
+  ],
+  "tags": {
+    "admin_level": "7",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 234949951,
+  "bounds": {
+    "minlat": 22.6170184,
+    "minlon": 120.3182514,
+    "maxlat": 22.6174286,
+    "maxlon": 120.3196527
+  },
+  "geometry": [
+    { "lat": 22.6174286, "lon": 120.3196527 },
+    { "lat": 22.6170184, "lon": 120.3182514 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 234949952,
+  "bounds": {
+    "minlat": 22.6238414,
+    "minlon": 120.3199849,
+    "maxlat": 22.6249928,
+    "maxlon": 120.3204260
+  },
+  "geometry": [
+    { "lat": 22.6238414, "lon": 120.3204260 },
+    { "lat": 22.6249928, "lon": 120.3199849 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 234949953,
+  "bounds": {
+    "minlat": 22.6214825,
+    "minlon": 120.3165010,
+    "maxlat": 22.6229148,
+    "maxlon": 120.3207809
+  },
+  "geometry": [
+    { "lat": 22.6214825, "lon": 120.3165010 },
+    { "lat": 22.6229148, "lon": 120.3207809 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 234949954,
+  "bounds": {
+    "minlat": 22.6243774,
+    "minlon": 120.3147829,
+    "maxlat": 22.6259821,
+    "maxlon": 120.3154070
+  },
+  "geometry": [
+    { "lat": 22.6259821, "lon": 120.3147829 },
+    { "lat": 22.6243774, "lon": 120.3154070 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 234949955,
+  "bounds": {
+    "minlat": 22.6196571,
+    "minlon": 120.3214956,
+    "maxlat": 22.6210789,
+    "maxlon": 120.3220492
+  },
+  "geometry": [
+    { "lat": 22.6210789, "lon": 120.3214956 },
+    { "lat": 22.6196571, "lon": 120.3220492 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 234949956,
+  "bounds": {
+    "minlat": 22.6200948,
+    "minlon": 120.3234235,
+    "maxlat": 22.6206802,
+    "maxlon": 120.3252618
+  },
+  "geometry": [
+    { "lat": 22.6200948, "lon": 120.3234235 },
+    { "lat": 22.6206802, "lon": 120.3252618 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 234949957,
+  "bounds": {
+    "minlat": 22.6232833,
+    "minlon": 120.3120375,
+    "maxlat": 22.6243774,
+    "maxlon": 120.3154070
+  },
+  "geometry": [
+    { "lat": 22.6232833, "lon": 120.3120375 },
+    { "lat": 22.6243774, "lon": 120.3154070 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 234949958,
+  "bounds": {
+    "minlat": 22.6214825,
+    "minlon": 120.3161506,
+    "maxlat": 22.6224221,
+    "maxlon": 120.3165010
+  },
+  "geometry": [
+    { "lat": 22.6224221, "lon": 120.3161506 },
+    { "lat": 22.6214825, "lon": 120.3165010 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 234949959,
+  "bounds": {
+    "minlat": 22.6224221,
+    "minlon": 120.3157578,
+    "maxlat": 22.6234754,
+    "maxlon": 120.3161506
+  },
+  "geometry": [
+    { "lat": 22.6234754, "lon": 120.3157578 },
+    { "lat": 22.6224221, "lon": 120.3161506 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 234949960,
+  "bounds": {
+    "minlat": 22.6234754,
+    "minlon": 120.3154070,
+    "maxlat": 22.6243774,
+    "maxlon": 120.3157578
+  },
+  "geometry": [
+    { "lat": 22.6243774, "lon": 120.3154070 },
+    { "lat": 22.6234754, "lon": 120.3157578 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 234949961,
+  "bounds": {
+    "minlat": 22.6149947,
+    "minlon": 120.3251865,
+    "maxlat": 22.6152607,
+    "maxlon": 120.3252364
+  },
+  "geometry": [
+    { "lat": 22.6152607, "lon": 120.3251865 },
+    { "lat": 22.6149947, "lon": 120.3252364 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 234949962,
+  "bounds": {
+    "minlat": 22.6249928,
+    "minlon": 120.3190473,
+    "maxlat": 22.6274405,
+    "maxlon": 120.3199849
+  },
+  "geometry": [
+    { "lat": 22.6249928, "lon": 120.3199849 },
+    { "lat": 22.6274405, "lon": 120.3190473 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 234949963,
+  "bounds": {
+    "minlat": 22.6196404,
+    "minlon": 120.3165505,
+    "maxlat": 22.6213499,
+    "maxlon": 120.3172263
+  },
+  "geometry": [
+    { "lat": 22.6213499, "lon": 120.3165505 },
+    { "lat": 22.6196404, "lon": 120.3172263 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 234949964,
+  "bounds": {
+    "minlat": 22.6183351,
+    "minlon": 120.3177423,
+    "maxlat": 22.6191642,
+    "maxlon": 120.3205811
+  },
+  "geometry": [
+    { "lat": 22.6183351, "lon": 120.3177423 },
+    { "lat": 22.6187360, "lon": 120.3193056 },
+    { "lat": 22.6191642, "lon": 120.3205811 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 234949965,
+  "bounds": {
+    "minlat": 22.6156961,
+    "minlon": 120.3220492,
+    "maxlat": 22.6196571,
+    "maxlon": 120.3225836
+  },
+  "geometry": [
+    { "lat": 22.6196571, "lon": 120.3220492 },
+    { "lat": 22.6182202, "lon": 120.3225836 },
+    { "lat": 22.6156961, "lon": 120.3225423 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 234949966,
+  "bounds": {
+    "minlat": 22.6174286,
+    "minlon": 120.3196527,
+    "maxlat": 22.6191642,
+    "maxlon": 120.3210749
+  },
+  "geometry": [
+    { "lat": 22.6191642, "lon": 120.3205811 },
+    { "lat": 22.6178449, "lon": 120.3210749 },
+    { "lat": 22.6174286, "lon": 120.3196527 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 234949967,
+  "bounds": {
+    "minlat": 22.6154056,
+    "minlon": 120.3182491,
+    "maxlat": 22.6170184,
+    "maxlon": 120.3182687
+  },
+  "geometry": [
+    { "lat": 22.6170184, "lon": 120.3182514 },
+    { "lat": 22.6167935, "lon": 120.3182687 },
+    { "lat": 22.6154056, "lon": 120.3182491 }
+  ],
+  "tags": {
+    "admin_level": "7",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 234949968,
+  "bounds": {
+    "minlat": 22.6141689,
+    "minlon": 120.3268355,
+    "maxlat": 22.6165365,
+    "maxlon": 120.3274294
+  },
+  "geometry": [
+    { "lat": 22.6141689, "lon": 120.3274294 },
+    { "lat": 22.6146172, "lon": 120.3274042 },
+    { "lat": 22.6152169, "lon": 120.3273052 },
+    { "lat": 22.6158399, "lon": 120.3271189 },
+    { "lat": 22.6165365, "lon": 120.3268355 }
+  ],
+  "tags": {
+    "admin_level": "7",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 234949969,
+  "bounds": {
+    "minlat": 22.6119710,
+    "minlon": 120.3250083,
+    "maxlat": 22.6149947,
+    "maxlon": 120.3253073
+  },
+  "geometry": [
+    { "lat": 22.6149947, "lon": 120.3252364 },
+    { "lat": 22.6141457, "lon": 120.3253073 },
+    { "lat": 22.6119710, "lon": 120.3250083 }
+  ],
+  "tags": {
+    "admin_level": "7",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 234949970,
+  "bounds": {
+    "minlat": 22.6154479,
+    "minlon": 120.3225423,
+    "maxlat": 22.6156961,
+    "maxlon": 120.3225466
+  },
+  "geometry": [
+    { "lat": 22.6156961, "lon": 120.3225423 },
+    { "lat": 22.6154479, "lon": 120.3225466 }
+  ],
+  "tags": {
+    "admin_level": "7",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 234949971,
+  "bounds": {
+    "minlat": 22.6141689,
+    "minlon": 120.3251865,
+    "maxlat": 22.6153117,
+    "maxlon": 120.3274294
+  },
+  "geometry": [
+    { "lat": 22.6152607, "lon": 120.3251865 },
+    { "lat": 22.6153117, "lon": 120.3256759 },
+    { "lat": 22.6149922, "lon": 120.3257022 },
+    { "lat": 22.6150084, "lon": 120.3261754 },
+    { "lat": 22.6146343, "lon": 120.3262214 },
+    { "lat": 22.6142178, "lon": 120.3262520 },
+    { "lat": 22.6141773, "lon": 120.3268829 },
+    { "lat": 22.6141689, "lon": 120.3274294 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 235642205,
+  "bounds": {
+    "minlat": 22.5849033,
+    "minlon": 120.3503618,
+    "maxlat": 22.5858907,
+    "maxlon": 120.3587201
+  },
+  "geometry": [
+    { "lat": 22.5858560, "lon": 120.3503618 },
+    { "lat": 22.5856390, "lon": 120.3506804 },
+    { "lat": 22.5858907, "lon": 120.3510055 },
+    { "lat": 22.5858122, "lon": 120.3519854 },
+    { "lat": 22.5856083, "lon": 120.3526497 },
+    { "lat": 22.5854350, "lon": 120.3535670 },
+    { "lat": 22.5852956, "lon": 120.3541535 },
+    { "lat": 22.5850409, "lon": 120.3546802 },
+    { "lat": 22.5849914, "lon": 120.3551299 },
+    { "lat": 22.5851093, "lon": 120.3552903 },
+    { "lat": 22.5851628, "lon": 120.3564790 },
+    { "lat": 22.5850585, "lon": 120.3568742 },
+    { "lat": 22.5849033, "lon": 120.3568856 },
+    { "lat": 22.5849710, "lon": 120.3587201 }
+  ],
+  "tags": {
+    "admin_level": "7",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 235642244,
+  "bounds": {
+    "minlat": 22.5753537,
+    "minlon": 120.3621642,
+    "maxlat": 22.5851272,
+    "maxlon": 120.3626920
+  },
+  "geometry": [
+    { "lat": 22.5851272, "lon": 120.3626920 },
+    { "lat": 22.5813572, "lon": 120.3625511 },
+    { "lat": 22.5753537, "lon": 120.3621642 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 235642247,
+  "bounds": {
+    "minlat": 22.5764887,
+    "minlon": 120.3492872,
+    "maxlat": 22.5853836,
+    "maxlon": 120.3496329
+  },
+  "geometry": [
+    { "lat": 22.5853836, "lon": 120.3496329 },
+    { "lat": 22.5849570, "lon": 120.3496081 },
+    { "lat": 22.5820236, "lon": 120.3494400 },
+    { "lat": 22.5764887, "lon": 120.3492872 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 235642263,
+  "bounds": {
+    "minlat": 22.5848514,
+    "minlon": 120.3587201,
+    "maxlat": 22.5851901,
+    "maxlon": 120.3626920
+  },
+  "geometry": [
+    { "lat": 22.5849710, "lon": 120.3587201 },
+    { "lat": 22.5849521, "lon": 120.3593696 },
+    { "lat": 22.5848914, "lon": 120.3610835 },
+    { "lat": 22.5848514, "lon": 120.3619499 },
+    { "lat": 22.5851901, "lon": 120.3619695 },
+    { "lat": 22.5851272, "lon": 120.3626920 }
+  ],
+  "tags": {
+    "admin_level": "7",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 235642274,
+  "bounds": {
+    "minlat": 22.5851254,
+    "minlon": 120.3626920,
+    "maxlat": 22.5865222,
+    "maxlon": 120.3655138
+  },
+  "geometry": [
+    { "lat": 22.5851272, "lon": 120.3626920 },
+    { "lat": 22.5851254, "lon": 120.3630945 },
+    { "lat": 22.5860306, "lon": 120.3631344 },
+    { "lat": 22.5860306, "lon": 120.3633839 },
+    { "lat": 22.5862389, "lon": 120.3633953 },
+    { "lat": 22.5862299, "lon": 120.3638848 },
+    { "lat": 22.5860230, "lon": 120.3638808 },
+    { "lat": 22.5860077, "lon": 120.3643308 },
+    { "lat": 22.5865222, "lon": 120.3643406 },
+    { "lat": 22.5865193, "lon": 120.3648296 },
+    { "lat": 22.5864809, "lon": 120.3655138 }
+  ],
+  "tags": {
+    "admin_level": "7",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 235824554,
+  "bounds": {
+    "minlat": 22.5817615,
+    "minlon": 120.3228170,
+    "maxlat": 22.5854771,
+    "maxlon": 120.3278671
+  },
+  "geometry": [
+    { "lat": 22.5854771, "lon": 120.3278671 },
+    { "lat": 22.5817615, "lon": 120.3228170 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 235824562,
+  "bounds": {
+    "minlat": 22.5854771,
+    "minlon": 120.3278671,
+    "maxlat": 22.5866391,
+    "maxlon": 120.3313831
+  },
+  "geometry": [
+    { "lat": 22.5854771, "lon": 120.3278671 },
+    { "lat": 22.5855626, "lon": 120.3280811 },
+    { "lat": 22.5864658, "lon": 120.3292057 },
+    { "lat": 22.5866279, "lon": 120.3295935 },
+    { "lat": 22.5866391, "lon": 120.3300092 },
+    { "lat": 22.5865413, "lon": 120.3303077 },
+    { "lat": 22.5864436, "lon": 120.3304904 },
+    { "lat": 22.5861709, "lon": 120.3306525 },
+    { "lat": 22.5860551, "lon": 120.3307657 },
+    { "lat": 22.5859393, "lon": 120.3311567 },
+    { "lat": 22.5859547, "lon": 120.3313831 }
+  ],
+  "tags": {
+    "admin_level": "7",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 235826447,
+  "bounds": {
+    "minlat": 22.5846055,
+    "minlon": 120.3178545,
+    "maxlat": 22.5885051,
+    "maxlon": 120.3199738
+  },
+  "geometry": [
+    { "lat": 22.5885051, "lon": 120.3179343 },
+    { "lat": 22.5877286, "lon": 120.3185535 },
+    { "lat": 22.5874402, "lon": 120.3187582 },
+    { "lat": 22.5868922, "lon": 120.3178545 },
+    { "lat": 22.5857071, "lon": 120.3188116 },
+    { "lat": 22.5862163, "lon": 120.3195438 },
+    { "lat": 22.5859600, "lon": 120.3197208 },
+    { "lat": 22.5854712, "lon": 120.3199738 },
+    { "lat": 22.5852228, "lon": 120.3195000 },
+    { "lat": 22.5848069, "lon": 120.3190408 },
+    { "lat": 22.5846055, "lon": 120.3186449 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 235826452,
+  "bounds": {
+    "minlat": 22.5903399,
+    "minlon": 120.3205499,
+    "maxlat": 22.5911316,
+    "maxlon": 120.3217841
+  },
+  "geometry": [
+    { "lat": 22.5911316, "lon": 120.3205499 },
+    { "lat": 22.5910037, "lon": 120.3206901 },
+    { "lat": 22.5907787, "lon": 120.3210934 },
+    { "lat": 22.5905672, "lon": 120.3217193 },
+    { "lat": 22.5905389, "lon": 120.3217537 },
+    { "lat": 22.5903399, "lon": 120.3217841 }
+  ],
+  "tags": {
+    "admin_level": "7",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 235826455,
+  "bounds": {
+    "minlat": 22.5881993,
+    "minlon": 120.3145654,
+    "maxlat": 22.5917633,
+    "maxlon": 120.3160534
+  },
+  "geometry": [
+    { "lat": 22.5917633, "lon": 120.3152325 },
+    { "lat": 22.5907844, "lon": 120.3160534 },
+    { "lat": 22.5904216, "lon": 120.3156170 },
+    { "lat": 22.5902096, "lon": 120.3154061 },
+    { "lat": 22.5900473, "lon": 120.3153192 },
+    { "lat": 22.5898502, "lon": 120.3152910 },
+    { "lat": 22.5897652, "lon": 120.3152924 },
+    { "lat": 22.5896167, "lon": 120.3153319 },
+    { "lat": 22.5891590, "lon": 120.3154664 },
+    { "lat": 22.5889135, "lon": 120.3149207 },
+    { "lat": 22.5886988, "lon": 120.3145654 },
+    { "lat": 22.5881993, "lon": 120.3151725 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 235826457,
+  "bounds": {
+    "minlat": 22.5915555,
+    "minlon": 120.3121042,
+    "maxlat": 22.5925461,
+    "maxlon": 120.3152325
+  },
+  "geometry": [
+    { "lat": 22.5917633, "lon": 120.3152325 },
+    { "lat": 22.5915555, "lon": 120.3149441 },
+    { "lat": 22.5920776, "lon": 120.3144910 },
+    { "lat": 22.5919521, "lon": 120.3142497 },
+    { "lat": 22.5921951, "lon": 120.3140377 },
+    { "lat": 22.5920061, "lon": 120.3136736 },
+    { "lat": 22.5921262, "lon": 120.3134367 },
+    { "lat": 22.5922747, "lon": 120.3132568 },
+    { "lat": 22.5925461, "lon": 120.3130170 },
+    { "lat": 22.5922808, "lon": 120.3125943 },
+    { "lat": 22.5920306, "lon": 120.3121042 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 235826471,
+  "bounds": {
+    "minlat": 22.5872412,
+    "minlon": 120.3161195,
+    "maxlat": 22.5885051,
+    "maxlon": 120.3179343
+  },
+  "geometry": [
+    { "lat": 22.5872412, "lon": 120.3161195 },
+    { "lat": 22.5885051, "lon": 120.3179343 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 235826475,
+  "bounds": {
+    "minlat": 22.5911316,
+    "minlon": 120.3199814,
+    "maxlat": 22.5912082,
+    "maxlon": 120.3205499
+  },
+  "geometry": [
+    { "lat": 22.5912082, "lon": 120.3199814 },
+    { "lat": 22.5911316, "lon": 120.3205499 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 235826483,
+  "bounds": {
+    "minlat": 22.5872412,
+    "minlon": 120.3151725,
+    "maxlat": 22.5881993,
+    "maxlon": 120.3161195
+  },
+  "geometry": [
+    { "lat": 22.5881993, "lon": 120.3151725 },
+    { "lat": 22.5872412, "lon": 120.3161195 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 235826490,
+  "bounds": {
+    "minlat": 22.5873117,
+    "minlon": 120.3237872,
+    "maxlat": 22.5876276,
+    "maxlon": 120.3238963
+  },
+  "geometry": [
+    { "lat": 22.5876276, "lon": 120.3237872 },
+    { "lat": 22.5873117, "lon": 120.3238963 }
+  ],
+  "tags": {
+    "admin_level": "7",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 235826501,
+  "bounds": {
+    "minlat": 22.5912082,
+    "minlon": 120.3152325,
+    "maxlat": 22.5937750,
+    "maxlon": 120.3199814
+  },
+  "geometry": [
+    { "lat": 22.5912082, "lon": 120.3199814 },
+    { "lat": 22.5937750, "lon": 120.3178443 },
+    { "lat": 22.5917633, "lon": 120.3152325 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 235826502,
+  "bounds": {
+    "minlat": 22.5846055,
+    "minlon": 120.3161195,
+    "maxlat": 22.5872412,
+    "maxlon": 120.3186449
+  },
+  "geometry": [
+    { "lat": 22.5872412, "lon": 120.3161195 },
+    { "lat": 22.5867324, "lon": 120.3166224 },
+    { "lat": 22.5846055, "lon": 120.3186449 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 235826512,
+  "bounds": {
+    "minlat": 22.5852187,
+    "minlon": 120.3221322,
+    "maxlat": 22.5876276,
+    "maxlon": 120.3237872
+  },
+  "geometry": [
+    { "lat": 22.5852187, "lon": 120.3221322 },
+    { "lat": 22.5854827, "lon": 120.3221895 },
+    { "lat": 22.5858455, "lon": 120.3222599 },
+    { "lat": 22.5862083, "lon": 120.3223943 },
+    { "lat": 22.5869128, "lon": 120.3227128 },
+    { "lat": 22.5876276, "lon": 120.3237872 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 235826514,
+  "bounds": {
+    "minlat": 22.5875023,
+    "minlon": 120.3135825,
+    "maxlat": 22.5881993,
+    "maxlon": 120.3151725
+  },
+  "geometry": [
+    { "lat": 22.5876674, "lon": 120.3135825 },
+    { "lat": 22.5875614, "lon": 120.3137480 },
+    { "lat": 22.5875023, "lon": 120.3142329 },
+    { "lat": 22.5878304, "lon": 120.3146360 },
+    { "lat": 22.5881031, "lon": 120.3150305 },
+    { "lat": 22.5881993, "lon": 120.3151725 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 235826518,
+  "bounds": {
+    "minlat": 22.5885051,
+    "minlon": 120.3173979,
+    "maxlat": 22.5912082,
+    "maxlon": 120.3199814
+  },
+  "geometry": [
+    { "lat": 22.5885051, "lon": 120.3179343 },
+    { "lat": 22.5886846, "lon": 120.3177578 },
+    { "lat": 22.5889156, "lon": 120.3173979 },
+    { "lat": 22.5898272, "lon": 120.3187894 },
+    { "lat": 22.5901652, "lon": 120.3184957 },
+    { "lat": 22.5912082, "lon": 120.3199814 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 235826523,
+  "bounds": {
+    "minlat": 22.5837374,
+    "minlon": 120.3143856,
+    "maxlat": 22.5861614,
+    "maxlon": 120.3186449
+  },
+  "geometry": [
+    { "lat": 22.5846055, "lon": 120.3186449 },
+    { "lat": 22.5837374, "lon": 120.3175022 },
+    { "lat": 22.5842133, "lon": 120.3170664 },
+    { "lat": 22.5841728, "lon": 120.3169889 },
+    { "lat": 22.5861337, "lon": 120.3153115 },
+    { "lat": 22.5857658, "lon": 120.3148272 },
+    { "lat": 22.5861614, "lon": 120.3143856 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 235826525,
+  "bounds": {
+    "minlat": 22.5817615,
+    "minlon": 120.3220365,
+    "maxlat": 22.5852187,
+    "maxlon": 120.3228170
+  },
+  "geometry": [
+    { "lat": 22.5817615, "lon": 120.3228170 },
+    { "lat": 22.5824714, "lon": 120.3225680 },
+    { "lat": 22.5839150, "lon": 120.3221378 },
+    { "lat": 22.5842472, "lon": 120.3220593 },
+    { "lat": 22.5845986, "lon": 120.3220365 },
+    { "lat": 22.5849213, "lon": 120.3220675 },
+    { "lat": 22.5852187, "lon": 120.3221322 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 235826527,
+  "bounds": {
+    "minlat": 22.5845612,
+    "minlon": 120.3193376,
+    "maxlat": 22.5855847,
+    "maxlon": 120.3221322
+  },
+  "geometry": [
+    { "lat": 22.5852187, "lon": 120.3221322 },
+    { "lat": 22.5854892, "lon": 120.3214491 },
+    { "lat": 22.5855770, "lon": 120.3211451 },
+    { "lat": 22.5855847, "lon": 120.3209487 },
+    { "lat": 22.5854988, "lon": 120.3207419 },
+    { "lat": 22.5851054, "lon": 120.3200925 },
+    { "lat": 22.5850004, "lon": 120.3200987 },
+    { "lat": 22.5845612, "lon": 120.3193376 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 235830550,
+  "bounds": {
+    "minlat": 22.5911316,
+    "minlon": 120.3205499,
+    "maxlat": 22.5955355,
+    "maxlon": 120.3225923
+  },
+  "geometry": [
+    { "lat": 22.5955355, "lon": 120.3224598 },
+    { "lat": 22.5946101, "lon": 120.3225161 },
+    { "lat": 22.5937912, "lon": 120.3225923 },
+    { "lat": 22.5934174, "lon": 120.3225923 },
+    { "lat": 22.5925481, "lon": 120.3224841 },
+    { "lat": 22.5920673, "lon": 120.3223526 },
+    { "lat": 22.5919370, "lon": 120.3222456 },
+    { "lat": 22.5918029, "lon": 120.3219923 },
+    { "lat": 22.5913775, "lon": 120.3207910 },
+    { "lat": 22.5912225, "lon": 120.3205635 },
+    { "lat": 22.5911316, "lon": 120.3205499 }
+  ],
+  "tags": {
+    "admin_level": "7",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 235830563,
+  "bounds": {
+    "minlat": 22.5961337,
+    "minlon": 120.3114517,
+    "maxlat": 22.6017149,
+    "maxlon": 120.3159450
+  },
+  "geometry": [
+    { "lat": 22.5961337, "lon": 120.3159450 },
+    { "lat": 22.5988236, "lon": 120.3137348 },
+    { "lat": 22.6017149, "lon": 120.3114517 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 235830614,
+  "bounds": {
+    "minlat": 22.6041827,
+    "minlon": 120.3144270,
+    "maxlat": 22.6059634,
+    "maxlon": 120.3245809
+  },
+  "geometry": [
+    { "lat": 22.6041827, "lon": 120.3144270 },
+    { "lat": 22.6049239, "lon": 120.3153489 },
+    { "lat": 22.6054976, "lon": 120.3158432 },
+    { "lat": 22.6058216, "lon": 120.3161649 },
+    { "lat": 22.6059458, "lon": 120.3164179 },
+    { "lat": 22.6059634, "lon": 120.3165875 },
+    { "lat": 22.6059593, "lon": 120.3168098 },
+    { "lat": 22.6058783, "lon": 120.3171900 },
+    { "lat": 22.6046565, "lon": 120.3192953 },
+    { "lat": 22.6058091, "lon": 120.3200454 },
+    { "lat": 22.6057483, "lon": 120.3201742 },
+    { "lat": 22.6051293, "lon": 120.3214858 },
+    { "lat": 22.6045659, "lon": 120.3219393 },
+    { "lat": 22.6042730, "lon": 120.3225827 },
+    { "lat": 22.6043029, "lon": 120.3227686 },
+    { "lat": 22.6042786, "lon": 120.3230172 },
+    { "lat": 22.6043164, "lon": 120.3232994 },
+    { "lat": 22.6048334, "lon": 120.3233842 },
+    { "lat": 22.6051763, "lon": 120.3233345 },
+    { "lat": 22.6054382, "lon": 120.3233287 },
+    { "lat": 22.6054922, "lon": 120.3238171 },
+    { "lat": 22.6051827, "lon": 120.3245809 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 235830630,
+  "bounds": {
+    "minlat": 22.5961337,
+    "minlon": 120.3144270,
+    "maxlat": 22.6041827,
+    "maxlon": 120.3204812
+  },
+  "geometry": [
+    { "lat": 22.6041827, "lon": 120.3144270 },
+    { "lat": 22.6004477, "lon": 120.3204812 },
+    { "lat": 22.5999971, "lon": 120.3200241 },
+    { "lat": 22.5961337, "lon": 120.3159450 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 235830632,
+  "bounds": {
+    "minlat": 22.5955355,
+    "minlon": 120.3218862,
+    "maxlat": 22.5956118,
+    "maxlon": 120.3224598
+  },
+  "geometry": [
+    { "lat": 22.5955355, "lon": 120.3224598 },
+    { "lat": 22.5955873, "lon": 120.3220901 },
+    { "lat": 22.5956118, "lon": 120.3218862 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 235830644,
+  "bounds": {
+    "minlat": 22.5956118,
+    "minlon": 120.3159450,
+    "maxlat": 22.5961337,
+    "maxlon": 120.3218862
+  },
+  "geometry": [
+    { "lat": 22.5956118, "lon": 120.3218862 },
+    { "lat": 22.5956548, "lon": 120.3215286 },
+    { "lat": 22.5957196, "lon": 120.3209919 },
+    { "lat": 22.5957699, "lon": 120.3182962 },
+    { "lat": 22.5958817, "lon": 120.3161501 },
+    { "lat": 22.5961337, "lon": 120.3159450 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 235832389,
+  "bounds": {
+    "minlat": 22.6130993,
+    "minlon": 120.3160628,
+    "maxlat": 22.6177904,
+    "maxlon": 120.3166125
+  },
+  "geometry": [
+    { "lat": 22.6177904, "lon": 120.3160628 },
+    { "lat": 22.6169957, "lon": 120.3163602 },
+    { "lat": 22.6166483, "lon": 120.3165008 },
+    { "lat": 22.6156861, "lon": 120.3165980 },
+    { "lat": 22.6153062, "lon": 120.3166125 },
+    { "lat": 22.6143498, "lon": 120.3164760 },
+    { "lat": 22.6143544, "lon": 120.3164249 },
+    { "lat": 22.6143727, "lon": 120.3162196 },
+    { "lat": 22.6138019, "lon": 120.3161575 },
+    { "lat": 22.6137771, "lon": 120.3163499 },
+    { "lat": 22.6130993, "lon": 120.3162030 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 235832391,
+  "bounds": {
+    "minlat": 22.6074414,
+    "minlon": 120.3211966,
+    "maxlat": 22.6082857,
+    "maxlon": 120.3249060
+  },
+  "geometry": [
+    { "lat": 22.6077047, "lon": 120.3249060 },
+    { "lat": 22.6077452, "lon": 120.3246764 },
+    { "lat": 22.6075589, "lon": 120.3246091 },
+    { "lat": 22.6076493, "lon": 120.3242743 },
+    { "lat": 22.6077587, "lon": 120.3237917 },
+    { "lat": 22.6077627, "lon": 120.3233793 },
+    { "lat": 22.6074414, "lon": 120.3233793 },
+    { "lat": 22.6075363, "lon": 120.3215925 },
+    { "lat": 22.6081667, "lon": 120.3216276 },
+    { "lat": 22.6082857, "lon": 120.3211966 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 235832393,
+  "bounds": {
+    "minlat": 22.6050538,
+    "minlon": 120.3245809,
+    "maxlat": 22.6051827,
+    "maxlon": 120.3256442
+  },
+  "geometry": [
+    { "lat": 22.6051827, "lon": 120.3245809 },
+    { "lat": 22.6051537, "lon": 120.3246524 },
+    { "lat": 22.6051091, "lon": 120.3247624 },
+    { "lat": 22.6050538, "lon": 120.3249803 },
+    { "lat": 22.6051253, "lon": 120.3256442 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 235832395,
+  "bounds": {
+    "minlat": 22.6086202,
+    "minlon": 120.3164267,
+    "maxlat": 22.6087144,
+    "maxlon": 120.3166448
+  },
+  "geometry": [
+    { "lat": 22.6086202, "lon": 120.3166448 },
+    { "lat": 22.6087144, "lon": 120.3164267 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 235832397,
+  "bounds": {
+    "minlat": 22.6177904,
+    "minlon": 120.3160628,
+    "maxlat": 22.6183351,
+    "maxlon": 120.3177423
+  },
+  "geometry": [
+    { "lat": 22.6177904, "lon": 120.3160628 },
+    { "lat": 22.6183351, "lon": 120.3177423 }
+  ],
+  "tags": {
+    "admin_level": "7",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 235832399,
+  "bounds": {
+    "minlat": 22.6087144,
+    "minlon": 120.3132255,
+    "maxlat": 22.6100980,
+    "maxlon": 120.3164267
+  },
+  "geometry": [
+    { "lat": 22.6087144, "lon": 120.3164267 },
+    { "lat": 22.6100980, "lon": 120.3132255 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 235832400,
+  "bounds": {
+    "minlat": 22.6122977,
+    "minlon": 120.3225007,
+    "maxlat": 22.6154479,
+    "maxlon": 120.3225466
+  },
+  "geometry": [
+    { "lat": 22.6122977, "lon": 120.3225007 },
+    { "lat": 22.6154479, "lon": 120.3225466 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 235832402,
+  "bounds": {
+    "minlat": 22.6119710,
+    "minlon": 120.3225007,
+    "maxlat": 22.6122977,
+    "maxlon": 120.3250083
+  },
+  "geometry": [
+    { "lat": 22.6122977, "lon": 120.3225007 },
+    { "lat": 22.6119710, "lon": 120.3250083 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 235832404,
+  "bounds": {
+    "minlat": 22.6122977,
+    "minlon": 120.3179899,
+    "maxlat": 22.6128621,
+    "maxlon": 120.3225007
+  },
+  "geometry": [
+    { "lat": 22.6128621, "lon": 120.3179899 },
+    { "lat": 22.6122977, "lon": 120.3225007 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 235832406,
+  "bounds": {
+    "minlat": 22.6117776,
+    "minlon": 120.3266575,
+    "maxlat": 22.6123398,
+    "maxlon": 120.3269812
+  },
+  "geometry": [
+    { "lat": 22.6117776, "lon": 120.3266575 },
+    { "lat": 22.6123398, "lon": 120.3269812 }
+  ],
+  "tags": {
+    "admin_level": "7",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 235832407,
+  "bounds": {
+    "minlat": 22.6128621,
+    "minlon": 120.3162030,
+    "maxlat": 22.6130993,
+    "maxlon": 120.3179899
+  },
+  "geometry": [
+    { "lat": 22.6128621, "lon": 120.3179899 },
+    { "lat": 22.6130993, "lon": 120.3162030 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 235832411,
+  "bounds": {
+    "minlat": 22.6102192,
+    "minlon": 120.3218251,
+    "maxlat": 22.6122977,
+    "maxlon": 120.3225007
+  },
+  "geometry": [
+    { "lat": 22.6102192, "lon": 120.3218251 },
+    { "lat": 22.6122977, "lon": 120.3225007 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 235832412,
+  "bounds": {
+    "minlat": 22.6128621,
+    "minlon": 120.3179899,
+    "maxlat": 22.6154056,
+    "maxlon": 120.3182491
+  },
+  "geometry": [
+    { "lat": 22.6154056, "lon": 120.3182491 },
+    { "lat": 22.6128621, "lon": 120.3179899 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 235832413,
+  "bounds": {
+    "minlat": 22.6086202,
+    "minlon": 120.3166448,
+    "maxlat": 22.6128621,
+    "maxlon": 120.3179899
+  },
+  "geometry": [
+    { "lat": 22.6128621, "lon": 120.3179899 },
+    { "lat": 22.6086202, "lon": 120.3166448 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 235832414,
+  "bounds": {
+    "minlat": 22.6154056,
+    "minlon": 120.3182491,
+    "maxlat": 22.6154678,
+    "maxlon": 120.3195717
+  },
+  "geometry": [
+    { "lat": 22.6154056, "lon": 120.3182491 },
+    { "lat": 22.6154678, "lon": 120.3195717 }
+  ],
+  "tags": {
+    "admin_level": "7",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 235832415,
+  "bounds": {
+    "minlat": 22.6082857,
+    "minlon": 120.3211966,
+    "maxlat": 22.6102192,
+    "maxlon": 120.3218251
+  },
+  "geometry": [
+    { "lat": 22.6082857, "lon": 120.3211966 },
+    { "lat": 22.6102192, "lon": 120.3218251 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 235832417,
+  "bounds": {
+    "minlat": 22.6130993,
+    "minlon": 120.3143121,
+    "maxlat": 22.6133328,
+    "maxlon": 120.3162030
+  },
+  "geometry": [
+    { "lat": 22.6130993, "lon": 120.3162030 },
+    { "lat": 22.6133328, "lon": 120.3143121 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 235832419,
+  "bounds": {
+    "minlat": 22.6077047,
+    "minlon": 120.3249060,
+    "maxlat": 22.6097791,
+    "maxlon": 120.3255724
+  },
+  "geometry": [
+    { "lat": 22.6097791, "lon": 120.3255724 },
+    { "lat": 22.6082851, "lon": 120.3250753 },
+    { "lat": 22.6077047, "lon": 120.3249060 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 235832421,
+  "bounds": {
+    "minlat": 22.6117745,
+    "minlon": 120.3250083,
+    "maxlat": 22.6119710,
+    "maxlon": 120.3266575
+  },
+  "geometry": [
+    { "lat": 22.6119710, "lon": 120.3250083 },
+    { "lat": 22.6117745, "lon": 120.3264100 },
+    { "lat": 22.6117776, "lon": 120.3266575 }
+  ],
+  "tags": {
+    "admin_level": "7",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 235832422,
+  "bounds": {
+    "minlat": 22.6068281,
+    "minlon": 120.3166448,
+    "maxlat": 22.6086202,
+    "maxlon": 120.3211966
+  },
+  "geometry": [
+    { "lat": 22.6086202, "lon": 120.3166448 },
+    { "lat": 22.6068281, "lon": 120.3207229 },
+    { "lat": 22.6082857, "lon": 120.3211966 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 235832424,
+  "bounds": {
+    "minlat": 22.6097791,
+    "minlon": 120.3255724,
+    "maxlat": 22.6117776,
+    "maxlon": 120.3266575
+  },
+  "geometry": [
+    { "lat": 22.6117776, "lon": 120.3266575 },
+    { "lat": 22.6108253, "lon": 120.3260070 },
+    { "lat": 22.6104940, "lon": 120.3258137 },
+    { "lat": 22.6097791, "lon": 120.3255724 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 235832426,
+  "bounds": {
+    "minlat": 22.6057555,
+    "minlon": 120.3126476,
+    "maxlat": 22.6087144,
+    "maxlon": 120.3164267
+  },
+  "geometry": [
+    { "lat": 22.6057555, "lon": 120.3126476 },
+    { "lat": 22.6073187, "lon": 120.3148868 },
+    { "lat": 22.6080442, "lon": 120.3158236 },
+    { "lat": 22.6087144, "lon": 120.3164267 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 235832428,
+  "bounds": {
+    "minlat": 22.6144263,
+    "minlon": 120.3225466,
+    "maxlat": 22.6154516,
+    "maxlon": 120.3252364
+  },
+  "geometry": [
+    { "lat": 22.6154479, "lon": 120.3225466 },
+    { "lat": 22.6154268, "lon": 120.3230389 },
+    { "lat": 22.6154516, "lon": 120.3235641 },
+    { "lat": 22.6144263, "lon": 120.3236570 },
+    { "lat": 22.6149947, "lon": 120.3252364 }
+  ],
+  "tags": {
+    "admin_level": "7",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 235832430,
+  "bounds": {
+    "minlat": 22.6051827,
+    "minlon": 120.3245809,
+    "maxlat": 22.6077047,
+    "maxlon": 120.3249060
+  },
+  "geometry": [
+    { "lat": 22.6077047, "lon": 120.3249060 },
+    { "lat": 22.6073298, "lon": 120.3248204 },
+    { "lat": 22.6068602, "lon": 120.3247832 },
+    { "lat": 22.6063649, "lon": 120.3248018 },
+    { "lat": 22.6059506, "lon": 120.3247791 },
+    { "lat": 22.6051827, "lon": 120.3245809 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 235832432,
+  "bounds": {
+    "minlat": 22.6097791,
+    "minlon": 120.3218251,
+    "maxlat": 22.6105485,
+    "maxlon": 120.3255724
+  },
+  "geometry": [
+    { "lat": 22.6097791, "lon": 120.3255724 },
+    { "lat": 22.6098533, "lon": 120.3252185 },
+    { "lat": 22.6099343, "lon": 120.3246555 },
+    { "lat": 22.6103461, "lon": 120.3247096 },
+    { "lat": 22.6105485, "lon": 120.3236219 },
+    { "lat": 22.6098829, "lon": 120.3234333 },
+    { "lat": 22.6102192, "lon": 120.3218251 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 235834461,
+  "bounds": {
+    "minlat": 22.6020772,
+    "minlon": 120.3283262,
+    "maxlat": 22.6030255,
+    "maxlon": 120.3290751
+  },
+  "geometry": [
+    { "lat": 22.6020772, "lon": 120.3290751 },
+    { "lat": 22.6030255, "lon": 120.3283262 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 235834462,
+  "bounds": {
+    "minlat": 22.6077061,
+    "minlon": 120.3287675,
+    "maxlat": 22.6087802,
+    "maxlon": 120.3288424
+  },
+  "geometry": [
+    { "lat": 22.6087802, "lon": 120.3287675 },
+    { "lat": 22.6077061, "lon": 120.3288424 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 235834463,
+  "bounds": {
+    "minlat": 22.6110254,
+    "minlon": 120.3286181,
+    "maxlat": 22.6113647,
+    "maxlon": 120.3327793
+  },
+  "geometry": [
+    { "lat": 22.6110254, "lon": 120.3286181 },
+    { "lat": 22.6113647, "lon": 120.3327793 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 235834464,
+  "bounds": {
+    "minlat": 22.6056338,
+    "minlon": 120.3325712,
+    "maxlat": 22.6058742,
+    "maxlon": 120.3358470
+  },
+  "geometry": [
+    { "lat": 22.6058742, "lon": 120.3358470 },
+    { "lat": 22.6056338, "lon": 120.3325712 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 235834465,
+  "bounds": {
+    "minlat": 22.6051253,
+    "minlon": 120.3256442,
+    "maxlat": 22.6052151,
+    "maxlon": 120.3268670
+  },
+  "geometry": [
+    { "lat": 22.6052151, "lon": 120.3268670 },
+    { "lat": 22.6051253, "lon": 120.3256442 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 235834466,
+  "bounds": {
+    "minlat": 22.6100667,
+    "minlon": 120.3325906,
+    "maxlat": 22.6101040,
+    "maxlon": 120.3330382
+  },
+  "geometry": [
+    { "lat": 22.6101040, "lon": 120.3325906 },
+    { "lat": 22.6100667, "lon": 120.3330382 }
+  ],
+  "tags": {
+    "admin_level": "7",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 235834467,
+  "bounds": {
+    "minlat": 22.6050296,
+    "minlon": 120.3313090,
+    "maxlat": 22.6055411,
+    "maxlon": 120.3313507
+  },
+  "geometry": [
+    { "lat": 22.6055411, "lon": 120.3313090 },
+    { "lat": 22.6050296, "lon": 120.3313507 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 235834468,
+  "bounds": {
+    "minlat": 22.6041436,
+    "minlon": 120.3313507,
+    "maxlat": 22.6050296,
+    "maxlon": 120.3320439
+  },
+  "geometry": [
+    { "lat": 22.6050296, "lon": 120.3313507 },
+    { "lat": 22.6041436, "lon": 120.3320439 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 235834469,
+  "bounds": {
+    "minlat": 22.6052151,
+    "minlon": 120.3268670,
+    "maxlat": 22.6055411,
+    "maxlon": 120.3313090
+  },
+  "geometry": [
+    { "lat": 22.6055411, "lon": 120.3313090 },
+    { "lat": 22.6052151, "lon": 120.3268670 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 235834470,
+  "bounds": {
+    "minlat": 22.6030255,
+    "minlon": 120.3283262,
+    "maxlat": 22.6050296,
+    "maxlon": 120.3313507
+  },
+  "geometry": [
+    { "lat": 22.6050296, "lon": 120.3313507 },
+    { "lat": 22.6030255, "lon": 120.3283262 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 235834471,
+  "bounds": {
+    "minlat": 22.6087802,
+    "minlon": 120.3286181,
+    "maxlat": 22.6110254,
+    "maxlon": 120.3287675
+  },
+  "geometry": [
+    { "lat": 22.6110254, "lon": 120.3286181 },
+    { "lat": 22.6087802, "lon": 120.3287675 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 235834472,
+  "bounds": {
+    "minlat": 22.6022496,
+    "minlon": 120.3320439,
+    "maxlat": 22.6041436,
+    "maxlon": 120.3335256
+  },
+  "geometry": [
+    { "lat": 22.6041436, "lon": 120.3320439 },
+    { "lat": 22.6022496, "lon": 120.3335256 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 235834473,
+  "bounds": {
+    "minlat": 22.6090376,
+    "minlon": 120.3323930,
+    "maxlat": 22.6101040,
+    "maxlon": 120.3325906
+  },
+  "geometry": [
+    { "lat": 22.6101040, "lon": 120.3325906 },
+    { "lat": 22.6090376, "lon": 120.3323930 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 235834474,
+  "bounds": {
+    "minlat": 22.6030255,
+    "minlon": 120.3276653,
+    "maxlat": 22.6038692,
+    "maxlon": 120.3283262
+  },
+  "geometry": [
+    { "lat": 22.6030255, "lon": 120.3283262 },
+    { "lat": 22.6038692, "lon": 120.3276653 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 235834475,
+  "bounds": {
+    "minlat": 22.6058742,
+    "minlon": 120.3358470,
+    "maxlat": 22.6059948,
+    "maxlon": 120.3390626
+  },
+  "geometry": [
+    { "lat": 22.6058742, "lon": 120.3358470 },
+    { "lat": 22.6059948, "lon": 120.3390626 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 235834476,
+  "bounds": {
+    "minlat": 22.6055411,
+    "minlon": 120.3313090,
+    "maxlat": 22.6056338,
+    "maxlon": 120.3325712
+  },
+  "geometry": [
+    { "lat": 22.6056338, "lon": 120.3325712 },
+    { "lat": 22.6055411, "lon": 120.3313090 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 235834477,
+  "bounds": {
+    "minlat": 22.6000057,
+    "minlon": 120.3279806,
+    "maxlat": 22.6010196,
+    "maxlon": 120.3294749
+  },
+  "geometry": [
+    { "lat": 22.6010196, "lon": 120.3294749 },
+    { "lat": 22.6000057, "lon": 120.3279806 }
+  ],
+  "tags": {
+    "admin_level": "7",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 235834478,
+  "bounds": {
+    "minlat": 22.6021792,
+    "minlon": 120.3244947,
+    "maxlat": 22.6029132,
+    "maxlon": 120.3250645
+  },
+  "geometry": [
+    { "lat": 22.6021792, "lon": 120.3250645 },
+    { "lat": 22.6029132, "lon": 120.3244947 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 235834479,
+  "bounds": {
+    "minlat": 22.6020772,
+    "minlon": 120.3290751,
+    "maxlat": 22.6041436,
+    "maxlon": 120.3320439
+  },
+  "geometry": [
+    { "lat": 22.6041436, "lon": 120.3320439 },
+    { "lat": 22.6020772, "lon": 120.3290751 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 235834480,
+  "bounds": {
+    "minlat": 22.6065328,
+    "minlon": 120.3288424,
+    "maxlat": 22.6077061,
+    "maxlon": 120.3289469
+  },
+  "geometry": [
+    { "lat": 22.6077061, "lon": 120.3288424 },
+    { "lat": 22.6065328, "lon": 120.3289469 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 235834481,
+  "bounds": {
+    "minlat": 22.6078722,
+    "minlon": 120.3321698,
+    "maxlat": 22.6090376,
+    "maxlon": 120.3323930
+  },
+  "geometry": [
+    { "lat": 22.6090376, "lon": 120.3323930 },
+    { "lat": 22.6078722, "lon": 120.3321698 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 235834482,
+  "bounds": {
+    "minlat": 22.6087802,
+    "minlon": 120.3287675,
+    "maxlat": 22.6090376,
+    "maxlon": 120.3323930
+  },
+  "geometry": [
+    { "lat": 22.6090376, "lon": 120.3323930 },
+    { "lat": 22.6087802, "lon": 120.3287675 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 235834483,
+  "bounds": {
+    "minlat": 22.6038692,
+    "minlon": 120.3268670,
+    "maxlat": 22.6052151,
+    "maxlon": 120.3276653
+  },
+  "geometry": [
+    { "lat": 22.6038692, "lon": 120.3276653 },
+    { "lat": 22.6048225, "lon": 120.3269187 },
+    { "lat": 22.6052151, "lon": 120.3268670 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 235834484,
+  "bounds": {
+    "minlat": 22.6101040,
+    "minlon": 120.3325906,
+    "maxlat": 22.6113647,
+    "maxlon": 120.3327793
+  },
+  "geometry": [
+    { "lat": 22.6113647, "lon": 120.3327793 },
+    { "lat": 22.6110410, "lon": 120.3327700 },
+    { "lat": 22.6101040, "lon": 120.3325906 }
+  ],
+  "tags": {
+    "admin_level": "7",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 235834485,
+  "bounds": {
+    "minlat": 22.6074957,
+    "minlon": 120.3249060,
+    "maxlat": 22.6077061,
+    "maxlon": 120.3288424
+  },
+  "geometry": [
+    { "lat": 22.6077061, "lon": 120.3288424 },
+    { "lat": 22.6074957, "lon": 120.3258358 },
+    { "lat": 22.6077047, "lon": 120.3249060 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 235834486,
+  "bounds": {
+    "minlat": 22.6010196,
+    "minlon": 120.3290751,
+    "maxlat": 22.6020772,
+    "maxlon": 120.3297580
+  },
+  "geometry": [
+    { "lat": 22.6020772, "lon": 120.3290751 },
+    { "lat": 22.6012153, "lon": 120.3297580 },
+    { "lat": 22.6010196, "lon": 120.3294749 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 235834487,
+  "bounds": {
+    "minlat": 22.6109377,
+    "minlon": 120.3266575,
+    "maxlat": 22.6117776,
+    "maxlon": 120.3286181
+  },
+  "geometry": [
+    { "lat": 22.6117776, "lon": 120.3266575 },
+    { "lat": 22.6109377, "lon": 120.3271651 },
+    { "lat": 22.6110254, "lon": 120.3286181 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 235834488,
+  "bounds": {
+    "minlat": 22.6021792,
+    "minlon": 120.3250645,
+    "maxlat": 22.6038692,
+    "maxlon": 120.3276653
+  },
+  "geometry": [
+    { "lat": 22.6038692, "lon": 120.3276653 },
+    { "lat": 22.6026981, "lon": 120.3259216 },
+    { "lat": 22.6027381, "lon": 120.3258864 },
+    { "lat": 22.6021792, "lon": 120.3250645 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 235834489,
+  "bounds": {
+    "minlat": 22.6000739,
+    "minlon": 120.3301212,
+    "maxlat": 22.6022496,
+    "maxlon": 120.3335256
+  },
+  "geometry": [
+    { "lat": 22.6022496, "lon": 120.3335256 },
+    { "lat": 22.6018406, "lon": 120.3329117 },
+    { "lat": 22.6003255, "lon": 120.3305068 },
+    { "lat": 22.6000739, "lon": 120.3301212 }
+  ],
+  "tags": {
+    "admin_level": "7",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 235834490,
+  "bounds": {
+    "minlat": 22.5989915,
+    "minlon": 120.3264858,
+    "maxlat": 22.6000057,
+    "maxlon": 120.3279806
+  },
+  "geometry": [
+    { "lat": 22.6000057, "lon": 120.3279806 },
+    { "lat": 22.5989915, "lon": 120.3264858 }
+  ],
+  "tags": {
+    "admin_level": "7",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 235834491,
+  "bounds": {
+    "minlat": 22.6065328,
+    "minlon": 120.3289469,
+    "maxlat": 22.6078722,
+    "maxlon": 120.3321698
+  },
+  "geometry": [
+    { "lat": 22.6078722, "lon": 120.3321698 },
+    { "lat": 22.6075766, "lon": 120.3317179 },
+    { "lat": 22.6070131, "lon": 120.3306487 },
+    { "lat": 22.6065328, "lon": 120.3289469 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 235834492,
+  "bounds": {
+    "minlat": 22.6051253,
+    "minlon": 120.3256442,
+    "maxlat": 22.6065328,
+    "maxlon": 120.3289469
+  },
+  "geometry": [
+    { "lat": 22.6065328, "lon": 120.3289469 },
+    { "lat": 22.6063560, "lon": 120.3283824 },
+    { "lat": 22.6060252, "lon": 120.3275986 },
+    { "lat": 22.6051253, "lon": 120.3256442 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 235834493,
+  "bounds": {
+    "minlat": 22.6059948,
+    "minlon": 120.3390626,
+    "maxlat": 22.6060111,
+    "maxlon": 120.3393244
+  },
+  "geometry": [
+    { "lat": 22.6059948, "lon": 120.3390626 },
+    { "lat": 22.6060111, "lon": 120.3393244 }
+  ],
+  "tags": {
+    "admin_level": "7",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 235834494,
+  "bounds": {
+    "minlat": 22.6058742,
+    "minlon": 120.3330382,
+    "maxlat": 22.6100667,
+    "maxlon": 120.3358470
+  },
+  "geometry": [
+    { "lat": 22.6100667, "lon": 120.3330382 },
+    { "lat": 22.6079977, "lon": 120.3332901 },
+    { "lat": 22.6080272, "lon": 120.3339149 },
+    { "lat": 22.6075652, "lon": 120.3339604 },
+    { "lat": 22.6077155, "lon": 120.3357047 },
+    { "lat": 22.6058742, "lon": 120.3358470 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 235834495,
+  "bounds": {
+    "minlat": 22.5956118,
+    "minlon": 120.3218862,
+    "maxlat": 22.6029132,
+    "maxlon": 120.3244947
+  },
+  "geometry": [
+    { "lat": 22.6029132, "lon": 120.3244947 },
+    { "lat": 22.6014048, "lon": 120.3228729 },
+    { "lat": 22.6012119, "lon": 120.3228294 },
+    { "lat": 22.6006850, "lon": 120.3227157 },
+    { "lat": 22.5982109, "lon": 120.3223045 },
+    { "lat": 22.5981213, "lon": 120.3222901 },
+    { "lat": 22.5956118, "lon": 120.3218862 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 235834496,
+  "bounds": {
+    "minlat": 22.5996280,
+    "minlon": 120.3250645,
+    "maxlat": 22.6021792,
+    "maxlon": 120.3279806
+  },
+  "geometry": [
+    { "lat": 22.6021792, "lon": 120.3250645 },
+    { "lat": 22.6016728, "lon": 120.3254805 },
+    { "lat": 22.6014933, "lon": 120.3255652 },
+    { "lat": 22.5996280, "lon": 120.3261712 },
+    { "lat": 22.5996738, "lon": 120.3262864 },
+    { "lat": 22.6002665, "lon": 120.3277777 },
+    { "lat": 22.6000057, "lon": 120.3279806 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 235834497,
+  "bounds": {
+    "minlat": 22.6029132,
+    "minlon": 120.3241161,
+    "maxlat": 22.6051253,
+    "maxlon": 120.3256442
+  },
+  "geometry": [
+    { "lat": 22.6051253, "lon": 120.3256442 },
+    { "lat": 22.6046772, "lon": 120.3248260 },
+    { "lat": 22.6043424, "lon": 120.3246960 },
+    { "lat": 22.6041124, "lon": 120.3245948 },
+    { "lat": 22.6037339, "lon": 120.3243917 },
+    { "lat": 22.6033883, "lon": 120.3241161 },
+    { "lat": 22.6032683, "lon": 120.3242424 },
+    { "lat": 22.6029132, "lon": 120.3244947 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 235834498,
+  "bounds": {
+    "minlat": 22.6056338,
+    "minlon": 120.3321117,
+    "maxlat": 22.6078722,
+    "maxlon": 120.3325712
+  },
+  "geometry": [
+    { "lat": 22.6078722, "lon": 120.3321698 },
+    { "lat": 22.6074812, "lon": 120.3321199 },
+    { "lat": 22.6072578, "lon": 120.3321117 },
+    { "lat": 22.6070192, "lon": 120.3321882 },
+    { "lat": 22.6064865, "lon": 120.3324322 },
+    { "lat": 22.6062841, "lon": 120.3324943 },
+    { "lat": 22.6060321, "lon": 120.3325294 },
+    { "lat": 22.6059669, "lon": 120.3325362 },
+    { "lat": 22.6056338, "lon": 120.3325712 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 235834499,
+  "bounds": {
+    "minlat": 22.6099894,
+    "minlon": 120.3330382,
+    "maxlat": 22.6102979,
+    "maxlon": 120.3374758
+  },
+  "geometry": [
+    { "lat": 22.6100667, "lon": 120.3330382 },
+    { "lat": 22.6099894, "lon": 120.3365583 },
+    { "lat": 22.6102979, "lon": 120.3374758 }
+  ],
+  "tags": {
+    "admin_level": "7",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 238024846,
+  "bounds": {
+    "minlat": 22.5908984,
+    "minlon": 120.3452416,
+    "maxlat": 22.5934709,
+    "maxlon": 120.3531773
+  },
+  "geometry": [
+    { "lat": 22.5908984, "lon": 120.3531773 },
+    { "lat": 22.5910810, "lon": 120.3517083 },
+    { "lat": 22.5913658, "lon": 120.3493849 },
+    { "lat": 22.5914848, "lon": 120.3486583 },
+    { "lat": 22.5915610, "lon": 120.3481913 },
+    { "lat": 22.5917561, "lon": 120.3475271 },
+    { "lat": 22.5921732, "lon": 120.3466531 },
+    { "lat": 22.5924854, "lon": 120.3462063 },
+    { "lat": 22.5929202, "lon": 120.3457393 },
+    { "lat": 22.5934709, "lon": 120.3452416 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 238024847,
+  "bounds": {
+    "minlat": 22.5844921,
+    "minlon": 120.3349792,
+    "maxlat": 22.5905555,
+    "maxlon": 120.3396147
+  },
+  "geometry": [
+    { "lat": 22.5904370, "lon": 120.3349792 },
+    { "lat": 22.5904732, "lon": 120.3350206 },
+    { "lat": 22.5905247, "lon": 120.3351493 },
+    { "lat": 22.5905555, "lon": 120.3353191 },
+    { "lat": 22.5904629, "lon": 120.3355249 },
+    { "lat": 22.5901285, "lon": 120.3359469 },
+    { "lat": 22.5900796, "lon": 120.3359953 },
+    { "lat": 22.5896499, "lon": 120.3364203 },
+    { "lat": 22.5893942, "lon": 120.3367107 },
+    { "lat": 22.5892331, "lon": 120.3368937 },
+    { "lat": 22.5889552, "lon": 120.3371407 },
+    { "lat": 22.5883482, "lon": 120.3376344 },
+    { "lat": 22.5876645, "lon": 120.3374519 },
+    { "lat": 22.5875072, "lon": 120.3381206 },
+    { "lat": 22.5864532, "lon": 120.3378261 },
+    { "lat": 22.5859711, "lon": 120.3396147 },
+    { "lat": 22.5849150, "lon": 120.3393080 },
+    { "lat": 22.5844921, "lon": 120.3392684 }
+  ],
+  "tags": {
+    "admin_level": "7",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 238024848,
+  "bounds": {
+    "minlat": 22.5993650,
+    "minlon": 120.3301212,
+    "maxlat": 22.6000739,
+    "maxlon": 120.3307415
+  },
+  "geometry": [
+    { "lat": 22.6000739, "lon": 120.3301212 },
+    { "lat": 22.5993650, "lon": 120.3307415 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 238024849,
+  "bounds": {
+    "minlat": 22.5957786,
+    "minlon": 120.3365001,
+    "maxlat": 22.5985028,
+    "maxlon": 120.3386337
+  },
+  "geometry": [
+    { "lat": 22.5985028, "lon": 120.3365001 },
+    { "lat": 22.5957786, "lon": 120.3386337 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 238024850,
+  "bounds": {
+    "minlat": 22.5932238,
+    "minlon": 120.3308335,
+    "maxlat": 22.5953634,
+    "maxlon": 120.3325301
+  },
+  "geometry": [
+    { "lat": 22.5932238, "lon": 120.3325301 },
+    { "lat": 22.5953634, "lon": 120.3308335 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 238024851,
+  "bounds": {
+    "minlat": 22.6060111,
+    "minlon": 120.3393244,
+    "maxlat": 22.6061205,
+    "maxlon": 120.3412175
+  },
+  "geometry": [
+    { "lat": 22.6060111, "lon": 120.3393244 },
+    { "lat": 22.6061205, "lon": 120.3412175 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 238024852,
+  "bounds": {
+    "minlat": 22.6022496,
+    "minlon": 120.3335256,
+    "maxlat": 22.6043609,
+    "maxlon": 120.3366952
+  },
+  "geometry": [
+    { "lat": 22.6043609, "lon": 120.3366952 },
+    { "lat": 22.6022496, "lon": 120.3335256 }
+  ],
+  "tags": {
+    "admin_level": "7",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 238024854,
+  "bounds": {
+    "minlat": 22.5987373,
+    "minlon": 120.3321190,
+    "maxlat": 22.6005844,
+    "maxlon": 120.3348603
+  },
+  "geometry": [
+    { "lat": 22.6005844, "lon": 120.3348603 },
+    { "lat": 22.5987373, "lon": 120.3321190 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 238024855,
+  "bounds": {
+    "minlat": 22.5932238,
+    "minlon": 120.3325301,
+    "maxlat": 22.5956838,
+    "maxlon": 120.3361094
+  },
+  "geometry": [
+    { "lat": 22.5956838, "lon": 120.3361094 },
+    { "lat": 22.5932238, "lon": 120.3325301 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 238024856,
+  "bounds": {
+    "minlat": 22.5982582,
+    "minlon": 120.3395566,
+    "maxlat": 22.6007794,
+    "maxlon": 120.3415204
+  },
+  "geometry": [
+    { "lat": 22.5982582, "lon": 120.3415204 },
+    { "lat": 22.5990353, "lon": 120.3409767 },
+    { "lat": 22.5993027, "lon": 120.3408694 },
+    { "lat": 22.5995900, "lon": 120.3405476 },
+    { "lat": 22.6007794, "lon": 120.3395566 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 238024857,
+  "bounds": {
+    "minlat": 22.5966784,
+    "minlon": 120.3264858,
+    "maxlat": 22.5989915,
+    "maxlon": 120.3271983
+  },
+  "geometry": [
+    { "lat": 22.5966784, "lon": 120.3271983 },
+    { "lat": 22.5989915, "lon": 120.3264858 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 238024858,
+  "bounds": {
+    "minlat": 22.5985028,
+    "minlon": 120.3348603,
+    "maxlat": 22.6005844,
+    "maxlon": 120.3365001
+  },
+  "geometry": [
+    { "lat": 22.5985028, "lon": 120.3365001 },
+    { "lat": 22.6005844, "lon": 120.3348603 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 238024859,
+  "bounds": {
+    "minlat": 22.5908930,
+    "minlon": 120.3282250,
+    "maxlat": 22.5933169,
+    "maxlon": 120.3291587
+  },
+  "geometry": [
+    { "lat": 22.5933169, "lon": 120.3282250 },
+    { "lat": 22.5908930, "lon": 120.3291587 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 238024860,
+  "bounds": {
+    "minlat": 22.6007794,
+    "minlon": 120.3380143,
+    "maxlat": 22.6027261,
+    "maxlon": 120.3395566
+  },
+  "geometry": [
+    { "lat": 22.6027261, "lon": 120.3380143 },
+    { "lat": 22.6007794, "lon": 120.3395566 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 238024861,
+  "bounds": {
+    "minlat": 22.5952800,
+    "minlon": 120.3271983,
+    "maxlat": 22.5966784,
+    "maxlon": 120.3275661
+  },
+  "geometry": [
+    { "lat": 22.5966784, "lon": 120.3271983 },
+    { "lat": 22.5952800, "lon": 120.3275661 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 238024862,
+  "bounds": {
+    "minlat": 22.5908930,
+    "minlon": 120.3291587,
+    "maxlat": 22.5932238,
+    "maxlon": 120.3325301
+  },
+  "geometry": [
+    { "lat": 22.5932238, "lon": 120.3325301 },
+    { "lat": 22.5908930, "lon": 120.3291587 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 238024863,
+  "bounds": {
+    "minlat": 22.6005844,
+    "minlon": 120.3348603,
+    "maxlat": 22.6027261,
+    "maxlon": 120.3380143
+  },
+  "geometry": [
+    { "lat": 22.6005844, "lon": 120.3348603 },
+    { "lat": 22.6027261, "lon": 120.3380143 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 238024864,
+  "bounds": {
+    "minlat": 22.6000739,
+    "minlon": 120.3294749,
+    "maxlat": 22.6010196,
+    "maxlon": 120.3301212
+  },
+  "geometry": [
+    { "lat": 22.6000739, "lon": 120.3301212 },
+    { "lat": 22.6010196, "lon": 120.3294749 }
+  ],
+  "tags": {
+    "admin_level": "7",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 238024865,
+  "bounds": {
+    "minlat": 22.5956838,
+    "minlon": 120.3348458,
+    "maxlat": 22.5973042,
+    "maxlon": 120.3361094
+  },
+  "geometry": [
+    { "lat": 22.5973042, "lon": 120.3348458 },
+    { "lat": 22.5956838, "lon": 120.3361094 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 238024866,
+  "bounds": {
+    "minlat": 22.5987373,
+    "minlon": 120.3307415,
+    "maxlat": 22.5993650,
+    "maxlon": 120.3321190
+  },
+  "geometry": [
+    { "lat": 22.5987373, "lon": 120.3321190 },
+    { "lat": 22.5993650, "lon": 120.3307415 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 238024867,
+  "bounds": {
+    "minlat": 22.6027261,
+    "minlon": 120.3366952,
+    "maxlat": 22.6043609,
+    "maxlon": 120.3380143
+  },
+  "geometry": [
+    { "lat": 22.6027261, "lon": 120.3380143 },
+    { "lat": 22.6043609, "lon": 120.3366952 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 238024868,
+  "bounds": {
+    "minlat": 22.5849602,
+    "minlon": 120.3229728,
+    "maxlat": 22.5873117,
+    "maxlon": 120.3278671
+  },
+  "geometry": [
+    { "lat": 22.5873117, "lon": 120.3238963 },
+    { "lat": 22.5870109, "lon": 120.3240450 },
+    { "lat": 22.5861091, "lon": 120.3247260 },
+    { "lat": 22.5860304, "lon": 120.3247166 },
+    { "lat": 22.5859948, "lon": 120.3246735 },
+    { "lat": 22.5859510, "lon": 120.3244884 },
+    { "lat": 22.5859665, "lon": 120.3243074 },
+    { "lat": 22.5862013, "lon": 120.3233317 },
+    { "lat": 22.5861936, "lon": 120.3230718 },
+    { "lat": 22.5861236, "lon": 120.3229728 },
+    { "lat": 22.5859480, "lon": 120.3230226 },
+    { "lat": 22.5853834, "lon": 120.3233941 },
+    { "lat": 22.5852030, "lon": 120.3235818 },
+    { "lat": 22.5849978, "lon": 120.3240219 },
+    { "lat": 22.5849605, "lon": 120.3241820 },
+    { "lat": 22.5849602, "lon": 120.3245329 },
+    { "lat": 22.5850714, "lon": 120.3251162 },
+    { "lat": 22.5850460, "lon": 120.3258132 },
+    { "lat": 22.5850755, "lon": 120.3259003 },
+    { "lat": 22.5851964, "lon": 120.3260668 },
+    { "lat": 22.5856212, "lon": 120.3265373 },
+    { "lat": 22.5856885, "lon": 120.3267176 },
+    { "lat": 22.5856475, "lon": 120.3270060 },
+    { "lat": 22.5854798, "lon": 120.3276451 },
+    { "lat": 22.5854771, "lon": 120.3278671 }
+  ],
+  "tags": {
+    "admin_level": "7",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 238024869,
+  "bounds": {
+    "minlat": 22.5859547,
+    "minlon": 120.3313831,
+    "maxlat": 22.5904370,
+    "maxlon": 120.3349792
+  },
+  "geometry": [
+    { "lat": 22.5859547, "lon": 120.3313831 },
+    { "lat": 22.5861534, "lon": 120.3318633 },
+    { "lat": 22.5862197, "lon": 120.3319054 },
+    { "lat": 22.5863227, "lon": 120.3322476 },
+    { "lat": 22.5862429, "lon": 120.3331507 },
+    { "lat": 22.5861361, "lon": 120.3337399 },
+    { "lat": 22.5861354, "lon": 120.3339297 },
+    { "lat": 22.5862177, "lon": 120.3341767 },
+    { "lat": 22.5863978, "lon": 120.3343311 },
+    { "lat": 22.5867580, "lon": 120.3345164 },
+    { "lat": 22.5872366, "lon": 120.3346604 },
+    { "lat": 22.5873106, "lon": 120.3347418 },
+    { "lat": 22.5875402, "lon": 120.3346862 },
+    { "lat": 22.5878592, "lon": 120.3345524 },
+    { "lat": 22.5879930, "lon": 120.3345318 },
+    { "lat": 22.5883789, "lon": 120.3345781 },
+    { "lat": 22.5885899, "lon": 120.3345267 },
+    { "lat": 22.5886378, "lon": 120.3345047 },
+    { "lat": 22.5889141, "lon": 120.3343774 },
+    { "lat": 22.5891611, "lon": 120.3341665 },
+    { "lat": 22.5893617, "lon": 120.3341304 },
+    { "lat": 22.5895161, "lon": 120.3341510 },
+    { "lat": 22.5896139, "lon": 120.3341973 },
+    { "lat": 22.5898403, "lon": 120.3343414 },
+    { "lat": 22.5902571, "lon": 120.3347736 },
+    { "lat": 22.5904370, "lon": 120.3349792 }
+  ],
+  "tags": {
+    "admin_level": "7",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 238024870,
+  "bounds": {
+    "minlat": 22.5985028,
+    "minlon": 120.3365001,
+    "maxlat": 22.6007794,
+    "maxlon": 120.3395566
+  },
+  "geometry": [
+    { "lat": 22.6007794, "lon": 120.3395566 },
+    { "lat": 22.5991190, "lon": 120.3371704 },
+    { "lat": 22.5985028, "lon": 120.3365001 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 238024871,
+  "bounds": {
+    "minlat": 22.5933169,
+    "minlon": 120.3282250,
+    "maxlat": 22.5953634,
+    "maxlon": 120.3308335
+  },
+  "geometry": [
+    { "lat": 22.5953634, "lon": 120.3308335 },
+    { "lat": 22.5944417, "lon": 120.3297043 },
+    { "lat": 22.5933169, "lon": 120.3282250 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 238024872,
+  "bounds": {
+    "minlat": 22.5873117,
+    "minlon": 120.3238963,
+    "maxlat": 22.5908930,
+    "maxlon": 120.3291587
+  },
+  "geometry": [
+    { "lat": 22.5873117, "lon": 120.3238963 },
+    { "lat": 22.5885217, "lon": 120.3256001 },
+    { "lat": 22.5908930, "lon": 120.3291587 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 238024873,
+  "bounds": {
+    "minlat": 22.5955355,
+    "minlon": 120.3224598,
+    "maxlat": 22.5989915,
+    "maxlon": 120.3264858
+  },
+  "geometry": [
+    { "lat": 22.5989915, "lon": 120.3264858 },
+    { "lat": 22.5964854, "lon": 120.3228674 },
+    { "lat": 22.5955355, "lon": 120.3224598 }
+  ],
+  "tags": {
+    "admin_level": "7",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 238024874,
+  "bounds": {
+    "minlat": 22.5933169,
+    "minlon": 120.3275661,
+    "maxlat": 22.5952800,
+    "maxlon": 120.3282250
+  },
+  "geometry": [
+    { "lat": 22.5952800, "lon": 120.3275661 },
+    { "lat": 22.5944075, "lon": 120.3278507 },
+    { "lat": 22.5933169, "lon": 120.3282250 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 238024875,
+  "bounds": {
+    "minlat": 22.5891509,
+    "minlon": 120.3230626,
+    "maxlat": 22.5933169,
+    "maxlon": 120.3282250
+  },
+  "geometry": [
+    { "lat": 22.5891509, "lon": 120.3230626 },
+    { "lat": 22.5921833, "lon": 120.3266269 },
+    { "lat": 22.5933169, "lon": 120.3282250 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 238024876,
+  "bounds": {
+    "minlat": 22.5934709,
+    "minlon": 120.3415204,
+    "maxlat": 22.5982582,
+    "maxlon": 120.3452416
+  },
+  "geometry": [
+    { "lat": 22.5934709, "lon": 120.3452416 },
+    { "lat": 22.5979309, "lon": 120.3417043 },
+    { "lat": 22.5982582, "lon": 120.3415204 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 238024877,
+  "bounds": {
+    "minlat": 22.5941886,
+    "minlon": 120.3361094,
+    "maxlat": 22.5957786,
+    "maxlon": 120.3386337
+  },
+  "geometry": [
+    { "lat": 22.5957786, "lon": 120.3386337 },
+    { "lat": 22.5941886, "lon": 120.3373134 },
+    { "lat": 22.5956838, "lon": 120.3361094 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 238024878,
+  "bounds": {
+    "minlat": 22.5973042,
+    "minlon": 120.3348458,
+    "maxlat": 22.5985028,
+    "maxlon": 120.3365001
+  },
+  "geometry": [
+    { "lat": 22.5973042, "lon": 120.3348458 },
+    { "lat": 22.5981172, "lon": 120.3360161 },
+    { "lat": 22.5985028, "lon": 120.3365001 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 238024879,
+  "bounds": {
+    "minlat": 22.5859547,
+    "minlon": 120.3291587,
+    "maxlat": 22.5908930,
+    "maxlon": 120.3313831
+  },
+  "geometry": [
+    { "lat": 22.5908930, "lon": 120.3291587 },
+    { "lat": 22.5899303, "lon": 120.3295800 },
+    { "lat": 22.5886137, "lon": 120.3302119 },
+    { "lat": 22.5859547, "lon": 120.3313831 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 238024880,
+  "bounds": {
+    "minlat": 22.5876276,
+    "minlon": 120.3230626,
+    "maxlat": 22.5891509,
+    "maxlon": 120.3237872
+  },
+  "geometry": [
+    { "lat": 22.5891509, "lon": 120.3230626 },
+    { "lat": 22.5889577, "lon": 120.3232724 },
+    { "lat": 22.5887543, "lon": 120.3233907 },
+    { "lat": 22.5876276, "lon": 120.3237872 }
+  ],
+  "tags": {
+    "admin_level": "7",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 238024881,
+  "bounds": {
+    "minlat": 22.5858560,
+    "minlon": 120.3503618,
+    "maxlat": 22.5908984,
+    "maxlon": 120.3531773
+  },
+  "geometry": [
+    { "lat": 22.5858560, "lon": 120.3503618 },
+    { "lat": 22.5859668, "lon": 120.3505123 },
+    { "lat": 22.5866344, "lon": 120.3510304 },
+    { "lat": 22.5908984, "lon": 120.3531773 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 238024882,
+  "bounds": {
+    "minlat": 22.6043609,
+    "minlon": 120.3366952,
+    "maxlat": 22.6060111,
+    "maxlon": 120.3393274
+  },
+  "geometry": [
+    { "lat": 22.6060111, "lon": 120.3393244 },
+    { "lat": 22.6055724, "lon": 120.3393274 },
+    { "lat": 22.6055877, "lon": 120.3385370 },
+    { "lat": 22.6043609, "lon": 120.3366952 }
+  ],
+  "tags": {
+    "admin_level": "7",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 238024883,
+  "bounds": {
+    "minlat": 22.5904370,
+    "minlon": 120.3325301,
+    "maxlat": 22.5932238,
+    "maxlon": 120.3349792
+  },
+  "geometry": [
+    { "lat": 22.5904370, "lon": 120.3349792 },
+    { "lat": 22.5914374, "lon": 120.3340501 },
+    { "lat": 22.5914030, "lon": 120.3339977 },
+    { "lat": 22.5932238, "lon": 120.3325301 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 238024884,
+  "bounds": {
+    "minlat": 22.5973042,
+    "minlon": 120.3321190,
+    "maxlat": 22.5987373,
+    "maxlon": 120.3348458
+  },
+  "geometry": [
+    { "lat": 22.5973042, "lon": 120.3348458 },
+    { "lat": 22.5975946, "lon": 120.3345811 },
+    { "lat": 22.5977759, "lon": 120.3343292 },
+    { "lat": 22.5981977, "lon": 120.3333030 },
+    { "lat": 22.5987373, "lon": 120.3321190 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 238024885,
+  "bounds": {
+    "minlat": 22.5982582,
+    "minlon": 120.3415204,
+    "maxlat": 22.6014818,
+    "maxlon": 120.3432941
+  },
+  "geometry": [
+    { "lat": 22.6014818, "lon": 120.3432941 },
+    { "lat": 22.6007158, "lon": 120.3428971 },
+    { "lat": 22.6004526, "lon": 120.3427293 },
+    { "lat": 22.5996884, "lon": 120.3423562 },
+    { "lat": 22.5982582, "lon": 120.3415204 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 238024886,
+  "bounds": {
+    "minlat": 22.5891509,
+    "minlon": 120.3217841,
+    "maxlat": 22.5903399,
+    "maxlon": 120.3230626
+  },
+  "geometry": [
+    { "lat": 22.5903399, "lon": 120.3217841 },
+    { "lat": 22.5901847, "lon": 120.3218078 },
+    { "lat": 22.5898269, "lon": 120.3220218 },
+    { "lat": 22.5895810, "lon": 120.3223735 },
+    { "lat": 22.5891948, "lon": 120.3230150 },
+    { "lat": 22.5891509, "lon": 120.3230626 }
+  ],
+  "tags": {
+    "admin_level": "7",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 238024887,
+  "bounds": {
+    "minlat": 22.5908984,
+    "minlon": 120.3531773,
+    "maxlat": 22.5970993,
+    "maxlon": 120.3553416
+  },
+  "geometry": [
+    { "lat": 22.5970993, "lon": 120.3553215 },
+    { "lat": 22.5965325, "lon": 120.3553416 },
+    { "lat": 22.5960847, "lon": 120.3553275 },
+    { "lat": 22.5956889, "lon": 120.3552188 },
+    { "lat": 22.5934103, "lon": 120.3542719 },
+    { "lat": 22.5910413, "lon": 120.3532396 },
+    { "lat": 22.5908984, "lon": 120.3531773 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 238024888,
+  "bounds": {
+    "minlat": 22.5953634,
+    "minlon": 120.3308335,
+    "maxlat": 22.5973042,
+    "maxlon": 120.3348458
+  },
+  "geometry": [
+    { "lat": 22.5953634, "lon": 120.3308335 },
+    { "lat": 22.5955510, "lon": 120.3310951 },
+    { "lat": 22.5960517, "lon": 120.3322172 },
+    { "lat": 22.5961930, "lon": 120.3328613 },
+    { "lat": 22.5964680, "lon": 120.3334893 },
+    { "lat": 22.5973042, "lon": 120.3348458 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 238024889,
+  "bounds": {
+    "minlat": 22.5903399,
+    "minlon": 120.3217841,
+    "maxlat": 22.5966784,
+    "maxlon": 120.3271983
+  },
+  "geometry": [
+    { "lat": 22.5903399, "lon": 120.3217841 },
+    { "lat": 22.5929996, "lon": 120.3257225 },
+    { "lat": 22.5932828, "lon": 120.3254027 },
+    { "lat": 22.5938977, "lon": 120.3263168 },
+    { "lat": 22.5949751, "lon": 120.3259246 },
+    { "lat": 22.5956218, "lon": 120.3257495 },
+    { "lat": 22.5966784, "lon": 120.3271983 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 238024890,
+  "bounds": {
+    "minlat": 22.5925338,
+    "minlon": 120.3386337,
+    "maxlat": 22.5957786,
+    "maxlon": 120.3452416
+  },
+  "geometry": [
+    { "lat": 22.5957786, "lon": 120.3386337 },
+    { "lat": 22.5940922, "lon": 120.3400030 },
+    { "lat": 22.5936849, "lon": 120.3402107 },
+    { "lat": 22.5933196, "lon": 120.3404299 },
+    { "lat": 22.5925338, "lon": 120.3410590 },
+    { "lat": 22.5938049, "lon": 120.3429290 },
+    { "lat": 22.5925561, "lon": 120.3439555 },
+    { "lat": 22.5934709, "lon": 120.3452416 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 238024891,
+  "bounds": {
+    "minlat": 22.5952800,
+    "minlon": 120.3275661,
+    "maxlat": 22.5993650,
+    "maxlon": 120.3307415
+  },
+  "geometry": [
+    { "lat": 22.5993650, "lon": 120.3307415 },
+    { "lat": 22.5981992, "lon": 120.3292330 },
+    { "lat": 22.5976120, "lon": 120.3286211 },
+    { "lat": 22.5974075, "lon": 120.3285788 },
+    { "lat": 22.5968055, "lon": 120.3287056 },
+    { "lat": 22.5962406, "lon": 120.3290478 },
+    { "lat": 22.5952800, "lon": 120.3275661 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 238024892,
+  "bounds": {
+    "minlat": 22.6010303,
+    "minlon": 120.3422916,
+    "maxlat": 22.6019190,
+    "maxlon": 120.3434808
+  },
+  "geometry": [
+    { "lat": 22.6010303, "lon": 120.3422916 },
+    { "lat": 22.6015640, "lon": 120.3429853 },
+    { "lat": 22.6019190, "lon": 120.3434808 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 238024893,
+  "bounds": {
+    "minlat": 22.6010303,
+    "minlon": 120.3412175,
+    "maxlat": 22.6061205,
+    "maxlon": 120.3424171
+  },
+  "geometry": [
+    { "lat": 22.6061205, "lon": 120.3412175 },
+    { "lat": 22.6054516, "lon": 120.3415597 },
+    { "lat": 22.6046303, "lon": 120.3419783 },
+    { "lat": 22.6040468, "lon": 120.3421997 },
+    { "lat": 22.6034150, "lon": 120.3423286 },
+    { "lat": 22.6028501, "lon": 120.3424171 },
+    { "lat": 22.6022592, "lon": 120.3423889 },
+    { "lat": 22.6015643, "lon": 120.3423406 },
+    { "lat": 22.6010303, "lon": 120.3422916 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 238027900,
+  "bounds": {
+    "minlat": 22.6071246,
+    "minlon": 120.3564201,
+    "maxlat": 22.6144288,
+    "maxlon": 120.3693619
+  },
+  "geometry": [
+    { "lat": 22.6071246, "lon": 120.3564201 },
+    { "lat": 22.6071926, "lon": 120.3571091 },
+    { "lat": 22.6074272, "lon": 120.3616009 },
+    { "lat": 22.6074643, "lon": 120.3627013 },
+    { "lat": 22.6079297, "lon": 120.3628421 },
+    { "lat": 22.6129287, "lon": 120.3627492 },
+    { "lat": 22.6135157, "lon": 120.3655457 },
+    { "lat": 22.6140138, "lon": 120.3678811 },
+    { "lat": 22.6144288, "lon": 120.3693619 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 238027901,
+  "bounds": {
+    "minlat": 22.5971680,
+    "minlon": 120.3528364,
+    "maxlat": 22.5994465,
+    "maxlon": 120.3529393
+  },
+  "geometry": [
+    { "lat": 22.5994465, "lon": 120.3529393 },
+    { "lat": 22.5971680, "lon": 120.3528364 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 238027902,
+  "bounds": {
+    "minlat": 22.6186589,
+    "minlon": 120.3475799,
+    "maxlat": 22.6198680,
+    "maxlon": 120.3495500
+  },
+  "geometry": [
+    { "lat": 22.6198680, "lon": 120.3475799 },
+    { "lat": 22.6186589, "lon": 120.3495500 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 238027903,
+  "bounds": {
+    "minlat": 22.5970993,
+    "minlon": 120.3528364,
+    "maxlat": 22.5971680,
+    "maxlon": 120.3553215
+  },
+  "geometry": [
+    { "lat": 22.5971680, "lon": 120.3528364 },
+    { "lat": 22.5970993, "lon": 120.3553215 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 238027904,
+  "bounds": {
+    "minlat": 22.6123176,
+    "minlon": 120.3327325,
+    "maxlat": 22.6126622,
+    "maxlon": 120.3371201
+  },
+  "geometry": [
+    { "lat": 22.6126622, "lon": 120.3371201 },
+    { "lat": 22.6123176, "lon": 120.3327325 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 238027906,
+  "bounds": {
+    "minlat": 22.6145053,
+    "minlon": 120.3475818,
+    "maxlat": 22.6154580,
+    "maxlon": 120.3484071
+  },
+  "geometry": [
+    { "lat": 22.6145053, "lon": 120.3475818 },
+    { "lat": 22.6154580, "lon": 120.3484071 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 238027907,
+  "bounds": {
+    "minlat": 22.6102979,
+    "minlon": 120.3371201,
+    "maxlat": 22.6126622,
+    "maxlon": 120.3374758
+  },
+  "geometry": [
+    { "lat": 22.6126622, "lon": 120.3371201 },
+    { "lat": 22.6102979, "lon": 120.3374758 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 238027909,
+  "bounds": {
+    "minlat": 22.6088709,
+    "minlon": 120.3454647,
+    "maxlat": 22.6100800,
+    "maxlon": 120.3455128
+  },
+  "geometry": [
+    { "lat": 22.6088709, "lon": 120.3454647 },
+    { "lat": 22.6100800, "lon": 120.3455128 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 238027910,
+  "bounds": {
+    "minlat": 22.6101258,
+    "minlon": 120.3558597,
+    "maxlat": 22.6101978,
+    "maxlon": 120.3573477
+  },
+  "geometry": [
+    { "lat": 22.6101258, "lon": 120.3558597 },
+    { "lat": 22.6101978, "lon": 120.3573477 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 238027912,
+  "bounds": {
+    "minlat": 22.6109070,
+    "minlon": 120.3469150,
+    "maxlat": 22.6135459,
+    "maxlon": 120.3490419
+  },
+  "geometry": [
+    { "lat": 22.6109070, "lon": 120.3469150 },
+    { "lat": 22.6135459, "lon": 120.3490419 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 238027913,
+  "bounds": {
+    "minlat": 22.6100736,
+    "minlon": 120.3522871,
+    "maxlat": 22.6101258,
+    "maxlon": 120.3558597
+  },
+  "geometry": [
+    { "lat": 22.6100736, "lon": 120.3522871 },
+    { "lat": 22.6101258, "lon": 120.3558597 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 238027915,
+  "bounds": {
+    "minlat": 22.6135459,
+    "minlon": 120.3475818,
+    "maxlat": 22.6145053,
+    "maxlon": 120.3490419
+  },
+  "geometry": [
+    { "lat": 22.6135459, "lon": 120.3490419 },
+    { "lat": 22.6145053, "lon": 120.3475818 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 238027916,
+  "bounds": {
+    "minlat": 22.6129908,
+    "minlon": 120.3441708,
+    "maxlat": 22.6130711,
+    "maxlon": 120.3455488
+  },
+  "geometry": [
+    { "lat": 22.6129908, "lon": 120.3441708 },
+    { "lat": 22.6130711, "lon": 120.3455488 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 238027918,
+  "bounds": {
+    "minlat": 22.6100736,
+    "minlon": 120.3504007,
+    "maxlat": 22.6123244,
+    "maxlon": 120.3522871
+  },
+  "geometry": [
+    { "lat": 22.6123244, "lon": 120.3504007 },
+    { "lat": 22.6100736, "lon": 120.3522871 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 238027919,
+  "bounds": {
+    "minlat": 22.6126622,
+    "minlon": 120.3366435,
+    "maxlat": 22.6164492,
+    "maxlon": 120.3371201
+  },
+  "geometry": [
+    { "lat": 22.6164492, "lon": 120.3366435 },
+    { "lat": 22.6126622, "lon": 120.3371201 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 238027921,
+  "bounds": {
+    "minlat": 22.6061205,
+    "minlon": 120.3399848,
+    "maxlat": 22.6084785,
+    "maxlon": 120.3412175
+  },
+  "geometry": [
+    { "lat": 22.6061205, "lon": 120.3412175 },
+    { "lat": 22.6076401, "lon": 120.3403843 },
+    { "lat": 22.6084785, "lon": 120.3399848 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 238027922,
+  "bounds": {
+    "minlat": 22.6198680,
+    "minlon": 120.3451089,
+    "maxlat": 22.6218616,
+    "maxlon": 120.3475799
+  },
+  "geometry": [
+    { "lat": 22.6198680, "lon": 120.3475799 },
+    { "lat": 22.6209376, "lon": 120.3459584 },
+    { "lat": 22.6218616, "lon": 120.3451089 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 238027924,
+  "bounds": {
+    "minlat": 22.6097755,
+    "minlon": 120.3414926,
+    "maxlat": 22.6107225,
+    "maxlon": 120.3455128
+  },
+  "geometry": [
+    { "lat": 22.6100800, "lon": 120.3455128 },
+    { "lat": 22.6097755, "lon": 120.3415627 },
+    { "lat": 22.6107225, "lon": 120.3414926 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 238027925,
+  "bounds": {
+    "minlat": 22.6187405,
+    "minlon": 120.3519519,
+    "maxlat": 22.6193191,
+    "maxlon": 120.3531798
+  },
+  "geometry": [
+    { "lat": 22.6191118, "lon": 120.3519519 },
+    { "lat": 22.6187405, "lon": 120.3527722 },
+    { "lat": 22.6193191, "lon": 120.3531798 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 238027927,
+  "bounds": {
+    "minlat": 22.6174683,
+    "minlon": 120.3451089,
+    "maxlat": 22.6218616,
+    "maxlon": 120.3456173
+  },
+  "geometry": [
+    { "lat": 22.6174683, "lon": 120.3456173 },
+    { "lat": 22.6208490, "lon": 120.3453163 },
+    { "lat": 22.6218616, "lon": 120.3451089 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 238027929,
+  "bounds": {
+    "minlat": 22.6084785,
+    "minlon": 120.3399848,
+    "maxlat": 22.6088709,
+    "maxlon": 120.3454647
+  },
+  "geometry": [
+    { "lat": 22.6084785, "lon": 120.3399848 },
+    { "lat": 22.6085609, "lon": 120.3406952 },
+    { "lat": 22.6088709, "lon": 120.3454647 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 238027930,
+  "bounds": {
+    "minlat": 22.6113647,
+    "minlon": 120.3327325,
+    "maxlat": 22.6123176,
+    "maxlon": 120.3327838
+  },
+  "geometry": [
+    { "lat": 22.6123176, "lon": 120.3327325 },
+    { "lat": 22.6115207, "lon": 120.3327838 },
+    { "lat": 22.6113647, "lon": 120.3327793 }
+  ],
+  "tags": {
+    "admin_level": "7",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 238027932,
+  "bounds": {
+    "minlat": 22.6145053,
+    "minlon": 120.3455836,
+    "maxlat": 22.6174683,
+    "maxlon": 120.3475818
+  },
+  "geometry": [
+    { "lat": 22.6145053, "lon": 120.3475818 },
+    { "lat": 22.6158762, "lon": 120.3455836 },
+    { "lat": 22.6174683, "lon": 120.3456173 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 238027933,
+  "bounds": {
+    "minlat": 22.6102979,
+    "minlon": 120.3374758,
+    "maxlat": 22.6108325,
+    "maxlon": 120.3388873
+  },
+  "geometry": [
+    { "lat": 22.6108325, "lon": 120.3388873 },
+    { "lat": 22.6103720, "lon": 120.3376835 },
+    { "lat": 22.6102979, "lon": 120.3374758 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 238027934,
+  "bounds": {
+    "minlat": 22.6084785,
+    "minlon": 120.3388873,
+    "maxlat": 22.6108325,
+    "maxlon": 120.3399848
+  },
+  "geometry": [
+    { "lat": 22.6084785, "lon": 120.3399848 },
+    { "lat": 22.6101576, "lon": 120.3391849 },
+    { "lat": 22.6108325, "lon": 120.3388873 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 238027936,
+  "bounds": {
+    "minlat": 22.6123244,
+    "minlon": 120.3490419,
+    "maxlat": 22.6135459,
+    "maxlon": 120.3504007
+  },
+  "geometry": [
+    { "lat": 22.6135459, "lon": 120.3490419 },
+    { "lat": 22.6127785, "lon": 120.3499377 },
+    { "lat": 22.6123244, "lon": 120.3504007 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 238027938,
+  "bounds": {
+    "minlat": 22.6179222,
+    "minlon": 120.3531798,
+    "maxlat": 22.6193191,
+    "maxlon": 120.3547382
+  },
+  "geometry": [
+    { "lat": 22.6193191, "lon": 120.3531798 },
+    { "lat": 22.6183632, "lon": 120.3546200 },
+    { "lat": 22.6180314, "lon": 120.3544213 },
+    { "lat": 22.6179222, "lon": 120.3547382 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 238027941,
+  "bounds": {
+    "minlat": 22.6154580,
+    "minlon": 120.3484071,
+    "maxlat": 22.6186589,
+    "maxlon": 120.3495500
+  },
+  "geometry": [
+    { "lat": 22.6186589, "lon": 120.3495500 },
+    { "lat": 22.6184082, "lon": 120.3494310 },
+    { "lat": 22.6169061, "lon": 120.3489943 },
+    { "lat": 22.6161376, "lon": 120.3487625 },
+    { "lat": 22.6154580, "lon": 120.3484071 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 238027942,
+  "bounds": {
+    "minlat": 22.6061205,
+    "minlon": 120.3412175,
+    "maxlat": 22.6088709,
+    "maxlon": 120.3456298
+  },
+  "geometry": [
+    { "lat": 22.6061205, "lon": 120.3412175 },
+    { "lat": 22.6065587, "lon": 120.3456298 },
+    { "lat": 22.6085887, "lon": 120.3454534 },
+    { "lat": 22.6088709, "lon": 120.3454647 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 238027944,
+  "bounds": {
+    "minlat": 22.6100800,
+    "minlon": 120.3455128,
+    "maxlat": 22.6109070,
+    "maxlon": 120.3469150
+  },
+  "geometry": [
+    { "lat": 22.6100800, "lon": 120.3455128 },
+    { "lat": 22.6101494, "lon": 120.3462185 },
+    { "lat": 22.6102615, "lon": 120.3463948 },
+    { "lat": 22.6109070, "lon": 120.3469150 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 238027945,
+  "bounds": {
+    "minlat": 22.6109070,
+    "minlon": 120.3455488,
+    "maxlat": 22.6130711,
+    "maxlon": 120.3469150
+  },
+  "geometry": [
+    { "lat": 22.6130711, "lon": 120.3455488 },
+    { "lat": 22.6120487, "lon": 120.3455591 },
+    { "lat": 22.6119684, "lon": 120.3457029 },
+    { "lat": 22.6115331, "lon": 120.3460742 },
+    { "lat": 22.6109070, "lon": 120.3469150 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 238027947,
+  "bounds": {
+    "minlat": 22.6106614,
+    "minlon": 120.3388873,
+    "maxlat": 22.6109365,
+    "maxlon": 120.3414926
+  },
+  "geometry": [
+    { "lat": 22.6107225, "lon": 120.3414926 },
+    { "lat": 22.6106614, "lon": 120.3406128 },
+    { "lat": 22.6106679, "lon": 120.3403952 },
+    { "lat": 22.6109365, "lon": 120.3395084 },
+    { "lat": 22.6108325, "lon": 120.3388873 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 238027949,
+  "bounds": {
+    "minlat": 22.6107225,
+    "minlon": 120.3414926,
+    "maxlat": 22.6129908,
+    "maxlon": 120.3443313
+  },
+  "geometry": [
+    { "lat": 22.6107225, "lon": 120.3414926 },
+    { "lat": 22.6107488, "lon": 120.3419785 },
+    { "lat": 22.6109773, "lon": 120.3424735 },
+    { "lat": 22.6111013, "lon": 120.3443313 },
+    { "lat": 22.6129908, "lon": 120.3441708 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 238027950,
+  "bounds": {
+    "minlat": 22.6218616,
+    "minlon": 120.3442910,
+    "maxlat": 22.6248953,
+    "maxlon": 120.3451089
+  },
+  "geometry": [
+    { "lat": 22.6218616, "lon": 120.3451089 },
+    { "lat": 22.6223556, "lon": 120.3447544 },
+    { "lat": 22.6231521, "lon": 120.3444668 },
+    { "lat": 22.6239795, "lon": 120.3443263 },
+    { "lat": 22.6248953, "lon": 120.3442910 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 238027952,
+  "bounds": {
+    "minlat": 22.6019190,
+    "minlon": 120.3434808,
+    "maxlat": 22.6123244,
+    "maxlon": 120.3504007
+  },
+  "geometry": [
+    { "lat": 22.6019190, "lon": 120.3434808 },
+    { "lat": 22.6041194, "lon": 120.3451310 },
+    { "lat": 22.6069106, "lon": 120.3469524 },
+    { "lat": 22.6118013, "lon": 120.3498020 },
+    { "lat": 22.6123244, "lon": 120.3504007 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 238027953,
+  "bounds": {
+    "minlat": 22.6130711,
+    "minlon": 120.3455488,
+    "maxlat": 22.6145053,
+    "maxlon": 120.3475818
+  },
+  "geometry": [
+    { "lat": 22.6145053, "lon": 120.3475818 },
+    { "lat": 22.6136378, "lon": 120.3468426 },
+    { "lat": 22.6133105, "lon": 120.3466286 },
+    { "lat": 22.6132364, "lon": 120.3465282 },
+    { "lat": 22.6131561, "lon": 120.3463008 },
+    { "lat": 22.6130711, "lon": 120.3455488 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 238027955,
+  "bounds": {
+    "minlat": 22.6186589,
+    "minlon": 120.3494869,
+    "maxlat": 22.6199780,
+    "maxlon": 120.3519519
+  },
+  "geometry": [
+    { "lat": 22.6186589, "lon": 120.3495500 },
+    { "lat": 22.6189571, "lon": 120.3495067 },
+    { "lat": 22.6199780, "lon": 120.3494869 },
+    { "lat": 22.6199441, "lon": 120.3504769 },
+    { "lat": 22.6197928, "lon": 120.3507846 },
+    { "lat": 22.6191118, "lon": 120.3519519 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 238027956,
+  "bounds": {
+    "minlat": 22.6059948,
+    "minlon": 120.3374758,
+    "maxlat": 22.6102979,
+    "maxlon": 120.3390626
+  },
+  "geometry": [
+    { "lat": 22.6102979, "lon": 120.3374758 },
+    { "lat": 22.6069124, "lon": 120.3379783 },
+    { "lat": 22.6068271, "lon": 120.3382961 },
+    { "lat": 22.6065655, "lon": 120.3386705 },
+    { "lat": 22.6064428, "lon": 120.3390011 },
+    { "lat": 22.6059948, "lon": 120.3390626 }
+  ],
+  "tags": {
+    "admin_level": "7",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 238027958,
+  "bounds": {
+    "minlat": 22.6173194,
+    "minlon": 120.3543161,
+    "maxlat": 22.6179222,
+    "maxlon": 120.3547382
+  },
+  "geometry": [
+    { "lat": 22.6179222, "lon": 120.3547382 },
+    { "lat": 22.6173194, "lon": 120.3543161 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 238027959,
+  "bounds": {
+    "minlat": 22.5994465,
+    "minlon": 120.3529393,
+    "maxlat": 22.6101258,
+    "maxlon": 120.3558597
+  },
+  "geometry": [
+    { "lat": 22.6101258, "lon": 120.3558597 },
+    { "lat": 22.6085277, "lon": 120.3553489 },
+    { "lat": 22.6068116, "lon": 120.3544927 },
+    { "lat": 22.6049340, "lon": 120.3534900 },
+    { "lat": 22.6035716, "lon": 120.3530737 },
+    { "lat": 22.6026506, "lon": 120.3531325 },
+    { "lat": 22.6019473, "lon": 120.3530359 },
+    { "lat": 22.5994465, "lon": 120.3529393 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 238027960,
+  "bounds": {
+    "minlat": 22.5994465,
+    "minlon": 120.3505087,
+    "maxlat": 22.6100736,
+    "maxlon": 120.3529393
+  },
+  "geometry": [
+    { "lat": 22.6100736, "lon": 120.3522871 },
+    { "lat": 22.6098853, "lon": 120.3522135 },
+    { "lat": 22.6067492, "lon": 120.3515206 },
+    { "lat": 22.6023382, "lon": 120.3505257 },
+    { "lat": 22.6017591, "lon": 120.3506112 },
+    { "lat": 22.5995504, "lon": 120.3505087 },
+    { "lat": 22.5994465, "lon": 120.3529393 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 238027961,
+  "bounds": {
+    "minlat": 22.6135459,
+    "minlon": 120.3490419,
+    "maxlat": 22.6174008,
+    "maxlon": 120.3515565
+  },
+  "geometry": [
+    { "lat": 22.6174008, "lon": 120.3515565 },
+    { "lat": 22.6155097, "lon": 120.3511826 },
+    { "lat": 22.6154303, "lon": 120.3511643 },
+    { "lat": 22.6145483, "lon": 120.3508994 },
+    { "lat": 22.6149806, "lon": 120.3501473 },
+    { "lat": 22.6135459, "lon": 120.3490419 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 238027963,
+  "bounds": {
+    "minlat": 22.6129908,
+    "minlon": 120.3432761,
+    "maxlat": 22.6174683,
+    "maxlon": 120.3456173
+  },
+  "geometry": [
+    { "lat": 22.6129908, "lon": 120.3441708 },
+    { "lat": 22.6137726, "lon": 120.3441156 },
+    { "lat": 22.6143006, "lon": 120.3439885 },
+    { "lat": 22.6150262, "lon": 120.3435637 },
+    { "lat": 22.6153071, "lon": 120.3434667 },
+    { "lat": 22.6167337, "lon": 120.3433184 },
+    { "lat": 22.6171410, "lon": 120.3432761 },
+    { "lat": 22.6174683, "lon": 120.3456173 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 238027964,
+  "bounds": {
+    "minlat": 22.6071246,
+    "minlon": 120.3564201,
+    "maxlat": 22.6101978,
+    "maxlon": 120.3575298
+  },
+  "geometry": [
+    { "lat": 22.6101978, "lon": 120.3573477 },
+    { "lat": 22.6096585, "lon": 120.3575014 },
+    { "lat": 22.6092568, "lon": 120.3575298 },
+    { "lat": 22.6088070, "lon": 120.3574659 },
+    { "lat": 22.6083638, "lon": 120.3572862 },
+    { "lat": 22.6075167, "lon": 120.3566382 },
+    { "lat": 22.6071246, "lon": 120.3564201 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 238027966,
+  "bounds": {
+    "minlat": 22.5971680,
+    "minlon": 120.3432941,
+    "maxlat": 22.6014818,
+    "maxlon": 120.3528364
+  },
+  "geometry": [
+    { "lat": 22.6014818, "lon": 120.3432941 },
+    { "lat": 22.6010423, "lon": 120.3437456 },
+    { "lat": 22.6004220, "lon": 120.3442919 },
+    { "lat": 22.5996948, "lon": 120.3452154 },
+    { "lat": 22.5983617, "lon": 120.3469098 },
+    { "lat": 22.5980861, "lon": 120.3473928 },
+    { "lat": 22.5977893, "lon": 120.3473089 },
+    { "lat": 22.5972762, "lon": 120.3518123 },
+    { "lat": 22.5971680, "lon": 120.3528364 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 238027968,
+  "bounds": {
+    "minlat": 22.6154580,
+    "minlon": 120.3470738,
+    "maxlat": 22.6198680,
+    "maxlon": 120.3484071
+  },
+  "geometry": [
+    { "lat": 22.6154580, "lon": 120.3484071 },
+    { "lat": 22.6161740, "lon": 120.3473760 },
+    { "lat": 22.6165233, "lon": 120.3471537 },
+    { "lat": 22.6168988, "lon": 120.3470874 },
+    { "lat": 22.6187947, "lon": 120.3470738 },
+    { "lat": 22.6187907, "lon": 120.3473226 },
+    { "lat": 22.6196214, "lon": 120.3474086 },
+    { "lat": 22.6198680, "lon": 120.3475799 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 238027969,
+  "bounds": {
+    "minlat": 22.6248953,
+    "minlon": 120.3442910,
+    "maxlat": 22.6281222,
+    "maxlon": 120.3443982
+  },
+  "geometry": [
+    { "lat": 22.6248953, "lon": 120.3442910 },
+    { "lat": 22.6270749, "lon": 120.3443637 },
+    { "lat": 22.6281222, "lon": 120.3443982 }
+  ],
+  "tags": {
+    "admin_level": "7",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 238027971,
+  "bounds": {
+    "minlat": 22.5970993,
+    "minlon": 120.3542460,
+    "maxlat": 22.6071246,
+    "maxlon": 120.3564201
+  },
+  "geometry": [
+    { "lat": 22.5970993, "lon": 120.3553215 },
+    { "lat": 22.6020936, "lon": 120.3544778 },
+    { "lat": 22.6040455, "lon": 120.3542460 },
+    { "lat": 22.6044647, "lon": 120.3542460 },
+    { "lat": 22.6050323, "lon": 120.3544115 },
+    { "lat": 22.6057441, "lon": 120.3547663 },
+    { "lat": 22.6062193, "lon": 120.3551967 },
+    { "lat": 22.6067346, "lon": 120.3561238 },
+    { "lat": 22.6071246, "lon": 120.3564201 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 238059403,
+  "bounds": {
+    "minlat": 22.6259262,
+    "minlon": 120.3515886,
+    "maxlat": 22.6291240,
+    "maxlon": 120.3536486
+  },
+  "geometry": [
+    { "lat": 22.6259262, "lon": 120.3535312 },
+    { "lat": 22.6265814, "lon": 120.3536486 },
+    { "lat": 22.6266679, "lon": 120.3530767 },
+    { "lat": 22.6269364, "lon": 120.3524044 },
+    { "lat": 22.6271528, "lon": 120.3522527 },
+    { "lat": 22.6277371, "lon": 120.3522366 },
+    { "lat": 22.6277364, "lon": 120.3515886 },
+    { "lat": 22.6284926, "lon": 120.3516245 },
+    { "lat": 22.6287466, "lon": 120.3516405 },
+    { "lat": 22.6287719, "lon": 120.3518021 },
+    { "lat": 22.6289458, "lon": 120.3518125 },
+    { "lat": 22.6289790, "lon": 120.3523513 },
+    { "lat": 22.6291240, "lon": 120.3523768 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 238059404,
+  "bounds": {
+    "minlat": 22.6101978,
+    "minlon": 120.3558247,
+    "maxlat": 22.6169590,
+    "maxlon": 120.3597364
+  },
+  "geometry": [
+    { "lat": 22.6169590, "lon": 120.3597364 },
+    { "lat": 22.6159330, "lon": 120.3578586 },
+    { "lat": 22.6154745, "lon": 120.3566902 },
+    { "lat": 22.6152213, "lon": 120.3562929 },
+    { "lat": 22.6149026, "lon": 120.3560517 },
+    { "lat": 22.6146799, "lon": 120.3559240 },
+    { "lat": 22.6143131, "lon": 120.3558247 },
+    { "lat": 22.6139813, "lon": 120.3558294 },
+    { "lat": 22.6136843, "lon": 120.3558341 },
+    { "lat": 22.6133743, "lon": 120.3559003 },
+    { "lat": 22.6109030, "lon": 120.3569599 },
+    { "lat": 22.6101978, "lon": 120.3573477 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 238059405,
+  "bounds": {
+    "minlat": 22.6169590,
+    "minlon": 120.3579768,
+    "maxlat": 22.6217176,
+    "maxlon": 120.3599836
+  },
+  "geometry": [
+    { "lat": 22.6217176, "lon": 120.3599310 },
+    { "lat": 22.6211093, "lon": 120.3595764 },
+    { "lat": 22.6214673, "lon": 120.3589793 },
+    { "lat": 22.6216951, "lon": 120.3586469 },
+    { "lat": 22.6216133, "lon": 120.3584398 },
+    { "lat": 22.6215513, "lon": 120.3582809 },
+    { "lat": 22.6213056, "lon": 120.3579768 },
+    { "lat": 22.6207937, "lon": 120.3586558 },
+    { "lat": 22.6203646, "lon": 120.3599836 },
+    { "lat": 22.6199281, "lon": 120.3597033 },
+    { "lat": 22.6180739, "lon": 120.3581598 },
+    { "lat": 22.6171369, "lon": 120.3595075 },
+    { "lat": 22.6169590, "lon": 120.3597364 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 238059406,
+  "bounds": {
+    "minlat": 22.6248953,
+    "minlon": 120.3442910,
+    "maxlat": 22.6254641,
+    "maxlon": 120.3491898
+  },
+  "geometry": [
+    { "lat": 22.6254641, "lon": 120.3491898 },
+    { "lat": 22.6248953, "lon": 120.3442910 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 238059407,
+  "bounds": {
+    "minlat": 22.6259997,
+    "minlon": 120.3558516,
+    "maxlat": 22.6260135,
+    "maxlon": 120.3565915
+  },
+  "geometry": [
+    { "lat": 22.6259997, "lon": 120.3558516 },
+    { "lat": 22.6260135, "lon": 120.3565915 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 238059408,
+  "bounds": {
+    "minlat": 22.6317133,
+    "minlon": 120.3531045,
+    "maxlat": 22.6323223,
+    "maxlon": 120.3562891
+  },
+  "geometry": [
+    { "lat": 22.6317133, "lon": 120.3562891 },
+    { "lat": 22.6323223, "lon": 120.3531045 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 238059409,
+  "bounds": {
+    "minlat": 22.6160645,
+    "minlon": 120.3533912,
+    "maxlat": 22.6173194,
+    "maxlon": 120.3543161
+  },
+  "geometry": [
+    { "lat": 22.6173194, "lon": 120.3543161 },
+    { "lat": 22.6160645, "lon": 120.3533912 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 238059410,
+  "bounds": {
+    "minlat": 22.6323223,
+    "minlon": 120.3498556,
+    "maxlat": 22.6329344,
+    "maxlon": 120.3531045
+  },
+  "geometry": [
+    { "lat": 22.6323223, "lon": 120.3531045 },
+    { "lat": 22.6328393, "lon": 120.3503921 },
+    { "lat": 22.6329344, "lon": 120.3498556 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 238059411,
+  "bounds": {
+    "minlat": 22.6259262,
+    "minlon": 120.3535312,
+    "maxlat": 22.6259786,
+    "maxlon": 120.3555119
+  },
+  "geometry": [
+    { "lat": 22.6259262, "lon": 120.3535312 },
+    { "lat": 22.6259786, "lon": 120.3555119 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 238059412,
+  "bounds": {
+    "minlat": 22.6217176,
+    "minlon": 120.3588108,
+    "maxlat": 22.6223224,
+    "maxlon": 120.3599310
+  },
+  "geometry": [
+    { "lat": 22.6223224, "lon": 120.3588108 },
+    { "lat": 22.6221436, "lon": 120.3591450 },
+    { "lat": 22.6217176, "lon": 120.3599310 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 238059413,
+  "bounds": {
+    "minlat": 22.6254641,
+    "minlon": 120.3491898,
+    "maxlat": 22.6259262,
+    "maxlon": 120.3535312
+  },
+  "geometry": [
+    { "lat": 22.6254641, "lon": 120.3491898 },
+    { "lat": 22.6258525, "lon": 120.3524265 },
+    { "lat": 22.6259262, "lon": 120.3535312 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 238059414,
+  "bounds": {
+    "minlat": 22.6160645,
+    "minlon": 120.3528598,
+    "maxlat": 22.6174175,
+    "maxlon": 120.3543161
+  },
+  "geometry": [
+    { "lat": 22.6173194, "lon": 120.3543161 },
+    { "lat": 22.6174175, "lon": 120.3535788 },
+    { "lat": 22.6164788, "lon": 120.3528598 },
+    { "lat": 22.6160645, "lon": 120.3533912 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 238059415,
+  "bounds": {
+    "minlat": 22.6281222,
+    "minlon": 120.3422152,
+    "maxlat": 22.6284174,
+    "maxlon": 120.3443982
+  },
+  "geometry": [
+    { "lat": 22.6281222, "lon": 120.3443982 },
+    { "lat": 22.6281866, "lon": 120.3430201 },
+    { "lat": 22.6282670, "lon": 120.3427140 },
+    { "lat": 22.6284174, "lon": 120.3422152 }
+  ],
+  "tags": {
+    "admin_level": "7",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 238059416,
+  "bounds": {
+    "minlat": 22.6209132,
+    "minlon": 120.3599310,
+    "maxlat": 22.6217176,
+    "maxlon": 120.3620470
+  },
+  "geometry": [
+    { "lat": 22.6217176, "lon": 120.3599310 },
+    { "lat": 22.6213057, "lon": 120.3606822 },
+    { "lat": 22.6211575, "lon": 120.3610601 },
+    { "lat": 22.6209132, "lon": 120.3620470 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 238059417,
+  "bounds": {
+    "minlat": 22.6254641,
+    "minlon": 120.3443982,
+    "maxlat": 22.6281222,
+    "maxlon": 120.3491898
+  },
+  "geometry": [
+    { "lat": 22.6281222, "lon": 120.3443982 },
+    { "lat": 22.6280443, "lon": 120.3458646 },
+    { "lat": 22.6279614, "lon": 120.3475437 },
+    { "lat": 22.6277169, "lon": 120.3491141 },
+    { "lat": 22.6254641, "lon": 120.3491898 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 238059418,
+  "bounds": {
+    "minlat": 22.6191118,
+    "minlon": 120.3519519,
+    "maxlat": 22.6259262,
+    "maxlon": 120.3535312
+  },
+  "geometry": [
+    { "lat": 22.6259262, "lon": 120.3535312 },
+    { "lat": 22.6240090, "lon": 120.3530763 },
+    { "lat": 22.6217331, "lon": 120.3525554 },
+    { "lat": 22.6210357, "lon": 120.3524287 },
+    { "lat": 22.6191118, "lon": 120.3519519 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 238059419,
+  "bounds": {
+    "minlat": 22.6179222,
+    "minlon": 120.3547382,
+    "maxlat": 22.6223224,
+    "maxlon": 120.3588108
+  },
+  "geometry": [
+    { "lat": 22.6223224, "lon": 120.3588108 },
+    { "lat": 22.6219891, "lon": 120.3584345 },
+    { "lat": 22.6214466, "lon": 120.3573973 },
+    { "lat": 22.6205792, "lon": 120.3566562 },
+    { "lat": 22.6194942, "lon": 120.3557930 },
+    { "lat": 22.6181893, "lon": 120.3549366 },
+    { "lat": 22.6179222, "lon": 120.3547382 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 238059420,
+  "bounds": {
+    "minlat": 22.6123244,
+    "minlon": 120.3504007,
+    "maxlat": 22.6160645,
+    "maxlon": 120.3533912
+  },
+  "geometry": [
+    { "lat": 22.6160645, "lon": 120.3533912 },
+    { "lat": 22.6138272, "lon": 120.3517189 },
+    { "lat": 22.6129278, "lon": 120.3510000 },
+    { "lat": 22.6125610, "lon": 120.3506783 },
+    { "lat": 22.6123244, "lon": 120.3504007 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 238059421,
+  "bounds": {
+    "minlat": 22.6291210,
+    "minlon": 120.3523768,
+    "maxlat": 22.6323223,
+    "maxlon": 120.3531045
+  },
+  "geometry": [
+    { "lat": 22.6291240, "lon": 120.3523768 },
+    { "lat": 22.6291210, "lon": 120.3525593 },
+    { "lat": 22.6303601, "lon": 120.3526214 },
+    { "lat": 22.6317887, "lon": 120.3529111 },
+    { "lat": 22.6323223, "lon": 120.3531045 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 238059422,
+  "bounds": {
+    "minlat": 22.6169590,
+    "minlon": 120.3597364,
+    "maxlat": 22.6206063,
+    "maxlon": 120.3628427
+  },
+  "geometry": [
+    { "lat": 22.6206063, "lon": 120.3628427 },
+    { "lat": 22.6195245, "lon": 120.3620663 },
+    { "lat": 22.6183510, "lon": 120.3614603 },
+    { "lat": 22.6180803, "lon": 120.3612711 },
+    { "lat": 22.6178489, "lon": 120.3610227 },
+    { "lat": 22.6169590, "lon": 120.3597364 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 238059423,
+  "bounds": {
+    "minlat": 22.6291240,
+    "minlon": 120.3393450,
+    "maxlat": 22.6295135,
+    "maxlon": 120.3523768
+  },
+  "geometry": [
+    { "lat": 22.6291240, "lon": 120.3523768 },
+    { "lat": 22.6292323, "lon": 120.3502093 },
+    { "lat": 22.6292585, "lon": 120.3489322 },
+    { "lat": 22.6293438, "lon": 120.3465007 },
+    { "lat": 22.6294007, "lon": 120.3444708 },
+    { "lat": 22.6295059, "lon": 120.3409877 },
+    { "lat": 22.6294864, "lon": 120.3403468 },
+    { "lat": 22.6295135, "lon": 120.3393450 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 238059424,
+  "bounds": {
+    "minlat": 22.6248804,
+    "minlon": 120.3565915,
+    "maxlat": 22.6260135,
+    "maxlon": 120.3569296
+  },
+  "geometry": [
+    { "lat": 22.6260135, "lon": 120.3565915 },
+    { "lat": 22.6248804, "lon": 120.3569296 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 238059425,
+  "bounds": {
+    "minlat": 22.6193191,
+    "minlon": 120.3531798,
+    "maxlat": 22.6259786,
+    "maxlon": 120.3565800
+  },
+  "geometry": [
+    { "lat": 22.6259786, "lon": 120.3555119 },
+    { "lat": 22.6259205, "lon": 120.3555458 },
+    { "lat": 22.6256700, "lon": 120.3555182 },
+    { "lat": 22.6254767, "lon": 120.3554445 },
+    { "lat": 22.6251301, "lon": 120.3552139 },
+    { "lat": 22.6238991, "lon": 120.3544238 },
+    { "lat": 22.6238390, "lon": 120.3544146 },
+    { "lat": 22.6237846, "lon": 120.3544609 },
+    { "lat": 22.6235902, "lon": 120.3549805 },
+    { "lat": 22.6234322, "lon": 120.3552840 },
+    { "lat": 22.6223821, "lon": 120.3565800 },
+    { "lat": 22.6203868, "lon": 120.3546521 },
+    { "lat": 22.6206457, "lon": 120.3541597 },
+    { "lat": 22.6193191, "lon": 120.3531798 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 238059426,
+  "bounds": {
+    "minlat": 22.6259997,
+    "minlon": 120.3558516,
+    "maxlat": 22.6272723,
+    "maxlon": 120.3563324
+  },
+  "geometry": [
+    { "lat": 22.6259997, "lon": 120.3558516 },
+    { "lat": 22.6262269, "lon": 120.3559032 },
+    { "lat": 22.6268901, "lon": 120.3562143 },
+    { "lat": 22.6272723, "lon": 120.3563324 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 238062333,
+  "bounds": {
+    "minlat": 22.6153042,
+    "minlon": 120.3631558,
+    "maxlat": 22.6178108,
+    "maxlon": 120.3654681
+  },
+  "geometry": [
+    { "lat": 22.6153530, "lon": 120.3631558 },
+    { "lat": 22.6153042, "lon": 120.3636761 },
+    { "lat": 22.6153129, "lon": 120.3639782 },
+    { "lat": 22.6153569, "lon": 120.3642482 },
+    { "lat": 22.6161993, "lon": 120.3642687 },
+    { "lat": 22.6161526, "lon": 120.3653990 },
+    { "lat": 22.6177422, "lon": 120.3652793 },
+    { "lat": 22.6177708, "lon": 120.3653137 },
+    { "lat": 22.6177966, "lon": 120.3653821 },
+    { "lat": 22.6178108, "lon": 120.3654681 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 238062335,
+  "bounds": {
+    "minlat": 22.6146220,
+    "minlon": 120.3597364,
+    "maxlat": 22.6169590,
+    "maxlon": 120.3631558
+  },
+  "geometry": [
+    { "lat": 22.6153530, "lon": 120.3631558 },
+    { "lat": 22.6151230, "lon": 120.3631151 },
+    { "lat": 22.6149375, "lon": 120.3631400 },
+    { "lat": 22.6147041, "lon": 120.3631151 },
+    { "lat": 22.6147062, "lon": 120.3628527 },
+    { "lat": 22.6146890, "lon": 120.3626736 },
+    { "lat": 22.6146453, "lon": 120.3624563 },
+    { "lat": 22.6146220, "lon": 120.3622471 },
+    { "lat": 22.6151048, "lon": 120.3621935 },
+    { "lat": 22.6150873, "lon": 120.3613669 },
+    { "lat": 22.6153027, "lon": 120.3612954 },
+    { "lat": 22.6153787, "lon": 120.3608054 },
+    { "lat": 22.6163543, "lon": 120.3607538 },
+    { "lat": 22.6163766, "lon": 120.3601129 },
+    { "lat": 22.6164963, "lon": 120.3601254 },
+    { "lat": 22.6166665, "lon": 120.3599442 },
+    { "lat": 22.6168162, "lon": 120.3598790 },
+    { "lat": 22.6169590, "lon": 120.3597364 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 238062336,
+  "bounds": {
+    "minlat": 22.6203091,
+    "minlon": 120.3628427,
+    "maxlat": 22.6206158,
+    "maxlon": 120.3652123
+  },
+  "geometry": [
+    { "lat": 22.6206063, "lon": 120.3628427 },
+    { "lat": 22.6204537, "lon": 120.3632870 },
+    { "lat": 22.6203091, "lon": 120.3638524 },
+    { "lat": 22.6203353, "lon": 120.3641693 },
+    { "lat": 22.6205448, "lon": 120.3650302 },
+    { "lat": 22.6206158, "lon": 120.3652123 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 238062349,
+  "bounds": {
+    "minlat": 22.6206063,
+    "minlon": 120.3628427,
+    "maxlat": 22.6244978,
+    "maxlon": 120.3651036
+  },
+  "geometry": [
+    { "lat": 22.6206063, "lon": 120.3628427 },
+    { "lat": 22.6212980, "lon": 120.3633247 },
+    { "lat": 22.6224165, "lon": 120.3638505 },
+    { "lat": 22.6234193, "lon": 120.3644514 },
+    { "lat": 22.6244978, "lon": 120.3651036 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 238066791,
+  "bounds": {
+    "minlat": 22.6270551,
+    "minlon": 120.3563324,
+    "maxlat": 22.6272845,
+    "maxlon": 120.3601396
+  },
+  "geometry": [
+    { "lat": 22.6272723, "lon": 120.3563324 },
+    { "lat": 22.6272845, "lon": 120.3573478 },
+    { "lat": 22.6270759, "lon": 120.3573964 },
+    { "lat": 22.6272033, "lon": 120.3580542 },
+    { "lat": 22.6272125, "lon": 120.3581963 },
+    { "lat": 22.6270551, "lon": 120.3592766 },
+    { "lat": 22.6270597, "lon": 120.3595676 },
+    { "lat": 22.6271399, "lon": 120.3598787 },
+    { "lat": 22.6271029, "lon": 120.3601396 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 238066792,
+  "bounds": {
+    "minlat": 22.6369883,
+    "minlon": 120.3536414,
+    "maxlat": 22.6384436,
+    "maxlon": 120.3561439
+  },
+  "geometry": [
+    { "lat": 22.6384436, "lon": 120.3561297 },
+    { "lat": 22.6382471, "lon": 120.3561060 },
+    { "lat": 22.6381052, "lon": 120.3561439 },
+    { "lat": 22.6380070, "lon": 120.3553823 },
+    { "lat": 22.6378629, "lon": 120.3553516 },
+    { "lat": 22.6379568, "lon": 120.3546988 },
+    { "lat": 22.6379241, "lon": 120.3543535 },
+    { "lat": 22.6378455, "lon": 120.3541407 },
+    { "lat": 22.6377975, "lon": 120.3537883 },
+    { "lat": 22.6369883, "lon": 120.3536414 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 238066793,
+  "bounds": {
+    "minlat": 22.6241636,
+    "minlon": 120.3596669,
+    "maxlat": 22.6286856,
+    "maxlon": 120.3624887
+  },
+  "geometry": [
+    { "lat": 22.6286856, "lon": 120.3624887 },
+    { "lat": 22.6273887, "lon": 120.3622284 },
+    { "lat": 22.6274891, "lon": 120.3618240 },
+    { "lat": 22.6263944, "lon": 120.3615757 },
+    { "lat": 22.6265537, "lon": 120.3609655 },
+    { "lat": 22.6256937, "lon": 120.3607956 },
+    { "lat": 22.6257668, "lon": 120.3603223 },
+    { "lat": 22.6255681, "lon": 120.3602655 },
+    { "lat": 22.6248927, "lon": 120.3596669 },
+    { "lat": 22.6246548, "lon": 120.3600632 },
+    { "lat": 22.6241636, "lon": 120.3605835 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 238066794,
+  "bounds": {
+    "minlat": 22.6295166,
+    "minlon": 120.3605164,
+    "maxlat": 22.6311165,
+    "maxlon": 120.3626439
+  },
+  "geometry": [
+    { "lat": 22.6295166, "lon": 120.3626439 },
+    { "lat": 22.6295938, "lon": 120.3624108 },
+    { "lat": 22.6296538, "lon": 120.3623812 },
+    { "lat": 22.6298372, "lon": 120.3623966 },
+    { "lat": 22.6298841, "lon": 120.3623777 },
+    { "lat": 22.6299048, "lon": 120.3623469 },
+    { "lat": 22.6303560, "lon": 120.3608224 },
+    { "lat": 22.6303807, "lon": 120.3607154 },
+    { "lat": 22.6303560, "lon": 120.3605415 },
+    { "lat": 22.6306369, "lon": 120.3605164 },
+    { "lat": 22.6311165, "lon": 120.3606032 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 238066795,
+  "bounds": {
+    "minlat": 22.6329344,
+    "minlon": 120.3498556,
+    "maxlat": 22.6371806,
+    "maxlon": 120.3525441
+  },
+  "geometry": [
+    { "lat": 22.6371806, "lon": 120.3525441 },
+    { "lat": 22.6368192, "lon": 120.3521282 },
+    { "lat": 22.6365639, "lon": 120.3518586 },
+    { "lat": 22.6357889, "lon": 120.3517072 },
+    { "lat": 22.6358370, "lon": 120.3513927 },
+    { "lat": 22.6354593, "lon": 120.3512508 },
+    { "lat": 22.6350533, "lon": 120.3511278 },
+    { "lat": 22.6350752, "lon": 120.3509126 },
+    { "lat": 22.6345753, "lon": 120.3508274 },
+    { "lat": 22.6346953, "lon": 120.3501203 },
+    { "lat": 22.6329344, "lon": 120.3498556 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 238066797,
+  "bounds": {
+    "minlat": 22.6363945,
+    "minlon": 120.3640498,
+    "maxlat": 22.6413488,
+    "maxlon": 120.3705450
+  },
+  "geometry": [
+    { "lat": 22.6413488, "lon": 120.3640498 },
+    { "lat": 22.6400341, "lon": 120.3643981 },
+    { "lat": 22.6393421, "lon": 120.3645258 },
+    { "lat": 22.6391566, "lon": 120.3645400 },
+    { "lat": 22.6388292, "lon": 120.3645022 },
+    { "lat": 22.6376038, "lon": 120.3642352 },
+    { "lat": 22.6371673, "lon": 120.3668225 },
+    { "lat": 22.6369664, "lon": 120.3680003 },
+    { "lat": 22.6369795, "lon": 120.3682841 },
+    { "lat": 22.6370232, "lon": 120.3684449 },
+    { "lat": 22.6377479, "lon": 120.3696983 },
+    { "lat": 22.6363945, "lon": 120.3705450 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 238066801,
+  "bounds": {
+    "minlat": 22.6233534,
+    "minlon": 120.3605835,
+    "maxlat": 22.6269669,
+    "maxlon": 120.3655644
+  },
+  "geometry": [
+    { "lat": 22.6241636, "lon": 120.3605835 },
+    { "lat": 22.6239228, "lon": 120.3608797 },
+    { "lat": 22.6233534, "lon": 120.3618369 },
+    { "lat": 22.6238942, "lon": 120.3620121 },
+    { "lat": 22.6240784, "lon": 120.3615277 },
+    { "lat": 22.6249897, "lon": 120.3619285 },
+    { "lat": 22.6252237, "lon": 120.3616376 },
+    { "lat": 22.6254297, "lon": 120.3618014 },
+    { "lat": 22.6254662, "lon": 120.3619507 },
+    { "lat": 22.6254137, "lon": 120.3622149 },
+    { "lat": 22.6262074, "lon": 120.3623961 },
+    { "lat": 22.6262472, "lon": 120.3625068 },
+    { "lat": 22.6262332, "lon": 120.3626616 },
+    { "lat": 22.6259787, "lon": 120.3636080 },
+    { "lat": 22.6269669, "lon": 120.3638272 },
+    { "lat": 22.6268186, "lon": 120.3655644 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 238066803,
+  "bounds": {
+    "minlat": 22.6355256,
+    "minlon": 120.3619885,
+    "maxlat": 22.6386370,
+    "maxlon": 120.3629001
+  },
+  "geometry": [
+    { "lat": 22.6386370, "lon": 120.3629001 },
+    { "lat": 22.6355256, "lon": 120.3619885 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 238066804,
+  "bounds": {
+    "minlat": 22.6386370,
+    "minlon": 120.3629001,
+    "maxlat": 22.6418500,
+    "maxlon": 120.3639521
+  },
+  "geometry": [
+    { "lat": 22.6386370, "lon": 120.3629001 },
+    { "lat": 22.6418500, "lon": 120.3639521 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 238066805,
+  "bounds": {
+    "minlat": 22.6355256,
+    "minlon": 120.3536414,
+    "maxlat": 22.6369883,
+    "maxlon": 120.3619885
+  },
+  "geometry": [
+    { "lat": 22.6369883, "lon": 120.3536414 },
+    { "lat": 22.6355256, "lon": 120.3619885 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 238066806,
+  "bounds": {
+    "minlat": 22.6206063,
+    "minlon": 120.3620470,
+    "maxlat": 22.6209132,
+    "maxlon": 120.3628427
+  },
+  "geometry": [
+    { "lat": 22.6209132, "lon": 120.3620470 },
+    { "lat": 22.6206063, "lon": 120.3628427 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 238066807,
+  "bounds": {
+    "minlat": 22.6369883,
+    "minlon": 120.3525441,
+    "maxlat": 22.6371806,
+    "maxlon": 120.3536414
+  },
+  "geometry": [
+    { "lat": 22.6371806, "lon": 120.3525441 },
+    { "lat": 22.6369883, "lon": 120.3536414 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 238066810,
+  "bounds": {
+    "minlat": 22.6286856,
+    "minlon": 120.3624887,
+    "maxlat": 22.6295166,
+    "maxlon": 120.3626439
+  },
+  "geometry": [
+    { "lat": 22.6286856, "lon": 120.3624887 },
+    { "lat": 22.6295166, "lon": 120.3626439 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 238066811,
+  "bounds": {
+    "minlat": 22.6236097,
+    "minlon": 120.3600656,
+    "maxlat": 22.6241636,
+    "maxlon": 120.3605835
+  },
+  "geometry": [
+    { "lat": 22.6241636, "lon": 120.3605835 },
+    { "lat": 22.6236097, "lon": 120.3600656 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 238066813,
+  "bounds": {
+    "minlat": 22.6259241,
+    "minlon": 120.3597159,
+    "maxlat": 22.6271029,
+    "maxlon": 120.3601396
+  },
+  "geometry": [
+    { "lat": 22.6271029, "lon": 120.3601396 },
+    { "lat": 22.6259241, "lon": 120.3597159 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 238066815,
+  "bounds": {
+    "minlat": 22.6223224,
+    "minlon": 120.3588108,
+    "maxlat": 22.6236097,
+    "maxlon": 120.3600656
+  },
+  "geometry": [
+    { "lat": 22.6236097, "lon": 120.3600656 },
+    { "lat": 22.6223224, "lon": 120.3588108 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 238066818,
+  "bounds": {
+    "minlat": 22.6271029,
+    "minlon": 120.3601396,
+    "maxlat": 22.6288703,
+    "maxlon": 120.3606306
+  },
+  "geometry": [
+    { "lat": 22.6288703, "lon": 120.3606306 },
+    { "lat": 22.6283339, "lon": 120.3604789 },
+    { "lat": 22.6271029, "lon": 120.3601396 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 238066819,
+  "bounds": {
+    "minlat": 22.6246114,
+    "minlon": 120.3587884,
+    "maxlat": 22.6259241,
+    "maxlon": 120.3597159
+  },
+  "geometry": [
+    { "lat": 22.6259241, "lon": 120.3597159 },
+    { "lat": 22.6255749, "lon": 120.3595079 },
+    { "lat": 22.6246114, "lon": 120.3587884 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 238066823,
+  "bounds": {
+    "minlat": 22.6329344,
+    "minlon": 120.3447330,
+    "maxlat": 22.6337462,
+    "maxlon": 120.3498556
+  },
+  "geometry": [
+    { "lat": 22.6329344, "lon": 120.3498556 },
+    { "lat": 22.6333922, "lon": 120.3472722 },
+    { "lat": 22.6337462, "lon": 120.3447330 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 238066825,
+  "bounds": {
+    "minlat": 22.6311165,
+    "minlon": 120.3606032,
+    "maxlat": 22.6355256,
+    "maxlon": 120.3619885
+  },
+  "geometry": [
+    { "lat": 22.6355256, "lon": 120.3619885 },
+    { "lat": 22.6332030, "lon": 120.3612412 },
+    { "lat": 22.6316357, "lon": 120.3607398 },
+    { "lat": 22.6311165, "lon": 120.3606032 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 238066826,
+  "bounds": {
+    "minlat": 22.6272723,
+    "minlon": 120.3563252,
+    "maxlat": 22.6290429,
+    "maxlon": 120.3563677
+  },
+  "geometry": [
+    { "lat": 22.6272723, "lon": 120.3563324 },
+    { "lat": 22.6275291, "lon": 120.3563566 },
+    { "lat": 22.6275649, "lon": 120.3563677 },
+    { "lat": 22.6278603, "lon": 120.3563646 },
+    { "lat": 22.6280190, "lon": 120.3563630 },
+    { "lat": 22.6290429, "lon": 120.3563252 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 238066827,
+  "bounds": {
+    "minlat": 22.6346014,
+    "minlon": 120.3619885,
+    "maxlat": 22.6363945,
+    "maxlon": 120.3705450
+  },
+  "geometry": [
+    { "lat": 22.6363945, "lon": 120.3705450 },
+    { "lat": 22.6346014, "lon": 120.3671906 },
+    { "lat": 22.6351851, "lon": 120.3640475 },
+    { "lat": 22.6351879, "lon": 120.3640333 },
+    { "lat": 22.6355256, "lon": 120.3619885 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 238066830,
+  "bounds": {
+    "minlat": 22.6371806,
+    "minlon": 120.3467948,
+    "maxlat": 22.6378597,
+    "maxlon": 120.3525441
+  },
+  "geometry": [
+    { "lat": 22.6377848, "lon": 120.3467948 },
+    { "lat": 22.6378412, "lon": 120.3476920 },
+    { "lat": 22.6378597, "lon": 120.3485908 },
+    { "lat": 22.6376683, "lon": 120.3497346 },
+    { "lat": 22.6371806, "lon": 120.3525441 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 238066832,
+  "bounds": {
+    "minlat": 22.6384436,
+    "minlon": 120.3544552,
+    "maxlat": 22.6401461,
+    "maxlon": 120.3561297
+  },
+  "geometry": [
+    { "lat": 22.6401461, "lon": 120.3544552 },
+    { "lat": 22.6390853, "lon": 120.3545735 },
+    { "lat": 22.6388627, "lon": 120.3546208 },
+    { "lat": 22.6387841, "lon": 120.3546965 },
+    { "lat": 22.6384436, "lon": 120.3561297 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 238066833,
+  "bounds": {
+    "minlat": 22.6236097,
+    "minlon": 120.3587884,
+    "maxlat": 22.6246114,
+    "maxlon": 120.3600656
+  },
+  "geometry": [
+    { "lat": 22.6246114, "lon": 120.3587884 },
+    { "lat": 22.6244429, "lon": 120.3590965 },
+    { "lat": 22.6242021, "lon": 120.3593942 },
+    { "lat": 22.6240786, "lon": 120.3595547 },
+    { "lat": 22.6236097, "lon": 120.3600656 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 238066834,
+  "bounds": {
+    "minlat": 22.6382659,
+    "minlon": 120.3561297,
+    "maxlat": 22.6386370,
+    "maxlon": 120.3629001
+  },
+  "geometry": [
+    { "lat": 22.6384436, "lon": 120.3561297 },
+    { "lat": 22.6383576, "lon": 120.3565714 },
+    { "lat": 22.6382659, "lon": 120.3577066 },
+    { "lat": 22.6382747, "lon": 120.3590405 },
+    { "lat": 22.6386370, "lon": 120.3629001 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 238066835,
+  "bounds": {
+    "minlat": 22.6259241,
+    "minlon": 120.3565915,
+    "maxlat": 22.6261141,
+    "maxlon": 120.3597159
+  },
+  "geometry": [
+    { "lat": 22.6260135, "lon": 120.3565915 },
+    { "lat": 22.6260857, "lon": 120.3575828 },
+    { "lat": 22.6261047, "lon": 120.3580485 },
+    { "lat": 22.6261141, "lon": 120.3582781 },
+    { "lat": 22.6260792, "lon": 120.3586896 },
+    { "lat": 22.6260440, "lon": 120.3588521 },
+    { "lat": 22.6259241, "lon": 120.3597159 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 238066837,
+  "bounds": {
+    "minlat": 22.6286856,
+    "minlon": 120.3606306,
+    "maxlat": 22.6288703,
+    "maxlon": 120.3624887
+  },
+  "geometry": [
+    { "lat": 22.6288703, "lon": 120.3606306 },
+    { "lat": 22.6288518, "lon": 120.3610557 },
+    { "lat": 22.6287991, "lon": 120.3614680 },
+    { "lat": 22.6287717, "lon": 120.3617956 },
+    { "lat": 22.6287411, "lon": 120.3620539 },
+    { "lat": 22.6286856, "lon": 120.3624887 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 238066840,
+  "bounds": {
+    "minlat": 22.6311165,
+    "minlon": 120.3562891,
+    "maxlat": 22.6317133,
+    "maxlon": 120.3606032
+  },
+  "geometry": [
+    { "lat": 22.6311165, "lon": 120.3606032 },
+    { "lat": 22.6311720, "lon": 120.3603509 },
+    { "lat": 22.6312615, "lon": 120.3598400 },
+    { "lat": 22.6313859, "lon": 120.3594782 },
+    { "lat": 22.6315824, "lon": 120.3592525 },
+    { "lat": 22.6317133, "lon": 120.3562891 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 238066841,
+  "bounds": {
+    "minlat": 22.6290429,
+    "minlon": 120.3561212,
+    "maxlat": 22.6317133,
+    "maxlon": 120.3563257
+  },
+  "geometry": [
+    { "lat": 22.6290429, "lon": 120.3563252 },
+    { "lat": 22.6298595, "lon": 120.3562879 },
+    { "lat": 22.6306347, "lon": 120.3561212 },
+    { "lat": 22.6308107, "lon": 120.3561313 },
+    { "lat": 22.6308175, "lon": 120.3563257 },
+    { "lat": 22.6317133, "lon": 120.3562891 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 238066843,
+  "bounds": {
+    "minlat": 22.6288703,
+    "minlon": 120.3563252,
+    "maxlat": 22.6290507,
+    "maxlon": 120.3606306
+  },
+  "geometry": [
+    { "lat": 22.6290429, "lon": 120.3563252 },
+    { "lat": 22.6289999, "lon": 120.3571427 },
+    { "lat": 22.6290307, "lon": 120.3587788 },
+    { "lat": 22.6290507, "lon": 120.3594561 },
+    { "lat": 22.6290280, "lon": 120.3598853 },
+    { "lat": 22.6288703, "lon": 120.3606306 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 238066844,
+  "bounds": {
+    "minlat": 22.6223224,
+    "minlon": 120.3569296,
+    "maxlat": 22.6248804,
+    "maxlon": 120.3588108
+  },
+  "geometry": [
+    { "lat": 22.6248804, "lon": 120.3569296 },
+    { "lat": 22.6242434, "lon": 120.3570222 },
+    { "lat": 22.6233655, "lon": 120.3573755 },
+    { "lat": 22.6232619, "lon": 120.3574638 },
+    { "lat": 22.6228992, "lon": 120.3581021 },
+    { "lat": 22.6226103, "lon": 120.3584562 },
+    { "lat": 22.6223224, "lon": 120.3588108 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 238066845,
+  "bounds": {
+    "minlat": 22.6209132,
+    "minlon": 120.3600656,
+    "maxlat": 22.6236097,
+    "maxlon": 120.3623194
+  },
+  "geometry": [
+    { "lat": 22.6236097, "lon": 120.3600656 },
+    { "lat": 22.6232908, "lon": 120.3604891 },
+    { "lat": 22.6231511, "lon": 120.3606972 },
+    { "lat": 22.6227233, "lon": 120.3616903 },
+    { "lat": 22.6225443, "lon": 120.3619079 },
+    { "lat": 22.6219025, "lon": 120.3623194 },
+    { "lat": 22.6209132, "lon": 120.3620470 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 238066846,
+  "bounds": {
+    "minlat": 22.6361511,
+    "minlon": 120.3448899,
+    "maxlat": 22.6377848,
+    "maxlon": 120.3467948
+  },
+  "geometry": [
+    { "lat": 22.6377848, "lon": 120.3467948 },
+    { "lat": 22.6374133, "lon": 120.3458695 },
+    { "lat": 22.6372311, "lon": 120.3454907 },
+    { "lat": 22.6370733, "lon": 120.3452260 },
+    { "lat": 22.6368183, "lon": 120.3450390 },
+    { "lat": 22.6366726, "lon": 120.3449880 },
+    { "lat": 22.6361511, "lon": 120.3448899 }
+  ],
+  "tags": {
+    "admin_level": "7",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 238066848,
+  "bounds": {
+    "minlat": 22.6290719,
+    "minlon": 120.3626439,
+    "maxlat": 22.6298538,
+    "maxlon": 120.3656721
+  },
+  "geometry": [
+    { "lat": 22.6295166, "lon": 120.3626439 },
+    { "lat": 22.6291206, "lon": 120.3636319 },
+    { "lat": 22.6290766, "lon": 120.3637615 },
+    { "lat": 22.6290719, "lon": 120.3638803 },
+    { "lat": 22.6290959, "lon": 120.3639647 },
+    { "lat": 22.6293563, "lon": 120.3644752 },
+    { "lat": 22.6296990, "lon": 120.3652796 },
+    { "lat": 22.6298538, "lon": 120.3656721 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 751598952,
+  "bounds": {
+    "minlat": 22.6324843,
+    "minlon": 120.3256602,
+    "maxlat": 22.6330575,
+    "maxlon": 120.3301518
+  },
+  "geometry": [
+    { "lat": 22.6328248, "lon": 120.3256602 },
+    { "lat": 22.6330535, "lon": 120.3276714 },
+    { "lat": 22.6330575, "lon": 120.3283592 },
+    { "lat": 22.6330009, "lon": 120.3286177 },
+    { "lat": 22.6324843, "lon": 120.3301518 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 1282923838,
+  "bounds": {
+    "minlat": 22.5853836,
+    "minlon": 120.3496329,
+    "maxlat": 22.5858560,
+    "maxlon": 120.3503618
+  },
+  "geometry": [
+    { "lat": 22.5853836, "lon": 120.3496329 },
+    { "lat": 22.5858560, "lon": 120.3503618 }
+  ],
+  "tags": {
+    "admin_level": "7",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 1421981319,
+  "bounds": {
+    "minlat": 22.6302568,
+    "minlon": 120.3179167,
+    "maxlat": 22.6303587,
+    "maxlon": 120.3179547
+  },
+  "geometry": [
+    { "lat": 22.6303587, "lon": 120.3179167 },
+    { "lat": 22.6302917, "lon": 120.3179436 },
+    { "lat": 22.6302568, "lon": 120.3179547 }
+  ],
+  "tags": {
+    "admin_level": "7",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 1534294510,
+  "bounds": {
+    "minlat": 22.6014818,
+    "minlon": 120.3432941,
+    "maxlat": 22.6019190,
+    "maxlon": 120.3434808
+  },
+  "geometry": [
+    { "lat": 22.6019190, "lon": 120.3434808 },
+    { "lat": 22.6014818, "lon": 120.3432941 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 1534294511,
+  "bounds": {
+    "minlat": 22.6174008,
+    "minlon": 120.3515565,
+    "maxlat": 22.6191118,
+    "maxlon": 120.3519519
+  },
+  "geometry": [
+    { "lat": 22.6191118, "lon": 120.3519519 },
+    { "lat": 22.6174008, "lon": 120.3515565 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 1534294512,
+  "bounds": {
+    "minlat": 22.6174008,
+    "minlon": 120.3495500,
+    "maxlat": 22.6186589,
+    "maxlon": 120.3515565
+  },
+  "geometry": [
+    { "lat": 22.6174008, "lon": 120.3515565 },
+    { "lat": 22.6186589, "lon": 120.3495500 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+},
+{
+  "type": "way",
+  "id": 1534294513,
+  "bounds": {
+    "minlat": 22.6259786,
+    "minlon": 120.3555119,
+    "maxlat": 22.6259997,
+    "maxlon": 120.3558516
+  },
+  "geometry": [
+    { "lat": 22.6259786, "lon": 120.3555119 },
+    { "lat": 22.6259997, "lon": 120.3558516 }
+  ],
+  "tags": {
+    "admin_level": "9",
+    "boundary": "administrative"
+  }
+}
+
+  ]
+}

@@ -1,0 +1,2126 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.4 2390de5a",
+  "osm3s": {
+    "timestamp_osm_base": "2026-11-26T08:41:21Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+
+{
+  "type": "node",
+  "id": 8270288613,
+  "lat": 22.6203400,
+  "lon": 120.2771100,
+  "tags": {
+    "alt_name": "YouBike2.0_哈瑪星鐵道文化園區(臨海新路)",
+    "alt_name:en": "YouBike2.0_Hamasen Railway Cultural Park (Linhaisin Rd.)",
+    "alt_name:zh": "YouBike2.0_哈瑪星鐵道文化園區(臨海新路)",
+    "alt_name:zh-Bopo": "YouBike2.0_ㄏㄚㄇㄚˇㄒㄧㄥㄊㄧㄝˇㄉㄠˋㄨㄣˊㄏㄨㄚˋㄩㄢˊㄑㄩ(ㄌㄧㄣˊㄏㄞˇㄒㄧㄣㄌㄨˋ)",
+    "alt_name:zh-Hans": "YouBike2.0_哈玛星铁道文化园区(临海新路)",
+    "alt_name:zh-Hant": "YouBike2.0_哈瑪星鐵道文化園區(臨海新路)",
+    "alt_name:zh-Latn-pinyin": "YouBike2.0_hāmǎxīngtiědàowénhuàyuánqū(línhǎixīnlù)",
+    "amenity": "bicycle_rental",
+    "authentication:app": "yes",
+    "authentication:contactless": "yes",
+    "authentication:membership_card": "yes",
+    "bicycle_rental": "docking_station",
+    "brand": "YouBike 2.0",
+    "brand:en": "YouBike 2.0",
+    "brand:wikidata": "Q20687952",
+    "brand:wikipedia": "en:YouBike",
+    "brand:zh": "微笑單車2.0",
+    "capacity": "28",
+    "description": "臨海新路25號西北側",
+    "description:en": "No. 25, Linhaixin Rd. (Northwest)",
+    "description:zh": "臨海新路25號西北側",
+    "description:zh-Hans": "临海新路25号西北侧",
+    "description:zh-Hant": "臨海新路25號西北側",
+    "fee": "yes",
+    "name": "哈瑪星鐵道文化園區(臨海新路)",
+    "name:en": "Hamasen Railway Cultural Park (Linhaisin Rd.)",
+    "name:zh": "哈瑪星鐵道文化園區(臨海新路)",
+    "name:zh-Bopo": "ㄏㄚㄇㄚˇㄒㄧㄥㄊㄧㄝˇㄉㄠˋㄨㄣˊㄏㄨㄚˋㄩㄢˊㄑㄩ(ㄌㄧㄣˊㄏㄞˇㄒㄧㄣㄌㄨˋ)",
+    "name:zh-Hans": "哈玛星铁道文化园区(临海新路)",
+    "name:zh-Hant": "哈瑪星鐵道文化園區(臨海新路)",
+    "name:zh-Latn-pinyin": "hāmǎxīngtiědàowénhuàyuánqū(línhǎixīnlù)",
+    "nat_ref": "KHH501209035",
+    "network": "高雄市公共自行車租賃系統",
+    "network:en": "Kaohsiung Pubic Bike",
+    "network:zh": "微笑單車",
+    "network:zh-Hans": "微笑单车",
+    "network:zh-Hant": "微笑單車",
+    "opening_hours": "24/7",
+    "operator": "Giant",
+    "operator:wikidata": "Q703557",
+    "operator:wikipedia": "en:Giant Bicycles",
+    "payment:credit_cards": "yes",
+    "payment:ep_easycard": "yes",
+    "payment:ep_ipass": "yes",
+    "payment:ep_linepay": "yes",
+    "payment:jcb": "yes",
+    "payment:mastercard": "yes",
+    "payment:visa": "yes",
+    "ref": "501209035",
+    "rental": "city_bike",
+    "source": "PTX",
+    "source:date": "2020-12-29T18:17:03+08:00"
+  }
+},
+{
+  "type": "way",
+  "id": 25822276,
+  "center": {
+    "lat": 22.6233788,
+    "lon": 120.2775797
+  },
+  "tags": {
+    "electrified": "no",
+    "gauge": "1067",
+    "railway": "disused",
+    "service": "siding",
+    "usage": "industrial"
+  }
+},
+{
+  "type": "way",
+  "id": 46140484,
+  "center": {
+    "lat": 22.6211772,
+    "lon": 120.2784067
+  },
+  "tags": {
+    "bicycle": "designated",
+    "foot": "designated",
+    "highway": "cycleway",
+    "railway": "abandoned",
+    "surface": "paved"
+  }
+},
+{
+  "type": "way",
+  "id": 113715493,
+  "center": {
+    "lat": 22.6252094,
+    "lon": 120.3281870
+  },
+  "tags": {
+    "electrified": "rail",
+    "frequency": "0",
+    "gauge": "1435",
+    "layer": "-2",
+    "maxspeed": "80",
+    "name": "高雄捷運橘線",
+    "name:en": "Kaohsiung MRT Orange Line",
+    "name:zh": "高雄捷運橘線",
+    "network": "高雄捷運",
+    "operator": "高雄捷運公司",
+    "railway": "subway",
+    "tunnel": "yes",
+    "voltage": "750"
+  }
+},
+{
+  "type": "way",
+  "id": 203342621,
+  "center": {
+    "lat": 22.6217317,
+    "lon": 120.2755612
+  },
+  "tags": {
+    "building": "transportation",
+    "fee": "no",
+    "historic": "yes",
+    "museum": "railway",
+    "name": "舊打狗驛故事館",
+    "name:en": "Takao Railway Museum",
+    "name:ja": "高雄鉄道博物館",
+    "name:zh": "舊打狗驛",
+    "opening_hours": "Tu-Su 10:00-18:00",
+    "toilets": "no",
+    "tourism": "museum",
+    "website": "https://trm.tw/",
+    "wikidata": "Q25713893"
+  }
+},
+{
+  "type": "way",
+  "id": 208694525,
+  "center": {
+    "lat": 22.6245073,
+    "lon": 120.2776296
+  },
+  "tags": {
+    "electrified": "no",
+    "gauge": "1067",
+    "railway": "disused",
+    "service": "siding",
+    "usage": "industrial"
+  }
+},
+{
+  "type": "way",
+  "id": 208694530,
+  "center": {
+    "lat": 22.6249749,
+    "lon": 120.2778417
+  },
+  "tags": {
+    "electrified": "no",
+    "gauge": "1067",
+    "railway": "disused",
+    "service": "siding",
+    "usage": "industrial"
+  }
+},
+{
+  "type": "way",
+  "id": 208694532,
+  "center": {
+    "lat": 22.6212192,
+    "lon": 120.2773410
+  },
+  "tags": {
+    "electrified": "no",
+    "gauge": "1067",
+    "railway": "disused",
+    "service": "siding",
+    "usage": "industrial"
+  }
+},
+{
+  "type": "way",
+  "id": 224343173,
+  "center": {
+    "lat": 22.6184731,
+    "lon": 120.2875850
+  },
+  "tags": {
+    "bridge": "yes",
+    "electrified": "no",
+    "gauge": "1435",
+    "layer": "1",
+    "maxspeed": "50",
+    "name": "高雄環狀輕軌",
+    "oneway": "yes",
+    "railway": "light_rail",
+    "usage": "main"
+  }
+},
+{
+  "type": "way",
+  "id": 224343174,
+  "center": {
+    "lat": 22.6206581,
+    "lon": 120.2777660
+  },
+  "tags": {
+    "electrified": "no",
+    "gauge": "1435",
+    "maxspeed": "50",
+    "name": "高雄捷運環狀輕軌",
+    "name:en": "Kaohsiung MRT Circular Line",
+    "name:zh": "高雄捷運環狀輕軌",
+    "oneway": "yes",
+    "operator": "高雄捷運公司",
+    "railway": "light_rail",
+    "start_date": "2017-09-26",
+    "usage": "main"
+  }
+},
+{
+  "type": "way",
+  "id": 310011560,
+  "center": {
+    "lat": 22.6207656,
+    "lon": 120.2741513
+  },
+  "tags": {
+    "addr:city": "高雄市",
+    "addr:country": "TW",
+    "addr:district": "鼓山區",
+    "addr:full": "804高雄市鼓山區捷興二街18號",
+    "addr:housenumber": "18",
+    "addr:postcode": "804",
+    "addr:street": "捷興二街",
+    "building": "yes",
+    "name": "打狗文史再興會社",
+    "office": "coworking",
+    "opening_hours": "Tu-Su 11:00-16:00"
+  }
+},
+{
+  "type": "way",
+  "id": 326841790,
+  "center": {
+    "lat": 22.6207508,
+    "lon": 120.2786139
+  },
+  "tags": {
+    "railway": "miniature"
+  }
+},
+{
+  "type": "way",
+  "id": 326841791,
+  "center": {
+    "lat": 22.6207692,
+    "lon": 120.2782420
+  },
+  "tags": {
+    "railway": "miniature"
+  }
+},
+{
+  "type": "way",
+  "id": 326841792,
+  "center": {
+    "lat": 22.6207100,
+    "lon": 120.2783892
+  },
+  "tags": {
+    "railway": "miniature"
+  }
+},
+{
+  "type": "way",
+  "id": 326841793,
+  "center": {
+    "lat": 22.6208223,
+    "lon": 120.2781829
+  },
+  "tags": {
+    "railway": "miniature"
+  }
+},
+{
+  "type": "way",
+  "id": 435657348,
+  "center": {
+    "lat": 22.6218167,
+    "lon": 120.2757253
+  },
+  "tags": {
+    "building": "transportation",
+    "name": "舊高雄港站月台"
+  }
+},
+{
+  "type": "way",
+  "id": 435657350,
+  "center": {
+    "lat": 22.6206401,
+    "lon": 120.2777358
+  },
+  "tags": {
+    "electrified": "no",
+    "gauge": "1435",
+    "maxspeed": "50",
+    "name": "高雄捷運環狀輕軌",
+    "name:en": "Kaohsiung MRT Circular Line",
+    "name:zh": "高雄捷運環狀輕軌",
+    "oneway": "yes",
+    "operator": "高雄捷運公司",
+    "railway": "light_rail",
+    "start_date": "2017-09-26",
+    "usage": "main"
+  }
+},
+{
+  "type": "way",
+  "id": 435657353,
+  "center": {
+    "lat": 22.6184447,
+    "lon": 120.2875804
+  },
+  "tags": {
+    "bridge": "yes",
+    "electrified": "no",
+    "gauge": "1435",
+    "layer": "1",
+    "maxspeed": "50",
+    "name": "高雄環狀輕軌",
+    "oneway": "yes",
+    "railway": "light_rail",
+    "usage": "main"
+  }
+},
+{
+  "type": "way",
+  "id": 462133990,
+  "center": {
+    "lat": 22.6252798,
+    "lon": 120.3306849
+  },
+  "tags": {
+    "electrified": "rail",
+    "frequency": "0",
+    "gauge": "1435",
+    "layer": "-2",
+    "maxspeed": "80",
+    "name": "高雄捷運橘線",
+    "name:en": "Kaohsiung MRT Orange Line",
+    "name:zh": "高雄捷運橘線",
+    "network": "高雄捷運",
+    "operator": "高雄捷運公司",
+    "railway": "subway",
+    "tunnel": "yes",
+    "voltage": "750"
+  }
+},
+{
+  "type": "way",
+  "id": 503078057,
+  "center": {
+    "lat": 22.6185381,
+    "lon": 120.2842359
+  },
+  "tags": {
+    "bench": "yes",
+    "light_rail": "yes",
+    "public_transport": "platform",
+    "railway": "platform",
+    "shelter": "yes",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 503078060,
+  "center": {
+    "lat": 22.6184660,
+    "lon": 120.2841953
+  },
+  "tags": {
+    "bench": "yes",
+    "light_rail": "yes",
+    "public_transport": "platform",
+    "railway": "platform",
+    "shelter": "yes",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 504037146,
+  "center": {
+    "lat": 22.6183807,
+    "lon": 120.2844990
+  },
+  "tags": {
+    "electrified": "no",
+    "gauge": "1435",
+    "maxspeed": "50",
+    "name": "高雄環狀輕軌",
+    "oneway": "yes",
+    "railway": "light_rail",
+    "usage": "main"
+  }
+},
+{
+  "type": "way",
+  "id": 504037148,
+  "center": {
+    "lat": 22.6183533,
+    "lon": 120.2844818
+  },
+  "tags": {
+    "electrified": "no",
+    "gauge": "1435",
+    "maxspeed": "50",
+    "name": "高雄環狀輕軌",
+    "oneway": "yes",
+    "railway": "light_rail",
+    "usage": "main"
+  }
+},
+{
+  "type": "way",
+  "id": 509451210,
+  "center": {
+    "lat": 22.6180060,
+    "lon": 120.2852520
+  },
+  "tags": {
+    "electrified": "no",
+    "embankment": "yes",
+    "gauge": "1435",
+    "maxspeed": "50",
+    "name": "高雄環狀輕軌",
+    "oneway": "yes",
+    "railway": "light_rail",
+    "usage": "main"
+  }
+},
+{
+  "type": "way",
+  "id": 509451211,
+  "center": {
+    "lat": 22.6180345,
+    "lon": 120.2852707
+  },
+  "tags": {
+    "electrified": "no",
+    "embankment": "yes",
+    "gauge": "1435",
+    "maxspeed": "50",
+    "name": "高雄環狀輕軌",
+    "oneway": "yes",
+    "railway": "light_rail",
+    "usage": "main"
+  }
+},
+{
+  "type": "way",
+  "id": 526535905,
+  "center": {
+    "lat": 22.6204194,
+    "lon": 120.2799227
+  },
+  "tags": {
+    "light_rail": "yes",
+    "public_transport": "platform",
+    "railway": "platform",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 526535906,
+  "center": {
+    "lat": 22.6205164,
+    "lon": 120.2799708
+  },
+  "tags": {
+    "light_rail": "yes",
+    "public_transport": "platform",
+    "railway": "platform",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 526535917,
+  "center": {
+    "lat": 22.6215851,
+    "lon": 120.2758783
+  },
+  "tags": {
+    "bench": "yes",
+    "bin": "no",
+    "light_rail": "yes",
+    "lit": "yes",
+    "public_transport": "platform",
+    "railway": "platform",
+    "shelter": "yes",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 623090560,
+  "center": {
+    "lat": 22.6158930,
+    "lon": 120.2861752
+  },
+  "tags": {
+    "electrified": "no",
+    "gauge": "1067",
+    "name": "裏岸壁線",
+    "railway": "disused",
+    "service": "siding"
+  }
+},
+{
+  "type": "way",
+  "id": 623090781,
+  "center": {
+    "lat": 22.6159279,
+    "lon": 120.2861974
+  },
+  "tags": {
+    "railway": "disused",
+    "service": "siding"
+  }
+},
+{
+  "type": "way",
+  "id": 623090972,
+  "center": {
+    "lat": 22.6158742,
+    "lon": 120.2862642
+  },
+  "tags": {
+    "railway": "disused",
+    "service": "crossover"
+  }
+},
+{
+  "type": "way",
+  "id": 623090973,
+  "center": {
+    "lat": 22.6161883,
+    "lon": 120.2855862
+  },
+  "tags": {
+    "railway": "disused",
+    "service": "crossover"
+  }
+},
+{
+  "type": "way",
+  "id": 631561143,
+  "center": {
+    "lat": 22.6220006,
+    "lon": 120.2760078
+  },
+  "tags": {
+    "electrified": "no",
+    "gauge": "1435",
+    "name": "高雄捷運環狀輕軌",
+    "name:en": "Kaohsiung MRT Circular Line",
+    "name:zh": "高雄捷運環狀輕軌",
+    "oneway": "yes",
+    "operator": "高雄捷運公司",
+    "railway": "light_rail",
+    "service": "crossover",
+    "start_date": "2017-09-26",
+    "usage": "main"
+  }
+},
+{
+  "type": "way",
+  "id": 631561147,
+  "center": {
+    "lat": 22.6265723,
+    "lon": 120.2786368
+  },
+  "tags": {
+    "bench": "yes",
+    "bin": "no",
+    "light_rail": "yes",
+    "lit": "yes",
+    "public_transport": "platform",
+    "railway": "platform",
+    "shelter": "yes",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 631561148,
+  "center": {
+    "lat": 22.6265141,
+    "lon": 120.2787333
+  },
+  "tags": {
+    "bench": "yes",
+    "bin": "no",
+    "light_rail": "yes",
+    "lit": "yes",
+    "public_transport": "platform",
+    "railway": "platform",
+    "shelter": "yes",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 727359282,
+  "center": {
+    "lat": 22.6174518,
+    "lon": 120.2722763
+  },
+  "tags": {
+    "name": "棧貳庫 - 打狗英國領事館",
+    "name:zh": "棧貳庫 - 打狗英國領事館",
+    "route": "ferry"
+  }
+},
+{
+  "type": "way",
+  "id": 902978160,
+  "center": {
+    "lat": 22.6246669,
+    "lon": 120.2772518
+  },
+  "tags": {
+    "building": "yes",
+    "name": "高雄港北號誌樓",
+    "tourism": "museum"
+  }
+},
+{
+  "type": "way",
+  "id": 902978161,
+  "center": {
+    "lat": 22.6217575,
+    "lon": 120.2761742
+  },
+  "tags": {
+    "electrified": "no",
+    "gauge": "1067",
+    "railway": "disused",
+    "service": "siding",
+    "usage": "industrial"
+  }
+},
+{
+  "type": "way",
+  "id": 902978162,
+  "center": {
+    "lat": 22.6220524,
+    "lon": 120.2761397
+  },
+  "tags": {
+    "electrified": "no",
+    "gauge": "1067",
+    "railway": "disused",
+    "service": "siding",
+    "usage": "industrial"
+  }
+},
+{
+  "type": "way",
+  "id": 902978163,
+  "center": {
+    "lat": 22.6223780,
+    "lon": 120.2763659
+  },
+  "tags": {
+    "electrified": "no",
+    "gauge": "1067",
+    "railway": "disused",
+    "service": "siding",
+    "usage": "industrial"
+  }
+},
+{
+  "type": "way",
+  "id": 902978165,
+  "center": {
+    "lat": 22.6216252,
+    "lon": 120.2761552
+  },
+  "tags": {
+    "electrified": "no",
+    "gauge": "1067",
+    "railway": "disused",
+    "service": "siding",
+    "usage": "industrial"
+  }
+},
+{
+  "type": "way",
+  "id": 902978166,
+  "center": {
+    "lat": 22.6214643,
+    "lon": 120.2761261
+  },
+  "tags": {
+    "electrified": "no",
+    "gauge": "1067",
+    "railway": "disused",
+    "service": "siding",
+    "usage": "industrial"
+  }
+},
+{
+  "type": "way",
+  "id": 902978167,
+  "center": {
+    "lat": 22.6218705,
+    "lon": 120.2762647
+  },
+  "tags": {
+    "electrified": "no",
+    "gauge": "1067",
+    "railway": "disused",
+    "service": "siding",
+    "usage": "industrial"
+  }
+},
+{
+  "type": "way",
+  "id": 902978168,
+  "center": {
+    "lat": 22.6214878,
+    "lon": 120.2766332
+  },
+  "tags": {
+    "electrified": "no",
+    "gauge": "1067",
+    "railway": "disused",
+    "service": "siding",
+    "usage": "industrial"
+  }
+},
+{
+  "type": "way",
+  "id": 902978169,
+  "center": {
+    "lat": 22.6214012,
+    "lon": 120.2765979
+  },
+  "tags": {
+    "electrified": "no",
+    "gauge": "1067",
+    "railway": "disused",
+    "service": "siding",
+    "usage": "industrial"
+  }
+},
+{
+  "type": "way",
+  "id": 902978170,
+  "center": {
+    "lat": 22.6224197,
+    "lon": 120.2769058
+  },
+  "tags": {
+    "electrified": "no",
+    "gauge": "1067",
+    "railway": "disused",
+    "service": "siding",
+    "usage": "industrial"
+  }
+},
+{
+  "type": "way",
+  "id": 902978171,
+  "center": {
+    "lat": 22.6216658,
+    "lon": 120.2764768
+  },
+  "tags": {
+    "electrified": "no",
+    "gauge": "1067",
+    "railway": "disused",
+    "service": "siding",
+    "usage": "industrial"
+  }
+},
+{
+  "type": "way",
+  "id": 902978172,
+  "center": {
+    "lat": 22.6218724,
+    "lon": 120.2768143
+  },
+  "tags": {
+    "electrified": "no",
+    "gauge": "1067",
+    "railway": "disused",
+    "service": "siding",
+    "usage": "industrial"
+  }
+},
+{
+  "type": "way",
+  "id": 902978173,
+  "center": {
+    "lat": 22.6217868,
+    "lon": 120.2767755
+  },
+  "tags": {
+    "electrified": "no",
+    "gauge": "1067",
+    "railway": "disused",
+    "service": "siding",
+    "usage": "industrial"
+  }
+},
+{
+  "type": "way",
+  "id": 902978174,
+  "center": {
+    "lat": 22.6217343,
+    "lon": 120.2767391
+  },
+  "tags": {
+    "electrified": "no",
+    "gauge": "1067",
+    "railway": "disused",
+    "service": "siding",
+    "usage": "industrial"
+  }
+},
+{
+  "type": "way",
+  "id": 902978175,
+  "center": {
+    "lat": 22.6216730,
+    "lon": 120.2767013
+  },
+  "tags": {
+    "electrified": "no",
+    "gauge": "1067",
+    "railway": "disused",
+    "service": "siding",
+    "usage": "industrial"
+  }
+},
+{
+  "type": "way",
+  "id": 902978176,
+  "center": {
+    "lat": 22.6215622,
+    "lon": 120.2766687
+  },
+  "tags": {
+    "electrified": "no",
+    "gauge": "1067",
+    "railway": "disused",
+    "service": "siding",
+    "usage": "industrial"
+  }
+},
+{
+  "type": "way",
+  "id": 902978178,
+  "center": {
+    "lat": 22.6220958,
+    "lon": 120.2769479
+  },
+  "tags": {
+    "electrified": "no",
+    "gauge": "1067",
+    "railway": "disused",
+    "service": "siding",
+    "usage": "industrial"
+  }
+},
+{
+  "type": "way",
+  "id": 902978179,
+  "center": {
+    "lat": 22.6223939,
+    "lon": 120.2771254
+  },
+  "tags": {
+    "electrified": "no",
+    "gauge": "1067",
+    "railway": "disused",
+    "service": "siding",
+    "usage": "industrial"
+  }
+},
+{
+  "type": "way",
+  "id": 902978180,
+  "center": {
+    "lat": 22.6210016,
+    "lon": 120.2774242
+  },
+  "tags": {
+    "electrified": "no",
+    "gauge": "1067",
+    "railway": "disused",
+    "service": "siding",
+    "usage": "industrial"
+  }
+},
+{
+  "type": "way",
+  "id": 902978181,
+  "center": {
+    "lat": 22.6210658,
+    "lon": 120.2773804
+  },
+  "tags": {
+    "electrified": "no",
+    "gauge": "1067",
+    "railway": "disused",
+    "service": "siding",
+    "usage": "industrial"
+  }
+},
+{
+  "type": "way",
+  "id": 902978182,
+  "center": {
+    "lat": 22.6214164,
+    "lon": 120.2772183
+  },
+  "tags": {
+    "electrified": "no",
+    "gauge": "1067",
+    "railway": "disused",
+    "service": "siding",
+    "usage": "industrial"
+  }
+},
+{
+  "type": "way",
+  "id": 902978183,
+  "center": {
+    "lat": 22.6213580,
+    "lon": 120.2772499
+  },
+  "tags": {
+    "electrified": "no",
+    "gauge": "1067",
+    "railway": "disused",
+    "service": "siding",
+    "usage": "industrial"
+  }
+},
+{
+  "type": "way",
+  "id": 902978184,
+  "center": {
+    "lat": 22.6202765,
+    "lon": 120.2747178
+  },
+  "tags": {
+    "electrified": "no",
+    "gauge": "1067",
+    "railway": "disused",
+    "service": "siding",
+    "usage": "industrial"
+  }
+},
+{
+  "type": "way",
+  "id": 902978185,
+  "center": {
+    "lat": 22.6205312,
+    "lon": 120.2751660
+  },
+  "tags": {
+    "electrified": "no",
+    "gauge": "1067",
+    "railway": "disused",
+    "service": "siding",
+    "usage": "industrial"
+  }
+},
+{
+  "type": "way",
+  "id": 902978186,
+  "center": {
+    "lat": 22.6202197,
+    "lon": 120.2747717
+  },
+  "tags": {
+    "electrified": "no",
+    "gauge": "1067",
+    "railway": "disused",
+    "service": "siding",
+    "usage": "industrial"
+  }
+},
+{
+  "type": "way",
+  "id": 902978197,
+  "center": {
+    "lat": 22.6248329,
+    "lon": 120.2778330
+  },
+  "tags": {
+    "electrified": "no",
+    "gauge": "1067",
+    "railway": "disused",
+    "service": "siding",
+    "usage": "industrial"
+  }
+},
+{
+  "type": "way",
+  "id": 902978198,
+  "center": {
+    "lat": 22.6248783,
+    "lon": 120.2778194
+  },
+  "tags": {
+    "electrified": "no",
+    "gauge": "1067",
+    "railway": "disused",
+    "service": "siding",
+    "usage": "industrial"
+  }
+},
+{
+  "type": "way",
+  "id": 902978199,
+  "center": {
+    "lat": 22.6247274,
+    "lon": 120.2778156
+  },
+  "tags": {
+    "electrified": "no",
+    "gauge": "1067",
+    "railway": "disused",
+    "service": "siding",
+    "usage": "industrial"
+  }
+},
+{
+  "type": "way",
+  "id": 902978200,
+  "center": {
+    "lat": 22.6243773,
+    "lon": 120.2776343
+  },
+  "tags": {
+    "electrified": "no",
+    "gauge": "1067",
+    "railway": "disused",
+    "service": "siding",
+    "usage": "industrial"
+  }
+},
+{
+  "type": "way",
+  "id": 929116541,
+  "center": {
+    "lat": 22.6219317,
+    "lon": 120.2765081
+  },
+  "tags": {
+    "electrified": "no",
+    "gauge": "1067",
+    "railway": "disused",
+    "service": "siding",
+    "usage": "industrial"
+  }
+},
+{
+  "type": "way",
+  "id": 1221742992,
+  "center": {
+    "lat": 22.6206054,
+    "lon": 120.2764306
+  },
+  "tags": {
+    "electrified": "no",
+    "gauge": "1435",
+    "name": "高雄捷運環狀輕軌",
+    "name:en": "Kaohsiung MRT Circular Line",
+    "name:zh": "高雄捷運環狀輕軌",
+    "oneway": "yes",
+    "operator": "高雄捷運公司",
+    "railway": "light_rail",
+    "service": "crossover",
+    "start_date": "2017-09-26",
+    "usage": "main"
+  }
+},
+{
+  "type": "way",
+  "id": 1221742993,
+  "center": {
+    "lat": 22.6186736,
+    "lon": 120.2838443
+  },
+  "tags": {
+    "electrified": "no",
+    "gauge": "1435",
+    "name": "高雄環狀輕軌",
+    "railway": "light_rail",
+    "service": "crossover"
+  }
+},
+{
+  "type": "way",
+  "id": 1247334115,
+  "center": {
+    "lat": 22.6198715,
+    "lon": 120.2770321
+  },
+  "tags": {
+    "electrified": "no",
+    "gauge": "1067",
+    "railway": "disused",
+    "service": "siding",
+    "usage": "industrial"
+  }
+},
+{
+  "type": "way",
+  "id": 1247334116,
+  "center": {
+    "lat": 22.6197212,
+    "lon": 120.2771466
+  },
+  "tags": {
+    "electrified": "no",
+    "gauge": "1067",
+    "railway": "disused",
+    "service": "siding",
+    "usage": "industrial"
+  }
+},
+{
+  "type": "way",
+  "id": 1247334117,
+  "center": {
+    "lat": 22.6197114,
+    "lon": 120.2771002
+  },
+  "tags": {
+    "electrified": "no",
+    "gauge": "1067",
+    "railway": "disused",
+    "service": "siding",
+    "usage": "industrial"
+  }
+},
+{
+  "type": "way",
+  "id": 1247334118,
+  "center": {
+    "lat": 22.6198637,
+    "lon": 120.2769666
+  },
+  "tags": {
+    "electrified": "no",
+    "gauge": "1067",
+    "railway": "disused",
+    "service": "siding",
+    "usage": "industrial"
+  }
+},
+{
+  "type": "way",
+  "id": 1247334119,
+  "center": {
+    "lat": 22.6199393,
+    "lon": 120.2769320
+  },
+  "tags": {
+    "electrified": "no",
+    "gauge": "1067",
+    "railway": "disused",
+    "service": "siding",
+    "usage": "industrial"
+  }
+},
+{
+  "type": "way",
+  "id": 1247334120,
+  "center": {
+    "lat": 22.6200491,
+    "lon": 120.2768599
+  },
+  "tags": {
+    "electrified": "no",
+    "gauge": "1067",
+    "railway": "disused",
+    "service": "siding",
+    "usage": "industrial"
+  }
+},
+{
+  "type": "way",
+  "id": 1247334121,
+  "center": {
+    "lat": 22.6198921,
+    "lon": 120.2768907
+  },
+  "tags": {
+    "electrified": "no",
+    "gauge": "1067",
+    "railway": "disused",
+    "service": "siding",
+    "usage": "industrial"
+  }
+},
+{
+  "type": "way",
+  "id": 1247334122,
+  "center": {
+    "lat": 22.6198538,
+    "lon": 120.2768217
+  },
+  "tags": {
+    "electrified": "no",
+    "gauge": "1067",
+    "railway": "disused",
+    "service": "siding",
+    "usage": "industrial"
+  }
+},
+{
+  "type": "way",
+  "id": 1247334123,
+  "center": {
+    "lat": 22.6201548,
+    "lon": 120.2766881
+  },
+  "tags": {
+    "electrified": "no",
+    "gauge": "1067",
+    "railway": "disused",
+    "service": "siding",
+    "usage": "industrial"
+  }
+},
+{
+  "type": "way",
+  "id": 1247334124,
+  "center": {
+    "lat": 22.6200526,
+    "lon": 120.2767466
+  },
+  "tags": {
+    "electrified": "no",
+    "gauge": "1067",
+    "railway": "disused",
+    "service": "siding",
+    "usage": "industrial"
+  }
+},
+{
+  "type": "way",
+  "id": 1247334125,
+  "center": {
+    "lat": 22.6199483,
+    "lon": 120.2768199
+  },
+  "tags": {
+    "electrified": "no",
+    "gauge": "1067",
+    "railway": "disused",
+    "service": "siding",
+    "usage": "industrial"
+  }
+},
+{
+  "type": "way",
+  "id": 1247688189,
+  "center": {
+    "lat": 22.6216165,
+    "lon": 120.2757923
+  },
+  "tags": {
+    "bench": "yes",
+    "bin": "no",
+    "light_rail": "yes",
+    "lit": "yes",
+    "public_transport": "platform",
+    "railway": "platform",
+    "shelter": "yes",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 1247688190,
+  "center": {
+    "lat": 22.6226131,
+    "lon": 120.2763284
+  },
+  "tags": {
+    "electrified": "no",
+    "gauge": "1435",
+    "maxspeed": "50",
+    "name": "高雄捷運環狀輕軌",
+    "name:en": "Kaohsiung MRT Circular Line",
+    "name:zh": "高雄捷運環狀輕軌",
+    "oneway": "yes",
+    "operator": "高雄捷運公司",
+    "railway": "light_rail",
+    "start_date": "2017-09-26",
+    "usage": "main"
+  }
+},
+{
+  "type": "way",
+  "id": 1247688191,
+  "center": {
+    "lat": 22.6215843,
+    "lon": 120.2758410
+  },
+  "tags": {
+    "electrified": "contact_line",
+    "frequency": "0",
+    "gauge": "1435",
+    "name": "高雄捷運環狀輕軌",
+    "name:en": "Kaohsiung MRT Circular Line",
+    "name:zh": "高雄捷運環狀輕軌",
+    "oneway": "yes",
+    "operator": "高雄捷運公司",
+    "railway": "light_rail",
+    "start_date": "2017-09-26",
+    "usage": "main",
+    "voltage": "750"
+  }
+},
+{
+  "type": "way",
+  "id": 1247688192,
+  "center": {
+    "lat": 22.6226277,
+    "lon": 120.2762977
+  },
+  "tags": {
+    "electrified": "no",
+    "gauge": "1435",
+    "maxspeed": "50",
+    "name": "高雄捷運環狀輕軌",
+    "name:en": "Kaohsiung MRT Circular Line",
+    "name:zh": "高雄捷運環狀輕軌",
+    "oneway": "yes",
+    "operator": "高雄捷運公司",
+    "railway": "light_rail",
+    "start_date": "2017-09-26",
+    "usage": "main"
+  }
+},
+{
+  "type": "way",
+  "id": 1247688193,
+  "center": {
+    "lat": 22.6215937,
+    "lon": 120.2758152
+  },
+  "tags": {
+    "electrified": "contact_line",
+    "frequency": "0",
+    "gauge": "1435",
+    "name": "高雄捷運環狀輕軌",
+    "name:en": "Kaohsiung MRT Circular Line",
+    "name:zh": "高雄捷運環狀輕軌",
+    "oneway": "yes",
+    "operator": "高雄捷運公司",
+    "railway": "light_rail",
+    "start_date": "2017-09-26",
+    "usage": "main",
+    "voltage": "750"
+  }
+},
+{
+  "type": "way",
+  "id": 1247688195,
+  "center": {
+    "lat": 22.6236340,
+    "lon": 120.2769220
+  },
+  "tags": {
+    "electrified": "no",
+    "gauge": "1067",
+    "railway": "rail",
+    "railway:preserved": "yes",
+    "usage": "tourism"
+  }
+},
+{
+  "type": "way",
+  "id": 1247688197,
+  "center": {
+    "lat": 22.6236490,
+    "lon": 120.2768942
+  },
+  "tags": {
+    "electrified": "no",
+    "gauge": "1067",
+    "railway": "rail",
+    "railway:preserved": "yes",
+    "usage": "tourism"
+  }
+},
+{
+  "type": "way",
+  "id": 1247688198,
+  "center": {
+    "lat": 22.6215720,
+    "lon": 120.2756975
+  },
+  "tags": {
+    "electrified": "no",
+    "gauge": "1067",
+    "railway": "rail",
+    "railway:preserved": "yes",
+    "service": "crossover",
+    "usage": "tourism"
+  }
+},
+{
+  "type": "way",
+  "id": 1247688199,
+  "center": {
+    "lat": 22.6228148,
+    "lon": 120.2763106
+  },
+  "tags": {
+    "electrified": "no",
+    "gauge": "1067",
+    "name": "高雄港站機迴線",
+    "railway": "rail",
+    "railway:preserved": "yes",
+    "service": "siding",
+    "usage": "tourism"
+  }
+},
+{
+  "type": "way",
+  "id": 1247688200,
+  "center": {
+    "lat": 22.6233347,
+    "lon": 120.2764912
+  },
+  "tags": {
+    "electrified": "no",
+    "gauge": "1067",
+    "railway": "disused",
+    "service": "siding",
+    "usage": "tourism"
+  }
+},
+{
+  "type": "way",
+  "id": 1247688201,
+  "center": {
+    "lat": 22.6233327,
+    "lon": 120.2764619
+  },
+  "tags": {
+    "electrified": "no",
+    "gauge": "1067",
+    "railway": "disused",
+    "service": "siding",
+    "usage": "tourism"
+  }
+},
+{
+  "type": "way",
+  "id": 1247688202,
+  "center": {
+    "lat": 22.6246263,
+    "lon": 120.2773932
+  },
+  "tags": {
+    "electrified": "no",
+    "gauge": "1067",
+    "railway": "disused",
+    "service": "siding",
+    "usage": "tourism"
+  }
+},
+{
+  "type": "way",
+  "id": 1247688203,
+  "center": {
+    "lat": 22.6243506,
+    "lon": 120.2771290
+  },
+  "tags": {
+    "electrified": "no",
+    "gauge": "1067",
+    "railway": "rail",
+    "railway:preserved": "yes",
+    "service": "crossover",
+    "usage": "tourism"
+  }
+},
+{
+  "type": "way",
+  "id": 1247688204,
+  "center": {
+    "lat": 22.6244775,
+    "lon": 120.2771661
+  },
+  "tags": {
+    "electrified": "no",
+    "gauge": "1067",
+    "railway": "rail",
+    "railway:preserved": "yes",
+    "service": "siding",
+    "usage": "tourism"
+  }
+},
+{
+  "type": "way",
+  "id": 1247688205,
+  "center": {
+    "lat": 22.6247820,
+    "lon": 120.2774609
+  },
+  "tags": {
+    "electrified": "no",
+    "gauge": "1067",
+    "railway": "disused",
+    "service": "crossover",
+    "usage": "tourism"
+  }
+},
+{
+  "type": "way",
+  "id": 1247688206,
+  "center": {
+    "lat": 22.6249234,
+    "lon": 120.2775097
+  },
+  "tags": {
+    "electrified": "no",
+    "gauge": "1067",
+    "railway": "rail",
+    "railway:preserved": "yes",
+    "service": "crossover",
+    "usage": "tourism"
+  }
+},
+{
+  "type": "way",
+  "id": 1248126967,
+  "center": {
+    "lat": 22.6204393,
+    "lon": 120.2755050
+  },
+  "tags": {
+    "electrified": "no",
+    "gauge": "1067",
+    "railway": "disused",
+    "service": "siding",
+    "usage": "industrial"
+  }
+},
+{
+  "type": "way",
+  "id": 1248126968,
+  "center": {
+    "lat": 22.6204066,
+    "lon": 120.2754689
+  },
+  "tags": {
+    "electrified": "no",
+    "gauge": "1067",
+    "railway": "disused",
+    "service": "siding",
+    "usage": "industrial"
+  }
+},
+{
+  "type": "way",
+  "id": 1248126969,
+  "center": {
+    "lat": 22.6198671,
+    "lon": 120.2743596
+  },
+  "tags": {
+    "electrified": "no",
+    "gauge": "1067",
+    "railway": "disused",
+    "service": "siding",
+    "usage": "industrial"
+  }
+},
+{
+  "type": "way",
+  "id": 1248126970,
+  "center": {
+    "lat": 22.6205147,
+    "lon": 120.2749739
+  },
+  "tags": {
+    "electrified": "no",
+    "gauge": "1067",
+    "railway": "disused",
+    "service": "siding",
+    "usage": "industrial"
+  }
+},
+{
+  "type": "way",
+  "id": 1248126971,
+  "center": {
+    "lat": 22.6205750,
+    "lon": 120.2751006
+  },
+  "tags": {
+    "electrified": "no",
+    "gauge": "1067",
+    "railway": "disused",
+    "service": "siding",
+    "usage": "industrial"
+  }
+},
+{
+  "type": "way",
+  "id": 1248126972,
+  "center": {
+    "lat": 22.6207542,
+    "lon": 120.2752369
+  },
+  "tags": {
+    "electrified": "no",
+    "gauge": "1067",
+    "railway": "disused",
+    "service": "siding",
+    "usage": "industrial"
+  }
+},
+{
+  "type": "way",
+  "id": 1248126985,
+  "center": {
+    "lat": 22.6221887,
+    "lon": 120.2762448
+  },
+  "tags": {
+    "electrified": "no",
+    "gauge": "1067",
+    "railway": "disused",
+    "service": "siding",
+    "usage": "industrial"
+  }
+},
+{
+  "type": "way",
+  "id": 1248126986,
+  "center": {
+    "lat": 22.6225188,
+    "lon": 120.2764679
+  },
+  "tags": {
+    "electrified": "no",
+    "gauge": "1067",
+    "railway": "disused",
+    "service": "siding",
+    "usage": "industrial"
+  }
+},
+{
+  "type": "way",
+  "id": 1248126987,
+  "center": {
+    "lat": 22.6219524,
+    "lon": 120.2768664
+  },
+  "tags": {
+    "electrified": "no",
+    "gauge": "1067",
+    "railway": "disused",
+    "service": "siding",
+    "usage": "industrial"
+  }
+},
+{
+  "type": "way",
+  "id": 1248126988,
+  "center": {
+    "lat": 22.6212060,
+    "lon": 120.2771131
+  },
+  "tags": {
+    "electrified": "no",
+    "gauge": "1067",
+    "railway": "disused",
+    "service": "siding",
+    "usage": "industrial"
+  }
+},
+{
+  "type": "way",
+  "id": 1248126989,
+  "center": {
+    "lat": 22.6213247,
+    "lon": 120.2771567
+  },
+  "tags": {
+    "electrified": "no",
+    "gauge": "1067",
+    "railway": "disused",
+    "service": "siding",
+    "usage": "industrial"
+  }
+},
+{
+  "type": "way",
+  "id": 1248126990,
+  "center": {
+    "lat": 22.6238397,
+    "lon": 120.2771180
+  },
+  "tags": {
+    "electrified": "no",
+    "gauge": "1067",
+    "railway": "disused",
+    "service": "siding",
+    "usage": "industrial"
+  }
+},
+{
+  "type": "way",
+  "id": 1248126991,
+  "center": {
+    "lat": 22.6215823,
+    "lon": 120.2772530
+  },
+  "tags": {
+    "electrified": "no",
+    "gauge": "1067",
+    "railway": "disused",
+    "service": "siding",
+    "usage": "industrial"
+  }
+},
+{
+  "type": "way",
+  "id": 1248126992,
+  "center": {
+    "lat": 22.6220850,
+    "lon": 120.2771761
+  },
+  "tags": {
+    "electrified": "no",
+    "gauge": "1067",
+    "railway": "disused",
+    "service": "siding",
+    "usage": "industrial"
+  }
+},
+{
+  "type": "way",
+  "id": 1248126993,
+  "center": {
+    "lat": 22.6218408,
+    "lon": 120.2772612
+  },
+  "tags": {
+    "electrified": "no",
+    "gauge": "1067",
+    "railway": "disused",
+    "service": "siding",
+    "usage": "industrial"
+  }
+},
+{
+  "type": "way",
+  "id": 1248126994,
+  "center": {
+    "lat": 22.6215071,
+    "lon": 120.2773350
+  },
+  "tags": {
+    "electrified": "no",
+    "gauge": "1067",
+    "railway": "disused",
+    "service": "siding",
+    "usage": "industrial"
+  }
+},
+{
+  "type": "way",
+  "id": 1316259262,
+  "center": {
+    "lat": 22.6215481,
+    "lon": 120.2744856
+  },
+  "tags": {
+    "area": "yes",
+    "public_transport": "platform",
+    "railway": "platform",
+    "subway": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 1559431724,
+  "center": {
+    "lat": 22.6186302,
+    "lon": 120.2839688
+  },
+  "tags": {
+    "electrified": "no",
+    "gauge": "1435",
+    "maxspeed": "50",
+    "name": "高雄環狀輕軌",
+    "oneway": "yes",
+    "railway": "light_rail",
+    "usage": "main"
+  }
+},
+{
+  "type": "way",
+  "id": 1559431725,
+  "center": {
+    "lat": 22.6186059,
+    "lon": 120.2839571
+  },
+  "tags": {
+    "electrified": "no",
+    "gauge": "1435",
+    "maxspeed": "50",
+    "name": "高雄環狀輕軌",
+    "oneway": "yes",
+    "railway": "light_rail",
+    "usage": "main"
+  }
+},
+{
+  "type": "way",
+  "id": 1559431726,
+  "center": {
+    "lat": 22.6185059,
+    "lon": 120.2841680
+  },
+  "tags": {
+    "electrified": "contact_line",
+    "frequency": "0",
+    "gauge": "1435",
+    "maxspeed": "50",
+    "name": "高雄環狀輕軌",
+    "oneway": "yes",
+    "railway": "light_rail",
+    "usage": "main",
+    "voltage": "750"
+  }
+},
+{
+  "type": "way",
+  "id": 1559431727,
+  "center": {
+    "lat": 22.6185306,
+    "lon": 120.2841815
+  },
+  "tags": {
+    "electrified": "contact_line",
+    "frequency": "0",
+    "gauge": "1435",
+    "maxspeed": "50",
+    "name": "高雄環狀輕軌",
+    "oneway": "yes",
+    "railway": "light_rail",
+    "usage": "main",
+    "voltage": "750"
+  }
+},
+{
+  "type": "way",
+  "id": 1559431728,
+  "center": {
+    "lat": 22.6196022,
+    "lon": 120.2818631
+  },
+  "tags": {
+    "electrified": "no",
+    "gauge": "1435",
+    "maxspeed": "50",
+    "name": "高雄捷運環狀輕軌",
+    "name:en": "Kaohsiung MRT Circular Line",
+    "name:zh": "高雄捷運環狀輕軌",
+    "oneway": "yes",
+    "operator": "高雄捷運公司",
+    "railway": "light_rail",
+    "start_date": "2017-09-26",
+    "usage": "main"
+  }
+},
+{
+  "type": "way",
+  "id": 1559431729,
+  "center": {
+    "lat": 22.6195782,
+    "lon": 120.2818514
+  },
+  "tags": {
+    "electrified": "no",
+    "gauge": "1435",
+    "maxspeed": "50",
+    "name": "高雄捷運環狀輕軌",
+    "name:en": "Kaohsiung MRT Circular Line",
+    "name:zh": "高雄捷運環狀輕軌",
+    "oneway": "yes",
+    "operator": "高雄捷運公司",
+    "railway": "light_rail",
+    "start_date": "2017-09-26",
+    "usage": "main"
+  }
+},
+{
+  "type": "way",
+  "id": 1559431730,
+  "center": {
+    "lat": 22.6204880,
+    "lon": 120.2798795
+  },
+  "tags": {
+    "electrified": "contact_line",
+    "frequency": "0",
+    "gauge": "1435",
+    "maxspeed": "50",
+    "name": "高雄捷運環狀輕軌",
+    "name:en": "Kaohsiung MRT Circular Line",
+    "name:zh": "高雄捷運環狀輕軌",
+    "oneway": "yes",
+    "operator": "高雄捷運公司",
+    "railway": "light_rail",
+    "start_date": "2017-09-26",
+    "usage": "main",
+    "voltage": "750"
+  }
+},
+{
+  "type": "way",
+  "id": 1559431731,
+  "center": {
+    "lat": 22.6205121,
+    "lon": 120.2798935
+  },
+  "tags": {
+    "electrified": "contact_line",
+    "frequency": "0",
+    "gauge": "1435",
+    "maxspeed": "50",
+    "name": "高雄捷運環狀輕軌",
+    "name:en": "Kaohsiung MRT Circular Line",
+    "name:zh": "高雄捷運環狀輕軌",
+    "oneway": "yes",
+    "operator": "高雄捷運公司",
+    "railway": "light_rail",
+    "start_date": "2017-09-26",
+    "usage": "main",
+    "voltage": "750"
+  }
+},
+{
+  "type": "way",
+  "id": 1559431732,
+  "center": {
+    "lat": 22.6250352,
+    "lon": 120.2777302
+  },
+  "tags": {
+    "electrified": "no",
+    "gauge": "1435",
+    "maxspeed": "50",
+    "name": "高雄環狀輕軌",
+    "oneway": "yes",
+    "railway": "light_rail",
+    "start_date": "2021-12-16 17:00",
+    "usage": "main"
+  }
+},
+{
+  "type": "way",
+  "id": 1559431733,
+  "center": {
+    "lat": 22.6264905,
+    "lon": 120.2786785
+  },
+  "tags": {
+    "electrified": "contact_line",
+    "frequency": "0",
+    "gauge": "1435",
+    "maxspeed": "50",
+    "name": "高雄環狀輕軌",
+    "oneway": "yes",
+    "railway": "light_rail",
+    "start_date": "2021-12-16 17:00",
+    "usage": "main",
+    "voltage": "750"
+  }
+},
+{
+  "type": "way",
+  "id": 1559431734,
+  "center": {
+    "lat": 22.6250573,
+    "lon": 120.2776915
+  },
+  "tags": {
+    "electrified": "no",
+    "gauge": "1435",
+    "maxspeed": "50",
+    "name": "高雄環狀輕軌",
+    "oneway": "yes",
+    "railway": "light_rail",
+    "start_date": "2021-12-16 17:00",
+    "usage": "main"
+  }
+},
+{
+  "type": "way",
+  "id": 1559431735,
+  "center": {
+    "lat": 22.6265120,
+    "lon": 120.2786356
+  },
+  "tags": {
+    "electrified": "contact_line",
+    "frequency": "0",
+    "gauge": "1435",
+    "maxspeed": "50",
+    "name": "高雄環狀輕軌",
+    "oneway": "yes",
+    "railway": "light_rail",
+    "start_date": "2021-12-16 17:00",
+    "usage": "main",
+    "voltage": "750"
+  }
+},
+{
+  "type": "way",
+  "id": 1559431736,
+  "center": {
+    "lat": 22.6280169,
+    "lon": 120.2796960
+  },
+  "tags": {
+    "electrified": "no",
+    "gauge": "1435",
+    "maxspeed": "50",
+    "name": "高雄環狀輕軌",
+    "oneway": "yes",
+    "railway": "light_rail",
+    "start_date": "2021-12-16 17:00",
+    "usage": "main"
+  }
+},
+{
+  "type": "way",
+  "id": 1559431737,
+  "center": {
+    "lat": 22.6280334,
+    "lon": 120.2796621
+  },
+  "tags": {
+    "electrified": "no",
+    "gauge": "1435",
+    "maxspeed": "50",
+    "name": "高雄環狀輕軌",
+    "oneway": "yes",
+    "railway": "light_rail",
+    "start_date": "2021-12-16 17:00",
+    "usage": "main"
+  }
+},
+{
+  "type": "relation",
+  "id": 6650289,
+  "center": {
+    "lat": 22.6226155,
+    "lon": 120.2764304
+  },
+  "tags": {
+    "alt_name": "打狗鐵道文化園區",
+    "alt_name:en": "Hamasen Railway Cultural Park",
+    "alt_name:ja": "打狗鉄道文化公園",
+    "alt_name:zh": "打狗鐵道文化園區",
+    "leisure": "park",
+    "name": "打狗鐵道公園",
+    "name:en": "Takao Railway Park",
+    "name:ja": "鉄道文化公園",
+    "name:zh": "打狗鐵道公園",
+    "tourism": "attraction",
+    "type": "multipolygon"
+  }
+},
+{
+  "type": "relation",
+  "id": 14021699,
+  "center": {
+    "lat": 22.6174518,
+    "lon": 120.2722763
+  },
+  "tags": {
+    "name": "棧貳庫 - 打狗英國領事館",
+    "route": "ferry",
+    "type": "route"
+  }
+}
+
+  ]
+}
