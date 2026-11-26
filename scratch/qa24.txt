@@ -1,0 +1,9 @@
+Traceback (most recent call last):
+  File "/home/claude/repo/pipeline/qa.py", line 4, in <module>
+    from corr import ll2px
+  File "/home/claude/repo/pipeline/corr.py", line 12, in <module>
+    A=np.asarray(Image.open('h89_16.png').convert('RGB')).astype(np.int16)
+                 ~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/PIL/Image.py", line 3670, in open
+    fp = builtins.open(filename, "rb")
+FileNotFoundError: [Errno 2] No such file or directory: 'h89_16.png'

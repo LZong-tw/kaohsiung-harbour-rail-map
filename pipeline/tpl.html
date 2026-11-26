@@ -203,13 +203,14 @@ const EXC={'糖鐵牛寮三角線（往籬仔內）':'#7a5c3a','糖鐵籬仔內�
 const exL=[];
 const MAINX=new Set(['獅子公園三角線東側（原主線弧線）']);
 for(const[n,parts]of Object.entries(G.extra)){const mx=MAINX.has(n),col=mx?'#7b2d8e':(EXC[n]||'#c2620a');
- for(const g of parts)exL.push(L.polyline(g,mx?{color:col,weight:4,lineCap:'round',opacity:.95}:{color:col,weight:3,dashArray:'6 4',lineCap:'round',opacity:.95}).bindTooltip(n,{sticky:true}));
+ for(const g of parts){const pl=L.polyline(g,mx?{color:col,weight:4,lineCap:'round',opacity:.95}:{color:col,weight:3,dashArray:'6 4',lineCap:'round',opacity:.95}).bindTooltip(n,{sticky:true});pl._xn=n;exL.push(pl)}
  const longest=parts.reduce((a,b)=>b.length>a.length?b:a);mkLabel('x-'+n,longest,n,col,11,n==='糖鐵籬子內線'?.12:.3)}
 const bpL=Object.entries(G.br).map(([n,p])=>L.circleMarker(p,{radius:3,color:'#5b6670',weight:2,fillColor:'#fff',fillOpacity:1}).bindTooltip(n,{direction:'bottom',offset:[0,4]}));
 const exBox=document.getElementById('ex');
-function drawExtra(){const on=exBox.checked;exL.forEach(l=>on?l.addTo(m):l.remove());for(const n in G.extra)showLabel('x-'+n,on)}
+let curY=1977;const XY=G.xy||{};const inY=n=>{const r=XY[n];return !r||((r[0]==null||curY>=r[0])&&(r[1]==null||curY<=r[1]))};
+function drawExtra(){const on=exBox.checked;exL.forEach(l=>on&&inY(l._xn)?l.addTo(m):l.remove());for(const n in G.extra)showLabel('x-'+n,on&&inY(n))}
 exBox.addEventListener('change',drawExtra);
-const _draw=draw;draw=function(y){_draw(y);bpL.forEach(b=>y>=1967?b.addTo(m):b.remove());drawExtra();relabel()};
+const _draw=draw;draw=function(y){curY=y;_draw(y);bpL.forEach(b=>y>=1967?b.addTo(m):b.remove());drawExtra();relabel()};
 m.on('zoomend moveend',relabel);
 addEventListener('load',()=>{Z0=m.getZoom();relabel()});
 Z0=m.getZoom();
