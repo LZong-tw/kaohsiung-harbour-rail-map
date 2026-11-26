@@ -88,7 +88,8 @@
 - **授權**：本研究為非商業學術用途，各圖資授權見 `METHODS.md`〈資料授權與使用條款〉。中研院圖磚為 CC BY-NC，要標示出處。
 - **不收錄**：臉書手繪圖、Google 街景截圖（街景只引用網址）。
 - **提交前掃描機密**：token、帳密、工作環境設定檔一律不收（`.gitignore` 已排除 `*mcp-config*.json`）。`/tmp` 的東西不要整批搬進 repo。
-- **先問使用者**：改寫 git 歷史、force push、更新公開的 artifact、改變 repo 或網站的公開範圍，都要先取得使用者同意。
+- **先問使用者**：改寫 git 歷史、force push、改變 repo 或網站的公開範圍，都要先取得使用者同意。
+- **公開 artifact 自動同步**：使用者已同意（第 26 輪），`site/index.html` 更新並推上 GitHub Pages 後，公開的地圖 artifact 直接跟著重新發布，不必再問。
 - **WebFetch 被拒的網站不要用其他方式繞道**。
 
 ## 重建與發布
@@ -102,6 +103,6 @@ cd .. && python tools/check_page.py site/index.html
 ```
 
 - **GitHub Pages**：推到 `main` 就由 `.github/workflows/pages.yml` 自動建置部署（`tools/build_site.py`）。
-- **Claude artifact**：用 `site/index.html` 重新發布。這是公開版本，發布前先問使用者。
+- **Claude artifact**：用 `site/index.html` 重新發布，與 GitHub Pages 保持同一版（使用者已同意自動同步）。
 - **Claude 文件**：同步修改，並更新 `METHODS.md`。
 - **commit 訊息**：結尾附上對話提供的署名行。
