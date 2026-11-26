@@ -130,7 +130,7 @@ const EV=[
 const STY={trunk:{color:'#1d4e89',weight:6},main:{color:'#7b2d8e',weight:5},br:{color:'#c2620a',weight:4},red:{color:'#c1121f',weight:5},unc:{color:'#c2620a',weight:3.5,dashArray:'0.5 7'},lr:{color:'#2f9e44',weight:7,opacity:.85},yd:{color:'#7b2d8e',weight:2.5,opacity:.9}};
 const GH={color:'#8a949c',weight:3,dashArray:'7 7',opacity:.9};
 const sw=S=>`<svg width="34" height="10" aria-hidden="true"><line x1="2" y1="5" x2="32" y2="5" stroke="${S.color}" stroke-width="${Math.min(S.weight,6)}" ${S.dashArray?`stroke-dasharray="${S.dashArray}"`:''} stroke-linecap="round"/></svg>`;
-document.getElementById('key').innerHTML=[[STY.main,'營運中'],[GH,'已停用'],[{color:'#c2620a',weight:3,dashArray:'6 4'},'專用側線'],[{color:'#7a5c3a',weight:3,dashArray:'6 4'},'糖業鐵道'],[STY.unc,'年份未查證']].map(([s,t])=>`<div>${sw(s)}${t}</div>`).join('');
+document.getElementById('key').innerHTML=[[STY.trunk,'縱貫線、屏東線'],[STY.main,'臨港線'],[STY.br,'臨港線支線'],[STY.red,'第二臨港線'],[STY.lr,'環狀輕軌'],[GH,'已停用'],[{color:'#c2620a',weight:3,dashArray:'6 4'},'專用側線'],[{color:'#7a5c3a',weight:3,dashArray:'6 4'},'糖業鐵道'],[STY.unc,'支線，年份未查證']].map(([s,t])=>`<div>${sw(s)}${t}</div>`).join('');
 const m=L.map('map',{zoomControl:false,zoomSnap:.1,attributionControl:true,maxBounds:G.bounds,maxBoundsViscosity:.8,minZoom:12,maxZoom:17});window.__map=m;
 L.imageOverlay('base.jpg',G.bounds).addTo(m);L.control.zoom({position:'topright'}).addTo(m);
 const mapEl=document.getElementById('map');let Z0=13;
