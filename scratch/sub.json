@@ -1,0 +1,410 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.4 2390de5a",
+  "osm3s": {
+    "timestamp_osm_base": "2026-11-26T09:53:06Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+
+{
+  "type": "node",
+  "id": 2532281870,
+  "lat": 22.6011362,
+  "lon": 120.3026406,
+  "tags": {
+    "bus": "yes",
+    "highway": "bus_stop",
+    "name": "輕軌經貿園區站",
+    "name:en": "LRT Commerce and Trade Park Station",
+    "name:zh": "輕軌經貿園區站",
+    "network": "高雄市公車",
+    "network:en": "Kaohsiung City Bus",
+    "network:wikidata": "Q15903688",
+    "network:wikipedia": "ja:高雄市公車",
+    "network:zh": "高雄市公車",
+    "operator": "高雄市公車",
+    "public_transport": "platform"
+  }
+},
+{
+  "type": "node",
+  "id": 2532281873,
+  "lat": 22.6011476,
+  "lon": 120.3027862,
+  "tags": {
+    "bus": "yes",
+    "highway": "bus_stop",
+    "name": "輕軌經貿園區站",
+    "name:en": "LRT Commerce and Trade Park Station",
+    "name:zh": "輕軌經貿園區站",
+    "network": "高雄市公車",
+    "network:en": "Kaohsiung City Bus",
+    "network:wikidata": "Q15903688",
+    "network:wikipedia": "ja:高雄市公車",
+    "network:zh": "高雄市公車",
+    "operator": "高雄市公車",
+    "public_transport": "platform"
+  }
+},
+{
+  "type": "node",
+  "id": 4579273017,
+  "lat": 22.6008963,
+  "lon": 120.3026381,
+  "tags": {
+    "alt_name": "輕軌經貿園區站",
+    "alt_name:en": "LRT Commerce and Trade Park Station",
+    "alt_name:nan": "Khin-thih Keng-bō͘ Hn̂g-khu chām;Khin-kúi Keng-bō͘ Hn̂g-khu",
+    "alt_name:nan-Hant": "輕鐵經貿園區站;輕軌經貿園區站",
+    "alt_name:nan-Latn-pehoeji": "Khin-thih Keng-bō͘ Hn̂g-khu chām;Khin-kúi Keng-bō͘ Hn̂g-khu",
+    "alt_name:nan-Latn-tailo": "Khin-thih King-bōo Hn̂g-khu tsām;khin-kuí king-bōo hn̂g-khu tsām",
+    "alt_name:zh": "輕軌經貿園區站",
+    "light_rail": "yes",
+    "name": "經貿園區",
+    "name:en": "Commerce and Trade Park",
+    "name:hak": "ginˊ meuˋ ienˇ kiˊ",
+    "name:nan": "Keng-bō͘ Hn̂g-khu",
+    "name:nan-Hant": "經貿園區",
+    "name:nan-Latn-pehoeji": "Keng-bō͘ Hn̂g-khu",
+    "name:nan-Latn-tailo": "King-bōo Hn̂g-khu",
+    "name:zh": "經貿園區",
+    "name:zh-Hans": "经贸园区",
+    "name:zh-Hant": "經貿園區",
+    "name:zh-Latn-pinyin": "jīng mào yuán qū",
+    "network": "高雄捷運",
+    "operator": "高雄捷運公司",
+    "public_transport": "station",
+    "railway": "station",
+    "ref": "C6",
+    "source": "survay;教育部",
+    "station": "light_rail",
+    "wheelchair": "yes",
+    "wikidata": "Q11123328",
+    "wikipedia": "zh:經貿園區站"
+  }
+},
+{
+  "type": "node",
+  "id": 6480877571,
+  "lat": 22.6009067,
+  "lon": 120.3026531,
+  "tags": {
+    "alt_name": "輕軌經貿園區站",
+    "alt_name:en": "LRT Commerce and Trade Park Station",
+    "alt_name:nan": "Khin-thih Keng-bō͘ Hn̂g-khu chām;Khin-kúi Keng-bō͘ Hn̂g-khu",
+    "alt_name:nan-Hant": "輕鐵經貿園區站;輕軌經貿園區站",
+    "alt_name:nan-Latn-pehoeji": "Khin-thih Keng-bō͘ Hn̂g-khu chām;Khin-kúi Keng-bō͘ Hn̂g-khu",
+    "alt_name:nan-Latn-tailo": "Khin-thih King-bōo Hn̂g-khu tsām;khin-kuí king-bōo hn̂g-khu tsām",
+    "alt_name:zh": "輕軌經貿園區站",
+    "light_rail": "yes",
+    "name": "經貿園區",
+    "name:en": "Commerce and Trade Park",
+    "name:hak": "ginˊ meuˋ ienˇ kiˊ",
+    "name:nan": "Keng-bō͘ Hn̂g-khu",
+    "name:nan-Hant": "經貿園區",
+    "name:nan-Latn-pehoeji": "Keng-bō͘ Hn̂g-khu",
+    "name:nan-Latn-tailo": "King-bōo Hn̂g-khu",
+    "name:zh": "經貿園區",
+    "name:zh-Hans": "经贸园区",
+    "name:zh-Hant": "經貿園區",
+    "name:zh-Latn-pinyin": "jīng mào yuán qū",
+    "public_transport": "stop_position",
+    "railway": "stop"
+  }
+},
+{
+  "type": "node",
+  "id": 6480877572,
+  "lat": 22.6008955,
+  "lon": 120.3026173,
+  "tags": {
+    "alt_name": "輕軌經貿園區站",
+    "alt_name:en": "LRT Commerce and Trade Park Station",
+    "alt_name:nan": "Khin-thih Keng-bō͘ Hn̂g-khu chām;Khin-kúi Keng-bō͘ Hn̂g-khu",
+    "alt_name:nan-Hant": "輕鐵經貿園區站;輕軌經貿園區站",
+    "alt_name:nan-Latn-pehoeji": "Khin-thih Keng-bō͘ Hn̂g-khu chām;Khin-kúi Keng-bō͘ Hn̂g-khu",
+    "alt_name:nan-Latn-tailo": "Khin-thih King-bōo Hn̂g-khu tsām;khin-kuí king-bōo hn̂g-khu tsām",
+    "alt_name:zh": "輕軌經貿園區站",
+    "light_rail": "yes",
+    "name": "經貿園區",
+    "name:en": "Commerce and Trade Park",
+    "name:hak": "ginˊ meuˋ ienˇ kiˊ",
+    "name:nan": "Keng-bō͘ Hn̂g-khu",
+    "name:nan-Hant": "經貿園區",
+    "name:nan-Latn-pehoeji": "Keng-bō͘ Hn̂g-khu",
+    "name:nan-Latn-tailo": "King-bōo Hn̂g-khu",
+    "name:zh": "經貿園區",
+    "name:zh-Hans": "经贸园区",
+    "name:zh-Hant": "經貿園區",
+    "name:zh-Latn-pinyin": "jīng mào yuán qū",
+    "public_transport": "stop_position",
+    "railway": "stop"
+  }
+},
+{
+  "type": "way",
+  "id": 93067056,
+  "center": {
+    "lat": 22.6076513,
+    "lon": 120.3168759
+  },
+  "tags": {
+    "leisure": "park",
+    "name": "前鎮31期公園"
+  }
+},
+{
+  "type": "way",
+  "id": 240132009,
+  "center": {
+    "lat": 22.6101202,
+    "lon": 120.3037745
+  },
+  "tags": {
+    "power": "substation"
+  }
+},
+{
+  "type": "way",
+  "id": 243060997,
+  "center": {
+    "lat": 22.6094394,
+    "lon": 120.3057011
+  },
+  "tags": {
+    "building": "commercial",
+    "building:levels": "24",
+    "name": "中華經貿大樓"
+  }
+},
+{
+  "type": "way",
+  "id": 615909103,
+  "center": {
+    "lat": 22.5925760,
+    "lon": 120.3021604
+  },
+  "tags": {
+    "highway": "unclassified",
+    "name": "高雄多功能經貿園區特定區計畫(園道七)"
+  }
+},
+{
+  "type": "way",
+  "id": 902644641,
+  "center": {
+    "lat": 22.5981515,
+    "lon": 120.3019016
+  },
+  "tags": {
+    "highway": "unclassified",
+    "lanes": "2",
+    "maxspeed": "40",
+    "name": "高雄多功能經貿園區特定區計畫(園道四)",
+    "oneway": "yes",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 902644647,
+  "center": {
+    "lat": 22.6003777,
+    "lon": 120.3009059
+  },
+  "tags": {
+    "highway": "proposed",
+    "name": "高雄多功能經貿園區特定區計畫(園道六)"
+  }
+},
+{
+  "type": "way",
+  "id": 910954385,
+  "center": {
+    "lat": 22.6016105,
+    "lon": 120.3166607
+  },
+  "tags": {
+    "highway": "proposed",
+    "name": "高雄多功能經貿園區特定區計畫(園道五)",
+    "oneway": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 910954386,
+  "center": {
+    "lat": 22.6015767,
+    "lon": 120.3167260
+  },
+  "tags": {
+    "highway": "proposed",
+    "name": "高雄多功能經貿園區特定區計畫(園道五)",
+    "oneway": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 1056803918,
+  "center": {
+    "lat": 22.6009574,
+    "lon": 120.3026265
+  },
+  "tags": {
+    "building": "yes",
+    "layer": "1",
+    "name": "經貿園區",
+    "network": "高雄捷運輕軌"
+  }
+},
+{
+  "type": "way",
+  "id": 1056803919,
+  "center": {
+    "lat": 22.6009378,
+    "lon": 120.3025638
+  },
+  "tags": {
+    "building": "yes",
+    "layer": "1",
+    "name": "經貿園區",
+    "network": "高雄捷運輕軌"
+  }
+},
+{
+  "type": "way",
+  "id": 1286821827,
+  "center": {
+    "lat": 22.5959093,
+    "lon": 120.3009091
+  },
+  "tags": {
+    "highway": "unclassified",
+    "lanes": "2",
+    "maxspeed": "40",
+    "name": "高雄多功能經貿園區特定區計畫(園道七)",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 1286821829,
+  "center": {
+    "lat": 22.5991816,
+    "lon": 120.3049387
+  },
+  "tags": {
+    "highway": "proposed",
+    "name": "高雄多功能經貿園區特定區計畫(園道四)"
+  }
+},
+{
+  "type": "way",
+  "id": 1286821830,
+  "center": {
+    "lat": 22.5975746,
+    "lon": 120.3004050
+  },
+  "tags": {
+    "highway": "unclassified",
+    "lanes": "2",
+    "maxspeed": "40",
+    "name": "高雄多功能經貿園區特定區計畫(園道四)",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 1290582947,
+  "center": {
+    "lat": 22.5997512,
+    "lon": 120.3066419
+  },
+  "tags": {
+    "highway": "residential",
+    "name": "高雄多功能經貿園區特定區計畫(園道四)"
+  }
+},
+{
+  "type": "relation",
+  "id": 6358157,
+  "center": {
+    "lat": 22.6009534,
+    "lon": 120.3026607
+  },
+  "tags": {
+    "alt_name": "輕軌經貿園區站",
+    "alt_name:en": "LRT Commerce and Trade Park Station",
+    "alt_name:nan": "Khin-thih Keng-bō͘ Hn̂g-khu chām;Khin-kúi Keng-bō͘ Hn̂g-khu",
+    "alt_name:nan-Hant": "輕鐵經貿園區站;輕軌經貿園區站",
+    "alt_name:nan-Latn-pehoeji": "Khin-thih Keng-bō͘ Hn̂g-khu chām;Khin-kúi Keng-bō͘ Hn̂g-khu",
+    "alt_name:nan-Latn-tailo": "Khin-thih King-bōo Hn̂g-khu tsām;khin-kuí king-bōo hn̂g-khu tsām",
+    "alt_name:zh": "輕軌經貿園區站",
+    "name": "經貿園區",
+    "name:en": "Commerce and Trade Park",
+    "name:hak": "ginˊ meuˋ ienˇ kiˊ",
+    "name:nan": "Keng-bō͘ Hn̂g-khu",
+    "name:nan-Hant": "經貿園區",
+    "name:nan-Latn-pehoeji": "Keng-bō͘ Hn̂g-khu",
+    "name:nan-Latn-tailo": "King-bōo Hn̂g-khu",
+    "name:zh": "經貿園區",
+    "name:zh-Hans": "经贸园区",
+    "name:zh-Hant": "經貿園區",
+    "name:zh-Latn-pinyin": "jīng mào yuán qū",
+    "operator": "高雄捷運公司",
+    "public_transport": "stop_area",
+    "ref": "C6",
+    "type": "public_transport",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "relation",
+  "id": 17726214,
+  "center": {
+    "lat": 22.5938653,
+    "lon": 120.3089875
+  },
+  "tags": {
+    "location": "indoor",
+    "name": "台電經貿一次配電變電所",
+    "power": "substation",
+    "substation": "distribution",
+    "type": "multipolygon"
+  }
+},
+{
+  "type": "relation",
+  "id": 17726218,
+  "center": {
+    "lat": 22.5938178,
+    "lon": 120.3080432
+  },
+  "tags": {
+    "government": "labor",
+    "name": "勞動部勞動力發展署高屏澎東分署",
+    "name:en": "Workforce Development Agency, Ministry of Labor, Kaohsiung - Pingtung - Penghu - Taitung Regional Branch",
+    "name:zh": "勞動部勞動力發展署高屏澎東分署",
+    "office": "government",
+    "type": "multipolygon"
+  }
+},
+{
+  "type": "relation",
+  "id": 18073690,
+  "center": {
+    "lat": 22.5886779,
+    "lon": 120.3100875
+  },
+  "tags": {
+    "leisure": "park",
+    "name": "前鎮公園",
+    "name:en": "Cianjhen Park",
+    "name:zh": "前鎮公園",
+    "type": "multipolygon"
+  }
+}
+
+  ]
+}

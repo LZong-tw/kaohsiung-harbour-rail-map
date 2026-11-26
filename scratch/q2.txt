@@ -1,0 +1,5 @@
+[out:json][timeout:60];
+(nwr["leisure"~"park|garden"](22.586,120.302,22.600,120.318);
+ relation(17726214);relation(17726218);
+ way["highway"]["name"](22.588,120.304,22.598,120.316););
+out geom tags;
