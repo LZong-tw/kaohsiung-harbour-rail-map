@@ -283,7 +283,7 @@ G['xy'] = {
     '中岸壁線': [1945, 2008],                         # 1945、1955、1966、1989、2001 年圖皆有
     '裏岸壁線': [1945, 2008],                         # 1945、1955、1989 年圖有
     '淺野線（臺泥側線）': [1945, 2018],               # 1945～2001 年圖皆有；上限取縱貫線地下化
-    '濱線（商港側，往海關碼頭）': [1908, 2008],       # 與濱線漁港側同期
+    '濱線（商港側，往海關碼頭）': [1908, 1965],       # 開辦推定與濱線漁港側同期；1962 年圖仍有、1970 年 1:1200 圖只剩地界線 → 停用推定 1965（第 28 輪）
     '苓雅寮東側線（1945 年美軍圖，三股）': [1944, 1955],  # 只見於 1945 年圖
     '船渠北岸造船所線 A（1945 年美軍圖）': [1941, 1955],
     '船渠北岸造船所線 B（1945 年美軍圖）': [1941, 1955],
@@ -322,7 +322,9 @@ _jc = [g for g in _qz if sum(p[0] for p in g) / len(g) > 22.6115]   # 機廠
 _qc = [g for g in _qz if sum(p[0] for p in g) / len(g) <= 22.6115]  # 前鎮車場
 G['yards'] = [
     {'src': '1945 年美軍高雄市街圖', 'o': 1900, 'c': 1960, 'lines': _old_ks},
-    {'src': '1976 年 1:5000 像片基本圖', 'o': 1960, 'c': 1987, 'lines': json.load(open('yard_ks1976.json'))},
+    # 1960–1986 改用 1970 年 1:1200 都市計畫航測地形圖（中研院高雄百年歷史地圖）描出的股道（第 28 輪，yardtrace_line.py）：
+    # 線劃圖的股道連續、轉轍器清楚，比 1976 年像片基本圖的描線（yard_ks1976.json，片段多）適合讓主線沿股道走。
+    {'src': '1970 年 1:1200 都市計畫航測地形圖', 'o': 1960, 'c': 1987, 'lines': json.load(open('yard_ks1970.json'))},
     {'src': '1998 年 1:5000 像片基本圖', 'o': 1987, 'c': 2008, 'lines': json.load(open('yard_ks1998.json'))},
     {'src': '1998 年 1:5000 像片基本圖', 'o': 1967, 'c': 2018, 'lines': _qc},
     {'src': '1998 年 1:5000 像片基本圖', 'o': 1975, 'c': 2018, 'lines': _jc},
@@ -330,6 +332,134 @@ G['yards'] = [
 ]
 del G['yard']
 print('yards', [(g['o'], g['c'], len(g['lines'])) for g in G['yards']])
+# 9) 交叉與疊線修正（第 28 輪，overlap.py 檢查）：
+#    側線與母線在接點附近交叉而過、或先疊在母線上走一段才分出，改成從接點起就在同一側以平滑曲線分出／併入。
+def _arc(M):
+    P = [toM(p) for p in M]
+    s = [0.0]
+    for a, b in zip(P, P[1:]):
+        s.append(s[-1] + float(np.hypot(*(b - a))))
+    return P, s
+def _at(P, s, x):
+    i = max(0, min(len(s) - 2, int(np.searchsorted(s, x)) - 1))
+    t = (x - s[i]) / ((s[i + 1] - s[i]) or 1e-9)
+    d = P[i + 1] - P[i]
+    u = d / (np.hypot(*d) or 1)
+    return P[i] + d * t, np.array([-u[1], u[0]])
+def _pos(P, s, p):
+    best = None
+    for i in range(len(P) - 1):
+        d = P[i + 1] - P[i]; l2 = float(d @ d) or 1e-9
+        t = float(np.clip((p - P[i]) @ d / l2, 0, 1)); q = P[i] + d * t
+        dist = float(np.hypot(*(p - q)))
+        if best is None or dist < best[0]:
+            u = d / np.sqrt(l2)
+            best = (dist, s[i] + t * np.sqrt(l2), float(u[0] * (p - q)[1] - u[1] * (p - q)[0]))
+    return best   # (距離, 沿線位置, 帶號側距：左正右負)
+def clean_junction(S, M, at_start, far=8.0, shared=1.5, step=3.0):
+    """側線 S 與母線 M 的接點整理：去掉疊在母線上的部分，從離母線 far 公尺處起沿母線以餘弦漸減的側距併入接點，
+    整段都在原本那一側，不會交叉。at_start：接點在 S 的起點。"""
+    S = list(S[::-1]) if at_start else list(S)
+    # 先加密（原本的頂點可能很疏，一段長直線就跨到母線另一側）
+    D = []
+    for a, b in zip(S, S[1:]):
+        A, B = toM(a), toM(b)
+        n = max(1, int(np.hypot(*(B - A)) / step))
+        D += [toLL(A + (B - A) * t) for t in np.linspace(0, 1, n, endpoint=False)]
+    S = D + [S[-1]]
+    P, s = _arc(M)
+    d = [_pos(P, s, toM(p)) for p in S]
+    j = len(S) - 1
+    while j > 0 and d[j - 1][0] < shared:
+        j -= 1
+    # 側線原本從哪一側來：取接點前 200 m 內離母線 far 以上的點，多數在哪一側就是哪一側
+    sa = np.r_[0, np.cumsum([np.hypot(*(toM(b) - toM(a))) for a, b in zip(S, S[1:])])]
+    win = [i for i in range(j) if sa[j] - sa[i] < 200 and d[i][0] >= far]
+    sgn = np.sign(sum(np.sign(d[i][2]) for i in win)) if win else 0
+    cand = [i for i in win if np.sign(d[i][2]) == sgn] or [i for i in range(j) if d[i][0] >= far] or [0]
+    k = max(cand)
+    s0, side = d[k][1], d[k][2]
+    s1 = d[j][1]
+    n = max(2, int(abs(s1 - s0) / step))
+    ramp = []
+    for x in np.linspace(s0, s1, n + 1)[1:]:
+        t = (x - s0) / ((s1 - s0) or 1e-9)
+        q, nv = _at(P, s, x)
+        ramp.append(toLL(q + nv * side * 0.5 * (1 + math.cos(math.pi * t))))
+    out = S[:k + 1] + ramp
+    return out[::-1] if at_start else out
+# 淺野線：從西側接近縱貫線，原本在最後 80 m 斜穿到東側再接回
+X['淺野線（臺泥側線）'][0] = clean_junction(X['淺野線（臺泥側線）'][0], S['zg_n'], at_start=False)
+# 台電線：起點在前鎮橋北端，原本先往南折出一個尖角，再以小角度斜穿第一臨港線到西側
+X['台電南部火力發電所線（推定）'][0] = clean_junction(X['台電南部火力發電所線（推定）'][0], S['w1'], at_start=True)
+# 205 大門側線：原本先疊在凱旋四路線上走約 40 m 才分出，分出處又略為交叉
+X['205 兵工廠大門側線（凱旋四路側）'][0] = clean_junction(X['205 兵工廠大門側線（凱旋四路側）'][0], S['k4'], at_start=True)
+# 第二貨櫃線：起點處略為跨到第二臨港線另一側
+S['c2'] = clean_junction(S['c2'], S['s2'], at_start=True)
+# 鼓山：西臨港線與鼓山—三塊厝線在鼓山站南側共用路廊，原本兩線在 250 m 內交叉兩次。
+# 往高雄港站的西臨港線應在西側、往三塊厝東彎的線在東側：鼓山站以南改為沿 zg_s 西側 6 m 並行，
+# 到 zg_s 開始東彎後再接回原線形。
+def _fix_gushan():
+    W, Z = S['west'], S['zg_s']
+    PZ, sZ = _arc(Z)
+    # zg_s 從鼓山站往南的直線段（開始東彎前），向西平移 6 m
+    stn = toM(G['st']['鼓山'])
+    off = []
+    for x in np.arange(0, 150, 6.0):
+        q, nv = _at(PZ, sZ, x)
+        if nv[0] > 0: nv = -nv            # 西側
+        off.append(q + nv * 6.0)
+    PW = [toM(p) for p in W]
+    # W 的北端接縱貫線；找出 W 上最接近 off[-1]、off[0] 的頂點，中間改成 off
+    i_s = int(np.argmin([np.hypot(*(p - off[-1])) for p in PW]))
+    i_n = int(np.argmin([np.hypot(*(p - off[0])) for p in PW]))
+    assert i_s < i_n, (i_s, i_n)
+    mid = [toLL(p) for p in off[::-1]]
+    # 平移段北端直接接到縱貫線上的接點（W 的最後一點），不再接回原本那段往東的弧線
+    return W[:i_s] + mid + W[-1:]
+S['west'] = _fix_gushan()
+# 草衙：糖鐵籬仔內線與第二臨港線延伸（中鋼線）在 1989 年圖上是同一條軌道（圖上只有一條鐵路），
+# 原本兩線各自依不同圖描，在 400 m 內交叉三次。15 m 以內的段落改為與中鋼線同線（以中鋼線的線形為準），
+# 前後 70 m 平滑銜接。
+def snap_shared(A, B, tol=15.0, step=3.0, L=70.0):
+    PA = [toM(p) for p in A]
+    D = []
+    for a, b in zip(PA, PA[1:]):
+        n = max(1, int(np.hypot(*(b - a)) / step))
+        for t in np.linspace(0, 1, n, endpoint=False):
+            D.append(a + (b - a) * t)
+    D.append(PA[-1])
+    PB, sB = _arc(B)
+    pos = [_pos(PB, sB, p) for p in D]
+    on = np.array([r[0] < tol for r in pos], float)
+    # 與 B 共線的權重：在共線段內為 1，進出共線段時在 L 公尺內以餘弦漸變
+    sA = np.r_[0, np.cumsum([np.hypot(*(b - a)) for a, b in zip(D, D[1:])])]
+    w = np.zeros(len(D))
+    idx = np.nonzero(on)[0]
+    for i in range(len(D)):
+        if not len(idx):
+            break
+        dmin = np.min(np.abs(sA[idx] - sA[i]))
+        w[i] = 1.0 if on[i] else (0.5 * (1 + math.cos(math.pi * dmin / L)) if dmin < L else 0.0)
+    out = []
+    for p, r, wi in zip(D, pos, w):
+        q, _ = _at(PB, sB, r[1])
+        out.append(toLL(p * (1 - wi) + q * wi))
+    return rdp_ll(out)
+def rdp_ll(L, eps=0.5):
+    P = [toM(p) for p in L]
+    def _r(a, b):
+        if b - a < 2:
+            return [a, b]
+        A, B = P[a], P[b]; v = B - A; n = np.hypot(*v) or 1
+        d = [abs(v[0] * (P[i] - A)[1] - v[1] * (P[i] - A)[0]) / n for i in range(a + 1, b)]
+        i = int(np.argmax(d))
+        if d[i] > eps:
+            m = a + 1 + i
+            return _r(a, m)[:-1] + _r(m, b)
+        return [a, b]
+    return [L[i] for i in _r(0, len(L) - 1)]
+X['糖鐵籬仔內線（籬仔內站—前鎮河—小港糖廠）'][0] = snap_shared(X['糖鐵籬仔內線（籬仔內站—前鎮河—小港糖廠）'][0], S['s2b'])
 # 6) stations & branch markers re-projected
 lines = [v for k, v in S.items() if not k.startswith('lr')] + [p[0] for p in X.values()]
 for n, p in list(G['st'].items()):
