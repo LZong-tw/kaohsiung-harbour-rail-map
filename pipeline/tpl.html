@@ -218,10 +218,10 @@ document.getElementById('tk').innerHTML=[1900,1907,1941,1955,1967,1977,1988,2008
 sl.addEventListener('input',()=>draw(+sl.value));
 document.getElementById('tk').addEventListener('click',e=>{const b=e.target.closest('button');if(b)draw(+b.dataset.y)});
 for(const id of ['la','lc'])document.getElementById(id).addEventListener('click',e=>{const li=e.target.closest('li[data-id]');if(li)m.fitBounds(lay[li.dataset.id].getBounds(),{padding:[40,40],maxZoom:16})});
-const EXC={'糖鐵牛寮三角線（往籬仔內）':'#7a5c3a','糖鐵籬仔內線（籬仔內站—前鎮河—小港糖廠）':'#7a5c3a','糖鐵籬子內線後期段（沿中山四路接臺糖倉庫）':'#7a5c3a','糖鐵五甲鳳山線（鳳山—五甲—籬仔內線分岐）':'#7a5c3a'};
+const EXC=n=>n.startsWith('糖鐵')?'#7a5c3a':null;   // 糖業鐵道一律棕色
 const exL=[];
 const MAINX=new Set(['獅子公園三角線東側（原主線弧線）']);
-for(const[n,parts]of Object.entries(G.extra)){const mx=MAINX.has(n),col=mx?'#7b2d8e':(EXC[n]||'#c2620a');
+for(const[n,parts]of Object.entries(G.extra)){const mx=MAINX.has(n),col=mx?'#7b2d8e':(EXC(n)||'#c2620a');
  for(const g of parts){const st=mx?{color:col,weight:4,lineCap:'round',opacity:.95,dashArray:null,interactive:false}:{color:col,weight:3,dashArray:'6 4',lineCap:'round',opacity:.95,interactive:false};const pl=L.polyline(g,st);pl._xn=n;pl._st=st;pl._xi=parts.indexOf(g);exL.push(pl)}
  const longest=parts.reduce((a,b)=>b.length>a.length?b:a);mkLabel('x-'+n,longest,n,col,11,n==='糖鐵籬子內線'?.12:.3)}
 const BRSEG={'5.4K':'zd','6.8K':'s2','前鎮橋':'qzb'};
