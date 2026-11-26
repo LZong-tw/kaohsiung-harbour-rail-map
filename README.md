@@ -14,8 +14,8 @@
 repo 可直接發布成靜態網站：首頁是互動地圖，另有「研究過程與方法」「工作歷程」「參考資料」三頁（由上述 Markdown 轉成），以及「資料與檔案」頁，依資料夾列出 repo 內所有程式、中間資料、檢查圖與截圖，連回 GitHub 上的原檔。研究資料本身不複製進網站，網站只有幾 MB。
 
 - 建置：`.github/workflows/pages.yml` 在每次推送到 `main` 時執行 `tools/build_site.py`，輸出 `_site/` 並部署。
-- 啟用：repo 的 Settings → Pages → Build and deployment → Source 選「GitHub Actions」。網址會是 <https://lzong-tw.github.io/kaohsiung-harbour-rail-map/>。
-- 限制：私有 repo 要開 Pages 需要 GitHub Pro／Team 以上方案；而且 Pages 網站本身是公開的（Enterprise 的私有 Pages 除外）。repo 維持私有時，「資料與檔案」頁的連結只有登入且有權限的帳號打得開。
+- 設定：repo 的 Settings → Pages → Build and deployment → Source 為「GitHub Actions」。
+- 網址：<https://lzong-tw.github.io/kaohsiung-harbour-rail-map/>（repo 與網站皆公開）。
 - 本機預覽：`pip install markdown && python tools/build_site.py`，再開 `_site/index.html`。
 
 ## 目錄

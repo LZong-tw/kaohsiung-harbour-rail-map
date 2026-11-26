@@ -141,7 +141,6 @@ def files_page():
     body = (f'<h1>資料與檔案</h1><p>研究用到的程式、中間資料、檢查圖與截圖都保留在 '
             f'<a href="{GH}">GitHub repo</a>，以下依資料夾列出並連到原檔。方法與判讀見'
             f'<a href="methods.html">研究過程與方法</a>，逐輪紀錄見<a href="worklog.html">工作歷程</a>。</p>'
-            f'<p class="muted">repo 若為私有，連結需登入且有權限的 GitHub 帳號才能開啟。</p>'
             f'<div class="tw"><table class="files"><tr><th>路徑</th><th>說明</th></tr>{trs}</table></div>')
     return page('資料與檔案', body, 'files.html')
 

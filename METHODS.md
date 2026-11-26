@@ -236,7 +236,7 @@
 
 ## 檔案、重現方式與致謝
 
-研究資料、程式與中間檔都在 GitHub 私有 repo [LZong-tw/kaohsiung-harbour-rail-map](https://github.com/LZong-tw/kaohsiung-harbour-rail-map)。互動地圖另外發布為[高雄臨港線 1900–2024](https://claude.ai/artifact/CD6Kw3bKNvSQ9xRWbWeqcY)。repo 也能用 GitHub Pages 發布成網站（`tools/build_site.py`）：首頁是地圖，本文件、工作歷程與參考資料轉成網頁，另有一頁依資料夾列出所有研究檔案並連回 repo 原檔。
+研究資料、程式與中間檔都在公開的 GitHub repo [LZong-tw/kaohsiung-harbour-rail-map](https://github.com/LZong-tw/kaohsiung-harbour-rail-map)。互動地圖另外發布為[高雄臨港線 1900–2024](https://claude.ai/artifact/CD6Kw3bKNvSQ9xRWbWeqcY)。repo 同時用 GitHub Pages 發布成[網站](https://lzong-tw.github.io/kaohsiung-harbour-rail-map/)（`tools/build_site.py`）：首頁是地圖，本文件、工作歷程與參考資料轉成網頁，另有一頁依資料夾列出所有研究檔案並連回 repo 原檔。
 
 | 路徑 | 內容 |
 | --- | --- |
