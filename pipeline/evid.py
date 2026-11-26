@@ -1,5 +1,3 @@
-# 年代證據比對：python3 evid.py OUT.png 線名 [線名…]；環境變數 YRS=1945,1955,1966,1989（另可加 1993、2001）
-# 每條線一列，各年圖一格，線以綠色疊在圖上。線名用 geo_v13.json 的 extra 名稱。
 import json,math,subprocess,sys,os
 from PIL import Image,ImageDraw
 G=json.load(open('geo_v13.json'))

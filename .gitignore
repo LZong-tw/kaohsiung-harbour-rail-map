@@ -2,3 +2,6 @@ _site/
 __pycache__/
 *.pyc
 *mcp-config*.json
+pipeline/n/TOPO05KPHOTO_*/
+pipeline/n/PHOTO1/
+pipeline/n/PHOTO20*/
