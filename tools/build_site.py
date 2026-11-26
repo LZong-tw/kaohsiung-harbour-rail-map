@@ -5,7 +5,7 @@ Pages:
   methods.html  METHODS.md   研究過程與方法
   worklog.html  WORKLOG.md   工作歷程
   sources.html  SOURCES.md   參考資料
-  files.html    every research file in the repo, linked to GitHub
+  files.html    FILES.md (what each script and intermediate file is for) + every repo file, linked to GitHub
 
 Research data (pipeline/, scratch/, uploads/ …) is NOT copied into the site; files.html links
 to it on GitHub so the Pages artifact stays small. Run from the repo root:
@@ -34,6 +34,7 @@ PAGES = [  # (source, output, title)
     ('SOURCES.md', 'sources.html', '參考資料'),
 ]
 MD2HTML = {src: out for src, out, _ in PAGES}
+MD2HTML['FILES.md'] = 'files.html'
 NAV = [('index.html', '地圖')] + [(o, t) for _, o, t in PAGES] + [('files.html', '資料與檔案')]
 
 # Directories described as a whole instead of file by file (tile caches, render dumps).
@@ -138,9 +139,9 @@ def files_page():
             for p in ps:
                 rows.append((p, f'&nbsp;&nbsp;<a href="{GH}/blob/{BRANCH}/{p}">{p}</a>', ''))
     trs = ''.join(f'<tr><td>{a}</td><td class="muted">{b}</td></tr>' for _, a, b in rows)
-    body = (f'<h1>資料與檔案</h1><p>研究用到的程式、中間資料、檢查圖與截圖都保留在 '
-            f'<a href="{GH}">GitHub repo</a>，以下依資料夾列出並連到原檔。方法與判讀見'
-            f'<a href="methods.html">研究過程與方法</a>，逐輪紀錄見<a href="worklog.html">工作歷程</a>。</p>'
+    body = (render_md('FILES.md').replace('<h1', '<h1 id="files-top"', 1) +
+            f'<h2 id="all-files">全部檔案</h2><p>repo 內所有檔案依資料夾列出，連到 '
+            f'<a href="{GH}">GitHub</a> 上的原檔；檔案很多的資料夾只列總數。</p>'
             f'<div class="tw"><table class="files"><tr><th>路徑</th><th>說明</th></tr>{trs}</table></div>')
     return page('資料與檔案', body, 'files.html')
 

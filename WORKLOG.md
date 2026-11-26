@@ -156,3 +156,12 @@
 - 使用者把 repo 轉為公開並啟用 GitHub Pages：<https://lzong-tw.github.io/kaohsiung-harbour-rail-map/>。
 - 使用者：「拿掉，只保留那一個網址」。`uploads/` 裡的 Google 街景截圖從整個 git 歷史移除並強制推送；文件改為只引用街景連結（見 `SOURCES.md`、`METHODS.md` 資料來源表）。
 
+## 第 24 輪：檔案說明
+
+- 使用者：「你現在有辦法說明每個中繼檔案和腳本的用途嗎，你自己找適合寫的地方記」。
+- 逐一讀過 `pipeline/` 的腳本（輸入、輸出、彼此引用），檢查每個中繼檔的內容與尺寸，寫成 [`FILES.md`](FILES.md)。
+  - 內容涵蓋：座標框架、現行流程、幾何版本沿革、早期腳本、圖資快取、底圖、遮罩、OSM 查詢、疊圖工具，以及 `scratch/`、`uploads/` 的分組說明。
+  - 沒有獨立腳本、在命令列產生的檔案（`water.npy`、`dark2.npy`、`pier*.json`、`s45.json`、`am45_shift.json`）照實標明。
+  - `scratch/` 的檢查圖只能依檔名分組說明，無法逐張交代。
+- 也加了 `pipeline/README.md` 指向說明；網站的「資料與檔案」頁最上方改為這份說明，下方才是完整檔案清單。
+
