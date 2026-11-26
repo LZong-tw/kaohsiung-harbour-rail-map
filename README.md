@@ -7,7 +7,7 @@
 | 研究過程與方法 | [`METHODS.md`](METHODS.md)（同步自 Claude 文件「高雄臨港線歷史路線圖：研究過程與方法」） | 資料來源、定位方法、線形規整、檢查流程、關鍵判讀與修正、路線與年代表、限制、授權 |
 | 互動地圖 | [`site/`](site/)（另發布為 Claude artifact「高雄臨港線 1900–2024」） | 地圖與年份操作，以及各年份營運中／已停用的路線清單 |
 
-逐輪工作紀錄在 [`WORKLOG.md`](WORKLOG.md)，參考資料在 [`SOURCES.md`](SOURCES.md)。
+逐輪工作紀錄在 [`WORKLOG.md`](WORKLOG.md)，參考資料在 [`SOURCES.md`](SOURCES.md)，每個腳本與中繼檔的用途在 [`FILES.md`](FILES.md)。
 
 ## 網站（GitHub Pages）
 
