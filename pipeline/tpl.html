@@ -50,6 +50,7 @@ button:focus-visible,input:focus-visible{outline:3px solid var(--acc);outline-of
 .lbl{background:rgba(255,255,255,.92);border:0;box-shadow:none;padding:calc(1px*var(--s,1)) calc(5px*var(--s,1));font:700 calc(13px*var(--s,1))/1.3 "Noto Sans TC",sans-serif;color:#14181d;border-radius:3px}
 .lbl::before{display:none}
 .lbl.off{color:#8a949c;font-weight:500}
+.leaflet-tooltip.pick{font:13px/1.5 "Noto Sans TC",sans-serif;padding:5px 9px;white-space:nowrap}.pick span{margin-left:.6em;color:#5b6670}.pick .off{color:#8a949c}
 .ll{font-family:"Noto Sans TC",sans-serif;font-weight:700;paint-order:stroke;stroke:#fff;stroke-linejoin:round;pointer-events:none;letter-spacing:.06em}
 .leaflet-container{font-family:"Noto Sans TC",sans-serif}
 @media(max-width:760px){html,body{height:auto}.app{grid-template-columns:minmax(0,1fr);grid-template-rows:62svh auto;height:auto}.side{border-left:0;border-top:1px solid var(--line);overflow:visible}}
@@ -165,9 +166,12 @@ function relabel(){mapEl.style.setProperty('--s',scale().toFixed(3));for(const k
 
 m.attributionControl.setPrefix(false).addAttribution('© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors');
 const FB=[[22.556,120.268],[22.672,120.362]];m.fitBounds(FB);addEventListener('load',()=>{m.invalidateSize();m.fitBounds(FB)});
-const yard=G.yard.map(g=>L.polyline(g,{color:'#7b2d8e',weight:1.5,opacity:.6,interactive:false}).addTo(m));
+const yard=G.yard.map(g=>{const l=L.polyline(g,{color:'#7b2d8e',weight:1.5,opacity:.6,interactive:false});
+ // 股道依最近的車站決定年份
+ let best=null,bd=1e9;for(const[n,o,c]of STN){const p=G.st[n];if(!p)continue;const d=Math.hypot(p[0]-g[0][0],(p[1]-g[0][1])*.92);if(d<bd){bd=d;best=[o,c]}}
+ l._o=best?best[0]:0;l._c=best?best[1]:9999;return l});
 const lay={};
-for(const s of SEG){lay[s.id]=L.polyline(G.seg[s.id],{...STY[s.k],lineCap:'round',lineJoin:'round'}).bindTooltip(s.name+'　'+(s.k==='unc'?'':s.o+'–'+(s.c>3000?'':s.c)),{sticky:true})}
+for(const s of SEG){lay[s.id]=L.polyline(G.seg[s.id],{...STY[s.k],lineCap:'round',lineJoin:'round',interactive:false})}
 for(const s of SEG)if(s.lb)mkLabel(s.id,G.seg[s.id],s.lb,STY[s.k].color,13);
 const order=['zg_n','zg_s','pt','west','hm','l1w','ob','w0','w1','qzb','w2','w3','k4','e1','zd','s2','s2b','c2','c3','qy1','qy2','lr1','lr2'];
 const stl={};
@@ -179,7 +183,7 @@ var draw=function(y){
   if(y<s.o){l.remove();showLabel(id,false);continue}
   if(y>=s.c){if(s.lr){l.remove();showLabel(id,false);continue}l.setStyle({...GH});l.addTo(m);l.bringToBack();showLabel(id,false);continue}
   l.setStyle({opacity:1,...STY[s.k],dashArray:STY[s.k].dashArray||null});l.addTo(m);if(s.lr)l.bringToFront();showLabel(id,true)}
- yard.forEach(g=>g.setStyle({opacity:y>=1941&&y<2008?.6:.2}));
+ yard.forEach(g=>y>=g._o&&y<g._c?g.addTo(m):g.remove());
  for(const[n,v]of Object.entries(stl)){
   if(y<v.o){v.mk.remove();continue}
   const on=y<v.c;v.mk.setStyle({color:on?'#3b4248':'#8a949c',fillColor:on?'#fff':'#c9ced2'});
@@ -203,14 +207,41 @@ const EXC={'糖鐵牛寮三角線（往籬仔內）':'#7a5c3a','糖鐵籬仔內�
 const exL=[];
 const MAINX=new Set(['獅子公園三角線東側（原主線弧線）']);
 for(const[n,parts]of Object.entries(G.extra)){const mx=MAINX.has(n),col=mx?'#7b2d8e':(EXC[n]||'#c2620a');
- for(const g of parts){const pl=L.polyline(g,mx?{color:col,weight:4,lineCap:'round',opacity:.95}:{color:col,weight:3,dashArray:'6 4',lineCap:'round',opacity:.95}).bindTooltip(n,{sticky:true});pl._xn=n;exL.push(pl)}
+ for(const g of parts){const st=mx?{color:col,weight:4,lineCap:'round',opacity:.95,dashArray:null,interactive:false}:{color:col,weight:3,dashArray:'6 4',lineCap:'round',opacity:.95,interactive:false};const pl=L.polyline(g,st);pl._xn=n;pl._st=st;exL.push(pl)}
  const longest=parts.reduce((a,b)=>b.length>a.length?b:a);mkLabel('x-'+n,longest,n,col,11,n==='糖鐵籬子內線'?.12:.3)}
-const bpL=Object.entries(G.br).map(([n,p])=>L.circleMarker(p,{radius:3,color:'#5b6670',weight:2,fillColor:'#fff',fillOpacity:1}).bindTooltip(n,{direction:'bottom',offset:[0,4]}));
+const BRSEG={'5.4K':'zd','6.8K':'s2','前鎮橋':'qzb'};
+const bpL=Object.entries(G.br).map(([n,p])=>{const c=L.circleMarker(p,{radius:3,color:'#5b6670',weight:2,fillColor:'#fff',fillOpacity:1}).bindTooltip(n,{direction:'bottom',offset:[0,4]});c._seg=Object.entries(BRSEG).find(([k])=>n.startsWith(k))?.[1];return c});
 const exBox=document.getElementById('ex');
-let curY=1977;const XY=G.xy||{};const inY=n=>{const r=XY[n];return !r||((r[0]==null||curY>=r[0])&&(r[1]==null||curY<=r[1]))};
-function drawExtra(){const on=exBox.checked;exL.forEach(l=>on&&inY(l._xn)?l.addTo(m):l.remove());for(const n in G.extra)showLabel('x-'+n,on&&inY(n))}
+let curY=1977;const XY=G.xy||{};
+const opened=n=>{const r=XY[n];return !r||r[0]==null||curY>=r[0]},closed=n=>{const r=XY[n];return !!r&&r[1]!=null&&curY>=r[1]};
+const inY=n=>opened(n)&&!closed(n);
+function drawExtra(){const on=exBox.checked;
+ exL.forEach(l=>{const n=l._xn;
+  if(MAINX.has(n)){if(!opened(n)){l.remove();return}l.setStyle(closed(n)?{...GH}:l._st);l.addTo(m);if(closed(n))l.bringToBack();return}
+  on&&inY(n)?l.addTo(m):l.remove()});
+ for(const n in G.extra)showLabel('x-'+n,(on||MAINX.has(n))&&inY(n))}
 exBox.addEventListener('change',drawExtra);
-const _draw=draw;draw=function(y){curY=y;_draw(y);bpL.forEach(b=>y>=1967?b.addTo(m):b.remove());drawExtra();relabel()};
+// 路線查詢：不靠各線自己的滑鼠事件（重疊的路廊只有最上層那條點得到、虛線的空隙點不到），
+// 改成在游標附近找所有看得到的線，列在同一個提示框裡。
+const tip=L.tooltip({direction:'top',offset:[0,-8],className:'pick'});
+const segYrs=s=>s.k==='unc'?'約 1977–2011':s.o+'–'+(s.c>3000?'':s.c);
+const xyYrs=n=>{const r=XY[n];return r?(r[0]??'')+'–'+(r[1]??''):''};const xOff=n=>closed(n);
+function pickAt(pt,tol){const hits=[];
+ const near=l=>{if(!m.hasLayer(l)||!l._parts||!l._pxBounds)return Infinity;const b=l._pxBounds;
+  if(pt.x<b.min.x-tol||pt.x>b.max.x+tol||pt.y<b.min.y-tol||pt.y>b.max.y+tol)return Infinity;
+  let d=Infinity;for(const part of l._parts)for(let i=1;i<part.length&&d>.5;i++)d=Math.min(d,L.LineUtil.pointToSegmentDistance(pt,part[i-1],part[i]));return d};
+ for(const s of SEG){const d=near(lay[s.id]);if(d<=tol)hits.push({d,t:s.name,y:segYrs(s),off:curY>=s.c})}
+ for(const l of exL){const d=near(l);if(d<=tol)hits.push({d,t:l._xn,y:xyYrs(l._xn),off:xOff(l._xn)})}
+ const seen=new Set();return hits.sort((a,b)=>(a.off-b.off)||(a.d-b.d)).filter(h=>!seen.has(h.t)&&seen.add(h.t)).slice(0,5)}
+function showPick(e,tol){const h=pickAt(e.layerPoint,tol);m.getContainer().style.cursor=h.length?'pointer':'';
+ if(!h.length){m.closeTooltip(tip);return}
+ tip.setLatLng(e.latlng).setContent(h.map(x=>`<div${x.off?' class="off"':''}>${x.t}${x.y?`<span>${x.y}</span>`:''}</div>`).join(''));
+ if(!m.hasLayer(tip))m.openTooltip(tip)}
+m.on('mousemove',e=>{if(!e.originalEvent.buttons)showPick(e,8)});
+m.on('click',e=>showPick(e,L.Browser.touch?18:8));
+m.on('mouseout movestart zoomstart',()=>{m.closeTooltip(tip);m.getContainer().style.cursor=''});
+
+const _draw=draw;draw=function(y){curY=y;_draw(y);bpL.forEach(b=>{const s=SEG.find(x=>x.id===b._seg);s&&y>=s.o&&y<s.c?b.addTo(m):b.remove()});drawExtra();relabel()};
 m.on('zoomend moveend',relabel);
 addEventListener('load',()=>{Z0=m.getZoom();relabel()});
 Z0=m.getZoom();
