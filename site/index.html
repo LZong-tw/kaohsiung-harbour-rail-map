@@ -7,154 +7,67 @@
 <link rel="stylesheet" href="leaflet.css">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet">
 <style>
-/* VOICE: 鐵道史研究筆記，冷靜、精確，年份與里程為主角
-   IDEA: 台鐵線路略圖疊在真實街圖上——港區灰底、線路黑、廢線虛線、輕軌綠
-   PICTURE: 以 OSM 實際軌跡繪製的可縮放地圖，隨年份長出、廢止、轉為輕軌
-   COLOUR and TYPE: 灰階底圖、幹線藍 #1d4e89、臨港線黑、第二臨港線朱 #c1121f、支線橙 #c2620a、輕軌綠 #2f9e44；Noto Sans TC
-   LAYOUT: 標題 → 大地圖＋年份 → 滑桿與年表 → 各線一覽 → 原圖 → 資料與限制 */
-:root{color-scheme:light dark;--bg:light-dark(#ffffff,#0e1418);--ink:light-dark(#14181d,#e7ecef);--mute:light-dark(#5b6670,#9aa7b1);--soft:light-dark(#f3f4f2,#162027);--line:light-dark(#dfe3e6,#26323a);--rail:#7b2d8e;--trunk:#1d4e89;--red:#c1121f;--org:#c2620a;--lr:#2f9e44;--ghost:#8a949c}
+/* VOICE 研究底圖：安靜、精確，線路是主角
+   IDEA 鐵道略圖畫在今日街圖上；選一個年份，看哪些線在跑、哪些已停
+   PICTURE 大地圖，線名沿線標註；旁邊是該年的路線清單，清單本身就是圖例
+   COLOUR 灰階底圖；縱貫藍 #1d4e89、臨港線紫 #7b2d8e、第二臨港線朱 #c1121f、支線橙 #c2620a、輕軌綠 #2f9e44、停用灰虛線
+   TYPE Noto Sans TC 900 年份、700 線名、400 說明
+   LAYOUT 桌機：地圖左、清單右；手機：地圖在上、清單在下 */
+:root{color-scheme:light dark;--bg:light-dark(#ffffff,#0e1418);--ink:light-dark(#14181d,#e7ecef);--mute:light-dark(#5b6670,#9aa7b1);--soft:light-dark(#f3f4f2,#162027);--line:light-dark(#dfe3e6,#26323a);--acc:#7b2d8e}
 :root[data-theme=light]{color-scheme:light}:root[data-theme=dark]{color-scheme:dark}
 *{box-sizing:border-box;min-width:0}
-body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 "Noto Sans TC",system-ui,sans-serif;overflow-x:clip}
-.band{padding:clamp(18px,4vw,48px) max(5vw,16px);max-width:1240px;margin:0 auto}
-h1{font-size:clamp(28px,5vw,44px);line-height:1.1;margin:0 0 8px;text-wrap:balance;font-weight:900}
-h2{font-size:22px;margin:0 0 12px}
-.lede{color:var(--mute);max-width:70ch;margin:0}
-.grid{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:28px;align-items:start}
-@media(max-width:900px){.grid{grid-template-columns:minmax(0,1fr)}}
-.mapwrap{position:relative}
-#map{aspect-ratio:1/1.08;max-height:86vh;width:100%;border-radius:10px;border:1px solid var(--line);background:#d9dcd8}
+html,body{height:100%;margin:0}
+body{background:var(--bg);color:var(--ink);font:15px/1.45 "Noto Sans TC",system-ui,sans-serif}
+.app{display:grid;grid-template-columns:minmax(0,1fr) 360px;height:100%}
+.mapbox{position:relative}
+#map{position:absolute;inset:0;background:#d9dcd8}
 @media(prefers-color-scheme:dark){:root:not([data-theme=light]) .leaflet-image-layer{filter:invert(.92) hue-rotate(180deg) brightness(.85)}}
 :root[data-theme=dark] .leaflet-image-layer{filter:invert(.92) hue-rotate(180deg) brightness(.85)}
-.yr{position:absolute;z-index:500;top:10px;right:12px;font-size:clamp(34px,6vw,52px);font-weight:900;line-height:1;pointer-events:none;color:#14181d;text-shadow:0 0 4px #fff,0 0 10px #fff}
+.hd{position:absolute;z-index:500;top:12px;left:16px;pointer-events:none;color:#14181d;text-shadow:0 0 3px #fff,0 0 8px #fff,0 0 14px #fff}
+.hd h1{margin:0;font-size:clamp(18px,2.4vw,24px);font-weight:700;line-height:1.2}
+.hd output{display:block;font-size:clamp(48px,8vw,80px);font-weight:900;line-height:1;letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+.side{overflow:auto;border-left:1px solid var(--line);padding:16px 18px 24px}
+.side input[type=range]{width:100%;height:40px;margin:0;accent-color:var(--acc)}
+.ticks{display:flex;flex-wrap:wrap;gap:4px;margin-bottom:12px}
+.ticks button{min-height:32px;padding:0 9px;border-radius:16px;border:1px solid var(--line);background:transparent;color:var(--ink);font:inherit;font-size:13px;font-variant-numeric:tabular-nums;cursor:pointer}
+.ticks button:hover{border-color:var(--ink)}
+.ticks button.on{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.ev{margin:0 0 16px;padding:10px 12px;border-left:4px solid var(--acc);background:var(--soft);border-radius:0 6px 6px 0}
+.ev time{display:block;font-weight:700;font-variant-numeric:tabular-nums}
+.side h2{font-size:15px;margin:14px 0 6px;display:flex;justify-content:space-between;align-items:baseline}
+.side h2 span{font-variant-numeric:tabular-nums;color:var(--mute);font-weight:500}
+.ls{list-style:none;margin:0;padding:0}
+.ls li{display:grid;grid-template-columns:34px minmax(0,1fr);gap:0 10px;padding:6px 6px;border-radius:6px;cursor:pointer}
+.ls li:hover,.ls li:focus-visible{background:var(--soft)}
+.ls svg{margin-top:5px}
+.ls b{font-weight:700}
+.ls .y{color:var(--mute);font-variant-numeric:tabular-nums;white-space:nowrap;margin-left:6px;font-size:13px}
+.ls p{grid-column:2;margin:1px 0 0;color:var(--mute);font-size:13px}
+.ls.off b{font-weight:500;color:var(--mute)}
+.tog{display:flex;align-items:center;gap:8px;font-size:14px;min-height:40px;cursor:pointer;margin-top:10px;border-top:1px solid var(--line);padding-top:10px}
+.tog input{width:18px;height:18px;margin:0;accent-color:var(--acc)}
+button:focus-visible,input:focus-visible{outline:3px solid var(--acc);outline-offset:2px}
 .lbl{background:rgba(255,255,255,.92);border:0;box-shadow:none;padding:calc(1px*var(--s,1)) calc(5px*var(--s,1));font:700 calc(13px*var(--s,1))/1.3 "Noto Sans TC",sans-serif;color:#14181d;border-radius:3px}
-.lbl.bp{background:none;color:#5b6670;font-weight:500;font-size:calc(11px*var(--s,1));text-shadow:0 0 3px #fff,0 0 3px #fff,0 0 3px #fff}
-.ll{font-family:"Noto Sans TC",sans-serif;font-weight:700;paint-order:stroke;stroke:#fff;stroke-linejoin:round;pointer-events:none;letter-spacing:.06em}
-.tog{display:flex;align-items:center;gap:10px;margin-top:10px;font-size:15px;min-height:44px;cursor:pointer}
-.tog input{width:22px;height:22px;accent-color:var(--red)}
 .lbl::before{display:none}
 .lbl.off{color:#8a949c;font-weight:500}
+.ll{font-family:"Noto Sans TC",sans-serif;font-weight:700;paint-order:stroke;stroke:#fff;stroke-linejoin:round;pointer-events:none;letter-spacing:.06em}
 .leaflet-container{font-family:"Noto Sans TC",sans-serif}
-.ctl label{font-size:14px;color:var(--mute)}
-input[type=range]{width:100%;height:44px;accent-color:var(--red)}
-.ticks{display:flex;flex-wrap:wrap;gap:6px}
-.ticks button{min-height:40px;padding:0 12px;border-radius:20px;border:1px solid var(--line);background:var(--bg);color:var(--ink);font:inherit;font-size:14px;cursor:pointer}
-.ticks button.on{background:var(--ink);color:var(--bg);border-color:var(--ink)}
-button:focus-visible,input:focus-visible,li:focus-visible{outline:3px solid var(--red);outline-offset:2px}
-.state{margin-top:14px;padding:12px 16px;border-left:4px solid var(--red);background:var(--soft);border-radius:0 8px 8px 0}
-.state b{display:block;font-size:17px}
-.legend{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:6px 16px;margin:12px 0 0;padding:0;list-style:none;font-size:14px}
-.legend li{display:flex;align-items:center;gap:8px}.legend svg{flex:none}
-.tl{list-style:none;margin:0;padding:0;border-left:2px solid var(--line);max-height:60vh;overflow:auto}
-.tl li{position:relative;padding:7px 8px 7px 18px;cursor:pointer;border-radius:6px}
-.tl li::before{content:"";position:absolute;left:-7px;top:15px;width:12px;height:12px;border-radius:50%;background:var(--bg);border:2px solid var(--ghost)}
-.tl li.past::before{background:var(--ink);border-color:var(--ink)}
-.tl li.now{background:var(--soft)}.tl li.now::before{background:var(--red);border-color:var(--red)}
-.tl time{font-weight:700;white-space:nowrap;margin-right:8px}
-table{border-collapse:collapse;width:100%;font-size:15px}
-th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
-td.n{white-space:nowrap;font-variant-numeric:tabular-nums}
-.note{font-size:14px;color:var(--mute)}
-.scan img{width:100%;border-radius:8px;border:1px solid var(--line)}
-details summary{cursor:pointer;font-weight:700;min-height:44px;display:flex;align-items:center}
-a{color:inherit}
-@media(max-width:600px){table{font-size:13px}.stack thead{display:none}.stack tr{display:grid;padding-block:10px;border-bottom:1px solid var(--line)}.stack td{display:flow-root;border:0;padding:3px 0;padding-inline-start:5.5em;text-align:start}.stack td::before{content:attr(data-l);float:inline-start;width:5em;margin-inline-start:-5.5em;color:var(--mute)}}
+@media(max-width:760px){html,body{height:auto}.app{grid-template-columns:minmax(0,1fr);grid-template-rows:62svh auto;height:auto}.side{border-left:0;border-top:1px solid var(--line);overflow:visible}}
 </style>
-<script>new MutationObserver(()=>{for(const c of document.querySelectorAll('.stack td:not([data-l])')){let i=0,p=c;while(p=p.previousElementSibling)i+=p.colSpan;c.dataset.l=c.closest('table').rows[0].cells[i]?.textContent||''}}).observe(document,{childList:true,subtree:true})</script>
+
 </head>
 <body>
-<header class="band" style="padding-bottom:6px">
-<h1>高雄臨港線與縱貫、屏東線：1900–2024</h1>
-<p class="lede">各條線都依 OpenStreetMap 上記錄的實際軌跡（現役、廢線與輕軌路廊）畫在真實街圖上。拖動年份可以看路網成形（1900–1977）、收縮（1988–2018），以及被輕軌接手（2015–2024）。地圖可以縮放、拖曳。</p>
-</header>
-<main class="band" style="padding-top:10px">
-<div class="grid">
-<section>
-<div class="mapwrap"><div id="map" aria-label="高雄臨港線歷年路網地圖"></div><div class="yr" id="yr"></div></div>
-<ul class="legend" id="lg"></ul>
-<label class="tog"><input type="checkbox" id="ex" checked>顯示其他側線與糖鐵（岸壁線、205 兵工廠外側線、臺糖、臺肥、臺鋁側線、淺野線、糖鐵等；年份未查證，不隨年份變化）</label>
-<p class="note">底圖 © OpenStreetMap contributors（2026 年現況街道）；軌跡資料同出 OSM（ODbL）。</p>
-</section>
-<section>
-<div class="ctl"><label for="sl">拖動年份（1900–2026）</label>
-<input type="range" id="sl" min="1900" max="2026" step="1" value="1977">
-<div class="ticks" id="tk"></div></div>
-<div class="state" id="st"></div>
-<h2 style="margin-top:20px">年表</h2>
-<ol class="tl" id="tl"></ol>
-</section>
+<div class="app">
+<div class="mapbox"><div id="map" aria-label="高雄臨港線路網地圖"></div><div class="hd"><h1>高雄臨港線</h1><output id="yr" for="sl"></output></div></div>
+<aside class="side">
+<input type="range" id="sl" min="1900" max="2026" step="1" value="1977" aria-label="年份">
+<div class="ticks" id="tk"></div>
+<p class="ev" id="ev"></p>
+<h2>營運中<span id="na"></span></h2><ul class="ls" id="la"></ul>
+<h2>已停用<span id="nc"></span></h2><ul class="ls off" id="lc"></ul>
+<label class="tog"><input type="checkbox" id="ex" checked>顯示側線與糖鐵</label>
+</aside>
 </div>
-</main>
-<section class="band">
-<h2>各線一覽</h2>
-<table class="stack"><thead><tr><th>路線／區段</th><th>啟用</th><th>停用</th><th>今日</th></tr></thead><tbody id="tb"></tbody></table>
-<h2 style="margin-top:28px">文獻有記載、但還沒定位的支線與側線</h2>
-<table class="stack"><thead><tr><th>名稱</th><th>啟用</th><th>停用</th><th>說明</th></tr></thead><tbody>
-<tr><td>高雄線</td><td class="n">日治</td><td class="n">—</td><td>自高雄驛（高雄港站）直通一號、二號碼頭，運輸進出口貨物；可能與表岸壁線部分重疊</td></tr>
-<tr><td>苓雅寮線、前鎮線</td><td class="n">戰時</td><td class="n">—</td><td>連接苓雅寮、前鎮的工業區與軍事地帶（依美方地圖與調查報告）</td></tr>
-<tr><td>左營軍港線</td><td class="n">戰時</td><td class="n">—</td><td>連接左營軍港，在本圖範圍北方</td></tr>
-<tr><td>苓鳳軍事線</td><td class="n">戰時</td><td class="n">—</td><td>連接陸軍營區後直通鳳山</td></tr>
-<tr><td>台糖公司高雄儲運所 B5、B4 倉庫線</td><td class="n">1973-02</td><td class="n">1984-02-09</td><td>專用側線</td></tr>
-<tr><td>台灣化學纖維公司高雄廠線</td><td class="n">1976-08-05</td><td class="n">1984-11-02</td><td>專用側線</td></tr>
-<tr><td>友聯儲運公司線</td><td class="n">1977-12-01</td><td class="n">1991-10-22</td><td>專用側線</td></tr>
-<tr><td>通發進企業公司線</td><td class="n">1979-08-05</td><td class="n">1994-11-20</td><td>專用側線</td></tr>
-</tbody></table>
-<p class="note">專用側線的日期依維基百科「高雄臨港線」條目（原表為民國紀年）；戰時路線名稱依邱柏翔、杜正宇〈日治時期高雄臨港線之路線調查〉（《高雄文獻》5 卷 1 期，2015）的摘要。</p>
-<p class="note">里程（自高雄港站起）：苓雅寮車場 2.1、新光 3.4、中島車場線分歧 5.4、第二臨港線分歧 6.8、前鎮車場 8.3、機廠 9.3、高雄 13.5 公里；第二臨港線前鎮車場＝草衙車場 5.18 公里。</p>
-</section>
-<section class="band">
-<h2>致謝：啟發這張圖的手繪路線圖</h2>
-<p class="note">這張圖的起點是一張高雄港區鐵道的手繪路線圖，出自臉書社團貼文：<a href="https://www.facebook.com/groups/openfind/posts/8293469417339893/" target="_blank" rel="noopener">facebook.com/groups/openfind/posts/8293469417339893</a>（作者未能確認）。手繪圖畫出了第二臨港線、中島線與第二／第三貨櫃線，所以繪製時間在 1977 年之後。本圖的位置與線形都改以歷史地形圖、美軍圖、航照與 OSM 為準，手繪圖只當作線索與致敬對象，不作為定位依據；圖面以原作者發表的版本為準，這裡不轉載。</p>
-</section>
-<section class="band">
-<h2>線形檢查</h2>
-<p class="note">每次重繪後，都用同一套程式檢查五件事。下表是本版的檢查結果與處理方式。</p>
-<table class="stack"><thead><tr><th>檢查項目</th><th>方法</th><th>本版結果</th></tr></thead><tbody>
-<tr><td>位置是否合理</td><td>以 2 公尺間隔取樣，量每一點到 1989 年地形圖鐵路符號的距離；連續 30 公尺以上偏離超過 12 公尺即列出</td><td>第一臨港線各段、中島線、凱旋路段都在 12 公尺內。仍列出的是：高雄港站站場內（依 1945 年圖重繪，與 1989 年圖的站場配置不同）、表岸壁線東段（為了落在 OSM 底圖的碼頭範圍內，比 1989 年圖的位置往陸側移 16 公尺）、凱得街段（1989 年圖上已無軌道）、幾條側線的末端（延伸到圖上未畫的廠內）</td></tr>
-<tr><td>重疊、重複</td><td>任兩條線相距不到 3.5 公尺（小於實際股道間距）且連續 40 公尺以上，排除接點附近 60 公尺</td><td>無。檢查過程中抓到並修正兩處：一、上一版的「小港糖廠線」其實就是糖鐵林園線進廠段，重複畫了兩次，已刪除；二、第二臨港線在草衙一帶被路網最短路徑導到糖鐵線上、兩線疊在一起，已改用 OSM 上標為「高雄港第二臨港線」的軌跡重建</td></tr>
-<tr><td>折角與小半徑</td><td>沿線每 16 公尺弦長量轉角，超過 25° 列為折角；主線估算半徑小於 80 公尺列出</td><td>臺鐵線已無折角。半徑 50–80 公尺的彎道集中在鹽埕—苓雅寮、成功路南端與民族接屏東線處，與 1989 年圖上的彎道一致，屬實際的急彎。糖鐵各線維持 OSM 原始軌跡，交會點（如牛寮三角線）保留原有轉角</td></tr>
-<tr><td>是否落在水上</td><td>以 2 公尺間隔取樣，對照 OSM 底圖（z15）的水域，連續 20 公尺以上落在水域即列出</td><td>岸壁線與成功路側線都已在陸地上。仍列出的幾處是假警報：底圖上藍色字的站名標籤（經貿園區）被誤判為水域；另有幾處是鐵橋與水岸邊的線（濱線過哨船頭、淺野線過運河、糖鐵過前鎮河）</td></tr>
-<tr><td>懸空端點</td><td>列出端點未接到任何線的線段</td><td>只剩各支線、側線的盡頭（碼頭、工廠、車場末端）與糖鐵在鳳山站的轉運端，皆為實際的終點</td></tr>
-</tbody></table>
-</section>
-<section class="band">
-<h2>資料與限制</h2>
-<details open><summary>幾何與年份的可信度</summary>
-<ul class="note">
-<li><b>幾何</b>：縱貫線、屏東線用的是 2018 年地下化後的路線；地下化前的地面線走同一條路廊，在這個比例尺下差異看不出來。第一臨港線東、西段的軌道已拆除，路線改沿輕軌描繪；輕軌就建在原臨港線路廊上，但個別彎道（如光榮碼頭一帶）會有數十公尺的偏差。</li>
-<li><b>年份</b>：主要依維基百科「高雄臨港線」「高雄港車站」「前鎮車場」「草衙車場」條目、公視與天下雜誌報導、高雄市都市計畫書；鳳山站 1907-10-01 啟用，屬屏東線（鳳山支線）第一期。</li>
-<li><b>第二、第三貨櫃線</b>：位置有 OSM 軌跡為證，啟用年份沒找到可靠出處，標成「約 1977–2011，未查證」。</li>
-<li><b>1941–42 東西兩段的分界</b>：是依 1943–44 年苓雅寮大橋、1955 年前鎮橋接通的先後推定的。</li>
-<li><b>輕軌分期年份</b>（2015、2017、2024）為概略值，沒有逐站查核。</li>
-<li><b>濱線（漁港線）</b>：OSM 上沒有軌跡，依文獻描述的走向（沿鼓山一路，穿過濱海一路與捷興一街之間，到鼓山渡船場旁的漁市場）沿現有街廓描出，屬重建線。</li>
-<li><b>本版修正（獅子公園三角線）</b>：5.4K 的獅子公園是三角線，不是改線。三個邊分別是：
-<ul>
-<li>成功路線往西南、併入往中島線方向的彎道（1989 年圖）。</li>
-<li>凱旋四路線直通中島線的直線段（1989 年圖）。</li>
-<li>成功路線往東的弧線，也就是 1945、1955、1966 年圖上第一臨港線的原主線，今凱旋四路弧段與輕軌走的就是這條路廊。依 1989 年圖，弧線在盡頭併入直線段。</li>
-</ul></li>
-<li><b>本版修正（經貿變電所側線）</b>：上一版穿過勞動部高屏澎東分署的「職訓中心側線」位置錯了，已移除。依 2009 年 8 月 Google 街景（凱旋四路 103 號前，22.59309, 120.30827），柏油下有一段斜穿凱旋四路的軌道，通進台電經貿一次配電變電所園區。改畫成「經貿變電所側線」：往西行經過中華五路口之後，才從臨港線往右（西北）岔出；沿凱旋四路北側往西，再轉向西北斜穿路面進入園區。園區內的長度和終點看不到，只畫約 60 公尺。</li>
-<li><b>前鎮運河支渠側線</b>：1955、1966 年圖上，運河支渠南端（今變電所北側）有一條往東的線，與今直線段平行後併入。這條線和街景那條是不是同一個系統，地圖上看不出來，所以分開畫。這兩張圖在這一帶只有 z15，位置誤差約 20–30 公尺。</li>
-
-
-<li><b>本版修正（蓬萊碼頭三條岸壁線）</b>：依 1989 年地形圖重畫，該圖與 2024 年正射影像的碼頭輪廓幾乎完全重合。表岸壁線沿碼頭南緣一路直線到碼頭東端（上一版東段誤吸到碼頭中央的股道，末端還往北岸彎）；中岸壁線改走倉庫列之間的中央股道；裏岸壁線沿碼頭北緣（面向船渠）的岸邊內側 12 公尺，止於駁二人行橋，因為橋以東船渠變寬，北緣往南退，東半段的北緣股道就是中岸壁線。三條線在 OSM 底圖上都在陸地上。</li>
-<li><b>本版修正（成功路 1945 年側線）</b>：苓雅寮東側線與船渠北岸造船所線 A、B 取自 1945 年美軍圖，這張圖在成功路一帶整體偏北約 30–55 公尺，上一版直接套用，線落到水上。這一版先比對水岸輪廓，算出局部位移（造船所線往南約 33、往東約 51 公尺；苓雅寮東側線往南約 55、往東約 20 公尺）再套疊，三條線都已回到陸地。</li>
-<li><b>本版修正（淺野線、東段接屏東線）</b>：淺野線（臺泥側線）依 1989 年地形圖逐點重描。該圖在這一帶與 OSM 對位良好；上一版中段偏北約 35 公尺，已改正。線形是從西端一路直線到鼓山站北側，再右彎併入縱貫線。東段接屏東線前的第一個彎，原本半徑約 50 公尺，在圖上像折角，改為與 2024 年正射影像上舊路廊（今綠帶）一致的 200 公尺圓曲線。</li>
-<li><b>本版修正</b>：國際商專旁的東段改回 1989 年圖上的直線（描線原本被校舍輪廓吸偏）；5.4K 依 1989 年圖重畫為凱旋路線直通中島線、成功路線以彎道併入；第二臨港線改用 OSM 的第二臨港線軌跡，並從前鎮車場南側分出（前鎮車場至分岐點為雙線並行）；前鎮車場加上 1989 年圖上可見的兩股股道（地圖為簡化表示，實際股道可能更多）；淺野線（臺泥側線）依 1989 年圖補全約 800 公尺，從鼓山站北側的縱貫線分出，往西北經今九如四路一帶進入廠區，與 1945 年美軍圖上 ASANO CEMENT 的側線位置相符；糖鐵在牛寮的三角線依 OSM 補上。</li>
-<li><b>線形整理（直線與曲線）</b>：描出來的線先沿 1989 年地形圖鐵路符號的距離場重新找路徑（只當作描線參考），再用 Douglas–Peucker 法切成直線段（容許偏差：主線 6 公尺、側線 4–5 公尺）；長度 45 公尺以上的直線段，再到 1989 年地形圖上沿線兩側取鐵路符號的像素，做穩健直線擬合（剔除文字、建物等離群點；位移超過 12 公尺或轉角超過 5° 的擬合不採用），讓直線落在圖上鐵路的實際位置。過短的直線段合併成單一彎道後，相鄰直線段用圓曲線連接（切線—圓曲線—切線）；半徑依原描線在轉角處的位置反推，讓曲線通過原圖上的彎道，主線限制在 50–500 公尺。支線以轉轍器方式分出：沿母線的實際曲線往回移動分岔點，直到分岐曲線半徑至少 100 公尺。縱貫線、屏東線、輕軌與 OSM 上的糖鐵廢線軌跡不經此處理。</li>
-<li><b>高雄港站站場（依 1945 年美軍圖與 1989 年地形圖重繪）</b>：西臨港線從鼓山南下，在北號誌樓附近進入咽喉，主線沿站場西側、站房（今舊打狗驛故事館）東側的月台到站，站點標在站房旁。北裏岸壁線從咽喉東側分出，沿站場東緣南下後轉向東南，走三號船渠北側；表岸壁線從咽喉往南穿過站場中央到第二碼頭南岸；濱線從月台南端往西南分出，再沿濱海一路與捷興一街之間往西。各線都在站場內以分岔點接入，不再有直角或回勾。</li>
-<li><b>北裏岸壁線</b>：高雄港站沿三號船渠北側經駁二到大義的這段就是 1930 年的北裏岸壁線，後來跨高雄川延伸成為臨港線西段，所以標為「北裏岸壁線（後為第一臨港線西段）」。原本畫在第二碼頭上、從中岸壁線分出的「裏岸壁線」已移除；第二碼頭北緣、面向三號船渠的那條軌道（上一版標為「名稱待查」）才符合文獻「碼頭北岸（三號船渠一側）」的描述，改標為裏岸壁線。</li>
-<li><b>戲獅甲線已移除</b>：1955 年圖上那條從成功路斜向十字船渠北端的實線，在 1945 年美軍圖上是雙線道路，不是鐵道。同一張圖上 IRON MILL 西側那個三角形和往東北的斜線，畫的是「架空電線」符號（線上有圓點），也不是鐵道。1944 年臨港線「先通到十字船渠」指的是凱旋路線抵達十字船渠東北支渠（高雄倉庫）一帶。</li>
-<li><b>成功路沿線側線（依 1945、1955、1966、1989 年四張圖逐段比對）</b>：苓雅寮東側線（1945，三股，從海岸線往東到成功路）；船渠北岸造船所線 A、B（1945，運河北岸兩條，弧形從主線分出）；臺鋁南側油槽區側線（1989）；臺肥三廠側線（1989）。中油輸油站、臺鋁本廠、化學工業區沿線，四張圖上都沒有看到另外分出的側線。</li>
-<li><b>糖鐵</b>：籬仔內站在 1955、1966 年圖上是一段南北向的站場（標 Sugar Refinery Railroad），位置與 1989 年圖上臺糖副產品加工廠南側那條虛線一致；往南過前鎮河後沿中山四路一側往東南，到牛寮附近與五甲鳳山線交會，再南下小港糖廠。五甲鳳山線依 OSM 的廢線軌跡，從鳳山站南下經五甲以東到交會點。另外沿中山四路、從臺糖倉庫附近起的那段依 OSM 標為籬子內線後期段。1989 年圖上從臺糖往東北經五甲到瑞隆路的虛線是高雄市與鳳山市的界線，不是鐵道。</li>
-<li><b>本版新增（依 1955、1966 年地形圖與 OSM）</b>：205 兵工廠外側線改為沿廠區北緣、再沿今凱得街南下接回凱旋四路的臨港線；另加一條通往廠區凱旋四路側大門的短側線。戲獅甲線是 1955 年圖上從成功路往東南、通往十字船渠北端的一條實線，可能就是 1944 年「從高雄站先通到十字船渠」那段臨港線的遺跡，但也可能只是道路，所以標為待確認。</li>
-<li><b>重描方式</b>：第一臨港線各段、中島線、第二臨港線與貨櫃線，依 1989 年經建版地形圖（z16）上的鐵路符號，以人工控制點沿線描出，再做平滑化；輕軌只畫在自己的圖層，不再當作臨港線的幾何。高雄港站到愛河這段是從站場北端分出、走三號船渠北側倉庫群後方；船渠北岸碼頭邊另有一條軌道，本圖暫標為「北裏岸壁線」，兩者的名稱對應仍待文獻確認。前鎮橋改放在成功路跨十字船渠支渠處（今成功橋旁），不是凱旋四路。「205 兵工廠外側線」沿廠區北緣繞行，東側沿今凱得街南下，再接回凱旋四路的臨港線；另一條短側線通往廠區凱旋四路側的大門，大門位置依 OSM 標記。205 廠內部在地形圖與航照上都被遮蔽，未畫。</li>
-<li><b>1989 年地形圖描線（較早版本說明）</b>：東段北端（沿凱旋路北上、在民族陸橋旁併入屏東線）、205 兵工廠側線、臺糖倉庫側線、草衙—小港糖廠段、高港支線（蓬萊碼頭）、濱線靠近車站的那一段，是依中央研究院「臺灣百年歷史地圖」的 1989 年經建版二萬五千分之一地形圖描出來的。各支線的端點都吸附到主線上的同一個節點。205 兵工廠側線與臺糖倉庫側線是依地圖上的設施取名，不是正式線名。</li>
-<li><b>岸壁線</b>：表、中、裏三條岸壁線與北裏岸壁線，依 1945 年美軍高雄市街圖（AMS City Plan）的軌道位置描出。這張圖套到現代底圖時整體偏北約 45 公尺，已用北裏岸壁線與輕軌（同一路廊）對齊校正。表岸壁線改用 1989 年地形圖的「高港支線」，位置比較準。OSM 上原本標成「裏岸壁線」的一小段落在碼頭中央，與文獻所說的「碼頭北岸」不符，已移除。中、裏岸壁線的啟用與廢止年份沒有查到。</li>
-<li><b>支線接續</b>：淺野線（臺泥側線）依文獻接到鼓山站（舊田町驛）；裏岸壁線接到北裏岸壁線（第一臨港線駁二段）；糖鐵籬子內線是接到距離最近的臨港線，屬推定。糖鐵小港線是 762 公釐軌距，在鳳山站與屏東線是轉運，不是直通。</li>
-<li><b>苓雅寮大橋年份</b>：維基百科記為 1943–44 年完成，故事島（Story Studio）的文章則寫 1935 年，兩者不一致，本圖暫用 1943–44。</li>
-</ul></details>
-</section>
 <script src="leaflet.js"></script>
 <script>
 {
@@ -174,8 +87,8 @@ const SEG=[
 {id:'k4',lb:'第一臨港線（凱旋路段）',name:'第一臨港線（6.8K—前鎮車場，凱旋四路）',k:'main',o:1941,c:2018,t:'東段的一部分；2008 年西段停用後仍維持到 2018',now:'輕軌 C1–C3'},
 {id:'e1',lb:'第一臨港線（東段）',name:'第一臨港線東段（前鎮車場—機廠—屏東線）',k:'main',o:1941,c:2018,t:'2018-09-28 末班車開出；10-01 廢止',now:'輕軌東段（凱旋路）'},
 {id:'hm',lb:'濱線',name:'濱線（漁港側）',k:'br',o:1908,c:2008,t:'日俄戰爭前後（約 1905–08）自打狗驛拉到新生地倉庫群；漁港側沿倉庫前方往西到第一船渠旁的漁市場（依 1945 年美軍圖）',now:'哈瑪星街廓紋理'},
-{id:'qy1',name:'前鎮車場股道',k:'yd',o:1967,c:2018,t:'1967-03-01 前鎮車場設立；依 1989 年地形圖描出的兩股（地圖為簡化表示，實際股道數可能更多）',now:'輕軌前鎮機廠'},
-{id:'qy2',name:'前鎮車場股道',k:'yd',o:1967,c:2018,t:'同上',now:'輕軌前鎮機廠'},
+{id:'qy1',name:'前鎮車場股道',k:'yd',o:1967,c:2018,t:'1967-03-01 前鎮車場設立',now:'輕軌前鎮機廠'},
+{id:'qy2',name:'前鎮車場股道',k:'yd',o:1967,c:2018,t:'1967-03-01 前鎮車場設立',now:'輕軌前鎮機廠'},
 {id:'zd',lb:'中島線',name:'中島線（第一貨櫃中心線）',k:'br',o:1970,c:2008,t:'1970-06 中島車場設立',now:'已拆除'},
 {id:'s2',lb:'第二臨港線',name:'第二臨港線（6.8K—草衙車場）',k:'red',o:1977,c:2011,t:'1977-07-08 通車；2011-07-12 廢止',now:'翠亨南北路自行車道（2015）'},
 {id:'s2b',lb:'中鋼線',name:'第二臨港線延伸（草衙—中鋼）',k:'red',o:1977,c:1988,t:'1988-05 停駛',now:'部分改中鋼側線自行車道'},
@@ -212,8 +125,9 @@ const EV=[
 [2024,'2024-01-01','輕軌環狀全線試營運']];
 const STY={trunk:{color:'#1d4e89',weight:6},main:{color:'#7b2d8e',weight:5},br:{color:'#c2620a',weight:4},red:{color:'#c1121f',weight:5},unc:{color:'#c2620a',weight:3,dashArray:'3 7'},lr:{color:'#2f9e44',weight:7,opacity:.85},yd:{color:'#7b2d8e',weight:2.5,opacity:.9}};
 const GH={color:'#8a949c',weight:3,dashArray:'7 7',opacity:.9};
-const m=L.map('map',{zoomSnap:.1,attributionControl:true,maxBounds:G.bounds,maxBoundsViscosity:.8,minZoom:12,maxZoom:17});window.__map=m;
-L.imageOverlay('base.jpg',G.bounds).addTo(m);
+const sw=S=>`<svg width="34" height="10" aria-hidden="true"><line x1="2" y1="5" x2="32" y2="5" stroke="${S.color}" stroke-width="${Math.min(S.weight,6)}" ${S.dashArray?`stroke-dasharray="${S.dashArray}"`:''} stroke-linecap="round"/></svg>`;
+const m=L.map('map',{zoomControl:false,zoomSnap:.1,attributionControl:true,maxBounds:G.bounds,maxBoundsViscosity:.8,minZoom:12,maxZoom:17});window.__map=m;
+L.imageOverlay('base.jpg',G.bounds).addTo(m);L.control.zoom({position:'topright'}).addTo(m);
 const mapEl=document.getElementById('map');let Z0=13;
 const scale=()=>Math.min(2.4,Math.max(.6,Math.pow(2,(m.getZoom()-Z0)*.5)));
 const LBL={};
@@ -253,7 +167,7 @@ m.attributionControl.setPrefix(false).addAttribution('© <a href="https://www.op
 const FB=[[22.556,120.268],[22.672,120.362]];m.fitBounds(FB);addEventListener('load',()=>{m.invalidateSize();m.fitBounds(FB)});
 const yard=G.yard.map(g=>L.polyline(g,{color:'#7b2d8e',weight:1.5,opacity:.6,interactive:false}).addTo(m));
 const lay={};
-for(const s of SEG){lay[s.id]=L.polyline(G.seg[s.id],{...STY[s.k],lineCap:'round',lineJoin:'round'}).bindTooltip(s.name+'｜'+s.t,{sticky:true})}
+for(const s of SEG){lay[s.id]=L.polyline(G.seg[s.id],{...STY[s.k],lineCap:'round',lineJoin:'round'}).bindTooltip(s.name+'　'+(s.k==='unc'?'':s.o+'–'+(s.c>3000?'':s.c)),{sticky:true})}
 for(const s of SEG)if(s.lb)mkLabel(s.id,G.seg[s.id],s.lb,STY[s.k].color,13);
 const order=['zg_n','zg_s','pt','west','hm','l1w','ob','w0','w1','qzb','w2','w3','k4','e1','zd','s2','s2b','c2','c3','qy1','qy2','lr1','lr2'];
 const stl={};
@@ -270,29 +184,28 @@ var draw=function(y){
   if(y<v.o){v.mk.remove();continue}
   const on=y<v.c;v.mk.setStyle({color:on?'#3b4248':'#8a949c',fillColor:on?'#fff':'#c9ced2'});
   v.mk.unbindTooltip().bindTooltip(n,{permanent:true,direction:v.dir,className:'lbl'+(on?'':' off'),offset:v.dir==='right'?[6,0]:v.dir==='left'?[-6,0]:[0,0]}).addTo(m)}
- const act=SEG.filter(s=>!s.lr&&y>=s.o&&y<s.c).length,gone=SEG.filter(s=>!s.lr&&y>=s.c).length,lrs=SEG.filter(s=>s.lr&&y>=s.o).length;
  const last=[...EV].reverse().find(e=>e[0]<=y);
- document.getElementById('st').innerHTML=`<b>${y} 年：${act} 段鐵路營運中${gone?`，${gone} 段已停用`:''}${lrs?`，輕軌 ${lrs} 期`:''}</b><span class="note">最近事件 ${last?last[1]+'：'+last[2]:'—'}</span>`;
- document.querySelectorAll('#tl li').forEach(li=>{const v=+li.dataset.y;li.className=v===(last&&last[0])?'now':v<y?'past':''});
+ document.getElementById('ev').innerHTML=last?`<time>${last[1]}</time>${last[2]}`:'臨港線尚未出現';
+ const yrs=s=>s.k==='unc'?'約 1977–2011':s.o+'–'+(s.c>3000?'':s.c);
+ const item=(s,st)=>`<li tabindex="0" data-id="${s.id}">${sw(st)}<div><b>${s.name}</b><span class="y">${yrs(s)}</span></div><p>${s.t}</p></li>`;
+ const seen=new Set(),uniq=a=>a.filter(s=>{const k=s.name;if(seen.has(k))return false;seen.add(k);return true});
+ const A=uniq(SEG.filter(s=>y>=s.o&&y<s.c)),C=uniq(SEG.filter(s=>!s.lr&&y>=s.c));
+ document.getElementById('la').innerHTML=A.map(s=>item(s,STY[s.k])).join('');
+ document.getElementById('lc').innerHTML=C.map(s=>item(s,GH)).join('')||'<li style="cursor:default"><span></span><div>無</div></li>';
+ document.getElementById('na').textContent=A.length;document.getElementById('nc').textContent=C.length;
  document.querySelectorAll('#tk button').forEach(b=>b.classList.toggle('on',+b.dataset.y===y));
 }
-document.getElementById('tl').innerHTML=EV.map(e=>`<li data-y="${e[0]}" tabindex="0"><time>${e[1]}</time>${e[2]}</li>`).join('');
 document.getElementById('tk').innerHTML=[1900,1907,1941,1955,1967,1977,1988,2008,2011,2018,2024].map(v=>`<button type="button" data-y="${v}">${v}</button>`).join('');
-document.getElementById('tb').innerHTML=SEG.map(s=>`<tr><td><b>${s.name}</b><br><span class="note">${s.t}</span></td><td class="n">${s.k==='unc'?'約1977?':s.o}</td><td class="n">${s.c>3000?'—':(s.k==='unc'?'約2011?':s.c)}</td><td>${s.now}</td></tr>`).join('');
-const sw=S=>`<svg width="38" height="12"><line x1="2" y1="6" x2="36" y2="6" stroke="${S.color}" stroke-width="${S.weight}" ${S.dashArray?`stroke-dasharray="${S.dashArray}"`:''} stroke-linecap="round"/></svg>`;
-document.getElementById('lg').innerHTML=[['trunk','縱貫線／屏東線'],['main','第一臨港線、西臨港線'],['red','第二臨港線'],['br','中島線、濱線'],['unc','貨櫃線（年份未查證）'],['lr','環狀輕軌']].map(([k,n])=>`<li>${sw(STY[k])}${n}</li>`).join('')+`<li>${sw(GH)}已停用／拆除</li>`;
 sl.addEventListener('input',()=>draw(+sl.value));
 document.getElementById('tk').addEventListener('click',e=>{const b=e.target.closest('button');if(b)draw(+b.dataset.y)});
-const tl=document.getElementById('tl');
-tl.addEventListener('click',e=>{const li=e.target.closest('li');if(li)draw(+li.dataset.y)});
-tl.addEventListener('keydown',e=>{const li=e.target.closest('li');if(li&&(e.key==='Enter'||e.key===' ')){e.preventDefault();draw(+li.dataset.y)}});
+for(const id of ['la','lc'])document.getElementById(id).addEventListener('click',e=>{const li=e.target.closest('li[data-id]');if(li)m.fitBounds(lay[li.dataset.id].getBounds(),{padding:[40,40],maxZoom:16})});
 const EXC={'糖鐵牛寮三角線（往籬仔內）':'#7a5c3a','糖鐵籬仔內線（籬仔內站—前鎮河—小港糖廠）':'#7a5c3a','糖鐵籬子內線後期段（沿中山四路接臺糖倉庫）':'#7a5c3a','糖鐵五甲鳳山線（鳳山—五甲—籬仔內線分岐）':'#7a5c3a'};
 const exL=[];
 const MAINX=new Set(['獅子公園三角線東側（原主線弧線）']);
 for(const[n,parts]of Object.entries(G.extra)){const mx=MAINX.has(n),col=mx?'#7b2d8e':(EXC[n]||'#c2620a');
- for(const g of parts)exL.push(L.polyline(g,mx?{color:col,weight:4,lineCap:'round',opacity:.95}:{color:col,weight:3,dashArray:'6 4',lineCap:'round',opacity:.95}).bindTooltip(n+'（年份未查證）',{sticky:true}));
+ for(const g of parts)exL.push(L.polyline(g,mx?{color:col,weight:4,lineCap:'round',opacity:.95}:{color:col,weight:3,dashArray:'6 4',lineCap:'round',opacity:.95}).bindTooltip(n,{sticky:true}));
  const longest=parts.reduce((a,b)=>b.length>a.length?b:a);mkLabel('x-'+n,longest,n,col,11,n==='糖鐵籬子內線'?.12:.3)}
-const bpL=Object.entries(G.br).map(([n,p])=>L.circleMarker(p,{radius:3,color:'#5b6670',weight:2,fillColor:'#fff',fillOpacity:1}).bindTooltip(n,{permanent:true,direction:'bottom',className:'lbl bp',offset:[0,4]}));
+const bpL=Object.entries(G.br).map(([n,p])=>L.circleMarker(p,{radius:3,color:'#5b6670',weight:2,fillColor:'#fff',fillOpacity:1}).bindTooltip(n,{direction:'bottom',offset:[0,4]}));
 const exBox=document.getElementById('ex');
 function drawExtra(){const on=exBox.checked;exL.forEach(l=>on?l.addTo(m):l.remove());for(const n in G.extra)showLabel('x-'+n,on)}
 exBox.addEventListener('change',drawExtra);
