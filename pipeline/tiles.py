@@ -3,7 +3,7 @@ from PIL import Image
 Z=15
 def xy(lon,lat):
     n=2**Z;x=(lon+180)/360*n;y=(1-math.asinh(math.tan(math.radians(lat)))/math.pi)/2*n;return x,y
-W,E,S,N=120.258,120.372,22.540,22.682
+W,E,S,N=120.258,120.422,22.540,22.682   # 第 31 輪：東界由 120.372 擴到 120.422（林園線到大寮）
 x0,y0=xy(W,N);x1,y1=xy(E,S)
 tx0,ty0,tx1,ty1=int(x0),int(y0),int(x1),int(y1)
 os.makedirs('t',exist_ok=True)
