@@ -13,6 +13,7 @@
 
 repo 可直接發布成靜態網站：首頁是互動地圖，另有「研究過程與方法」「工作歷程」「參考資料」三頁（由上述 Markdown 轉成），以及「資料與檔案」頁，依資料夾列出 repo 內所有程式、中間資料、檢查圖與截圖，連回 GitHub 上的原檔。研究資料本身不複製進網站，網站只有幾 MB。
 
+- 分享地圖：選好年份、位置、縮放層級與側線開關後，複製瀏覽器網址即可分享同一個視角。在路線清單用 Tab 選到線名後，可按 Enter 或空白鍵定位。
 - 建置：`.github/workflows/pages.yml` 在每次推送到 `main` 時執行 `tools/build_site.py`，輸出 `_site/` 並部署。
 - 設定：repo 的 Settings → Pages → Build and deployment → Source 為「GitHub Actions」。
 - 網址：<https://lzong-tw.github.io/kaohsiung-harbour-rail-map/>（repo 與網站皆公開）。

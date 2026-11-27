@@ -37,12 +37,13 @@ body{background:var(--bg);color:var(--ink);font:15px/1.45 "Noto Sans TC",system-
 .side h2{font-size:15px;margin:14px 0 6px;display:flex;justify-content:space-between;align-items:baseline}
 .side h2 span{font-variant-numeric:tabular-nums;color:var(--mute);font-weight:500}
 .ls{list-style:none;margin:0;padding:0}
-.ls li{display:grid;grid-template-columns:34px minmax(0,1fr);gap:0 10px;padding:6px 6px;border-radius:6px;cursor:pointer}
-.ls li:hover,.ls li:focus-visible{background:var(--soft)}
+.ls button{display:grid;grid-template-columns:34px minmax(0,1fr);gap:0 10px;padding:6px;width:100%;border:0;border-radius:6px;background:transparent;color:inherit;font:inherit;text-align:start;cursor:pointer}
+.ls button:hover,.ls button:focus-visible{background:var(--soft)}
+.ls .empty{padding:6px 6px 6px 50px}
 .ls svg{margin-top:5px}
 .ls b{font-weight:700}
 .ls .y{color:var(--mute);font-variant-numeric:tabular-nums;white-space:nowrap;margin-left:6px;font-size:13px}
-.ls p{grid-column:2;margin:1px 0 0;color:var(--mute);font-size:13px}
+.ls .description{grid-column:2;margin:1px 0 0;color:var(--mute);font-size:13px}
 .ls.off b{font-weight:500;color:var(--mute)}
 .key{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2px 14px;margin:12px 0 0;font-size:13px;color:var(--mute)}
 .key div{display:flex;align-items:center;gap:8px;min-height:22px}.key svg{flex:none}
@@ -53,6 +54,10 @@ button:focus-visible,input:focus-visible{outline:3px solid var(--acc);outline-of
 .lbl::before{display:none}
 .lbl.off{color:#8a949c;font-weight:500}
 .leaflet-tooltip.pick{font:13px/1.5 "Noto Sans TC",sans-serif;padding:5px 9px;white-space:nowrap}.pick span{margin-left:.6em;color:#5b6670}.pick .off{color:#8a949c}
+.date-pick .leaflet-popup-content{font-size:14px;line-height:1.55;color:#14181d;overflow-wrap:anywhere}
+.date-pick section+section{margin-top:8px;padding-top:8px;border-top:1px solid #dfe3e6}
+.date-pick small{display:block;color:#52616b;font-size:13px}
+.date-pick .leaflet-popup-content p{margin:3px 0 0}
 .ll{font-family:"Noto Sans TC",sans-serif;font-weight:700;paint-order:stroke;stroke:#fff;stroke-linejoin:round;pointer-events:none;letter-spacing:.06em}
 .leaflet-container{font-family:"Noto Sans TC",sans-serif}
 /* 小數縮放層級時圖磚之間會露出一像素的縫：讓每張圖磚多蓋一像素，並取消 Leaflet 預設的 plus-lighter 疊色（否則重疊處會變亮） */
@@ -169,7 +174,8 @@ function relabel(){mapEl.style.setProperty('--s',scale().toFixed(3));for(const k
   if(R.some(q=>!(r.right<q.left||r.left>q.right||r.bottom<q.top||r.top>q.bottom))){o.el.style.display='none';continue}R.push(r)}}
 
 m.attributionControl.setPrefix(false).addAttribution('© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors');m.attributionControl.addAttribution('股道：<a href="https://maps.nlsc.gov.tw/">內政部國土測繪中心</a>像片基本圖、<a href="https://gis.sinica.edu.tw/kaohsiung/">中研院高雄百年歷史地圖</a>');
-const FB=[[22.556,120.268],[22.672,120.362]];m.fitBounds(FB);addEventListener('load',()=>{m.invalidateSize();m.fitBounds(FB)});
+const FB=[[22.556,120.268],[22.672,120.362]];m.fitBounds(FB);
+Z0=m.getZoom();
 const yard=G.yards.flatMap(gr=>gr.lines.map(g=>{const l=L.polyline(g,{color:'#7b2d8e',weight:1.2,opacity:.55,interactive:false});
  // 有年代的組別直接用；沒有的依最近車站決定年份
  let o=gr.o,c=gr.c;if(o==null){let bd=1e9;for(const[n,so,sc]of STN){const p=G.st[n];if(!p)continue;const d=Math.hypot(p[0]-g[0][0],(p[1]-g[0][1])*.92);if(d<bd){bd=d;o=so;c=sc}}}
@@ -192,6 +198,7 @@ const stl={};
 for(const[n,o,c,dir]of STN){const p=G.st[n];stl[n]={o,c,mk:L.circleMarker(p,{radius:5,color:'#3b4248',weight:2,fillColor:'#fff',fillOpacity:1}),dir}}
 const sl=document.getElementById('sl'),yr=document.getElementById('yr');
 var draw=function(y){
+ closePick();
  yr.textContent=y;sl.value=y;
  for(const id of order){const s=SEG.find(x=>x.id===id),l=lay[id];
   if(y<s.o){l.remove();showLabel(id,false);continue}
@@ -206,18 +213,18 @@ var draw=function(y){
  const last=[...EV].reverse().find(e=>e[0]<=y);
  document.getElementById('ev').innerHTML=last?`<time>${last[1]}</time>${last[2]}`:'臨港線尚未出現';
  const yrs=s=>s.k==='unc'?'約 1977–2011':s.o+'–'+(s.c>3000?'':s.c);
- const item=(s,st)=>`<li tabindex="0" data-id="${s.id}">${sw(st)}<div><b>${s.name}</b><span class="y">${yrs(s)}</span></div><p>${s.t}</p></li>`;
+ const item=(s,st)=>`<li data-id="${s.id}"><button type="button" data-id="${s.id}">${sw(st)}<span><b>${s.name}</b><span class="y">${yrs(s)}</span></span><span class="description">${s.t}</span></button></li>`;
  const seen=new Set(),uniq=a=>a.filter(s=>{const k=s.name;if(seen.has(k))return false;seen.add(k);return true});
  const A=uniq(SEG.filter(s=>y>=s.o&&y<s.c)),C=uniq(SEG.filter(s=>!s.lr&&y>=s.c));
  document.getElementById('la').innerHTML=A.map(s=>item(s,STY[s.k])).join('');
- document.getElementById('lc').innerHTML=C.map(s=>item(s,GH)).join('')||'<li style="cursor:default"><span></span><div>無</div></li>';
+ document.getElementById('lc').innerHTML=C.map(s=>item(s,GH)).join('')||'<li class="empty">無</li>';
  document.getElementById('na').textContent=A.length;document.getElementById('nc').textContent=C.length;
  document.querySelectorAll('#tk button').forEach(b=>b.classList.toggle('on',+b.dataset.y===y));
 }
 document.getElementById('tk').innerHTML=[1900,1907,1941,1955,1967,1977,1988,2008,2011,2018,2024].map(v=>`<button type="button" data-y="${v}">${v}</button>`).join('');
 sl.addEventListener('input',()=>draw(+sl.value));
 document.getElementById('tk').addEventListener('click',e=>{const b=e.target.closest('button');if(b)draw(+b.dataset.y)});
-for(const id of ['la','lc'])document.getElementById(id).addEventListener('click',e=>{const li=e.target.closest('li[data-id]');if(li)m.fitBounds(lay[li.dataset.id].getBounds(),{padding:[40,40],maxZoom:16})});
+for(const id of ['la','lc'])document.getElementById(id).addEventListener('click',e=>{const button=e.target.closest('button[data-id]');if(button)m.fitBounds(lay[button.dataset.id].getBounds(),{padding:[40,40],maxZoom:16})});
 const EXC=n=>n.startsWith('糖鐵')?'#7a5c3a':null;   // 糖業鐵道一律棕色
 const exL=[];
 const MAINX=new Set(['獅子公園三角線東側（原主線弧線）']);
@@ -240,28 +247,111 @@ exBox.addEventListener('change',drawExtra);
 // 改成在游標附近找所有看得到的線，列在同一個提示框裡。
 const tip=L.tooltip({direction:'top',offset:[0,-8],className:'pick'});
 const segYrs=s=>s.k==='unc'?'約 1977–2011':s.o+'–'+(s.c>3000?'':s.c);
-const xyYrs=n=>{const r=XY[n];return r?(r[0]??'')+'–'+(r[1]??''):''};const xOff=n=>closed(n);
+// 研究依據見 METHODS.md〈側線與糖鐵的顯示年份〉及專用側線表。
+// 年份滑桿的截止值表示第一個停止著色的年份，與文獻的停用日期分開呈現。
+const shipyardDates='開辦取所接母線的通車年。僅見於 1945 年美軍圖，1955 年圖已無，實際停用年未查明。';
+const arsenalDates='文獻記聯勤二〇五廠線於 1959 年 2 月開辦。廢止日未查明，圖上以凱旋四路段 2018 年停用為上限。';
+const sugarTransferDates='這段糖鐵的起訖未查明。地圖借用臺鐵台糖籬仔內轉運線的文獻年代：1955 年 3 月 1 日至 1993 年 12 月 28 日。';
+const danshuiDates='1966 年圖無、1977 年臺糖圖有，開辦推定為 1971 年。停用推定與林園線鳳山—大寮段同在 1991 年底。';
+const dateEvidence={
+ '台電南部火力發電所線（推定）':'文獻記 1955 年 10 月 1 日開辦，1992 年 8 月 7 日廢止。線路與廠主的對應為推定。',
+ '台灣肥料公司線（臺肥三廠）':'文獻記 1952 年 1 月 1 日開辦。廢止日未查明，圖上以第一臨港線西段 2008 年停用為上限。',
+ '台灣鹼業公司線（推定）':'文獻記 1954 年 3 月 21 日開辦，1993 年 12 月 28 日廢止。線路與廠主的對應為推定。',
+ '台灣塑膠公司線（推定）':'文獻記 1965 年 10 月 18 日開辦，1990 年 11 月 30 日廢止。線路與廠主的對應為推定。',
+ '205 兵工廠外側線（推定兼硫酸錏廠線）':arsenalDates,
+ '205 兵工廠大門側線（凱旋四路側）':arsenalDates,
+ '台糖中心倉庫線（推定）':'文獻記 1962 年 12 月 1 日開辦。廢止日未查明，圖上以第二臨港線 2011 年廢止為上限。',
+ '中岸壁線':'1945、1955、1966、1989、2001 年圖皆有。開辦年未查明，自最早圖證起顯示；停用取第一臨港線西段 2008 年停用。',
+ '裏岸壁線':'1945、1955、1989 年圖可見。開辦年未查明，自最早圖證起顯示；停用取第一臨港線西段 2008 年停用。',
+ '淺野線（臺泥側線）':'1945 至 2001 年的圖上可見。起訖未查明，自最早圖證起顯示，以 2018 年縱貫線地下化為上限。',
+ '濱線（商港側，往海關碼頭）':'開辦推定約 1908 年，與漁港側同期。1962 年圖仍有股道，1970 年圖僅存地界線，停用推定約 1965 年。',
+ '苓雅寮東側線（1945 年美軍圖，三股）':shipyardDates,
+ '船渠北岸造船所線 A（1945 年美軍圖）':shipyardDates,
+ '船渠北岸造船所線 B（1945 年美軍圖）':shipyardDates,
+ '經貿變電所側線（推定台機鋼品廠線）':'1955 年圖已有，2009 年街景仍見路面下的軌道。開辦及廢止日未查明，顯示上限取第一臨港線西段 2008 年停用。',
+ '獅子公園三角線東側（原主線弧線）':'沿用第一臨港線 1941 至 2008 年的年代。1989 年圖上此弧線與道路重疊，實際使用到哪一年未查明。',
+ '糖鐵籬子內線後期段（沿中山四路接臺糖倉庫）':'本段起訖未查明。開辦取相接的臺鐵台糖中心倉庫線 1962 年開辦，終年取臺鐵台糖籬仔內轉運線 1993 年 12 月廢止。',
+ '糖鐵鳳山線（鳳山—二苓—小港糖廠）':'文獻記 1909 年 10 月 5 日開業。1955 年圖仍有，1966 年圖上牛寮以南已被機場跑道切斷，圖上取 1966 年為停用上限，實際可能更早。',
+ '糖鐵林園線（小港糖廠—佛公—鳳山）':sugarTransferDates,
+ '糖鐵籬子內線（籬仔內站—佛公）':sugarTransferDates,
+ '糖鐵三角線（佛公）':sugarTransferDates,
+ '糖鐵林園線（鳳山—大寮）':'臺灣總督府府報第 2722 號記 1909 年 6 月 5 日運輸營業。1989 年圖仍有、1993 年圖已無，停用推定為 1991 年底。',
+ '糖鐵淡水線（大寮岔點段）':danshuiDates,
+ '糖鐵大寮三角線':danshuiDates
+};
+function xyYrs(name){
+ const years=XY[name];
+ if(!years)return '';
+ const [start,end]=years;
+ return '著色年份 '+(start??'')+'–'+(end==null?'':end-1);
+}
 function pickAt(pt,tol){const hits=[];
  const near=l=>{if(!m.hasLayer(l)||!l._parts||!l._pxBounds)return Infinity;const b=l._pxBounds;
   if(pt.x<b.min.x-tol||pt.x>b.max.x+tol||pt.y<b.min.y-tol||pt.y>b.max.y+tol)return Infinity;
   let d=Infinity;for(const part of l._parts)for(let i=1;i<part.length&&d>.5;i++)d=Math.min(d,L.LineUtil.pointToSegmentDistance(pt,part[i-1],part[i]));return d};
  for(const s of SEG){const d=near(lay[s.id]);if(d<=tol)hits.push({d,t:s.name,y:segYrs(s),off:curY>=s.c})}
- for(const l of exL){const d=near(l);if(d<=tol)hits.push({d,t:l._xn,y:xyYrs(l._xn),off:xOff(l._xn)})}
- const seen=new Set();return hits.sort((a,b)=>(a.off-b.off)||(a.d-b.d)).filter(h=>!seen.has(h.t)&&seen.add(h.t)).slice(0,5)}
+ for(const l of exL){const d=near(l);if(d<=tol)hits.push({d,t:l._xn,y:xyYrs(l._xn),off:closed(l._xn)})}
+ const seen=new Set();return hits.sort((a,b)=>(a.off-b.off)||(a.d-b.d)).filter(h=>!seen.has(h.t)&&seen.add(h.t))}
 function showPick(e,tol){const h=pickAt(e.layerPoint,tol);m.getContainer().style.cursor=h.length?'pointer':'';
  if(!h.length){m.closeTooltip(tip);return}
- tip.setLatLng(e.latlng).setContent(h.map(x=>`<div${x.off?' class="off"':''}>${x.t}${x.y?`<span>${x.y}</span>`:''}</div>`).join(''));
+ tip.setLatLng(e.latlng).setContent(h.slice(0,5).map(x=>`<div${x.off?' class="off"':''}>${x.t}${x.y?`<span>${x.y}</span>`:''}</div>`).join('')+'<small>點選查看年代依據</small>');
  if(!m.hasLayer(tip))m.openTooltip(tip)}
-m.on('mousemove',e=>{if(!e.originalEvent.buttons)showPick(e,8)});
-m.on('click',e=>showPick(e,L.Browser.touch?18:8));
+const datePopup=L.popup({className:'date-pick'});
+function closePick(){m.closePopup(datePopup);m.closeTooltip(tip)}
+m.on('mousemove',e=>{if(!e.originalEvent.buttons&&!m.hasLayer(datePopup))showPick(e,8)});
+m.on('click',e=>{
+ const hits=pickAt(e.layerPoint,L.Browser.touch?18:8);
+ closePick();
+ if(!hits.length)return;
+ const size=m.getSize();
+ datePopup.options.maxWidth=Math.min(340,Math.max(80,size.x-80));
+ datePopup.options.maxHeight=Math.max(60,Math.floor(size.y*.52));
+ const sections=hits.map(hit=>{
+  const basis=dateEvidence[hit.t]||SEG.find(s=>s.name===hit.t)?.t||'年代依據未收錄。';
+  return `<section><b>${hit.t}</b><small>${hit.y}</small><p>${basis}</p></section>`;
+ });
+ datePopup.setLatLng(e.latlng).setContent(sections.join('')).openOn(m);
+});
+exBox.addEventListener('change',closePick);
 m.on('mouseout movestart zoomstart',()=>{m.closeTooltip(tip);m.getContainer().style.cursor=''});
 
 const _draw=draw;draw=function(y){curY=y;eraGeom(y);_draw(y);bpL.forEach(b=>{const s=SEG.find(x=>x.id===b._seg);s&&y>=s.o&&y<s.c?b.addTo(m):b.remove()});drawExtra();relabel()};
 m.on('zoomend moveend',relabel);
-addEventListener('load',()=>{Z0=m.getZoom();relabel()});
-Z0=m.getZoom();
-
-draw(1977);
+window.__railCheck = {segments: SEG, lines: lay, extras: exL, yards: yard, branches: bpL, pickAt};
+// 使用網址片段，讓 GitHub Pages 和離線 HTML 都能分享同一個年份與視角。
+let restoringView=false;
+function restoreView(){
+ const params=new URLSearchParams(location.hash.slice(1));
+ const number=key=>{const value=params.get(key);return /^-?\d+(?:\.\d+)?$/.test(value)?Number(value):NaN};
+ const year=number('year'),lat=number('lat'),lng=number('lng'),zoom=number('zoom');
+ restoringView=true;
+ exBox.checked=params.get('extra')!=='0';
+ if(Number.isFinite(lat)&&Number.isFinite(lng)&&L.latLngBounds(G.bounds).contains([lat,lng])&&zoom>=m.getMinZoom()&&zoom<=m.getMaxZoom()){
+  m.setView([lat,lng],zoom,{animate:false});
+ }else{
+  m.fitBounds(FB,{animate:false});
+ }
+ draw(Number.isInteger(year)&&year>=Number(sl.min)&&year<=Number(sl.max)?year:1977);
+ restoringView=false;
+}
+function saveView(){
+ if(restoringView)return;
+ const center=m.getCenter();
+ const params=new URLSearchParams({year:String(curY),lat:center.lat.toFixed(6),lng:center.lng.toFixed(6),zoom:m.getZoom().toFixed(1),extra:exBox.checked?'1':'0'});
+ const hash='#'+params.toString();
+ if(location.hash===hash)return;
+ try{history.replaceState(history.state,'',hash)}catch(error){
+  // 部分嵌入式網頁禁止修改瀏覽器歷程，地圖仍可操作。
+  if(error.name!=='SecurityError')throw error;
+ }
+}
+restoreView();
+addEventListener('hashchange',restoreView);
+m.on('moveend',saveView);
+sl.addEventListener('change',saveView);
+document.getElementById('tk').addEventListener('click',e=>{if(e.target.closest('button'))saveView()});
+exBox.addEventListener('change',saveView);
+addEventListener('load',()=>{m.invalidateSize();relabel()});
 }
 </script>
 </body>
