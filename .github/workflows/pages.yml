@@ -1,22 +1,25 @@
 name: Pages
 
 on:
+  pull_request:
+    branches: [main]
   push:
     branches: [main]
   workflow_dispatch:
 
 permissions:
   contents: read
-  pages: write
-  id-token: write
 
 concurrency:
-  group: pages
+  group: pages-${{ github.ref }}
   cancel-in-progress: true
 
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: read
     steps:
       # The repo is ~800 MB of tile caches and renders; the site only needs the pages and the
       # file list, so fetch trees without blobs and check out just what the build reads.
@@ -25,6 +28,9 @@ jobs:
           filter: blob:none
           sparse-checkout: |
             site
+            /pipeline/build_page.py
+            /pipeline/geo_v13.json
+            /pipeline/tpl.html
             tools
             METHODS.md
             WORKLOG.md
@@ -34,14 +40,26 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - run: pip install markdown==3.7
+      - run: pip install markdown==3.7 playwright==1.56.0
+      - name: Verify generated map
+        working-directory: pipeline
+        run: |
+          python build_page.py
+          git diff --exit-code -- ../site/index.html
       - run: python tools/build_site.py
+      - run: python tools/check_page.py _site/index.html
       - uses: actions/configure-pages@v5
+        if: github.event_name != 'pull_request'
       - uses: actions/upload-pages-artifact@v3
+        if: github.event_name != 'pull_request'
         with:
           path: _site
 
   deploy:
+    if: github.event_name != 'pull_request'
+    permissions:
+      pages: write
+      id-token: write
     needs: build
     runs-on: ubuntu-latest
     environment:
