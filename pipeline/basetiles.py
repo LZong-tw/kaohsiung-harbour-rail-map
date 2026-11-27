@@ -9,7 +9,8 @@ python3 basetiles.py [base.jpg]
 
 base.jpg 的左上角是 120.262°E、22.680°N，像素對齊 z15 的全球像素格（誤差小於半像素）。
 """
-import math
+import glob, math
+import numpy as np
 import os
 import shutil
 import sys
@@ -31,8 +32,20 @@ def gy(lat, z):
 
 base = Image.open(SRC).convert('L')
 alpha = Image.new('L', base.size, 255)  # 底圖範圍以外透明，深色模式下才不會多出一圈色塊
-shutil.rmtree(OUT, ignore_errors=True)
-count = 0
+# 已有的圖磚若與新切的看起來相同（灰階平均差 < 3、透明範圍相同）就保留原檔，不重寫：
+# 底圖只改一部分時（例如第 31 輪往東擴圖），其餘圖磚不會因重新壓縮或重新取樣而整批變動。
+stale = set(glob.glob(f'{OUT}/*/*/*.webp'))
+count = kept = 0
+
+
+def same(path, new):
+    if not os.path.exists(path):
+        return False
+    o = np.asarray(Image.open(path).convert('RGBA'), np.int16); n = np.asarray(new, np.int16)
+    if (np.abs(o[..., 3] - n[..., 3]) > 8).mean() > 0.0005:
+        return False
+    m = n[..., 3] > 0
+    return not m.any() or np.abs(o[..., 0] - n[..., 0])[m].mean() < 3
 for z in range(12, Z0 + 1):
     s = 2 ** (z - Z0)
     size = (round(base.width * s), round(base.height * s))
@@ -46,6 +59,11 @@ for z in range(12, Z0 + 1):
             tile = Image.new('LA', (256, 256), (0, 0))
             tile.paste(Image.merge('LA', (im, al)), (x0 - tx * 256, y0 - ty * 256))
             os.makedirs(f'{OUT}/{z}/{tx}', exist_ok=True)
-            tile.convert('RGBA').save(f'{OUT}/{z}/{tx}/{ty}.webp', quality=80, method=6)
-            count += 1
-print('tiles', count)
+            path = f'{OUT}/{z}/{tx}/{ty}.webp'; stale.discard(path); count += 1
+            new = tile.convert('RGBA')
+            if same(path, new):
+                kept += 1; continue
+            new.save(path, quality=80, method=6)
+for p in stale:
+    os.remove(p)
+print('tiles', count, 'kept', kept, 'removed', len(stale))
