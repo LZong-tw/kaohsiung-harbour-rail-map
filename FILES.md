@@ -258,3 +258,5 @@ Overpass 查詢與結果。查詢存成 `.txt`，結果存成 `.json`，透過�
 | `pipeline/apply_reg.py` | 新增：糖鐵籬仔內倉庫線改名並改接糖鐵、台糖中心倉庫線自台肥線西段分出、第二臨港線草衙車場以東改走南側線形 |
 | `pipeline/rename_r36_figs.py` | 把 `scratch/r36/` 的比對圖改成「地點_內容_年份」的一次性腳本；對照表 `scratch/r36/檔名對照.tsv` |
 | `scratch/r36/*_修正後疊圖_*.jpg`、`*_修正前疊圖_*.jpg` | 各線修正前後疊在像片基本圖、經建版上的比對圖 |
+| `pipeline/inventory_check.py`、`pipeline/line_inventory.json` | 線的清單檢查：每條線名、每組站場股數不得無故減少（CI 會跑）；有意刪改後跑 `--update` |
+| `pipeline/rename_past_figs.py`、`scratch/past/檔名對照.tsv` | 把 `scratch/past/` 626 張舊圖改成「種類_地點_內容__舊檔名」並重寫 `MANIFEST.tsv` 的一次性腳本與對照表 |
