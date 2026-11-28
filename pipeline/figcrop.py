@@ -71,6 +71,9 @@ if a.overlay != 'none':
         return [v] if isinstance(v[0][0], (int, float)) else v
     L = []
     for k, v in G['seg'].items():
+        if k.startswith('lr'):   # 輕軌（2015 年起）：指定較早的年份時不畫，免得圖上多一條與臨港線並行的洋紅線
+            if yr is None or yr >= 2015: L.append(((0, 170, 60, 210), v))
+            continue
         alt = G.get('alt', {}).get(k)
         if yr is not None and alt:
             for o, c, g in alt:
@@ -94,7 +97,7 @@ if a.overlay != 'none':
                     d.line([P[i], P[i + 1]], fill=col, width=w)
             else:
                 d.line(P, fill=col, width=w)
-    legend = f'洋紅：本研究的主線、支線；橘：側線、糖鐵；藍：站場股道（{"全部年份" if yr is None else f"{yr} 年顯示者"}）'
+    legend = f'洋紅：本研究的主線、支線；橘：側線、糖鐵；藍：站場股道{"；綠：輕軌" if yr is None or yr >= 2015 else ""}（{"全部年份" if yr is None else f"{yr} 年顯示者"}）'
 if a.trace:
     d = ImageDraw.Draw(img, 'RGBA')
     for P in json.load(open(a.trace)):
