@@ -33,6 +33,8 @@ EXCLUDE_RE = [
     r'(^|/)k84', r'(^|/)b84', r'(^|/)b8984', r'(^|/)w84', r'(^|/)w8489', r'(^|/)t84', r'(^|/)t8984', r'(^|/)c84',
     r'(^|/)qz_[a-e]\.png$', r'Google_Drive', r'(^|/)xg_', r'uploads_sheet', r'(^|/)a56z', r'(^|/)a69z', r'(^|/)m70z',
     r'/aud/fso\.png$', r'(^|/)late[35]', r'(^|/)f_1K_2000', r'(^|/)clean_1', r'(^|/)lost3', r'(^|/)x3\.png$',
+    # 股道示意圖（yarddiag.py 等）：底下襯著淡化的 1970 年 1:1200 圖或 1945 年舊航照，第一次收錄時漏看，回顧時發現後移除
+    r'(^|/)d(45|70|76|84)', r'(^|/)r(70|76)', r'(^|/)reach7[06]', r'(^|/)n70a',
     r'(^|/)r45c?\.png$', r'(^|/)tri2?\.png$', r'(^|/)g1\.png$', r'(^|/)cr\.png$', r'(^|/)s84z',
 ]
 SKIP_DIR = re.compile(r'/(badtiles|khh|junk|r28_private|sheets)/')
