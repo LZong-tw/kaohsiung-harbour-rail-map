@@ -75,9 +75,11 @@ def kink_check(name, L, win=8, maxturn=25, rmin=None):
         if not col or o[0] - col[-1][0] > 20: col.append(o)
     return col
 
-def dangling(lines, tol=1.0):
+def dangling(lines, tol=1.0, also=None):
+    # also：各年代另存的線形（G['alt']）。側線接的是當年顯示的那一版，只拿基準線形比會把接得好好的端點報成懸空。
     res = []
     allp = {n: [M(p) for p in L] for n, L in lines.items()}
+    for n, L in (also or {}).items(): allp[n] = [M(p) for p in L]
     def near_any(p, me):
         for n, P in allp.items():
             if n == me: continue
@@ -110,4 +112,5 @@ if __name__ == '__main__':
     for n, L in lines.items():
         for r in kink_check(n, L, rmin=80 if n in MAIN else None): print(' ', n, r)
     print('== 懸空端點（未接到任何線）')
-    for r in dangling(lines): print(' ', r)
+    ALSO = {f'alt:{k}:{e[0]}': e[2] for k, v in G.get('alt', {}).items() for e in v}
+    for r in dangling(lines, also=ALSO): print(' ', r)

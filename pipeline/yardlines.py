@@ -252,7 +252,7 @@ def main():
     import manual, manual_lines
     zd = G['alt']['zd'][0][2]
     G['alt']['zd'] = [[1970, 2008, zd]]
-    G['yards'] = [g for g in G['yards'] if g['src'] != manual_lines.ZSRC]
+    G['yards'] = [g for g in G['yards'] if g['src'] not in (manual_lines.ZSRC, manual_lines.ZSRC_E, manual_lines.ZSRC_YL)]
     manual.apply(G, {**G['seg'], 'zd': zd}, G['extra'], manual_lines.ZD_LINES)
     # 濱線商港側：預設線形改依 1962 年圖；1960–1964 年濱線走 1970 年股道時，分岐點跟著移
     hn = '濱線（商港側，往海關碼頭）'

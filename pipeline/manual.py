@@ -81,8 +81,10 @@ def _attach(P, parent):
     return _herm(q, uq, far, t1), P[k + 1:]
 
 
-def _parallel(parent, a, b, off, taper=25.0, step=3.0):
-    """母線上 a→b 之間的一段，往側邊平移 off 公尺（正值為行進方向左側），兩端各以 taper 公尺漸收回母線（轉轍器）。"""
+def _parallel(parent, a, b, off, taper=25.0, step=3.0, taper_b=None):
+    """母線上 a→b 之間的一段，往側邊平移 off 公尺（正值為行進方向左側），兩端各以 taper 公尺漸收回母線（轉轍器）。
+    taper_b：b 端另給漸收長度；0 表示 b 端不收回（兩股並行到盡頭）。"""
+    tb = taper if taper_b is None else taper_b
     M = [toM(p) for p in parent]
     ia, ib = nearest_on(a, parent), nearest_on(b, parent)
     ka, kb = ia[1] + ia[3], ib[1] + ib[3]
@@ -104,7 +106,7 @@ def _parallel(parent, a, b, off, taper=25.0, step=3.0):
         t = (d - D[j - 1]) / ((D[j] - D[j - 1]) or 1e-9)
         p = seg[j - 1] + (seg[j] - seg[j - 1]) * t
         u = unit(seg[j] - seg[j - 1])
-        w = min(1.0, d / taper, (L - d) / taper)
+        w = min(1.0, d / taper if taper > 0 else 1.0, (L - d) / tb if tb > 0 else 1.0)
         w = 0.5 - 0.5 * math.cos(math.pi * max(0.0, w))
         out.append(p + np.array([-u[1], u[0]]) * off * w)
     return [toLL(p) for p in out]
@@ -112,7 +114,7 @@ def _parallel(parent, a, b, off, taper=25.0, step=3.0):
 
 def geom(spec, lookup):
     if spec.get('parallel'):
-        return _parallel(lookup(spec['parallel']), spec['pts'][0], spec['pts'][1], spec['off'], taper=spec.get('taper', 25.0))
+        return _parallel(lookup(spec['parallel']), spec['pts'][0], spec['pts'][1], spec['off'], taper=spec.get('taper', 25.0), taper_b=spec.get('taper_b'))
     P = [toM(p) for p in spec['pts']]
     if spec.get('raw'):      # 控制點本身已含接點：只做平滑，不另外算接入曲線。用在咽喉很短的扇形站場，或接入曲線要照圖走的線
         if spec.get('on0'): P[0] = nearest_on(spec['pts'][0], lookup(spec['on0']))[2]      # 第一點吸到母線上
