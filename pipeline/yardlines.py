@@ -122,10 +122,7 @@ PLAN = {
     ],
     # 中島（第 36 輪）：中島線本線依各版像片基本圖的描線走。錨點：5.4K 西側擴建路上、擴建路西段、東側線南段、東側線北段、
     # 北段轉彎處、北段倉庫列之間那組的西端。原本的中島線在北段斜穿倉庫、夾在兩組軌道中間（使用者在 1983 年圖上指出）。
-    1970: [('seg', 'zd', 'ZD', True, False, {'snap': 50.0, 'R': 120.0, 'jump': 80.0, 'blend': 80.0, 'extend_end': True})],   # 1976 年版（1970–1979）
-    1980: [('seg', 'zd', 'ZD', True, False, {'snap': 50.0, 'R': 120.0, 'jump': 80.0, 'blend': 80.0, 'extend_end': True})],   # 1983 年版（1980–1985）
-    1986: [('seg', 'zd', 'ZD', True, False, {'snap': 50.0, 'R': 120.0, 'jump': 80.0, 'blend': 80.0, 'extend_end': True})],   # 1989 年版（1986–1993）
-    1994: [('seg', 'zd', 'ZD', True, False, {'snap': 50.0, 'R': 120.0, 'jump': 80.0, 'blend': 80.0, 'extend_end': True})],   # 1998 年版（1994–2007）
+    1980: [('seg', 'zd', 'ZD', True, False, {'snap': 50.0, 'R': 120.0, 'jump': 80.0, 'blend': 80.0, 'extend_end': True})],   # 1983 年版；整個 1970–2007 都用這一版（見 main）
     1991: [  # 1998 年 1:5000 像片基本圖（1991–2007）
         ('seg', 'west', [(838, 1030), (921, 766)], False, True),
         ('seg', 'hm', [(838, 1030), (560, 1430)], False, True),
@@ -204,7 +201,7 @@ def main():
         G['alt'][k] = [list(r) for r in v]
     for k, v in G.get('xalt0', {}).items():          # 側線的同類資料（第 36 輪：台糖中心倉庫線 1962–1976）
         G['xalt'][k] = [list(r) for r in v]
-    ZD_ERA = {1970: (1976, 1980), 1980: (1983, 1986), 1986: (1989, 1994), 1994: (1998, 2008)}
+    ZD_ERA = {1980: (1983, 1986)}
     for y0, plan in PLAN.items():
         if y0 in ZD_ERA:                 # 中島：描線只用來吸附，不畫上地圖（第 36 輪）
             ed, c = ZD_ERA[y0]
@@ -250,6 +247,13 @@ def main():
             jumps = sum(1 for s, t in zip(full, full[1:]) if s[0] != t[0])
             print(gr['src'], name, '路徑', len(pts), '點', '換股', jumps, '次')
             (G['alt'] if kind == 'seg' else G['xalt']).setdefault(name, []).append([gr['o'], gr['c'], new if kind == 'seg' else [new]])
+    # 中島線本線：四版像片基本圖上是同一股軌道，只用 1983 年版算出的線形，整個 1970–2007 年通用；
+    # 中島其他各股由人工定線（manual_lines.ZD_LINES），接在這條本線上（第 36 輪）
+    import manual, manual_lines
+    zd = G['alt']['zd'][0][2]
+    G['alt']['zd'] = [[1970, 2008, zd]]
+    G['yards'] = [g for g in G['yards'] if g['src'] != manual_lines.ZSRC]
+    manual.apply(G, {**G['seg'], 'zd': zd}, G['extra'], manual_lines.ZD_LINES)
     # 濱線商港側：預設線形改依 1962 年圖；1960–1964 年濱線走 1970 年股道時，分岐點跟著移
     hn = '濱線（商港側，往海關碼頭）'
     G['extra'][hn] = [hamasen_link(G['seg']['hm'])]

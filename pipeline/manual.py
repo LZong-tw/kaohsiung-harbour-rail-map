@@ -10,6 +10,7 @@ apply_reg.py 在最後呼叫 apply(G, S, X)：
 - 控制點之間用向心 Catmull-Rom 曲線（通過每個控制點、不會過衝），每 3 m 取一點；
 - 寫入 X[name]、G['xy'][name]（顯示年份）、G['xb'][name]（年代與線形的依據，網頁點選時顯示）；
 - replaces：這條線取代的舊線名（刪除舊線）；
+- parallel=母線、off=公尺、pts=[起, 迄]：沿母線平移的並行股道（兩端漸收回母線），用在圖上畫成兩、三股並行的地方；
 - yard='來源說明'：這條是站場股道（並行的第二、三股），放進 G['yards'] 的對應年份組，不列為具名的線。
 """
 import math
@@ -79,7 +80,38 @@ def _attach(P, parent):
     return _herm(q, uq, far, t1), P[k + 1:]
 
 
+def _parallel(parent, a, b, off, taper=25.0, step=3.0):
+    """母線上 a→b 之間的一段，往側邊平移 off 公尺（正值為行進方向左側），兩端各以 taper 公尺漸收回母線（轉轍器）。"""
+    M = [toM(p) for p in parent]
+    ia, ib = nearest_on(a, parent), nearest_on(b, parent)
+    ka, kb = ia[1] + ia[3], ib[1] + ib[3]
+    if ka > kb:
+        M = M[::-1]
+        parent = parent[::-1]
+        ia, ib = nearest_on(a, parent), nearest_on(b, parent)
+    seg = [ia[2]] + M[ia[1] + 1:ib[1] + 1] + [ib[2]]
+    # 重新取樣
+    D = [0.0]
+    for p, q in zip(seg, seg[1:]):
+        D.append(D[-1] + float(np.hypot(*(q - p))))
+    L = D[-1]
+    out = []
+    n = max(2, int(L / step))
+    for k in range(n + 1):
+        d = L * k / n
+        j = max(1, min(len(D) - 1, int(np.searchsorted(D, d))))
+        t = (d - D[j - 1]) / ((D[j] - D[j - 1]) or 1e-9)
+        p = seg[j - 1] + (seg[j] - seg[j - 1]) * t
+        u = unit(seg[j] - seg[j - 1])
+        w = min(1.0, d / taper, (L - d) / taper)
+        w = 0.5 - 0.5 * math.cos(math.pi * max(0.0, w))
+        out.append(p + np.array([-u[1], u[0]]) * off * w)
+    return [toLL(p) for p in out]
+
+
 def geom(spec, lookup):
+    if spec.get('parallel'):
+        return _parallel(lookup(spec['parallel']), spec['pts'][0], spec['pts'][1], spec['off'])
     P = [toM(p) for p in spec['pts']]
     head, tail = [], []
     if spec.get('on0'):
