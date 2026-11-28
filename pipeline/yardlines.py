@@ -164,8 +164,15 @@ HAMA_J = (540, 1425)                                    # 分岐點附近（取�
 HAMA_PTS = [(760, 1500), (870, 1580), (960, 1625)]     # 1962 年圖與 1970 年地界線上的通過點
 
 
+HAMA_SLIDE = 35.0
 def hamasen_link(hm):
     J, h, _ = on_line(hm, px2ll(*HAMA_J))
+    # 第 36 輪之十四：濱線漁港側依像片基本圖南移約 10 m 後，分岔點離 1962 年圖的第一個控制點太近，接入曲線在 16 m 內折了 34°（原本就有 26°）。
+    # 分岔點沿濱線往西（哈瑪星方向）退 SLIDE 公尺，接入曲線拉長。
+    A = np.array([to_xy(p) for p in hm]); cs = np.r_[0, np.cumsum(np.hypot(*np.diff(A, axis=0).T))]
+    k = int(np.argmin(np.hypot(*(A - np.array(J)).T))); sJ = min(cs[-1] - 1.0, cs[k] + HAMA_SLIDE)
+    k2 = int(np.searchsorted(cs, sJ)) - 1; u = (A[k2 + 1] - A[k2]) / (cs[k2 + 1] - cs[k2])
+    J = A[k2] + u * (sJ - cs[k2]); h = math.atan2(u[1], u[0])
     # 濱線的走向是車站→哈瑪星（往西南）；分岔出去的線是由哈瑪星往東的列車轉入，切線取反方向
     h = h + math.pi
     P = [np.array(to_xy(px2ll(*q))) for q in HAMA_PTS]

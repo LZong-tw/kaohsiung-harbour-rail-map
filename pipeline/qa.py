@@ -108,7 +108,7 @@ if __name__ == '__main__':
     print('== 重疊／重複（兩線相距 <3.5 m 連續 >40 m，排除接點 60 m 內）')
     for r in overlap_check(lines): print(' ', r)
     print('== 折角（16 m 弦內轉角 >25°）與小半徑（主線 R<80 m）')
-    MAIN = {'west', 'l1w', 'w0', 'w1', 'w2', 'w3', 'k4', 'e1', 's2', 's2b', 'zd'}
+    MAIN = {'west', 'l1w', 'w0', 'w1', 'w2', 'w3', 'k4', 'e1', 's2a', 's2', 's2b', 'zd'}
     for n, L in lines.items():
         for r in kink_check(n, L, rmin=80 if n in MAIN else None): print(' ', n, r)
     print('== 懸空端點（未接到任何線）')

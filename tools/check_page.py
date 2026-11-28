@@ -18,7 +18,7 @@ from playwright.async_api import async_playwright, expect
 YEARS = [1900, 1930, 1945, 1960, 1977, 1995, 2010, 2024]
 HARBOUR = '濱線（商港側，往海關碼頭）'
 LINYUAN = '糖鐵林園線（鳳山—大寮）'
-SECOND_LINE = '第二臨港線（6.8K—草衙車場）'
+SECOND_LINE = '第二臨港線（第二貨櫃線分岐—草衙車場）'
 
 # 沿著當年可見的路線抽樣，包含虛線與共線路廊。
 CHECK_PICKS = """() => {
