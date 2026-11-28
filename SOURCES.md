@@ -62,6 +62,7 @@
 
 - 國土測繪圖資服務雲〈使用規範〉：第 2 條可在網路、論文發表等合法用途中公開顯示內容並附來源，不得大量下載；第 9 條不得移除識別資料或版權聲明。據此收錄附出處的像片基本圖比對裁切圖。<http://maps.nlsc.gov.tw/pro/use_clause.jsp>
 - 國土測繪中心 WMTS 服務清單（GetCapabilities）與圖層說明 API：1/5000 像片基本圖在高雄有 民國 65、72、78、87、98、108、113 年版。<https://wmts.nlsc.gov.tw/wmts?SERVICE=WMTS&REQUEST=GetCapabilities>、<https://api.nlsc.gov.tw/other/MapLayerInfo/TOPO05KPHOTO_087>
+- 中研院「高雄百年歷史地圖」WMTS 圖層清單（八十多個圖層，含 1926–1980 年萬分之一圖、1956–1987 年各版街圖、1984／1986 年都市計畫航測地形圖、2000 年 1:1000 圖、舊航照）：<https://gis.sinica.edu.tw/kaohsiung/wmts?SERVICE=WMTS&REQUEST=GetCapabilities>。使用者提供 1979 年院轄高雄市街圖（`Kaohsiung_14K_1979`）截圖，指出中島多線與往小港的線。
 - 高雄市政府〈擬定及變更高雄多功能經貿園區特定區高雄港站及中島調車場地區細部計畫（配合台鐵高雄港站及臨港沿線都市更新再開發）案〉計畫書（民國 99 年 10 月）：中島調車場位於前鎮區擴建路與新生路口，約 0.82 公頃，基地狹長、以軌道設施為主；中島站土地 8,036 m² 屬臺鐵。未記股道數。<https://urban-web.kcg.gov.tw/KDA/web_upload/KDA05/KDA0501/20101102101035-1.pdf>
 
 ## 線索

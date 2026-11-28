@@ -31,6 +31,7 @@ ap.add_argument('--scale', type=float, default=1.0)
 ap.add_argument('--overlay', default='dotted')
 ap.add_argument('--geo', default='geo_v13.json')
 ap.add_argument('--note', default='')
+ap.add_argument('--trace', default=None, help='另疊一組描線（[[lat,lon],...] 的清單），青色實線')
 a = ap.parse_args()
 
 if a.layer.startswith('Kaohsiung_'):
@@ -94,6 +95,11 @@ if a.overlay != 'none':
             else:
                 d.line(P, fill=col, width=w)
     legend = f'洋紅：本研究的主線、支線；橘：側線、糖鐵；藍：站場股道（{"全部年份" if yr is None else f"{yr} 年顯示者"}）'
+if a.trace:
+    d = ImageDraw.Draw(img, 'RGBA')
+    for P in json.load(open(a.trace)):
+        d.line([px(p[0], p[1]) for p in P], fill=(0, 200, 230, 230), width=max(2, int(round(2 * a.scale))))
+    legend = (legend + '；' if legend else '') + f'青：描線（{os.path.basename(a.trace)}）'
 
 font = None
 for f in ('/usr/share/fonts/opentype/noto/NotoSansCJK-Regular.ttc', '/usr/share/fonts/truetype/noto/NotoSansCJK-Regular.ttc',

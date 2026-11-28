@@ -14,6 +14,7 @@ python3 yardlines.py            # 讀 geo_v13.json，寫回 G['alt']（主線、
 """
 import json, math, sys
 import numpy as np
+import yardroute
 from yardroute import Graph, route, to_xy, to_ll
 
 Z, W0, N0 = 18, 120.2715, 22.6270
@@ -119,6 +120,12 @@ PLAN = {
         # 哪一條才是裏岸壁線未查明，先不改（第 29 輪）。
         ('x', '裏岸壁線', [(1014, 1045), (1049, 1228), (1138, 1438)], False, True, {'snap': 8.0, 'from': ('ob', (989, 860))}),
     ],
+    # 中島（第 36 輪）：中島線本線依各版像片基本圖的描線走。錨點：5.4K 西側擴建路上、擴建路西段、東側線南段、東側線北段、
+    # 北段轉彎處、北段倉庫列之間那組的西端。原本的中島線在北段斜穿倉庫、夾在兩組軌道中間（使用者在 1983 年圖上指出）。
+    1970: [('seg', 'zd', 'ZD', True, False, {'snap': 50.0, 'R': 120.0, 'jump': 80.0, 'blend': 80.0, 'extend_end': True})],   # 1976 年版（1970–1979）
+    1980: [('seg', 'zd', 'ZD', True, False, {'snap': 50.0, 'R': 120.0, 'jump': 80.0, 'blend': 80.0, 'extend_end': True})],   # 1983 年版（1980–1985）
+    1986: [('seg', 'zd', 'ZD', True, False, {'snap': 50.0, 'R': 120.0, 'jump': 80.0, 'blend': 80.0, 'extend_end': True})],   # 1989 年版（1986–1993）
+    1994: [('seg', 'zd', 'ZD', True, False, {'snap': 50.0, 'R': 120.0, 'jump': 80.0, 'blend': 80.0, 'extend_end': True})],   # 1998 年版（1994–2007）
     1991: [  # 1998 年 1:5000 像片基本圖（1991–2007）
         ('seg', 'west', [(838, 1030), (921, 766)], False, True),
         ('seg', 'hm', [(838, 1030), (560, 1430)], False, True),
@@ -126,6 +133,11 @@ PLAN = {
         ('seg', 'l1w', [(1018, 800), (1250, 1200)], True, True),
     ],
 }
+
+
+# 中島線本線的錨點（緯度, 經度），依 1976–1998 年像片基本圖描線上的位置選定（第 36 輪）
+ZD_ANCHORS = [(22.59050, 120.30200), (22.58962, 120.29900), (22.59300, 120.29600), (22.59820, 120.29400),
+              (22.60000, 120.29335), (22.60565, 120.29118), (22.60872, 120.28483)]
 
 
 def hermite(p0, h0, p1, h1, step=2.0):
@@ -192,13 +204,35 @@ def main():
         G['alt'][k] = [list(r) for r in v]
     for k, v in G.get('xalt0', {}).items():          # 側線的同類資料（第 36 輪：台糖中心倉庫線 1962–1976）
         G['xalt'][k] = [list(r) for r in v]
+    ZD_ERA = {1970: (1976, 1980), 1980: (1983, 1986), 1986: (1989, 1994), 1994: (1998, 2008)}
     for y0, plan in PLAN.items():
-        gr = next(g for g in G['yards'] if g.get('o') == y0)
+        if y0 in ZD_ERA:                 # 中島：描線只用來吸附，不畫上地圖（第 36 輪）
+            ed, c = ZD_ERA[y0]
+            gr = {'src': f'{ed} 年 1:5000 像片基本圖（中島，自動描線，只供吸附）', 'o': y0, 'c': c,
+                  'lines': json.load(open(f'yard_zd{ed}.json'))}
+        else:
+            gr = next(g for g in G['yards'] if g.get('o') == y0)
         g = Graph(gr['lines'])
         start = {}     # 同一組裡起點錨點相同的線共用同一個起點（第 36 輪：1984 年組的濱線與西臨港線起點差 3.3 m，連通檢查判為斷開）
         for kind, name, anchors, c0, c1, *opt in plan:
             opt = opt[0] if opt else {}
+            if anchors == 'ZD':
+                anchors = [ll2px(p) for p in ZD_ANCHORS]
+            # 中島東側線北端到北段西行那組之間的彎道，各版描線都斷開 60–110 m（彎道、文字），跳躍距離放寬到 120 m，
+            # 斷開處由 yardroute 以 Hermite 曲線銜接（第 36 輪）
+            yardroute.R, yardroute.JUMP_COST = opt.get('R', 40.0), opt.get('jump', 20.0)
             pts, full = route(g, [px2ll(*p) for p in anchors], snap=opt.get('snap', 20.0))
+            yardroute.R, yardroute.JUMP_COST = 40.0, 20.0
+            if opt.get('extend_end'):
+                # 描線在線的盡頭常常斷掉（文字、圖幅邊），終點錨點是人工依圖定的：路徑沒到時，順著路徑末端方向延伸到錨點（第 36 輪）
+                end = px2ll(*anchors[-1])
+                a, b = np.array(to_xy(pts[-2])), np.array(to_xy(pts[-1]))
+                e = np.array(to_xy(end))
+                gap = float(np.hypot(*(e - b)))
+                if gap > 5:
+                    u = (b - a) / (float(np.hypot(*(b - a))) or 1e-9)
+                    if float((e - b) @ u) / gap > math.cos(math.radians(20)):
+                        pts = list(pts) + [to_ll(*e)]
             if not c0 and 'from' not in opt:
                 pts = list(pts)
                 if anchors[0] in start:

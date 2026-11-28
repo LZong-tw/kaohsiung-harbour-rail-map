@@ -69,3 +69,35 @@ fig('TOPO05KPHOTO_087', box(QW, QN, 2550, 1750, 4101, 2700), 'taipower_1998.jpg'
 # 6. 5.4K 三角、台糖中心倉庫、鋼品廠（1998）
 fig('TOPO05KPHOTO_087', (120.296, 120.312, 22.586, 22.598), 'triangle_1998_overview.jpg', 1998, 0.6, 'solid',
     '使用者指出：成功二路往西南的一束股道漏畫、台糖中心倉庫線走向不對；凱旋四路往西北那股確定進臺機鋼品廠')
+
+# 7. 成功二路西側那束股道（台肥三廠、台糖中心倉庫、嘉吉飼料）、鋼品廠線、籬仔內、往小港一帶
+for code, yr in [('065', 1976), ('072', 1983), ('078', 1989), ('087', 1998)]:
+    fig(f'TOPO05KPHOTO_{code}', (120.30143, 120.30573, 22.59442, 22.59838), f'fan_{yr}.jpg', yr, 1.0, 'dotted')
+    fig(f'TOPO05KPHOTO_{code}', (120.3055, 120.3110, 22.5922, 22.5972), f'steel_{yr}.jpg', yr, 0.8, 'dotted')
+for code, yr in [('065', 1976), ('078', 1989), ('087', 1998)]:
+    fig(f'TOPO05KPHOTO_{code}', (120.2995, 120.3060, 22.5915, 22.5965), f'fan_south_{yr}.jpg', yr, 0.8, 'dotted')
+for code, yr in [('072', 1983), ('087', 1998)]:
+    fig(f'TOPO05KPHOTO_{code}', (120.3140, 120.3240, 22.5915, 22.5990), f'tsg_kaixuan_{yr}.jpg', yr, 0.6, 'dotted',
+        '中山四路×凱旋四路東南：1983 年圖標「臺糖鐵路」「臺糖倉庫」「臺糖副產品加工廠」')
+for code, yr in [('065', 1976), ('072', 1983), ('078', 1989)]:
+    fig(f'TOPO05KPHOTO_{code}', (120.3175, 120.3310, 22.5790, 22.6010), f'lizinei_{yr}.jpg', yr, 0.5, 'solid')
+    fig(f'TOPO05KPHOTO_{code}', (120.3160, 120.3300, 22.5960, 22.6120), f'lizinei_north_{yr}.jpg', yr, 0.5, 'solid')
+    fig(f'TOPO05KPHOTO_{code}', (120.3190, 120.3265, 22.5975, 22.6065), f'lizinei_link_{yr}.jpg', yr, 0.7, 'dotted',
+        '籬子內線北端（籬仔內站）與凱旋四路的第一臨港線之間約 350 m 沒有畫')
+fig('TOPO05KPHOTO_072', (120.318, 120.346, 22.562, 22.598), 'xiaogang_1983.jpg', 1983, 0.75, 'solid',
+    '使用者指出：1979 年院轄高雄市街圖上，自凱旋／中山路圓環南下、再往東彎向小港的鐵路，地圖上沒有對應')
+fig('TOPO05KPHOTO_065', (120.318, 120.346, 22.562, 22.598), 'xiaogang_1976.jpg', 1976, 0.75, 'solid')
+for code, yr in [('072', 1983), ('078', 1989)]:
+    subprocess.run(['python3', 'figcrop.py', f'TOPO05KPHOTO_{code}', '17', '120.312', '120.342', '22.566', '22.600',
+                    f'../scratch/r36/s2_{yr}.jpg', '--year', str(yr), '--overlay', 'dotted', '--scale', '0.8'], check=True)
+
+# 8. 中島：自動描線（只供吸附）與修正後的中島線本線
+for code, yr in [('065', 1976), ('072', 1983), ('078', 1989), ('087', 1998)]:
+    subprocess.run(['python3', 'figcrop.py', f'TOPO05KPHOTO_{code}', '18', '120.284', '120.306', '22.586', '22.6125',
+                    f'../scratch/r36/zd_trace_{yr}.jpg', '--overlay', 'none', '--trace', f'yard_zd{yr}.json', '--scale', '0.42',
+                    '--note', '自動描線（zhongdao.py）：只供中島線本線吸附，不畫上地圖'], check=True)
+    fig(f'TOPO05KPHOTO_{code}', (120.284, 120.306, 22.586, 22.6125), f'zd_new_{yr}.jpg', yr, 0.42, 'solid',
+        '第 36 輪修正後的中島線本線（洋紅）')
+for code, yr in [('072', 1983), ('087', 1998)]:
+    fig(f'TOPO05KPHOTO_{code}', (120.2840, 120.2970, 22.5990, 22.6105), f'zd_new_north_{yr}.jpg', yr, 0.6, 'solid',
+        '第 36 輪修正後：中島線本線北段沿倉庫南側道路那組走到西端')

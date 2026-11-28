@@ -164,7 +164,7 @@ TRUNK_GEOMETRY = r"""(y)=>{
  const g=id=>m.hasLayer(R.lines[id])?R.lines[id].getLatLngs().map(p=>[p.lat,p.lng]):null;
  return {zgs:g('zg_s'),zgc:g('zgc'),fso:g('fso'),fsoOff:R.lines.fso.options.dashArray==='7 7',
   yards:R.yards.filter(l=>m.hasLayer(l)&&l.getLatLngs()[0].lat<22.627).length,
-  old:sta('打狗停車場'),port:sta('高雄港站'),gushan:sta('鼓山'),skc:sta('三塊厝')};
+  old:sta('打狗停車場'),port:sta('高雄港站'),gushan:sta('鼓山'),skc:sta('三塊厝'),zdc:sta('中島車場'),zd:g('zd')};
 }"""
 
 
@@ -200,6 +200,24 @@ async def check_trunk_geometry(page):
     assert r['fsoOff'], '舊線 1995 年拆除後轉灰'
     r = await at(1987)
     assert r['skc'] and not r['skc']['on'], r['skc']
+    r = await at(1980)
+    assert r['zdc'] and r['zdc']['ll'][0] < 22.5915 and r['zdc']['ll'][1] > 120.2995, ('中島車場在擴建路與新生路口（第 36 輪）', r['zdc'])
+    import math
+    def near(line, p):
+        best = 1e9
+        for (a1, b1), (a2, b2) in zip(line, line[1:]):
+            ax, ay, bx, by = (b1 - p[1]) * 102800, (a1 - p[0]) * 110574, (b2 - p[1]) * 102800, (a2 - p[0]) * 110574
+            dx, dy = bx - ax, by - ay
+            t = max(0.0, min(1.0, -(ax * dx + ay * dy) / ((dx * dx + dy * dy) or 1e-9)))
+            best = min(best, math.hypot(ax + t * dx, ay + t * dy))
+        return best
+    for y in (1975, 1983, 1990, 2000):
+        r = await at(y)
+        # 中島線本線改走像片基本圖上的軌道：北段沿倉庫南側道路那組到西端，不斜穿倉庫（第 36 輪，使用者在 1983 年圖上指出）
+        assert near(r['zd'], (22.60872, 120.28483)) < 15 and near(r['zd'], (22.6000, 120.2934)) < 15, (y, '中島線本線位置')
+        assert near(r['zd'], (22.6080, 120.2877)) > 20, (y, '不再走原本夾在兩組軌道之間的線形')
+    r = await at(1969)
+    assert r['zdc'] is None, ('中島車場 1970 年設立', r['zdc'])
     r = await at(2010)
     assert r['gushan'] and not r['gushan']['on'], r['gushan']
     r = await at(2018)
