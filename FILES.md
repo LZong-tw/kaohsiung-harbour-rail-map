@@ -248,3 +248,13 @@ Overpass 查詢與結果。查詢存成 `.txt`，結果存成 `.json`，透過�
 | `*-excerpt_from_previous_claude_message.txt` | 使用者引用的回覆片段 |
 
 街景截圖不收錄，只在 `SOURCES.md` 與 `METHODS.md` 引用連結。
+
+## 第 36 輪之四至七新增／修改
+
+| 檔案 | 用途 |
+|---|---|
+| `pipeline/manual.py` | 人工定線的精修。新增 `parallel`（沿母線平移的並行股道）、`raw`（控制點含接點、只平滑，用於扇形站場） |
+| `pipeline/manual_lines.py` | 人工定線的控制點。`LINES`（前鎮一帶側線、硫酸錏廠線、鹼業線、鋼品廠線與各站場股道）、`ZD_LINES`（中島各股、中島車場五股、友聯貨櫃側線，由 `yardlines.py` 套用） |
+| `pipeline/apply_reg.py` | 新增：糖鐵籬仔內倉庫線改名並改接糖鐵、台糖中心倉庫線自台肥線西段分出、第二臨港線草衙車場以東改走南側線形 |
+| `pipeline/rename_r36_figs.py` | 把 `scratch/r36/` 的比對圖改成「地點_內容_年份」的一次性腳本；對照表 `scratch/r36/檔名對照.tsv` |
+| `scratch/r36/*_修正後疊圖_*.jpg`、`*_修正前疊圖_*.jpg` | 各線修正前後疊在像片基本圖、經建版上的比對圖 |
