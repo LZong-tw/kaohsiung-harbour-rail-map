@@ -265,6 +265,20 @@ def main():
             if o not in own:
                 G['xalt'].setdefault(xn, []).append([o, c, [reattach(G['extra'][xn][0], g)] + G['extra'][xn][1:]])
         G['xalt'].get(xn, []).sort(key=lambda a: a[0])
+    # 自動描線把主線本身也描成一股的：高雄機廠組（1975–2018）裡沿東臨港線的那一條。e1 在第 36 輪之十一依像片基本圖移到這條線上之後，
+    # 兩者是同一股軌道，描線又是八個頂點的折線，會和主線互相交織（overlap.py 報斜穿）。六成以上頂點離 e1 不到 2.5 m 的股道移除。
+    def _dseg(p, L):
+        best = 1e9
+        for a_, b_ in zip(L, L[1:]):
+            ax, ay = (a_[1] - p[1]) * 102700, (a_[0] - p[0]) * 110800; bx, by = (b_[1] - p[1]) * 102700, (b_[0] - p[0]) * 110800
+            dx, dy = bx - ax, by - ay; l2 = dx * dx + dy * dy or 1e-9
+            t = max(0.0, min(1.0, -(ax * dx + ay * dy) / l2)); best = min(best, math.hypot(ax + t * dx, ay + t * dy))
+        return best
+    for g in G['yards']:
+        if g.get('o') == 1975 and g.get('c') == 2018:
+            keep = [l for l in g['lines'] if sum(_dseg(p, G['seg']['e1']) < 2.5 for p in l) < 0.6 * len(l)]
+            if len(keep) != len(g['lines']): print('機廠組移除與 e1 重複的描線', len(g['lines']) - len(keep), '條')
+            g['lines'] = keep
     json.dump(G, open('geo_v13.json', 'w'), separators=(',', ':'))
 
 
