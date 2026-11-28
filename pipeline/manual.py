@@ -172,7 +172,11 @@ def apply(G, S, X, lines):
             YARD[n] = g
             print('manual 股道', n, len(g), '點')
             continue
+        if spec.get('part_of'):      # 同一條具名側線的另一段（母線不同，分段畫）：併進那條線，不另列一筆
+            g = geom(spec, lookup); X[spec['part_of']].append(g); YARD[n] = g
+            print('manual', spec['part_of'], '續段', n, len(g), '點'); continue
         X[n] = [geom(spec, lookup)]
+        YARD[n] = X[n][0]
         G['xy'][n] = list(spec['yrs'])
         G['xb'][n] = spec['basis']
         print('manual', n, round(sum(float(np.hypot(*(toM(b) - toM(a)))) for a, b in zip(X[n][0], X[n][0][1:]))), 'm')
