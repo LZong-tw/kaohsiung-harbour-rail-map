@@ -409,7 +409,7 @@ m.on('click',e=>{
  datePopup.options.maxWidth=Math.min(340,Math.max(80,size.x-80));
  datePopup.options.maxHeight=Math.max(60,Math.floor(size.y*.52));
  const sections=hits.map(hit=>{
-  const basis=dateEvidence[hit.t]||hit.basis||'年代依據未收錄。';
+  const basis=(G.xb||{})[hit.t]||dateEvidence[hit.t]||hit.basis||'年代依據未收錄。';
   return `<section><b>${hit.t}</b><small>${hit.y}</small><p>${basis}</p></section>`;
  });
  datePopup.setLatLng(e.latlng).setContent(sections.join('')).openOn(m);

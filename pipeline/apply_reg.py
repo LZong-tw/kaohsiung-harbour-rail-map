@@ -708,5 +708,12 @@ for n, p in list(G['st'].items()):
     if best[0] < 40: G['st'][n] = toLL(best[2])
 G['br'] = {'5.4K 中島線分歧': S['zd'][0], '6.8K 第二臨港線分歧': S['s2'][0],
            '前鎮橋（1955）': S['qzb'][1]}
+# 10) 人工定線（第 36 輪起，manual.py／manual_lines.py）：控制點由人讀圖，程式只做平滑與接到母線
+import manual, manual_lines
+manual.apply(G, S, X, manual_lines.LINES)
+# 台灣肥料公司線：1976、1983 年像片基本圖上往西到台糖中心倉庫北側（約 120.3022°E）；1989、1998 年版只到約 120.3036°E，西段已拆
+_tf = X['台灣肥料公司線（臺肥三廠）'][0]
+_cut = next((i for i, p in enumerate(_tf) if p[1] < 120.3036 and p[0] < 22.5957), len(_tf))
+G.setdefault('xalt0', {})['台灣肥料公司線（臺肥三廠）'] = [[1986, 9999, [[list(p) for p in _tf[:_cut]]]]]
 json.dump(G, open('geo_v13.json', 'w'), separators=(',', ':'))
 print({k: len(v) for k, v in S.items() if not k.startswith('lr')})
