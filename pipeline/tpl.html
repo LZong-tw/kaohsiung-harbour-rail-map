@@ -87,7 +87,8 @@ const G=__GEO__;
 const SEG=[
 {id:'zg_n',lb:'縱貫線',name:'縱貫線（鼓山—往左營）',k:'trunk',o:1900,c:9999,t:'1900-11-29 打狗—臺南段通車；2018-10-14 地下化',now:'營運中（地下）'},
 {id:'west',lb:'西臨港線',name:'西臨港線（高雄港站—鼓山）',k:'main',o:1900,c:2008,t:'1900–1941 為縱貫線終點段；1907–2008 為屏東線起點段；1968 停辦客運',now:'輕軌西段、哈瑪星鐵道園區'},
-{id:'zg_s',lb:'縱貫線',name:'鼓山—三塊厝—高雄',k:'trunk',o:1907,c:9999,t:'1907 鳳山支線；1941 高雄新驛啟用後成為縱貫線正線',now:'營運中（地下）'},
+{id:'zg_s',lb:'縱貫線',name:'鼓山—三塊厝—高雄',k:'trunk',o:1907,c:9999,t:'三塊厝以東 1907 年鳳山支線通車；鼓山南側分岐經高雄川橋到三塊厝的一段 1941 年隨高雄新驛新建，成為縱貫線正線',now:'營運中（地下）'},
+{id:'fso',lb:'鳳山支線',name:'鳳山支線舊線（打狗驛北—三塊厝）',k:'trunk',o:1907,c:1963,t:'1907 年鳳山支線自打狗驛北方分岔，直線往東北東到三塊厝；1941 年後保留為高雄港—三塊厝連絡線，停用年推定',now:'建國路一帶'},
 {id:'pt',lb:'屏東線',name:'屏東線（高雄—鳳山）',k:'trunk',o:1907,c:9999,t:'1907-10-01 鳳山停車場啟用',now:'營運中（地下）'},
 {id:'l1w',lb:'北裏岸壁線',name:'北裏岸壁線（高雄港站—駁二—大義；後為第一臨港線西段）',k:'main',o:1930,c:2008,t:'1930 年自高雄驛延伸，沿三號船渠北側經今駁二；之後自大義倉庫群附近築堤跨高雄川延伸到苓雅寮，成為臨港線西段的起點段',now:'駁二園區、自行車道'},
 {id:'ob',lb:'表岸壁線',name:'表岸壁線（第二碼頭南岸）',k:'br',o:1914,c:2008,t:'1914 年自打狗驛分岔通往第二碼頭；1989 年地形圖上標為「高港支線」',now:'蓬萊商港區碼頭'},
@@ -106,7 +107,9 @@ const SEG=[
 {id:'c3',lb:'第三貨櫃線',name:'第三貨櫃線（年份未查證）',k:'unc',o:1977,c:2011,t:'通往第三貨櫃中心',now:'部分軌道仍在'},
 {id:'lr1',name:'環狀輕軌 第一階段 C1–C14',k:'lr',o:2017,c:9999,t:'2015 先通 C1–C4，2017 延伸到 C14 哈瑪星',now:'營運中',lr:1},
 {id:'lr2',lb:'環狀輕軌',name:'環狀輕軌 第二階段',k:'lr',o:2024,c:9999,t:'2024-01-01 環狀全線試營運（中間各段 2021 年起陸續通車）',now:'營運中',lr:1}];
-const STN=[['高雄港站',1900,2008,'right'],['高雄站',1941,9999,'top'],['苓雅寮車場',1941,2008,'left'],['新光',1941,2008,'right'],['中島車場',1970,2008,'left'],['前鎮車場',1967,2018,'right'],['高雄機廠',1975,2018,'right'],['草衙車場',1977,2011,'right'],['中鋼',1977,1988,'right'],['鳳山',1907,9999,'bottom'],['三塊厝',1908,9999,'bottom'],['鼓山',1900,9999,'left'],['往左營',1900,9999,'right']];
+const STN=[['打狗停車場',1900,1908,'left'],['高雄港站',1908,2008,'right'],['高雄站',1941,9999,'top'],['苓雅寮車場',1941,2008,'left'],['新光',1941,2008,'right'],['中島車場',1970,2008,'left'],['前鎮車場',1967,2018,'right'],['高雄機廠',1975,2018,'right'],['草衙車場',1977,2011,'right'],['中鋼',1977,1988,'right'],['鳳山',1907,9999,'bottom'],['三塊厝',1908,9999,'bottom'],['鼓山',1929,9999,'left'],['往左營',1900,9999,'right']];
+// 站名與營業期間（停用期間以灰色標示）：田町 1929 設站、1950 改名鼓山、2009-05 停用、2018-10 地下站啟用；三塊厝 1986-09 停用、2018-10 地下站啟用。
+const STX={'打狗停車場':[[1900,1908,'打狗']],'鼓山':[[1929,1950,'田町'],[1950,2009,'鼓山'],[2018,9999,'鼓山']],'三塊厝':[[1908,1987,'三塊厝'],[2018,9999,'三塊厝']]};
 const EV=[
 [1900,'1900-11-29','打狗停車場啟用，縱貫線打狗—臺南段通車'],
 [1907,'1907-10-01','鳳山支線（今屏東線）打狗—鳳山通車，經三塊厝'],
@@ -114,7 +117,8 @@ const EV=[
 [1914,'1914','打狗驛分出通往第二碼頭的「表岸壁線」，之後陸續增設中岸壁線、裏岸壁線'],
 [1920,'1920','打狗改名高雄，車站改稱高雄驛'],
 [1930,'1930','北裏岸壁線自高雄驛（今高雄港站）延伸，經今駁二一帶，後再跨高雄川（愛河）到苓雅寮'],
-[1941,'1941','高雄新驛（今高雄站）啟用，舊站改稱高雄港驛；第一臨港線東西兩段 1941–42 分別通車'],
+[1929,'1929-10-01','淺野水泥設田町驛（1950 年改名鼓山）'],
+[1941,'1941','高雄新驛（今高雄站）啟用，舊站改稱高雄港驛；縱貫線改由田町南側新分岐經高雄川橋到三塊厝；第一臨港線東西兩段 1941–42 分別通車'],
 [1944,'1943–44','苓雅寮大橋（今愛河舊鐵橋）完成'],
 [1947,'1947-04','戰後重建站房，改稱高雄港站'],
 [1955,'1955-11','前鎮橋（成功橋）竣工，環狀臨港線成形'],
@@ -124,6 +128,7 @@ const EV=[
 [1975,'1975','高雄機廠從鹽埕遷到前鎮車場北側'],
 [1977,'1977-07-08','第二臨港線通車；草衙車場設立'],
 [1979,'1979-07-01','西部幹線電氣化完工，前鎮車場為終點'],
+[1986,'1986-09','三塊厝站停用'],
 [1988,'1988-05','第二臨港線草衙—中鋼段停駛'],
 [2005,'2005-10-20','貨運列車改由前鎮車場到發'],
 [2008,'2008-11-19','第一臨港線西段停用（含中島、苓雅寮、高雄港站、濱線）；12-16 高雄港站裁撤'],
@@ -131,7 +136,7 @@ const EV=[
 [2011,'2011-07-12','第二臨港線全線廢止'],
 [2015,'2015','輕軌 C1–C4 試營運；03-09 第二臨港線路廊自行車道啟用'],
 [2017,'2017','輕軌第一階段延伸到 C14 哈瑪星'],
-[2018,'2018-09-28','東段末班車開出，10-01 臨港線全線廢止；10-14 縱貫、屏東線市區段地下化'],
+[2018,'2018-09-28','東段末班車開出，10-01 臨港線全線廢止；10-14 縱貫、屏東線市區段地下化，鼓山、三塊厝以地下站重新啟用'],
 [2024,'2024-01-01','輕軌環狀全線試營運']];
 const STY={trunk:{color:'#1d4e89',weight:6},main:{color:'#7b2d8e',weight:5},br:{color:'#c2620a',weight:4},red:{color:'#c1121f',weight:5},unc:{color:'#c2620a',weight:3.5,dashArray:'0.5 7'},lr:{color:'#2f9e44',weight:7,opacity:.85},yd:{color:'#7b2d8e',weight:2.5,opacity:.9}};
 const GH={color:'#8a949c',weight:3,dashArray:'7 7',opacity:.9};
@@ -158,8 +163,13 @@ function routeForYear(s,year){
     year<2008?'1968 年高雄港站停辦屏東線客運，港區仍辦理貨運。':'2008 年西段停用，高雄港站裁撤。'};
  }
  if(s.id==='zg_s'&&year<1941)
-  return {...s,lb:branch,name:branch+'（鼓山—三塊厝方向）',
-   t:'1907 年鳳山支線由打狗經三塊厝通往鳳山。這段路廊在 1941 年高雄新驛啟用後納入縱貫線。'};
+  return {...s,lb:branch,name:branch+'（三塊厝—今高雄站址）',
+   t:'1907 年鳳山支線經三塊厝通往鳳山。三塊厝以西當時走舊線（另列）；1941 年高雄新驛啟用後，這段路廊成為縱貫線。'};
+ if(s.id==='fso')
+  return year<1941?{...s,lb:branch,name:branch+'（打狗驛北—三塊厝，舊線）',
+   t:'1907 年鳳山支線自'+harbourStationName(year)+'北方分岔，直線往東北東到三塊厝（1924、1942 年圖）。1941 年改走田町南側新線。'}:
+   {...s,lb:'連絡線',name:'高雄港—三塊厝連絡線（鳳山支線舊線，停用年推定）',
+   t:'1941 年新線啟用後，舊線仍見於 1942、1945、1955 年圖與 1956 年航照；1970 年圖只剩虛線。停用年未查明，推定 1963 年。'};
  if(s.id==='pt'&&year<1941)
   return {...s,lb:branch,name:branch+'（今高雄站址—鳳山方向）',
    t:'1907 年打狗至鳳山通車，當時仍由港邊的車站出發。'};
@@ -233,7 +243,7 @@ function eraGeom(y){
  for(const id in ALT){const g=pickAlt(ALT[id],y,G.seg[id]),l=lay[id];if(l&&l._g!==g){l._g=g;l.setLatLngs(g);if(LBL[id])LBL[id].coords=g}}
  for(const l of exL){const parts=pickAlt(XALT[l._xn],curY,G.extra[l._xn]),g=parts[l._xi]||parts[0];if(l._g!==g){l._g=g;l.setLatLngs(g)}}}
 for(const s of SEG)if(s.lb)mkLabel(s.id,G.seg[s.id],s.lb,STY[s.k].color,13);
-const order=['zg_n','zg_s','pt','west','hm','l1w','ob','w0','w1','qzb','w2','w3','k4','e1','zd','s2','s2b','c2','c3','lr1','lr2'];
+const order=['zg_n','zg_s','fso','pt','west','hm','l1w','ob','w0','w1','qzb','w2','w3','k4','e1','zd','s2','s2b','c2','c3','lr1','lr2'];
 const stl={};
 for(const[n,o,c,dir]of STN){const p=G.st[n];stl[n]={o,c,mk:L.circleMarker(p,{radius:5,color:'#3b4248',weight:2,fillColor:'#fff',fillOpacity:1}),dir}}
 const sl=document.getElementById('sl'),yr=document.getElementById('yr');
@@ -252,9 +262,10 @@ var draw=function(y){
  yard.forEach(g=>y>=g._o&&y<g._c?g.addTo(m):g.remove());
  ttL.forEach(g=>y>=g._o&&y<g._c?g.addTo(m):g.remove());
  for(const[n,v]of Object.entries(stl)){
-  if(y<v.o){v.mk.remove();continue}
-  const on=y<v.c;v.mk.setStyle({color:on?'#3b4248':'#8a949c',fillColor:on?'#fff':'#c9ced2'});
-  const stationName=n==='高雄港站'?harbourStationName(y):n;
+  if(y<v.o||(n==='打狗停車場'&&y>=v.c)){v.mk.remove();continue}
+  let on=y<v.c,stationName=n==='高雄港站'?harbourStationName(y):n;
+  const per=STX[n];if(per){const r=per.find(r=>r[0]<=y&&y<r[1]);on=!!r;stationName=(r||per.filter(r=>r[0]<=y).pop()||per[0])[2]}
+  v.mk.setStyle({color:on?'#3b4248':'#8a949c',fillColor:on?'#fff':'#c9ced2'});
   v.mk.unbindTooltip().bindTooltip(stationName,{permanent:true,direction:v.dir,className:'lbl'+(on?'':' off'),offset:v.dir==='right'?[6,0]:v.dir==='left'?[-6,0]:[0,0]}).addTo(m)}
  const last=[...EV].reverse().find(e=>e[0]<=y);
  document.getElementById('ev').innerHTML=last?`<time>${last[1]}</time>${last[2]}`:'臨港線尚未出現';
@@ -406,7 +417,7 @@ m.on('mouseout movestart zoomstart',()=>{m.closeTooltip(tip);m.getContainer().st
 
 const _draw=draw;draw=function(y){curY=y;eraGeom(y);_draw(y);bpL.forEach(b=>{const s=SEG.find(x=>x.id===b._seg);s&&y>=s.o&&y<s.c?b.addTo(m):b.remove()});drawExtra();drawSidebar(y);relabel()};
 m.on('zoomend moveend',relabel);
-window.__railCheck = {segments: SEG, lines: lay, extras: exL, yards: yard, branches: bpL, pickAt, routeForYear};
+window.__railCheck = {segments: SEG, lines: lay, extras: exL, yards: yard, branches: bpL, stations: stl, pickAt, routeForYear};
 // 使用網址片段，讓 GitHub Pages 和離線 HTML 都能分享同一個年份與視角。
 let restoringView=false;
 function restoreView(){

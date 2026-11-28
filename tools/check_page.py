@@ -156,6 +156,50 @@ async def check_railway_history(page):
             )
 
 
+TRUNK_GEOMETRY = r"""(y)=>{
+ const R=window.__railCheck,m=__map,st=R.stations;
+ const sta=n=>{const v=st[n];if(!v||!m.hasLayer(v.mk))return null;
+  return {name:v.mk.getTooltip().getContent(),on:v.mk.options.fillColor==='#fff',ll:[v.mk.getLatLng().lat,v.mk.getLatLng().lng]}};
+ const g=id=>m.hasLayer(R.lines[id])?R.lines[id].getLatLngs().map(p=>[p.lat,p.lng]):null;
+ return {zgs:g('zg_s'),fso:g('fso'),fsoOff:R.lines.fso.options.dashArray==='7 7',
+  yards:R.yards.filter(l=>m.hasLayer(l)&&l.getLatLngs()[0].lat<22.627).length,
+  old:sta('打狗停車場'),port:sta('高雄港站'),gushan:sta('鼓山'),skc:sta('三塊厝')};
+}"""
+
+
+async def check_trunk_geometry(page):
+    """一般鐵路依年代換線形與站位（第 34 輪）：第 33 輪只換了線名，這裡檢查線形與車站本身。"""
+    async def at(year):
+        await set_year(page, year)
+        return await page.evaluate(TRUNK_GEOMETRY, year)
+    r = await at(1900)
+    assert r['old'] and r['old']['name'] == '打狗' and abs(r['old']['ll'][0] - 22.6265) < 0.0005, r['old']
+    assert r['port'] is None and r['yards'] == 0 and r['zgs'] is None and r['fso'] is None, r
+    assert r['gushan'] is None and r['skc'] is None, (r['gushan'], r['skc'])
+    r = await at(1907)
+    assert r['old'] and r['port'] is None and r['yards'] == 0, r
+    assert r['zgs'][0][1] > 120.292, ('1907 年鳳山支線不應走 1941 年新線', r['zgs'][0])
+    assert r['fso'] and not r['fsoOff'] and r['fso'][0][1] < 120.284, r['fso'][:2]
+    r = await at(1908)
+    assert r['old'] is None and r['port'] and r['yards'] > 0, r
+    r = await at(1929)
+    assert r['gushan']['name'] == '田町' and r['gushan']['on'], r['gushan']
+    r = await at(1941)
+    assert r['zgs'][0][1] < 120.283, ('1941 年起縱貫線經鼓山南側新線', r['zgs'][0])
+    assert r['fso'] and not r['fsoOff'], '1941 年後舊線仍在（1942 年圖）'
+    r = await at(1950)
+    assert r['gushan']['name'] == '鼓山', r['gushan']
+    r = await at(1963)
+    assert r['fsoOff'], '舊線停用（推定）後轉灰'
+    r = await at(1987)
+    assert r['skc'] and not r['skc']['on'], r['skc']
+    r = await at(2010)
+    assert r['gushan'] and not r['gushan']['on'], r['gushan']
+    r = await at(2018)
+    assert r['gushan']['on'] and r['skc']['on'], (r['gushan'], r['skc'])
+    print('一般鐵路線形與站位：1900 打狗停車場、1907 鳳山支線舊線、1908 遷站、1941 新線、田町／鼓山、三塊厝停用期皆通過')
+
+
 async def check_siding_zoom(page):
     await set_year(page, 1964)
     target = page.locator('#la').get_by_role('button', name=re.compile(re.escape(HARBOUR)))
@@ -293,6 +337,7 @@ async def main(uri):
                 assert not result['misses'], f"{year} 查不到：{result['misses']}"
             await check_annual_lists(page)
             await check_railway_history(page)
+            await check_trunk_geometry(page)
             await check_boundaries(page)
             await check_siding_zoom(page)
             await page.goto(uri)

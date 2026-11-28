@@ -24,6 +24,7 @@
 | 1993 經建版 1:25,000 | 中研院 `TM25K_1993`（z17） | 專用側線考證：與 1989 年版互相比對 |
 | 二萬五千分一地形圖 1942、1950 年版；美軍 1:50,000 圖 1944 | 中研院 `JM25K_1942`、`TM25K_1950`、`AM50K_1944`（z16–z17） | 第 30 輪：糖鐵鳳山線（鳳山—二苓—工場）南段的位置；1942、1950 年圖標「臺灣製糖鐵道」 |
 | 臺糖小港糖廠鐵道路線圖、分佈圖（民國 66 年 6 月，1:100,000） | 使用者提供的 Google Drive 掃描：路線圖 <https://drive.google.com/file/d/1NXCYjkRSFlo8MAOAY_2JIpM_bNcv0PQP/view>、分佈圖 <https://drive.google.com/file/d/1Fmu4A3froEI2RllbT3eDNU_j6-WqRkDH/view>；索引頁 Tenrivers 的影像記事〈台糖各糖廠鐵道路線圖及分布圖〉<https://tenriversnote.com/sugar50/> | 第 31 輪：糖鐵正式線名與各分岐點、車站里程（佛公三角形、林園線、淡水線、大寮三角線）。授權未標示，圖檔不收錄，只用線名與里程 |
+| 臺灣堡圖 1904；日治五萬分一地形圖 1924 | 中研院 `JM20K_1904`（jpg，z16）、`JM50K_1924`（jpg，z15） | 第 34 輪：1900–1907 年打狗停車場位置、1907–1940 年鳳山支線舊線。`JM25K_1921` 整幅偏約東 830 m、南 200 m 且內容為 1940 年代，未採用 |
 | 2024 正射影像 | 國土測繪中心 WMTS `PHOTO2` | 現況路廊、碼頭輪廓、對位檢查 |
 | OpenStreetMap | 圖磚與 Overpass API（maps.mail.ru 鏡像） | 底圖、現行與廢線軌跡、變電所與分署範圍、水域遮罩 |
 
@@ -47,6 +48,14 @@
 - 使用者提供的臉書社團討論（第 31 輪）：留言確認第二臨港線在中山路西側、糖鐵在東側，留言附前鎮區行政區域圖。<https://www.facebook.com/groups/TSRTPCR/posts/24017460044529967/>、<https://www.facebook.com/photo.php?fbid=24304636635807348>。臉書不允許程式讀取，內容依使用者轉述；圖不收錄。
 - 使用者提供的 Google 地圖連結 <https://goo.gl/maps/C1EuxW3ESTPjZaFV8>（My Maps「台湾 臺糖鐵道 廃線跡 配線図式路線図」）：讀不到圖層內容，未使用。
 - 使用者提供的高雄市歷史博物館「高雄故事」文章（糖鐵與第二臨港線的關係）：<https://crh.khm.gov.tw/khstory/storyDetail.aspx?ID=865>。第 30 輪以 WebFetch 讀取時，網站的 robots.txt 無法讀取，頁面未取得，內容尚未核對。
+
+## 一般鐵路考證用到的網路資料（第 34 輪）
+
+- 天下雜誌〈百年淬鍊，成就高雄蛻變重生〉（2024）：1900 年打狗驛站房在今鼓山一路 87 巷一帶，往南是潟湖與潮間灘地。<https://www.cw.com.tw/article/5133273>
+- 謝明勳，關鍵評論網（打狗臨時停車場；抽砂填土完成前以此為南部線起點）。<https://www.thenewslens.com/article/148082>
+- 英文維基百科 Gushan railway station (Taiwan)：1929-10-01 淺野水泥設田町驛；1941 年在田町南側新設分岐接三塊厝與高雄新驛；1950-04-15 改名鼓山；2008-11-09 停辦客運、2009-05-13 裁撤、2018-10-14 重新啟用。<https://en.wikipedia.org/wiki/Gushan_railway_station_(Taiwan)>
+- 自由時報（2026-06-04）：1941 年配合縱貫線改道高雄新驛，新建愛河鐵路橋「高雄川橋」。<https://news.ltn.com.tw/amp/news/life/breakingnews/5460198>
+- 公視新聞網：三塊厝站 1986 年（民國 75 年）9 月底停用。<https://news.pts.org.tw/article/376836>；蕃薯藤旅遊：1908 年設三塊厝乘降場、2018 年隨地下化重新列入時刻表。<https://travel.yam.com/article/125508>
 
 ## 線索
 
