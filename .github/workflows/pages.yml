@@ -29,6 +29,7 @@ jobs:
           sparse-checkout: |
             site
             /pipeline/build_page.py
+            /pipeline/connect_check.py
             /pipeline/geo_v13.json
             /pipeline/tpl.html
             tools
@@ -46,6 +47,7 @@ jobs:
         run: |
           python build_page.py
           git diff --exit-code -- ../site/index.html
+          python connect_check.py geo_v13.json
       - run: python tools/build_site.py
       - run: python tools/check_page.py _site/index.html
       - uses: actions/configure-pages@v5

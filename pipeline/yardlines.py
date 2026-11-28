@@ -190,12 +190,21 @@ def main():
     # 站場以外依年代換的線形（apply_reg.py 寫在 G['alt0']，例如 1907–1940 年的鳳山支線舊線），先放進來（第 34 輪）
     for k, v in G.get('alt0', {}).items():
         G['alt'][k] = [list(r) for r in v]
+    for k, v in G.get('xalt0', {}).items():          # 側線的同類資料（第 36 輪：台糖中心倉庫線 1962–1976）
+        G['xalt'][k] = [list(r) for r in v]
     for y0, plan in PLAN.items():
         gr = next(g for g in G['yards'] if g.get('o') == y0)
         g = Graph(gr['lines'])
+        start = {}     # 同一組裡起點錨點相同的線共用同一個起點（第 36 輪：1984 年組的濱線與西臨港線起點差 3.3 m，連通檢查判為斷開）
         for kind, name, anchors, c0, c1, *opt in plan:
             opt = opt[0] if opt else {}
             pts, full = route(g, [px2ll(*p) for p in anchors], snap=opt.get('snap', 20.0))
+            if not c0 and 'from' not in opt:
+                pts = list(pts)
+                if anchors[0] in start:
+                    pts[0] = start[anchors[0]]
+                else:
+                    start[anchors[0]] = pts[0]
             if 'from' in opt:                  # 自母線（本年代的線形）上的指定點以緩和曲線分出，接到路徑起點
                 par = G['alt'][opt['from'][0]][-1][2]
                 P0, h0, _ = on_line(par, px2ll(*opt['from'][1]))

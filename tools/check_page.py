@@ -131,11 +131,12 @@ async def check_railway_history(page):
         (1900, 'west', 'trunk', '縱貫線'),
         (1906, 'zg_s', None, ''), (1906, 'pt', None, ''),
         (1907, 'zg_s', 'trunk', '鳳山支線'), (1907, 'pt', 'trunk', '鳳山支線'),
-        (1941, 'zg_s', 'trunk', '縱貫線'), (1941, 'pt', 'trunk', '屏東線'),
+        (1940, 'zgc', None, ''),
+        (1941, 'zg_s', 'trunk', '縱貫線'), (1941, 'zgc', 'trunk', '縱貫線'), (1941, 'pt', 'trunk', '屏東線'),
         (1941, 'west', 'main', '西臨港線'),
         (2007, 'west', 'main', '西臨港線'), (2008, 'west', 'closed', '西臨港線'),
     ]
-    for route_id in ['zg_n', 'zg_s', 'pt']:
+    for route_id in ['zg_n', 'zgc', 'zg_s', 'pt']:
         cases.extend([(2017, route_id, 'trunk', ''), (2018, route_id, 'underground', '地下')])
     for year, route_id, kind, text in cases:
         await set_year(page, year)
@@ -161,7 +162,7 @@ TRUNK_GEOMETRY = r"""(y)=>{
  const sta=n=>{const v=st[n];if(!v||!m.hasLayer(v.mk))return null;
   return {name:v.mk.getTooltip().getContent(),on:v.mk.options.fillColor==='#fff',ll:[v.mk.getLatLng().lat,v.mk.getLatLng().lng]}};
  const g=id=>m.hasLayer(R.lines[id])?R.lines[id].getLatLngs().map(p=>[p.lat,p.lng]):null;
- return {zgs:g('zg_s'),fso:g('fso'),fsoOff:R.lines.fso.options.dashArray==='7 7',
+ return {zgs:g('zg_s'),zgc:g('zgc'),fso:g('fso'),fsoOff:R.lines.fso.options.dashArray==='7 7',
   yards:R.yards.filter(l=>m.hasLayer(l)&&l.getLatLngs()[0].lat<22.627).length,
   old:sta('打狗停車場'),port:sta('高雄港站'),gushan:sta('鼓山'),skc:sta('三塊厝')};
 }"""
@@ -174,18 +175,22 @@ async def check_trunk_geometry(page):
         return await page.evaluate(TRUNK_GEOMETRY, year)
     r = await at(1900)
     assert r['old'] and r['old']['name'] == '打狗' and abs(r['old']['ll'][0] - 22.6265) < 0.0005, r['old']
-    assert r['port'] is None and r['yards'] == 0 and r['zgs'] is None and r['fso'] is None, r
+    assert r['port'] is None and r['yards'] == 0 and r['zgs'] is None and r['zgc'] is None and r['fso'] is None, r
     assert r['gushan'] is None and r['skc'] is None, (r['gushan'], r['skc'])
     r = await at(1907)
     assert r['old'] and r['port'] is None and r['yards'] == 0, r
     assert r['zgs'][0][1] > 120.292, ('1907 年鳳山支線不應走 1941 年新線', r['zgs'][0])
+    assert r['zgc'] is None, '鼓山—高雄川橋—三塊厝的彎線 1941 年才有（第 36 輪）'
     assert r['fso'] and not r['fsoOff'] and r['fso'][0][1] < 120.284, r['fso'][:2]
     r = await at(1908)
     assert r['old'] is None and r['port'] and r['yards'] > 0, r
     r = await at(1929)
     assert r['gushan']['name'] == '田町' and r['gushan']['on'], r['gushan']
+    r = await at(1940)
+    assert r['zgc'] is None, '1940 年還沒有彎線'
     r = await at(1941)
-    assert r['zgs'][0][1] < 120.283, ('1941 年起縱貫線經鼓山南側新線', r['zgs'][0])
+    assert r['zgc'] and r['zgc'][0][1] < 120.283, ('1941 年起縱貫線經鼓山南側新線', r['zgc'] and r['zgc'][0])
+    assert abs(r['zgc'][-1][0] - r['zgs'][0][0]) < 1e-6 and abs(r['zgc'][-1][1] - r['zgs'][0][1]) < 1e-6, '彎線與三塊厝—高雄段要接在同一點'
     assert r['fso'] and not r['fsoOff'], '1941 年後舊線仍在（1942 年圖）'
     r = await at(1950)
     assert r['gushan']['name'] == '鼓山', r['gushan']

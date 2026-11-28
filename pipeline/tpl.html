@@ -87,7 +87,8 @@ const G=__GEO__;
 const SEG=[
 {id:'zg_n',lb:'縱貫線',name:'縱貫線（鼓山—往左營）',k:'trunk',o:1900,c:9999,t:'1900-11-29 打狗—臺南段通車；2018-10-14 地下化',now:'營運中（地下）'},
 {id:'west',lb:'西臨港線',name:'西臨港線（高雄港站—鼓山）',k:'main',o:1900,c:2008,t:'1900–1941 為縱貫線終點段；1907–2008 為屏東線起點段；1968 停辦客運',now:'輕軌西段、哈瑪星鐵道園區'},
-{id:'zg_s',lb:'縱貫線',name:'鼓山—三塊厝—高雄',k:'trunk',o:1907,c:9999,t:'三塊厝以東 1907 年鳳山支線通車；鼓山南側分岐經高雄川橋到三塊厝的一段 1941 年隨高雄新驛新建，成為縱貫線正線',now:'營運中（地下）'},
+{id:'zgc',lb:'縱貫線',name:'縱貫線（鼓山—高雄川橋—三塊厝）',k:'trunk',o:1941,c:9999,t:'1941 年隨高雄新驛新建：自鼓山（田町）南側分岐，經高雄川橋跨愛河到三塊厝，成為縱貫線正線',now:'營運中（地下）'},
+{id:'zg_s',lb:'縱貫線',name:'三塊厝—高雄',k:'trunk',o:1907,c:9999,t:'1907 年鳳山支線通車時已有；1941 年高雄新驛啟用後成為縱貫線正線',now:'營運中（地下）'},
 {id:'fso',lb:'鳳山支線',name:'鳳山支線舊線（打狗驛北—三塊厝）',k:'trunk',o:1907,c:1995,t:'1907 年鳳山支線自打狗驛北方分岔，直線往東北東到三塊厝；1941 年後保留為高雄港—高雄連絡線，1995 年拆除',now:'建國路北側一帶'},
 {id:'pt',lb:'屏東線',name:'屏東線（高雄—鳳山）',k:'trunk',o:1907,c:9999,t:'1907-10-01 鳳山停車場啟用',now:'營運中（地下）'},
 {id:'l1w',lb:'北裏岸壁線',name:'北裏岸壁線（高雄港站—駁二—大義；後為第一臨港線西段）',k:'main',o:1930,c:2008,t:'1930 年自高雄驛延伸，沿三號船渠北側經今駁二；之後自大義倉庫群附近築堤跨高雄川延伸到苓雅寮，成為臨港線西段的起點段',now:'駁二園區、自行車道'},
@@ -164,23 +165,24 @@ function routeForYear(s,year){
  }
  if(s.id==='zg_s'&&year<1941)
   return {...s,lb:branch,name:branch+'（三塊厝—今高雄站址）',
-   t:'1907 年鳳山支線經三塊厝通往鳳山。三塊厝以西當時走舊線（另列）；1941 年高雄新驛啟用後，這段路廊成為縱貫線。'};
+   t:'1907 年鳳山支線經三塊厝通往鳳山。三塊厝以西當時走舊線（另列）；1941 年高雄新驛啟用後，這段成為縱貫線。'};
  if(s.id==='fso')
   return year<1941?{...s,lb:branch,name:branch+'（打狗驛北—三塊厝，舊線）',
    t:'1907 年鳳山支線自'+harbourStationName(year)+'北方分岔，直線往東北東到三塊厝（1924、1942 年圖）。1941 年改走田町南側新線。'}:
    {...s,lb:'連絡線',name:'高雄港—高雄連絡線（鳳山支線舊線）',
-   t:'1941 年新線啟用後保留，與西臨港線、鼓山—三塊厝線構成三角線。1993 年經建版仍有，1998 年像片基本圖已無；網路討論記為 1995 年拆除，未見文獻。'};
+   t:'1941 年新線啟用後保留，與西臨港線、鼓山—三塊厝的縱貫線構成三角線。1993 年經建版仍有，1998 年像片基本圖已無；網路討論記為 1995 年拆除，未見文獻。'};
  if(s.id==='pt'&&year<1941)
   return {...s,lb:branch,name:branch+'（今高雄站址—鳳山方向）',
    t:'1907 年打狗至鳳山通車，當時仍由港邊的車站出發。'};
- if(s.id!=='zg_n'&&s.id!=='zg_s'&&s.id!=='pt')return s;
+ if(s.id!=='zg_n'&&s.id!=='zg_s'&&s.id!=='zgc'&&s.id!=='pt')return s;
  const rail=s.id==='pt'?'屏東線':'縱貫線';
- const part={zg_n:'鼓山—往左營',zg_s:'鼓山—三塊厝—高雄',pt:'高雄—鳳山'}[s.id];
+ const part={zg_n:'鼓山—往左營',zgc:'鼓山—高雄川橋—三塊厝',zg_s:'三塊厝—高雄',pt:'高雄—鳳山'}[s.id];
  if(year>=2018)return {...s,k:'underground',lb:rail+'（地下）',name:rail+'（'+part+'，市區段地下）',
   t:'2018 年 10 月 14 日市區段地下化，沿線繼續營運。圖上標示路廊位置。'};
  return {...s,lb:rail,name:rail+'（'+part+'）',
   t:s.id==='zg_n'?'1900 年打狗—臺南段通車，本段自鼓山向北通往左營。':
-   s.id==='zg_s'?'1941 年高雄新驛啟用，縱貫線正線由鼓山改經三塊厝通往新驛。':'屏東線由高雄站往東通往鳳山。'};
+   s.id==='zgc'?'1941 年隨高雄新驛新建，縱貫線正線由鼓山南側分岐，經高雄川橋到三塊厝。':
+   s.id==='zg_s'?'1907 年鳳山支線時已有；1941 年高雄新驛啟用後成為縱貫線正線。':'屏東線由高雄站往東通往鳳山。'};
 }
 const sw=S=>`<svg width="34" height="10" aria-hidden="true"><line x1="2" y1="5" x2="32" y2="5" stroke="${S.color}" stroke-width="${Math.min(S.weight,6)}" ${S.dashArray?`stroke-dasharray="${S.dashArray}"`:''} stroke-linecap="round"/></svg>`;
 const m=L.map('map',{zoomControl:false,zoomSnap:.1,attributionControl:true,maxBounds:G.bounds,maxBoundsViscosity:.8,minZoom:12,maxZoom:17});window.__map=m;
@@ -243,7 +245,7 @@ function eraGeom(y){
  for(const id in ALT){const g=pickAlt(ALT[id],y,G.seg[id]),l=lay[id];if(l&&l._g!==g){l._g=g;l.setLatLngs(g);if(LBL[id])LBL[id].coords=g}}
  for(const l of exL){const parts=pickAlt(XALT[l._xn],curY,G.extra[l._xn]),g=parts[l._xi]||parts[0];if(l._g!==g){l._g=g;l.setLatLngs(g)}}}
 for(const s of SEG)if(s.lb)mkLabel(s.id,G.seg[s.id],s.lb,STY[s.k].color,13);
-const order=['zg_n','zg_s','fso','pt','west','hm','l1w','ob','w0','w1','qzb','w2','w3','k4','e1','zd','s2','s2b','c2','c3','lr1','lr2'];
+const order=['zg_n','zgc','zg_s','fso','pt','west','hm','l1w','ob','w0','w1','qzb','w2','w3','k4','e1','zd','s2','s2b','c2','c3','lr1','lr2'];
 const stl={};
 for(const[n,o,c,dir]of STN){const p=G.st[n];stl[n]={o,c,mk:L.circleMarker(p,{radius:5,color:'#3b4248',weight:2,fillColor:'#fff',fillOpacity:1}),dir}}
 const sl=document.getElementById('sl'),yr=document.getElementById('yr');
