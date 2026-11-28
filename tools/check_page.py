@@ -189,8 +189,10 @@ async def check_trunk_geometry(page):
     assert r['fso'] and not r['fsoOff'], '1941 年後舊線仍在（1942 年圖）'
     r = await at(1950)
     assert r['gushan']['name'] == '鼓山', r['gushan']
-    r = await at(1963)
-    assert r['fsoOff'], '舊線停用（推定）後轉灰'
+    r = await at(1994)
+    assert r['fso'] and not r['fsoOff'], '1993 年經建版仍有舊線'
+    r = await at(1995)
+    assert r['fsoOff'], '舊線 1995 年拆除後轉灰'
     r = await at(1987)
     assert r['skc'] and not r['skc']['on'], r['skc']
     r = await at(2010)

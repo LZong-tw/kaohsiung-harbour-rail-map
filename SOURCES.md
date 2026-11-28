@@ -55,6 +55,7 @@
 - 謝明勳，關鍵評論網（打狗臨時停車場；抽砂填土完成前以此為南部線起點）。<https://www.thenewslens.com/article/148082>
 - 英文維基百科 Gushan railway station (Taiwan)：1929-10-01 淺野水泥設田町驛；1941 年在田町南側新設分岐接三塊厝與高雄新驛；1950-04-15 改名鼓山；2008-11-09 停辦客運、2009-05-13 裁撤、2018-10-14 重新啟用。<https://en.wikipedia.org/wiki/Gushan_railway_station_(Taiwan)>
 - 自由時報（2026-06-04）：1941 年配合縱貫線改道高雄新驛，新建愛河鐵路橋「高雄川橋」。<https://news.ltn.com.tw/amp/news/life/breakingnews/5460198>
+- 使用者提供：PTT Railway 板 blue1030〈[討論] 鼓山=高雄港=高雄 間的三角線路廊〉（2013-04-17）：高雄港=高雄路廊 1995 年拆除（未註出處），路廊經北斗街、愛河、同盟路、市中一路，在三民國小後匯入縱貫線。<https://www.pttweb.cc/bbs/Railway/M.1366180207.A.02B>
 - 公視新聞網：三塊厝站 1986 年（民國 75 年）9 月底停用。<https://news.pts.org.tw/article/376836>；蕃薯藤旅遊：1908 年設三塊厝乘降場、2018 年隨地下化重新列入時刻表。<https://travel.yam.com/article/125508>
 
 ## 線索
