@@ -411,6 +411,42 @@ def clean_junction(S, M, at_start, far=8.0, shared=1.5, step=3.0):
         ramp.append(toLL(q + nv * side * 0.5 * (1 + math.cos(math.pi * t))))
     out = S[:k + 1] + ramp
     return out[::-1] if at_start else out
+# ── 主線橫向微調（第 36 輪之十一）──
+# hk_offset.py 沿主線量兩種大比例尺圖上鐵路符號的橫向位置：1983 年像片基本圖（MODE=dark）與 1984 年都市計畫航測地形圖（有橫刻的線）。
+# 兩者都指出同一段偏了 6–12 m 的，才依量得的偏移平移（公尺，正值往行進方向右側），兩端漸收到 0；只有一種圖支持、或兩圖不一致的不動。
+#   w1 苓雅寮車場南端—成功橋：原線形沿彎道內側走，落在三股並行（主線加兩股輸油站側線）的西南方空地上。
+#   里程自 w1 起點量（與 hk_offset.py 印出的相同）。像片基本圖 1035–1245 m：−11.3…−12.7；1984 年圖最南一股：−9.1（1140）、−11.8（1380）、−6.1…−9.7（1500–1605）、−7.5（1725–1785）、−6（1815–1905）；2145 m 以後轉為 +2…+5（成功二路，未改）。
+MAIN_ADJ = {
+    'w1': [(800, 0.0), (1035, -10.0), (1400, -10.5), (1600, -8.5), (1760, -7.5), (1880, -6.0), (2030, 0.0)],
+}
+def _lat_adjust(L, table, step=8.0):
+    KX_, KY_ = 102700.0, 110800.0
+    P = [np.array([(p[1] - L[0][1]) * KX_, (p[0] - L[0][0]) * KY_]) for p in L]
+    D = [0.0]
+    for a_, b_ in zip(P, P[1:]): D.append(D[-1] + float(np.hypot(*(b_ - a_))))
+    s0, s1 = table[0][0], table[-1][0]
+    def off(sv):
+        for (sa, oa), (sb, ob_) in zip(table, table[1:]):
+            if sa <= sv <= sb:
+                t = (sv - sa) / (sb - sa); t = 0.5 - 0.5 * math.cos(math.pi * t)
+                return oa + (ob_ - oa) * t
+        return 0.0
+    out = []
+    for i in range(len(P)):
+        if D[i] < s0 or D[i] > s1 or i == 0: out.append(list(L[i])); 
+        if i == len(P) - 1: break
+        a_, b_ = P[i], P[i + 1]; ln = D[i + 1] - D[i]
+        if ln == 0 or D[i + 1] < s0 or D[i] > s1: continue
+        u = (b_ - a_) / ln; nr = np.array([u[1], -u[0]])
+        n = max(1, int(math.ceil(ln / step)))
+        for k in range(0 if (s0 <= D[i] <= s1 and i > 0) else 1, n + 1):
+            sv = D[i] + ln * k / n
+            if sv < s0 or sv > s1 or (k == n and i + 1 == len(P) - 1): continue
+            q = a_ + u * (ln * k / n) + nr * off(sv)
+            if k == n: continue      # 終點由下一段的 k=0 產生，避免重複
+            out.append([L[0][0] + q[1] / KY_, L[0][1] + q[0] / KX_])
+    return out
+for _k, _t in MAIN_ADJ.items(): S[_k] = _lat_adjust(S[_k], _t)
 # 淺野線：從西側接近縱貫線，原本在最後 80 m 斜穿到東側再接回
 X['淺野線（臺泥側線）'][0] = clean_junction(X['淺野線（臺泥側線）'][0], S['zg_n'], at_start=False)
 # 台電線：起點在前鎮橋北端，原本先往南折出一個尖角，再以小角度斜穿第一臨港線到西側
