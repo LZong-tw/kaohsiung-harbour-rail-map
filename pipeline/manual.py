@@ -10,7 +10,7 @@ apply_reg.py 在最後呼叫 apply(G, S, X)：
 - 控制點之間用向心 Catmull-Rom 曲線（通過每個控制點、不會過衝），每 3 m 取一點；
 - 寫入 X[name]、G['xy'][name]（顯示年份）、G['xb'][name]（年代與線形的依據，網頁點選時顯示）；
 - replaces：這條線取代的舊線名（刪除舊線）；
-- parallel=母線、off=公尺、pts=[起, 迄]：沿母線平移的並行股道（兩端漸收回母線），用在圖上畫成兩、三股並行的地方；
+- parallel=母線、off=公尺、pts=[起, 迄]、taper=漸收長度（預設 25 m；偏移大的股道要加長，約偏移量的 6 倍）：沿母線平移的並行股道（兩端漸收回母線），用在圖上畫成兩、三股並行的地方；不加 yard 就成為具名的線；
 - raw=True：第一個控制點就是母線上的接點，只平滑、不另算接入曲線（咽喉很短的扇形站場）；
 - yard='來源說明'：這條是站場股道（並行的第二、三股），放進 G['yards'] 的對應年份組，不列為具名的線。
 """
@@ -112,9 +112,11 @@ def _parallel(parent, a, b, off, taper=25.0, step=3.0):
 
 def geom(spec, lookup):
     if spec.get('parallel'):
-        return _parallel(lookup(spec['parallel']), spec['pts'][0], spec['pts'][1], spec['off'])
+        return _parallel(lookup(spec['parallel']), spec['pts'][0], spec['pts'][1], spec['off'], taper=spec.get('taper', 25.0))
     P = [toM(p) for p in spec['pts']]
-    if spec.get('raw'):      # 控制點本身已含接點（第一點在母線上）：只做平滑，不另外算接入曲線。用在咽喉很短的扇形站場
+    if spec.get('raw'):      # 控制點本身已含接點：只做平滑，不另外算接入曲線。用在咽喉很短的扇形站場，或接入曲線要照圖走的線
+        if spec.get('on0'): P[0] = nearest_on(spec['pts'][0], lookup(spec['on0']))[2]      # 第一點吸到母線上
+        if spec.get('on1'): P[-1] = nearest_on(spec['pts'][-1], lookup(spec['on1']))[2]    # 最後一點吸到母線上
         return [toLL(q) for q in _cr([2 * P[0] - P[1]] + P + [2 * P[-1] - P[-2]])]
     head, tail = [], []
     if spec.get('on0'):
