@@ -424,43 +424,103 @@ def clean_junction(S, M, at_start, far=8.0, shared=1.5, step=3.0):
 #   1950–2130 m 之間 11 m 的橫移各來源都有，是實際的反向曲線（R 約 700 m）。
 #   起點：430 m 以前不動（前鎮車場各股在 350 m 併入）；430–800 m 照 1998 年像片基本圖描出的那一股（機廠組第 39 條：−1.0、−4.8、−7.6、−7.3、−10.0、−11.4）走。
 #   終點：3320 m 以後漸收到 0（終點接屏東線，節點不動；像片基本圖在 3450–3510 m 仍是 −8.6…−8.9，所以最後 250 m 還差 2–5 m）。
+#   第 36 輪之十二：成功二路、凱旋四路、中山四路的主線也照量到的偏移移過去（各版像片基本圖彼此差 3–5 m，取中間值，精度約 ±3 m）：
+#   w1 成功二路（2150 m 以南）：1989 年像片基本圖 +4.0…+10.4（多在 +7）、1998 年版 +4.6…+6.0、1984 年圖兩股 +1.3…+5.0 與 +4.4…+7.7 → +8，取西側那一股（往中島的岔線自西股分出；東股另畫成第二股）。
+#   qzb、w2 成功二路南端：1983 年版 +12.2、+12.3、+8.7、+4.5、+1.2；1989 年版 +7.1（180）、+2.9（300）→ 由 +8 收到 0（三角線東側在 583 m 分出）。
+#   w3 凱旋四路西段：1983 年版 −4.3（540–1020 m 五處 −3.8…−4.7）、1989 年版 −4.0…−6.5；兩端節點不動。
+#   k4 凱旋四路東段：1983 年版 −4.4（180）、−11.0…−11.5（900–1140）；1989 年版 −7.5（390）；1998 年版 −8.5（510–630）、−4.4…−4.8（750–990）；
+#      1976 年版 −10.0…−10.8（870–1050）。這一段是三股並行，各版畫的不是同一股，取 −8；1380 m 以後（前鎮車場各股併入處）不動。
+#   s2 中山四路：1983 年版 −2.4…−4.0（660–1620）、1989 年版 −3.0…−3.5（300–780）、1998 年版 −0.8…−3.3；2460–2940 m 一帶 1989 年版 −8.0…−12.9、1998 年版 −7.9。
 MAIN_ADJ = {
-    'w1': [(800, 0.0), (1035, -10.0), (1400, -10.5), (1600, -8.5), (1760, -7.5), (1880, -6.0), (2030, 0.0)],
+    'w1': [(800, 0.0), (1035, -10.0), (1400, -10.5), (1600, -8.5), (1760, -7.5), (1880, -6.0), (2030, 0.0), (2150, 5.0), (2300, 8.0), (2907, 8.0)],
+    'qzb': [(0, 8.0), (150, 8.0)],
+    'w2': [(0, 8.0), (300, 6.5), (450, 3.5), (560, 0.0)],
+    'w3': [(0, 0.0), (150, -4.5), (1050, -4.5), (1241, 0.0)],
+    'k4': [(0, 0.0), (30, 0.0), (150, -4.5), (250, -5.0), (450, -7.5), (650, -8.5), (1150, -8.0), (1380, 0.0)],   # 30–150 m 就移完：第二臨港線在 180 m 分出，接點不能落在漸變段中間（方向會轉 3°，與分出的線交叉）
+    's2': [(250, 0.0), (450, -3.2), (2300, -3.2), (2500, -5.0), (2700, -7.0), (2850, -10.0), (2950, -10.0), (3300, -5.0), (3450, 0.0)],
     'e1': [(430, 0.0), (500, -4.8), (550, -7.6), (600, -9.0), (650, -11.0), (700, -12.0), (810, -12.5), (930, -10.2), (1020, -7.8), (1190, -14.0), (1300, -13.7), (1410, -12.4),
            (1530, -8.8), (1650, -6.9), (1710, -5.9), (1830, -4.2), (1950, -1.5), (2130, -13.5), (2250, -11.3), (2310, -9.7), (2700, -7.5),
            (2850, -10.3), (3000, -11.8), (3150, -13.3), (3320, -11.0), (3605, 0.0)],
 }
+def _adj_off(table, sv):
+    if sv <= table[0][0]: return table[0][1] if sv == table[0][0] or table[0][0] == 0 else 0.0
+    if sv >= table[-1][0]: return table[-1][1]
+    for (sa, oa), (sb, ob_) in zip(table, table[1:]):
+        if sa <= sv <= sb:
+            t = (sv - sa) / (sb - sa); t = 0.5 - 0.5 * math.cos(math.pi * t)
+            return oa + (ob_ - oa) * t
+    return 0.0
 def _lat_adjust(L, table, step=8.0):
+    """沿線重新取樣（≤ step 公尺），各點依里程往右法線方向移 _adj_off 公尺。表以外的里程：起點前為 0（表從 0 開始則沿用第一個值），終點後沿用最後一個值。"""
     KX_, KY_ = 102700.0, 110800.0
     P = [np.array([(p[1] - L[0][1]) * KX_, (p[0] - L[0][0]) * KY_]) for p in L]
     D = [0.0]
     for a_, b_ in zip(P, P[1:]): D.append(D[-1] + float(np.hypot(*(b_ - a_))))
-    s0, s1 = table[0][0], table[-1][0]
-    def off(sv):
-        for (sa, oa), (sb, ob_) in zip(table, table[1:]):
-            if sa <= sv <= sb:
-                t = (sv - sa) / (sb - sa); t = 0.5 - 0.5 * math.cos(math.pi * t)
-                return oa + (ob_ - oa) * t
-        return 0.0
     out = []
-    for i in range(len(P)):
-        if D[i] < s0 or D[i] > s1 or i == 0: out.append(list(L[i])); 
-        if i == len(P) - 1: break
+    for i in range(len(P) - 1):
         a_, b_ = P[i], P[i + 1]; ln = D[i + 1] - D[i]
-        if ln == 0 or D[i + 1] < s0 or D[i] > s1: continue
+        if ln == 0: continue
         u = (b_ - a_) / ln; nr = np.array([u[1], -u[0]])
-        n = max(1, int(math.ceil(ln / step)))
-        for k in range(0 if (s0 <= D[i] <= s1 and i > 0) else 1, n + 1):
+        moving = _adj_off(table, D[i]) != 0 or _adj_off(table, D[i + 1]) != 0 or (table[0][0] < D[i + 1] and D[i] < table[-1][0])
+        n = max(1, int(math.ceil(ln / step))) if moving else 1
+        for k in range(n):
             sv = D[i] + ln * k / n
-            if sv < s0 or sv > s1 or (k == n and i + 1 == len(P) - 1): continue
-            q = a_ + u * (ln * k / n) + nr * off(sv)
-            if k == n: continue      # 終點由下一段的 k=0 產生，避免重複
+            q = a_ + u * (ln * k / n) + nr * _adj_off(table, sv)
             out.append([L[0][0] + q[1] / KY_, L[0][1] + q[0] / KX_])
+    # 終點
+    a_, b_ = P[-2], P[-1]; ln = D[-1] - D[-2] or 1e-9; u = (b_ - a_) / ln; nr = np.array([u[1], -u[0]])
+    q = b_ + nr * _adj_off(table, D[-1]); out.append([L[0][0] + q[1] / KY_, L[0][1] + q[0] / KX_])
     return out
-for _k, _t in MAIN_ADJ.items(): S[_k] = _lat_adjust(S[_k], _t)
+def _adj_disp(P, Lold, table):
+    """原本在 Lold 上（或旁邊）的點 P，隨主線平移的位移（緯度差、經度差）。"""
+    KX_, KY_ = 102700.0, 110800.0
+    best = None; cum = 0.0
+    for a_, b_ in zip(Lold, Lold[1:]):
+        ax, ay = (a_[1] - P[1]) * KX_, (a_[0] - P[0]) * KY_; bx, by = (b_[1] - P[1]) * KX_, (b_[0] - P[0]) * KY_
+        dx, dy = bx - ax, by - ay; ln = math.hypot(dx, dy)
+        if ln == 0: continue
+        t = max(0.0, min(1.0, -(ax * dx + ay * dy) / (ln * ln))); d = math.hypot(ax + t * dx, ay + t * dy)
+        if best is None or d < best[0]: best = (d, cum + t * ln, dx / ln, dy / ln)
+        cum += ln
+    _, sv, ux, uy = best; o = _adj_off(table, sv)
+    return (-ux * o / KY_, uy * o / KX_)          # 右法線 (uy, −ux) × o
+def _follow(L, Lold, table, at_start, blend=120.0, step=8.0):
+    """L 的一端接在主線 Lold 上：端點跟著主線移，位移沿 L 在 blend 公尺內漸收到 0。"""
+    KX_, KY_ = 102700.0, 110800.0
+    Q = list(L) if at_start else list(L)[::-1]
+    dlat, dlon = _adj_disp(Q[0], Lold, table)
+    if abs(dlat) * KY_ + abs(dlon) * KX_ < 0.05: return L
+    out = [[Q[0][0] + dlat, Q[0][1] + dlon]]; cum = 0.0
+    for a_, b_ in zip(Q, Q[1:]):
+        ln = math.hypot((b_[1] - a_[1]) * KX_, (b_[0] - a_[0]) * KY_)
+        n = max(1, int(math.ceil(ln / step))) if cum < blend else 1
+        for k in range(1, n + 1):
+            sv = cum + ln * k / n; w = 0.0 if sv >= blend else 0.5 + 0.5 * math.cos(math.pi * sv / blend)
+            out.append([a_[0] + (b_[0] - a_[0]) * k / n + dlat * w, a_[1] + (b_[1] - a_[1]) * k / n + dlon * w])
+        cum += ln
+    return out if at_start else out[::-1]
+_OLD = {k: [list(p) for p in S[k]] for k in MAIN_ADJ}
+for _k, _t in MAIN_ADJ.items(): S[_k] = [list(toLL(q)) for q in rdp([toM(p) for p in _lat_adjust(S[_k], _t)], 0.25)]   # 平移時每 8 m 取樣，之後以 0.25 m 容許差抽稀
+# 端點接在被移動的主線上、又不是之後才用 clean_junction／manual 接上的線，端點跟著主線移
+S['s2'] = _follow(S['s2'], _OLD['k4'], MAIN_ADJ['k4'], at_start=True)          # 第二臨港線自凱旋四路分出（先跟 k4，再套 s2 自己的表：s2 的表從 250 m 才開始）
+S['s2'][0] = list(toLL(nearest_on(S['s2'][0], S['k4'])[2]))                              # 主線抽稀後端點可能離線 0.25 m，吸回線上
+#   造船所線 A、B 來自 1945 年美軍圖，位置本來就是相對成功路的主線定的，整條跟著主線平移（blend 取極大）；臺肥線的線身不動，接點用 clean_junction 重接（見下）
+for _nm, _par, _st, _bl in (('獅子公園三角線東側（原主線弧線）', 'w3', False, 120.0), ('獅子公園三角線東側（原主線弧線）', 'w2', True, 120.0),
+                            ('船渠北岸造船所線 A（1945 年美軍圖）', 'w1', True, 1e9), ('船渠北岸造船所線 B（1945 年美軍圖）', 'w1', True, 1e9)):
+    if _nm in X:
+        X[_nm][0] = _follow(X[_nm][0], _OLD[_par], MAIN_ADJ[_par], at_start=_st, blend=_bl)
+        X[_nm][0][0 if _st else -1] = list(toLL(nearest_on(X[_nm][0][0 if _st else -1], S[_par])[2]))
+    else: print('MAIN_ADJ：找不到要跟著移的線', _nm)
 # 淺野線：從西側接近縱貫線，原本在最後 80 m 斜穿到東側再接回
 X['淺野線（臺泥側線）'][0] = clean_junction(X['淺野線（臺泥側線）'][0], S['zg_n'], at_start=False)
 # 台電線：起點在前鎮橋北端，原本先往南折出一個尖角，再以小角度斜穿第一臨港線到西側
+X['台灣肥料公司線（臺肥三廠）'][0] = _follow(X['台灣肥料公司線（臺肥三廠）'][0], _OLD['w2'], MAIN_ADJ['w2'], at_start=True, blend=80.0)   # 成功二路主線西移之後，接點跟著移，80 m 內漸收（45 m 會與主線交叉、120 m 以上會斜穿西側各股、clean_junction 會留折角）
+X['台灣肥料公司線（臺肥三廠）'][0][0] = list(toLL(nearest_on(X['台灣肥料公司線（臺肥三廠）'][0][0], S['w2'])[2]))
+# 第 36 輪之十二：1984 年圖上台電的兩個分支都在 22.6005–22.6010°N 併入成功路的主線，沒有沿主線往南拖到 22.5999°N 的引線；
+# 原線形那一段是早期描線留下的。把 22.60085°N 以南的起始段去掉，再用 clean_junction 接到（已西移的）主線上。
+_tp = X['台電南部火力發電所線（推定）'][0]
+_i0 = next(i for i, p in enumerate(_tp) if p[0] >= 22.60085)
+X['台電南部火力發電所線（推定）'][0] = _tp[_i0:]
 X['台電南部火力發電所線（推定）'][0] = clean_junction(X['台電南部火力發電所線（推定）'][0], S['w1'], at_start=True)
 # 205 大門側線：原本先疊在凱旋四路線上走約 40 m 才分出，分出處又略為交叉
 X['205 兵工廠大門側線（凱旋四路側）'][0] = clean_junction(X['205 兵工廠大門側線（凱旋四路側）'][0], S['k4'], at_start=True)

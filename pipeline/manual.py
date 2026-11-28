@@ -116,6 +116,10 @@ def geom(spec, lookup):
     if spec.get('parallel'):
         return _parallel(lookup(spec['parallel']), spec['pts'][0], spec['pts'][1], spec['off'], taper=spec.get('taper', 25.0), taper_b=spec.get('taper_b'))
     P = [toM(p) for p in spec['pts']]
+    if spec.get('shift'):
+        # 控制點整批平移（北、東，公尺）：用在控制點是從對位有偏移的圖上讀來的線；shift_w 可逐點給權重（漸收）
+        dn, de = spec['shift']; w = spec.get('shift_w') or [1.0] * len(P)
+        P = [toM((p[0] + dn * wi / 110800.0, p[1] + de * wi / 102700.0)) for p, wi in zip(spec['pts'], w)]
     if spec.get('raw'):      # 控制點本身已含接點：只做平滑，不另外算接入曲線。用在咽喉很短的扇形站場，或接入曲線要照圖走的線
         if spec.get('on0'): P[0] = nearest_on(spec['pts'][0], lookup(spec['on0']))[2]      # 第一點吸到母線上
         if spec.get('on1'): P[-1] = nearest_on(spec['pts'][-1], lookup(spec['on1']))[2]    # 最後一點吸到母線上
