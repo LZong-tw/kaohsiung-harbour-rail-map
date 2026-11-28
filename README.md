@@ -6,6 +6,7 @@
 |---|---|---|
 | 研究過程與方法 | [`METHODS.md`](METHODS.md)（同步自 Claude 文件「高雄臨港線歷史路線圖：研究過程與方法」） | 資料來源、定位方法、線形規整、檢查流程、關鍵判讀與修正、路線與年代表、限制、授權 |
 | 互動地圖 | [`site/`](site/)（另發布為 Claude artifact「高雄臨港線 1900–2024」） | 地圖與年份操作，以及各年份營運中／已停用的路線清單 |
+| 開放資料 | [`data/`](data/)（GeoJSON，[欄位說明](data/README.md)） | 全部線形與年份、依據的開放格式副本：GitHub 直接顯示成地圖，geojson.io、QGIS 可開啟修改，可轉 KML、GeoPackage |
 
 逐輪工作紀錄在 [`WORKLOG.md`](WORKLOG.md)，參考資料在 [`SOURCES.md`](SOURCES.md)，每個腳本與中繼檔的用途在 [`FILES.md`](FILES.md)。在這個 repo 工作的原則（給 Claude，也給人看）在 [`CLAUDE.md`](CLAUDE.md)。
 
@@ -25,6 +26,7 @@ repo 可直接發布成靜態網站：首頁是互動地圖，另有「研究過
 | 路徑 | 內容 |
 |---|---|
 | `site/` | 最新的互動地圖：`index.html` 內嵌幾何資料，搭配 `leaflet.*` 與底圖 `base.jpg`，可離線開啟 |
+| `data/` | 開放格式 GeoJSON 與欄位說明（`pipeline/export_geojson.py` 產生） |
 | `site_v1/` | 最早一版頁面，留作對照 |
 | `pipeline/` | 程式與中間資料，保留原工作目錄結構 |
 | `pipeline/tpl.html` | 頁面模板；`build_page.py` 會把幾何資料注入 `__GEO__` |

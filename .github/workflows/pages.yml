@@ -34,6 +34,8 @@ jobs:
             /pipeline/line_inventory.json
             /pipeline/geo_v13.json
             /pipeline/tpl.html
+            /pipeline/export_geojson.py
+            data
             tools
             METHODS.md
             WORKLOG.md
@@ -51,6 +53,7 @@ jobs:
           git diff --exit-code -- ../site/index.html
           python connect_check.py geo_v13.json
           python inventory_check.py
+          python export_geojson.py --check
       - run: python tools/build_site.py
       - run: python tools/check_page.py _site/index.html
       - uses: actions/configure-pages@v5

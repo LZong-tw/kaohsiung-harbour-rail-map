@@ -5,6 +5,7 @@ Pages:
   methods.html  METHODS.md   研究過程與方法
   worklog.html  WORKLOG.md   工作歷程
   sources.html  SOURCES.md   參考資料
+  data.html     data/README.md 開放資料（GeoJSON 的欄位說明）；data/*.geojson 原樣複製
   files.html    FILES.md (what each script and intermediate file is for) + every repo file, linked to GitHub
 
 Research data (pipeline/, scratch/, uploads/ …) is NOT copied into the site; files.html links
@@ -32,6 +33,7 @@ PAGES = [  # (source, output, title)
     ('METHODS.md', 'methods.html', '研究過程與方法'),
     ('WORKLOG.md', 'worklog.html', '工作歷程'),
     ('SOURCES.md', 'sources.html', '參考資料'),
+    ('data/README.md', 'data.html', '開放資料'),
 ]
 MD2HTML = {src: out for src, out, _ in PAGES}
 MD2HTML['FILES.md'] = 'files.html'
@@ -166,6 +168,7 @@ def main():
             shutil.copytree(f'site/{f}', f'{OUT}/{f}')   # 底圖圖磚 site/t/
         else:
             shutil.copy(f'site/{f}', f'{OUT}/{f}')
+    shutil.copytree('data', f'{OUT}/data')            # 開放格式 GeoJSON（pipeline/export_geojson.py 產生），網站上可直接下載
     open(f'{OUT}/index.html', 'w', encoding='utf-8').write(map_page())
     for src, out, title in PAGES:
         open(f'{OUT}/{out}', 'w', encoding='utf-8').write(page(title, render_md(src), out))

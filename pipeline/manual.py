@@ -148,6 +148,23 @@ def geom(spec, lookup):
 YARD = {}
 
 
+def _lat_adj(L, table, step=8.0):
+    P = [toM(p) for p in L]; out = []; d = 0.0
+    def off(s):
+        if s <= table[0][0] or s >= table[-1][0]: return table[0][1] if s <= table[0][0] else table[-1][1]
+        for (s0, o0), (s1, o1) in zip(table, table[1:]):
+            if s0 <= s <= s1:
+                t = (s - s0) / ((s1 - s0) or 1e-9); return o0 + (o1 - o0) * (1 - np.cos(np.pi * t)) / 2
+    for a, b in zip(P, P[1:]):
+        ln = float(np.hypot(*(b - a)))
+        if ln == 0: continue
+        u = (b - a) / ln; nr = np.array([u[1], -u[0]]); k = max(1, int(np.ceil(ln / step)))
+        for i in range(k): out.append(a + u * (ln * i / k) + nr * off(d + ln * i / k))
+        d += ln
+    out.append(P[-1] + nr * off(d))
+    return [toLL(q) for q in out]
+
+
 def apply(G, S, X, lines):
     def lookup(k):
         if k in S:
@@ -176,6 +193,8 @@ def apply(G, S, X, lines):
             g = geom(spec, lookup); X[spec['part_of']].append(g); YARD[n] = g
             print('manual', spec['part_of'], '續段', n, len(g), '點'); continue
         X[n] = [geom(spec, lookup)]
+        if spec.get('adj'):          # adj=[(里程 m, 側距 m), …]：定線後再依像片基本圖量到的橫向位置平移（正＝行進方向右側，餘弦內插；表以外為 0）
+            X[n][0] = _lat_adj(X[n][0], spec['adj'])
         YARD[n] = X[n][0]
         G['xy'][n] = list(spec['yrs'])
         G['xb'][n] = spec['basis']
