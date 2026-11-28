@@ -11,6 +11,7 @@ apply_reg.py 在最後呼叫 apply(G, S, X)：
 - 寫入 X[name]、G['xy'][name]（顯示年份）、G['xb'][name]（年代與線形的依據，網頁點選時顯示）；
 - replaces：這條線取代的舊線名（刪除舊線）；
 - parallel=母線、off=公尺、pts=[起, 迄]：沿母線平移的並行股道（兩端漸收回母線），用在圖上畫成兩、三股並行的地方；
+- raw=True：第一個控制點就是母線上的接點，只平滑、不另算接入曲線（咽喉很短的扇形站場）；
 - yard='來源說明'：這條是站場股道（並行的第二、三股），放進 G['yards'] 的對應年份組，不列為具名的線。
 """
 import math
@@ -113,6 +114,8 @@ def geom(spec, lookup):
     if spec.get('parallel'):
         return _parallel(lookup(spec['parallel']), spec['pts'][0], spec['pts'][1], spec['off'])
     P = [toM(p) for p in spec['pts']]
+    if spec.get('raw'):      # 控制點本身已含接點（第一點在母線上）：只做平滑，不另外算接入曲線。用在咽喉很短的扇形站場
+        return [toLL(q) for q in _cr([2 * P[0] - P[1]] + P + [2 * P[-1] - P[-2]])]
     head, tail = [], []
     if spec.get('on0'):
         head, P = _attach(P, lookup(spec['on0']))
